@@ -1,8 +1,25 @@
+# ![Votee Logo](https://photos-2.dropbox.com/t/2/AAD5ILL-u-e52TtJ5QQBPAsRuPn_D1qxH1r5zRmMbVcuRw/12/36535402/png/32x32/1/_/1/2/Votee_Logo.PNG/EKfR5BsYurJYIAIoAg/aETM5OCXNAltVwg2MEXQvUuy60sd6LXZCE4KlOR53Rs?size=1280x960&size_mode=3)
+
+Votee is a classroom oriented voting software, perfect for improving the voting experience for both students and professors. Creating a visual and informative experience, Votee provides a much more interactive response to classroom questions, and displays informative data for both student and professor. Votee will guide you through the term making your daily quizzes a breeze while keeping you up to date on grades and progress. Votee is an all-in-one application for creating questions, classroom voting and organization of classroom results. 
+ 
+If you are a professor in need of an interactive quiz for your classroom, do yourself a favour and stay organized with Votee. Create daily questions for your class using the software and track the progress of your students based on quiz results. Several forms of questions can be created to keep your class on top! Once a question has been created, set a time frame for completion and allocate marks. Then watch Votee do the rest! If visualization helps you, Votee can display several statistics of your classroom results in chart form. Observing progress and tracking performance are some of many benefits of the Votee software.
+ 
+Now that you have created your set of questions, it is time for the students to get to work! Rather than purchasing a clunky iClicker, students are able to use Votee through their mobile devices. By signing in to both their account and current classroom, students will be prompted with the professor’s daily quiz. As each question and its corresponding answers are displayed, the students can then vote for their preferred answer through a simple click of a button. Votee will soon unveil whether the individuals vote was correct or not as well as the distribution of classroom answers. Votee provides a very visual experience as the students’ answer can be clearly displayed, and their marks are tracked as they go. Throughout the term all quiz grades can be viewed allowing the student to observe their progress and browse through previous votes allowing the student to get the most out of the Votee daily quizzes.
+ 
+As a professor, you want to entrust in all answers provided by the Votee application. As students are able to use Votee with their mobile device, Votee ensures students are attending the class for the answers to be accepted. When you find yourself outside your university network, Votee will not allow the student to vote therefore preventing all answers from outside the classroom setting. As a result, Votee helps improve classroom attendance, as marks will not be allocated to class skippers!
+ 
+Votee is your all-in-one application and handy classroom voting software. As a professor you will find yourself better prepared, more informed, and very organized. Students will find participation more simple, enjoyable and valuable to their education. Votee benefits everyone in a classroom and is therefore the best choice for a class voting software. If you want a better voting experience, vote Votee.
+
+# Votee is built on MEAN Stack, which is outlined below:
+#
+#
+
+
+
+# [![MEAN Logo](http://mean.io/system/assets/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack
 [![Build Status](https://travis-ci.org/linnovate/mean.svg)](https://travis-ci.org/linnovate/mean)
 [![Dependencies Status](https://david-dm.org/linnovate/mean.svg)](https://david-dm.org/linnovate/mean)
 [![Gitter](https://badges.gitter.im/JoinChat.svg)](https://gitter.im/linnovate/mean?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
-# [![MEAN Logo](http://mean.io/system/assets/img/logos/meanlogo.png)](http://mean.io/) MEAN Stack
 
 MEAN is a framework for an easy starting point with [MongoDB](https://www.mongodb.org/), [Node.js](http://www.nodejs.org/), [Express](http://expressjs.com/), and [AngularJS](https://angularjs.org/) based applications. It is designed to give you a quick and organized way to start developing MEAN based web apps with useful modules like Mongoose and Passport pre-bundled and configured. We mainly try to take care of the connection points between existing popular frameworks and solve common integration problems.
 
