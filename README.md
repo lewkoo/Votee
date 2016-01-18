@@ -1,4 +1,4 @@
-# ![Votee Logo](https://photos-2.dropbox.com/t/2/AAD5ILL-u-e52TtJ5QQBPAsRuPn_D1qxH1r5zRmMbVcuRw/12/36535402/png/32x32/1/_/1/2/Votee_Logo.PNG/EKfR5BsYurJYIAIoAg/aETM5OCXNAltVwg2MEXQvUuy60sd6LXZCE4KlOR53Rs?size=1280x960&size_mode=3)
+# ![Votee Logo](http://s30.postimg.org/bksknbpi9/Votee_Logo.png)
 
 Votee is a classroom oriented voting software, perfect for improving the voting experience for both students and professors. Creating a visual and informative experience, Votee provides a much more interactive response to classroom questions, and displays informative data for both student and professor. Votee will guide you through the term making your daily quizzes a breeze while keeping you up to date on grades and progress. Votee is an all-in-one application for creating questions, classroom voting and organization of classroom results. 
  
