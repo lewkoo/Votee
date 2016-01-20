@@ -26,12 +26,12 @@ Votee is your all-in-one application and handy classroom voting software. As a p
 
 We choose MEAN Stack for a few reasons, chief of those we have outlined below: 
 * MEAN is a complete stack, composed of a database, a web server, back end and front end logic engine and modern front end styling tools
-* MongoDM is one of the world most widely used non-relational database. Looking at the potential data that will be stored in Votee, non-relational databases seem like a good fit.
-* Node.js is a light weight sever built on JavaScript. It was specifically tuned for the MEAN stack and it includes a tool called *gulp* - a configuration manager and deployment tool, which will be handy when dealing with managing production and development instances of the live server, as well as continuous integration.
+* MongoDM is one of the world most widely used non-relational database. Looking at the potential data that will be stored in Votee, non-relational databases seem like a good fit
+* Node.js is a light weight sever built on JavaScript. It was specifically tuned for the MEAN stack and it includes a tool called *gulp* - a configuration manager and deployment tool, which will be handy when dealing with managing production and development instances of the live server, as well as continuous integration
 * MEAN comes with AngularJS and Bootstrap for easy and fast front end logic and styling. This will allow us to prototype many diffurent UI options when developing Votee
-* MEAN itself is a big framework with a large community and good documentation. It also includes packages - bundles of reusable code that bring in extra features that are commonly requested in web service applications.
+* MEAN itself is a big framework with a large community and good documentation. It also includes packages - bundles of reusable code that bring in extra features that are commonly requested in web service applications
 * MEAN comes with testing build - in. Frameworks for running and executing unit and acceptance testing are provided. 
-* Best of all - all of MEAN code is done in JavaScript and JSON, so there is no need for developers to switch between and learn many programming languages
+* Best of all - all of MEAN code is JavaScript and JSON, so there is no need for developers to switch between and learn many programming languages
 
 ### You can read more on the MEAN stack below:
 
