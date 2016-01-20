@@ -1,0 +1,100 @@
+[
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> uploaded a file: <https:\/\/4350team.slack.com\/files\/levko\/F0JMGRR89\/img_0179.png|IMG_0179.PNG>",
+        "file": {
+            "id": "F0JMGRR89",
+            "created": 1453089686,
+            "timestamp": 1453089686,
+            "name": "IMG_0179.PNG",
+            "title": "IMG_0179.PNG",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 17085,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0JMGRR89\/img_0179.png?t=xoxe-17979658209-18920698884-18927042023-058249cb9c",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0JMGRR89\/download\/img_0179.png?t=xoxe-17979658209-18920698884-18927042023-058249cb9c",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0JMGRR89-1cbb30caea\/img_0179_64.png?t=xoxe-17979658209-18920698884-18927042023-058249cb9c",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0JMGRR89-1cbb30caea\/img_0179_80.png?t=xoxe-17979658209-18920698884-18927042023-058249cb9c",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0JMGRR89-1cbb30caea\/img_0179_360.png?t=xoxe-17979658209-18920698884-18927042023-058249cb9c",
+            "thumb_360_w": 206,
+            "thumb_360_h": 177,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0JMGRR89-1cbb30caea\/img_0179_160.png?t=xoxe-17979658209-18920698884-18927042023-058249cb9c",
+            "image_exif_rotation": 1,
+            "original_w": 206,
+            "original_h": 177,
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0JMGRR89\/img_0179.png",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0JMGRR89-10cacbc68b",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1453089687.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "As promised, here is a logo",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1453089691.000000"
+        },
+        "ts": "1453089689.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "It is not all that great, but it\u2019ll do for now, I think",
+        "ts": "1453089704.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "man, they added a lot to the mean stack in 2 years.",
+        "ts": "1453089915.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Updated the github page. check it out.",
+        "ts": "1453091333.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<http:\/\/mean.io|mean.io> uses a lot of packages now(not sure if we need ALL of it). With everything installed size is ~357mb for me. Also it uses some of it its own packages made by linovate, which from what i understand probably wont be needed. Imo it can be a bit overwhelming when just starting out with web dev.",
+        "ts": "1453098129.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Logo looks nice :simple_smile:",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1453098571.000000"
+        },
+        "ts": "1453098559.000009"
+    }
+]

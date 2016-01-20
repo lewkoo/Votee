@@ -1,0 +1,138 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Git repo link: <https:\/\/github.com\/lewkoo\/votee>",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1452800552.000000"
+        },
+        "ts": "1452800537.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Vision statement: <https:\/\/docs.google.com\/document\/d\/1CvnXLNxiKNNfu2M9UAxi4Pqej2G6_-8UjwUmqZ_DwPw\/edit?usp=sharing>",
+        "ts": "1452800713.000005"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> shared a file: <https:\/\/4350team.slack.com\/files\/levko\/F0JFEJ4QL\/voteevisionstatement|Votee vision statement>",
+        "file": {
+            "id": "F0JFEJ4QL",
+            "created": 1452800724,
+            "timestamp": 1452800724,
+            "name": "Voteevisionstatement",
+            "title": "Votee vision statement",
+            "mimetype": "application\/vnd.google-apps.document",
+            "filetype": "gdoc",
+            "pretty_type": "GDocs Document",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 3580,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "gdrive",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/docs.google.com\/document\/d\/1CvnXLNxiKNNfu2M9UAxi4Pqej2G6_-8UjwUmqZ_DwPw\/edit?usp=drivesdk",
+            "thumb_64": "https:\/\/slack.global.ssl.fastly.net\/66f9\/img\/files\/gdraw_64.png",
+            "thumb_360": "https:\/\/slack.global.ssl.fastly.net\/272a\/img\/files\/gdoc_360.png",
+            "thumb_360_w": 360,
+            "thumb_360_h": 167,
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0JFEJ4QL\/voteevisionstatement",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1452800724.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/trello.com\/invite\/b\/WL7V6tmy\/c8b68ebc2c50cac1c756da1c4589c34d\/team-d-votee>",
+        "ts": "1452800903.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok I found my old github that was just messing around from before so I made a fresh one... my user is now just: tylerboswick",
+        "ts": "1452803369.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "added you",
+        "ts": "1452803433.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "My Github name is \"GingerSteve\"\n",
+        "ts": "1452803494.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "added",
+        "ts": "1452803589.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "Here's the meeting minutes doc - <https:\/\/docs.google.com\/document\/d\/11v5Q1EMSSffcXFhZ3_U-IiGAWo7Q3_ZtMn5ytjzdmgg\/edit?usp=docslist_api>",
+        "ts": "1452804603.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Here's their website if you're doing some research: \n<http:\/\/mean.io\/#!\/>",
+        "attachments": [
+            {
+                "service_name": "MEAN.IO",
+                "title": "MEAN.IO - MongoDB, Express, Angularjs Node.js powered fullstack web framework - MEAN.IO - MongoDB, Express, Angularjs Node.js powered fullstack web framework",
+                "title_link": "http:\/\/mean.io\/#!\/",
+                "text": "MEAN MongoDB, ExpressJS, AngularJS, NodeJS.",
+                "fallback": "MEAN.IO: MEAN.IO - MongoDB, Express, Angularjs Node.js powered fullstack web framework - MEAN.IO - MongoDB, Express, Angularjs Node.js powered fullstack web framework",
+                "from_url": "http:\/\/mean.io\/#!\/",
+                "id": 1
+            }
+        ],
+        "ts": "1452805083.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "my github name is 'sandersjessica'",
+        "ts": "1452807124.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, everyone is now on github! yay!",
+        "ts": "1452807295.000010"
+    },
+    {
+        "text": "removed an integration from this channel: <https:\/\/4350team.slack.com\/services\/B0J39NTFT|github>",
+        "bot_id": "B0J39NTFT",
+        "type": "message",
+        "subtype": "bot_remove",
+        "user": "U0HUU655Y",
+        "ts": "1452807443.000011"
+    }
+]

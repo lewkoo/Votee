@@ -1,0 +1,30 @@
+[
+    {
+        "user": "U0HUU655Y",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HUU655Y|levko> has joined the channel",
+        "ts": "1452195474.106796"
+    },
+    {
+        "user": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HV1T7F1|yuriy> has joined the channel",
+        "ts": "1452200829.266049"
+    },
+    {
+        "user": "U0HV4EBMJ",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HV4EBMJ|tboswick> has joined the channel",
+        "ts": "1452207146.000002"
+    },
+    {
+        "user": "U0J06U3E3",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0J06U3E3|steve> has joined the channel",
+        "ts": "1452219032.000003"
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "user": "U0J3A5RML",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0J3A5RML|nloewen> has joined the channel",
+        "ts": "1452354184.000002"
+    },
+    {
+        "text": "added an integration to this channel: <https:\/\/4350team.slack.com\/services\/B0J39NTFT|github>",
+        "bot_id": "B0J39NTFT",
+        "type": "message",
+        "subtype": "bot_add",
+        "user": "U0J3A5RML",
+        "ts": "1452354829.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hello everyone,",
+        "ts": "1452359644.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I just went over the notes and it seems that the Student ID is required for me to submit to the prof. So if everyone could provide their student ID's, that would be great",
+        "ts": "1452359717.000005"
+    },
+    {
+        "user": "U0J3D11K5",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0J3D11K5|sandersjess> has joined the channel",
+        "ts": "1452367515.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you can also send it via DM or if you would rather not disclose it to me or anyone else - I am fine with leaving it blank, but then it will be your responsibility to sort it out with the instructor",
+        "ts": "1452368059.000003"
+    }
+]
