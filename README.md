@@ -6,6 +6,8 @@
 
 **Reasons for choosing MEAN are outlined below and [here](https://github.com/lewkoo/Votee/wiki/Reasons-for-choosing-MEAN-stack)** 
 
+**Discussiong from Slack: [#general](www.googledrive.com/host/0B67iyt815Os7SGU4NUZDcmRPaG8) and [#project_idea](www.googledrive.com/host/0B67iyt815Os7MEVrcFVMNnlEVm8)**
+
 **Discussions from slack are in Slack Logs folder**
 
 
