@@ -8,8 +8,6 @@
 
 **Discussiong from Slack: [#general](http://www.googledrive.com/host/0B67iyt815Os7SGU4NUZDcmRPaG8) and [#project_idea](http://www.googledrive.com/host/0B67iyt815Os7MEVrcFVMNnlEVm8)**
 
-**Discussions from slack are in Slack Logs folder**
-
 
 
 # ![Votee Logo](http://s30.postimg.org/bksknbpi9/Votee_Logo.png)
