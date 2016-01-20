@@ -4,6 +4,8 @@
 
 **[Meeting minutes](https://docs.google.com/document/d/11v5Q1EMSSffcXFhZ3_U-IiGAWo7Q3_ZtMn5ytjzdmgg/edit?usp=sharing)**
 
+**Discussions from slack are in Slack Logs folder**
+
 
 # ![Votee Logo](http://s30.postimg.org/bksknbpi9/Votee_Logo.png)
 
