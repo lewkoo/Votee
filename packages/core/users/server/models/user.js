@@ -132,6 +132,16 @@ UserSchema.methods.isAdmin = function() {
 };
 
 /**
+ * IsProfessor - check if the user is a professor
+ *
+ * @return {Boolean}
+ * @api public
+ */
+UserSchema.methods.isProfessor = function() {
+  return this.roles.indexOf('professor') !== -1;
+}
+
+/**
  * Authenticate - check if the passwords are the same
  *
  * @param {String} plainText

@@ -25,17 +25,31 @@ Circles.register(function(app, auth, database) {
   Circles.menus.add({
     title: 'Circles',
     link: 'manage circles',
-    roles: ['authenticated', 'admin'],
+    roles: ['authenticated', 'admin', 'professor'],
     menu: 'main'
   });
 
   Circles.models = {};
 
   Circles.registerCircle('admin');
+  /**
+   * these permissions are created for and by the articles package
+   */
   Circles.registerCircle('can delete content', ['admin']);
   Circles.registerCircle('can edit content', ['admin']);
   Circles.registerCircle('can create content', ['admin']);
+
   Circles.registerCircle('authenticated');
+  Circles.registerCircle('professor'); // create a professor role
+
+  Circles.registerCircle('can create polls', ['professor']); // add professor permissions
+  Circles.registerCircle('can edit polls', ['professor']);
+  Circles.registerCircle('can delete polls', ['professor']);
+
+  Circles.registerCircle('can create courses', ['admin']); // only admins can create courses
+  Circles.registerCircle('can edit courses', ['professor']); // professors can edit their course page
+  Circles.registerCircle('can view courses', ['authenticated']); // everyone can view courses
+
   Circles.registerCircle('anonymous');
 
   return Circles;

@@ -9,12 +9,13 @@ var crypto = require('crypto');
  * @todo consider taking out to a common unit testing javascript helper
  * @return string
  */
-function getRandomString(len) {
+var getRandomString = function getRandomString(len) {
   if (!len)
     len = 16;
 
   return crypto.randomBytes(Math.ceil(len / 2)).toString('hex');
 }
+module.exports.getRandomString = getRandomString;
 
 /**
  * Module dependencies.
@@ -213,7 +214,7 @@ describe('<Unit Test>', function() {
         });
       });
 
-    });
+    }); // Method Save description end
 
     // source: http://en.wikipedia.org/wiki/Email_address
     describe('Test Email Validations', function() {
