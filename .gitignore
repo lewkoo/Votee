@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # --------------------
 # OSX Files
 # --------------------
@@ -72,3 +73,30 @@ modules/views/
 # vim Files
 # --------------------
 *.swp
+=======
+*.sw*
+*~
+
+# Logs and databases #
+######################
+*.log
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+node_modules/
+.sass-cache/
+public/stylesheets/*.css
+public/min/
+public/index.html
+vendor/*
+public/fonts
+>>>>>>> e362af9e0ffec2fe388c3d64328d5b02759032c7
