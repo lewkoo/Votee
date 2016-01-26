@@ -139,7 +139,17 @@ UserSchema.methods.isAdmin = function() {
  */
 UserSchema.methods.isProfessor = function() {
   return this.roles.indexOf('professor') !== -1;
-}
+};
+
+/**
+ * IsStudent - check if the user is a student
+ *
+ * @return {Boolean}
+ * @api public
+ */
+UserSchema.methods.isStudent = function() {
+  return this.roles.indexOf('student') !== -1;
+};
 
 /**
  * Authenticate - check if the passwords are the same

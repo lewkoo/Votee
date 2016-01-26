@@ -41,6 +41,7 @@ Circles.register(function(app, auth, database) {
 
   Circles.registerCircle('authenticated');
   Circles.registerCircle('professor'); // create a professor role
+  Circles.registerCircle('student'); // create a student role
 
   Circles.registerCircle('can create polls', ['professor']); // add professor permissions
   Circles.registerCircle('can edit polls', ['professor']);
@@ -49,6 +50,13 @@ Circles.register(function(app, auth, database) {
   Circles.registerCircle('can create courses', ['admin']); // only admins can create courses
   Circles.registerCircle('can edit courses', ['professor']); // professors can edit their course page
   Circles.registerCircle('can view courses', ['authenticated']); // everyone can view courses
+
+  Circles.registerCircle('can view questions', ['authenticated']);
+  Circles.registerCircle('can edit questions', ['professor']);
+
+  Circles.registerCircle('can view answers', ['professor']);
+  Circles.registerCircle('can post answers', ['student']);
+  Circles.registerCircle('can edit answers', ['student']);
 
   Circles.registerCircle('anonymous');
 
