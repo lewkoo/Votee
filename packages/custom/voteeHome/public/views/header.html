@@ -21,23 +21,23 @@
                 </ul>
             </div>
 
-            <div class="left pull-left">
-                <ul class="navbar-nav nav" ng-show="hdrctr.hdrvars.authenticated">
-                    <li class="dropdown" uib-dropdown on-toggle="toggled(open)">
-                        <a href="#" class="dropdown-toggle" uib-dropdown-toggle>
-                            <span>Admin</span> <b class="caret"></b>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.admin">
-                                <a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>
-                            </li>
+            <!--<div class="left pull-left">-->
+                <!--<ul class="navbar-nav nav" ng-show="hdrctr.hdrvars.authenticated">-->
+                    <!--<li class="dropdown" uib-dropdown on-toggle="toggled(open)">-->
+                        <!--<a href="#" class="dropdown-toggle" uib-dropdown-toggle>-->
+                            <!--<span>Admin</span> <b class="caret"></b>-->
+                        <!--</a>-->
+                        <!--<ul class="dropdown-menu">-->
+                            <!--<li ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ng-repeat="item in hdrctr.menus.admin">-->
+                                <!--<a mean-token="item.link" ui-sref='{{item.link}}'>{{item.title}}</a>-->
+                            <!--</li>-->
 
-                        </ul>
+                        <!--</ul>-->
 
-                    </li>
+                    <!--</li>-->
 
-                </ul>
-            </div>
+                <!--</ul>-->
+            <!--</div>-->
 
             <div class="right pull-right">
                 <div class="text-edit" ng-show="hdrctr.hdrvars.authenticated">

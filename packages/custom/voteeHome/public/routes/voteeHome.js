@@ -8,6 +8,16 @@ angular.module('mean.voteeHome').config(['$viewPathProvider','$stateProvider',
     //});
       $viewPathProvider.override('system/views/index.html', 'voteeHome/views/index.html');
 
+      $stateProvider.state('Students', {
+        url: '/student/profile',
+        templateUrl: 'voteeHome/views/student.html'
+      });
+
+      //implement professor main page
+      $stateProvider.state('Professors', {
+          url: '/professors/profile',
+          templateUrl: 'voteeHome/views/test.html'
+      });
   }
 ]);
 

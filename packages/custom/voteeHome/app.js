@@ -17,29 +17,31 @@ VoteeHome.register(function(app, auth, database, system) {
   VoteeHome.routes(app, auth, database);
 
   //We are adding a link to the main menu for all authenticated users
-  VoteeHome.menus.add({
-        title: 'Votee home',
-        link: 'voteeHome',
-        roles: ['authenticated', 'anonymous'],
-        menu: 'voteeMain'
-    });
+  //VoteeHome.menus.add({
+  //      title: 'Votee home',
+  //      link: 'voteeHome',
+  //      roles: ['authenticated', 'anonymous'],
+  //      menu: 'voteeMain'
+  //  });
+    console.log(auth);
 
     VoteeHome.menus.add({
         title: 'Students',
-        link: 'votee students',
-        roles: ['authenticated' ],
+        link: 'Students',
+        roles: [ 'student' ],
         menu: 'voteeMain'
     });
 
     VoteeHome.menus.add({
         title: 'Professors',
-        link: 'votee professors',
-        roles: ['authenticated'],
+        link: 'professors',
+        roles: ['professor'],
         menu: 'voteeMain'
     });
 
     // Set views path, template engine and default layout
     app.set('views', __dirname + '/server/views');
+
   
   VoteeHome.aggregateAsset('css', 'voteeHome.css');
     VoteeHome.angularDependencies(['mean.system']);

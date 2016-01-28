@@ -1,3 +1,16 @@
 .voteeHome-example h1 {
   background-color: purple
 }
+
+body{
+    background-color: #EEEEEE;
+}
+
+i.glyphicon {
+    font-size: 2em;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
