@@ -93,14 +93,17 @@ module.exports = function(MeanUser) {
             req.assert('password', 'Password must be between 8-20 characters long').len(8, 20);
             req.assert('username', 'Username cannot be more than 20 characters').len(1, 20);
             req.assert('confirmPassword', 'Passwords do not match').equals(req.body.password);
+            req.assert('roles', 'You must select a user type').notEmpty();
 
             var errors = req.validationErrors();
             if (errors) {
                 return res.status(400).send(errors);
             }
 
-            // Hard coded for now. Will address this with the user permissions system in v0.3.5
-            user.roles = ['authenticated'];
+
+            // Add the selected user role to the list of available roles,
+            // including the 'authenticated' role
+            user.roles.push('authenticated');
             user.save(function(err) {
                 if (err) {
                     switch (err.code) {
@@ -142,7 +145,8 @@ module.exports = function(MeanUser) {
                         user: {
                             name: req.user.name,
                             username: user.username,
-                            email: user.email
+                            email: user.email,
+                            roles: user.roles
                         }
                     });
 
