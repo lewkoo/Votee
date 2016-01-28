@@ -79,8 +79,40 @@ describe('<Unit Test>', function() {
                 });
             });
 
+            it('it should be throwing an error when course title is not provided', function(done){
+                this.timeout(10000);
+                course.title = '';
+
+                return course.save(function(err, data){
+                    expect(err).to.not.be(null);
+                    done();
+                });
+            });
+
+            it('it should be throwing an error when you try to save a cource without a professor', function(done){
+                this.timeout(10000);
+                course.professor = null;
+
+                return course.save(function(err, data){
+                    expect(err).to.not.be(null);
+                    done();
+                });
+            });
+
+
+
         }); // END of Save method tests
 
+        afterEach(function(done) {
+            this.timeout(10000);
+            course.remove(function() {
+                professor.remove();
+                students.forEach(function(entry){
+                   entry.remove();
+                });
+            });
+            done();
+        });
 
     }); // END of Course model tests
 });// END of description of Unit Test Suite
