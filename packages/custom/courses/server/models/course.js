@@ -40,13 +40,13 @@ var CourseSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User',
         required: false
-    }] // this is how you store a collection of Mongoose objects
+    }], // this is how you store a collection of Mongoose objects
 
-    //questions : [Question], // collection of Questions
-
-
-
-
+    questions : [{
+        type: Schema.ObjectId,
+        ref: 'Question',
+        required: false
+    }] // collection of Questions
 });
 
 mongoose.model('Course', CourseSchema);
