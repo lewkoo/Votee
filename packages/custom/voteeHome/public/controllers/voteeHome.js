@@ -8,13 +8,5 @@ angular.module('mean.voteeHome').controller('VoteeHomeController', ['$scope','$s
 	$scope.package = {
 	  name: 'voteeHome'
 	};
-
-    console.log($scope);
-    console.log(VoteeHome);
-    console.log(Global);
-    console.log($location);
-    console.log(MeanUser);
-      console.log($state);
-
   }
 ]);
