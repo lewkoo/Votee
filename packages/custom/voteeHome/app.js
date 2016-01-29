@@ -34,7 +34,7 @@ VoteeHome.register(function(app, auth, database, system) {
 
     VoteeHome.menus.add({
         title: 'Professors',
-        link: 'professors',
+        link: 'Professors',
         roles: ['professor'],
         menu: 'voteeMain'
     });
