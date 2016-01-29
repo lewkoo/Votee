@@ -45,10 +45,12 @@ describe('<Unit Test>', function() {
                 username: 'number1Prof1972',
                 password: 'youshallnotpass'
             });
+            professor.roles.push('professor');
             professor.save();
 
             for (var i = 0; i < 5; i++){
                 var student = generateRandomStudent(i);
+                student.roles.push('student');
                 student.save();
                 students.push(student);
             } // generate 5 students
