@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # --------------------
 # OSX Files
 # --------------------
@@ -65,7 +64,6 @@ tests/results/**
 modules/public/
 modules/views/
 /public/build/
-/packages/contrib/
 /packages/**/**/public/assets/lib
 
 
@@ -99,4 +97,3 @@ public/min/
 public/index.html
 vendor/*
 public/fonts
->>>>>>> e362af9e0ffec2fe388c3d64328d5b02759032c7

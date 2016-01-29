@@ -92,6 +92,7 @@
     "require-dir": "latest",
     "requirejs": "latest",
     "supertest": "latest",
-    "through": "latest"
+    "through": "latest",
+    "mongoose-schema-extend": "latest"
   }
 }
