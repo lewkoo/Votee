@@ -16,7 +16,7 @@ angular.module('mean.voteeHome').config(['$viewPathProvider','$stateProvider',
       //implement professor main page
       $stateProvider.state('Professors', {
           url: '/professors/profile',
-          templateUrl: 'voteeHome/views/test.html'
+          templateUrl: 'voteeHome/views/prof.html'
       });
   }
 ]);
