@@ -21,8 +21,8 @@ module.exports = {
     },
     landingPage: '/',
     facebook: {
-      clientID: 'DEFAULT_APP_ID',
-      clientSecret: 'APP_SECRET',
+      clientID: '1072391942805903',
+      clientSecret: '9bfbf96469e0bb1f1f7b34e50e4f865f',
       callbackURL: 'http://localhost:3000/api/auth/facebook/callback',
       enabled: false
     },

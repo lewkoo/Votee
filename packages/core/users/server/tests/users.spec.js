@@ -9,12 +9,13 @@ var crypto = require('crypto');
  * @todo consider taking out to a common unit testing javascript helper
  * @return string
  */
-function getRandomString(len) {
+var getRandomString = function getRandomString(len) {
   if (!len)
     len = 16;
 
   return crypto.randomBytes(Math.ceil(len / 2)).toString('hex');
-}
+};
+module.exports.getRandomString = getRandomString;
 
 /**
  * Module dependencies.
@@ -213,7 +214,7 @@ describe('<Unit Test>', function() {
         });
       });
 
-    });
+    }); // Method Save description end
 
     // source: http://en.wikipedia.org/wiki/Email_address
     describe('Test Email Validations', function() {
@@ -400,6 +401,11 @@ describe('<Unit Test>', function() {
 
         return _user.save(function(err) {
           expect(_user.name).to.be('&lt;/script&gt;&lt;script&gt;alert(1)&lt;/script&gt;');
+
+          _user.remove(function(){
+            expect(err).to.be(null);
+          });
+
           done();
         });
       });
@@ -411,6 +417,11 @@ describe('<Unit Test>', function() {
 
         return _user.save(function(err) {
           expect(_user.name).to.be('&lt;b&gt;xss&lt;/b&gt;');
+
+          _user.remove(function(){
+            expect(err).to.be(null);
+          });
+
           done();
         });
       });
@@ -419,16 +430,14 @@ describe('<Unit Test>', function() {
 
     after(function(done) {
 
-      /** Clean up user objects
-       * un-necessary as they are cleaned up in each test but kept here
-       * for educational purposes
-       *
-       *  var _user1 = new User(user1);
-       *  var _user2 = new User(user2);
-       *
-       *  _user1.remove();
-       *  _user2.remove();
-       */
+      //Clean up user objects
+      // un-necessary as they are cleaned up in each test but kept here
+      // for educational purposes
+      var _user1 = new User(user1);
+      var _user2 = new User(user2);
+
+      _user1.remove();
+      _user2.remove();
 
       done();
     });
