@@ -1,8 +1,8 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.questions').controller('QuestionsController', ['$scope', 'Global', 'Questions', '$location', 'MeanUser', 'Circles',
-    function($scope, Global, Questions, $location, MeanUser, Circles) {
+angular.module('mean.questions').controller('QuestionsController', ['$scope', '$stateParams', 'Global', 'Questions', '$location', 'MeanUser', 'Circles',
+    function($scope,$stateParams, Global, Questions, $location, MeanUser, Circles) {
         $scope.global = Global;
         $scope.package = {
             name: 'questions'
@@ -29,6 +29,14 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', 'G
         $scope.find = function() {
             Questions.query(function(questions) {
                 $scope.questions = questions;
+            });
+        };
+
+        $scope.findOne = function() {
+            Questions.get({
+                questionId: $stateParams.questionId
+            }, function(question) {
+                $scope.question = question;
             });
         };
 
