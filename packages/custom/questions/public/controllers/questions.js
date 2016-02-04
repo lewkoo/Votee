@@ -40,5 +40,20 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             });
         };
 
+        $scope.create = function(isValid) {
+            if (isValid) {
+                var question = new Questions($scope.article);
+
+                question.$save(function(response) {
+                    $location.path('questions/' + response._id);
+                });
+
+                $scope.question = {};
+
+            } else {
+                $scope.submitted = true;
+            }
+        };
+
     }
 ]);
