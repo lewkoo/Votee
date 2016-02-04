@@ -1,3 +1,7 @@
-<h2>QUESTION GO HERE</h2>
+<section data-ng-controller="QuestionsController" data-ng-init="find()">
+    <h2>TEXT</h2>
+    <ul class="questions unstyled">
 
-
+    </ul>
+    <h1 data-ng-hide="!questions || questions.length">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
+</section>

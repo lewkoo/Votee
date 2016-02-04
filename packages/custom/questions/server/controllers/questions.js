@@ -5,7 +5,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    Article = mongoose.model('Article'),
+    Question = mongoose.model('Question'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -16,7 +16,7 @@ module.exports = function(Questions) {
          * Find question by id
          */
         question: function(req, res, next, id) {
-            Article.load(id, function(err, article) {
+            Question.load(id, function(err, article) {
                 if (err) return next(err);
                 if (!article) return next(new Error('Failed to load article ' + id));
                 req.article = article;
@@ -65,7 +65,7 @@ module.exports = function(Questions) {
                     });
                 }
 
-                Articles.events.publish({
+                Questions.events.publish({
                     action: 'updated',
                     user: {
                         name: req.user.name
@@ -122,7 +122,7 @@ module.exports = function(Questions) {
          * List of Question
          */
         all: function(req, res) {
-            var query = req.acl.query('Questions');
+            var query = req.acl.query('Question');
 
             query.find({}).sort('-created').populate('user', 'name username').exec(function(err, questions) {
                 if (err) {
