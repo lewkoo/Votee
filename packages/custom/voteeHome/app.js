@@ -27,7 +27,7 @@ VoteeHome.register(function(app, auth, database, system) {
     VoteeHome.menus.add({
         title: 'Students',
         link: 'Students',
-        roles: [ 'student' ],
+        roles: [ 'authenticated' ],
         menu: 'voteeMain'
     });
 
@@ -51,7 +51,7 @@ VoteeHome.register(function(app, auth, database, system) {
         roles: ['authenticated, student'],
         menu: 'voteeMain'
     });*/
-    
+
     VoteeHome.menus.add({
         'roles': ['authenticated'],
         'title': 'Articles',

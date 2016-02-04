@@ -3,5 +3,5 @@
     <ul class="questions unstyled">
 
     </ul>
-    <h1 data-ng-hide="!questions || questions.length">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
+    <h1 data-ng-hide="!questions || questions.length || !isAuthorized">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
 </section>

@@ -27,13 +27,13 @@ module.exports = function(Questions) {
          * Create a question
          */
         create: function(req, res) {
-            var question = new Questions(req.body);
+            var question = new Question(req.body);
             question.user = req.user;
 
             question.save(function(err) {
                 if (err) {
                     return res.status(500).json({
-                        error: 'Cannot save the article'
+                        error: 'Cannot save the question'
                     });
                 }
 
@@ -42,7 +42,7 @@ module.exports = function(Questions) {
                     user: {
                         name: req.user.name
                     },
-                    url: config.hostname + '/articles/' + question._id,
+                    url: config.hostname + '/questions/' + question._id,
                     name: question.title
                 });
 
