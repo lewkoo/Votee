@@ -18,8 +18,8 @@ Questions.register(function(app, auth, database) {
 
   //We are adding a link to the main menu for all authenticated users
   Questions.menus.add({
-    title: 'questions example page',
-    link: 'questions example page',
+    title: 'Questions',
+    link: 'all questions',
     roles: ['authenticated'],
     menu: 'main'
   });

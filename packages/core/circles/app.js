@@ -51,6 +51,8 @@ Circles.register(function(app, auth, database) {
   Circles.registerCircle('can edit courses', ['professor']); // professors can edit their course page
   Circles.registerCircle('can view courses', ['authenticated']); // everyone can view courses
 
+  Circles.registerCircle('can create questions', ['professor']);
+  Circles.registerCircle('can delete questions', ['professor']);
   Circles.registerCircle('can view questions', ['authenticated']);
   Circles.registerCircle('can edit questions', ['professor']);
 
