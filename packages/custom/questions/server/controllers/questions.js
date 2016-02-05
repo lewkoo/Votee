@@ -28,7 +28,7 @@ module.exports = function(Questions) {
          */
         create: function(req, res) {
             var question = new Question(req.body);
-            question.user = req.user;
+            question.creator = req.user;
 
             question.save(function(err) {
                 if (err) {

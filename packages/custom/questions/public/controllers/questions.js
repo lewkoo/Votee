@@ -11,12 +11,9 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.isAuthorized = MeanUser.isProfessor;
         //console.log($scope.isAuthorized);
 
-        //default # of questions for prof
-        $scope.numberOfQuestions = 4;
-
         $scope.create = function(isValid) {
             if (isValid) {
-                var question = new Question($scope.question);
+                var question = new Questions($scope.question);
 
                 question.$save(function(response) {
                     $location.path('questions/' + response._id);
@@ -41,21 +38,6 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             }, function(question) {
                 $scope.question = question;
             });
-        };
-
-        $scope.create = function(isValid) {
-            if (isValid) {
-                var question = new Questions($scope.article);
-
-                question.$save(function(response) {
-                    $location.path('questions/' + response._id);
-                });
-
-                $scope.question = {};
-
-            } else {
-                $scope.submitted = true;
-            }
         };
 
     }

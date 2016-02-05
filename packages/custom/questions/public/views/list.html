@@ -1,7 +1,8 @@
 <section data-ng-controller="QuestionsController" data-ng-init="find()">
     <h2>TEXT</h2>
     <ul class="questions unstyled">
-
+        <span>{{question.created | date:'medium'}}</span> /
+        <span>{{question.user.name}}</span>
     </ul>
     <h1 data-ng-hide="!questions || questions.length || !isAuthorized">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
 </section>
