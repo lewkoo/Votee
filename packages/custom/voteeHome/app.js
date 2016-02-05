@@ -27,7 +27,7 @@ VoteeHome.register(function(app, auth, database, system) {
     VoteeHome.menus.add({
         title: 'Students',
         link: 'Students',
-        roles: [ 'student' ],
+        roles: [ 'authenticated' ],
         menu: 'voteeMain'
     });
 
@@ -39,31 +39,32 @@ VoteeHome.register(function(app, auth, database, system) {
     });
 
     VoteeHome.menus.add({
+        title: 'Questions',
+        link: 'Questions',
+        roles: ['authenticated'],
+        menu: 'voteeMain'
+    });
+
+    /*VoteeHome.menus.add({
         title: 'your courses',
         link: 'your courses',
         roles: ['authenticated, student'],
         menu: 'voteeMain'
-    });
+    });*/
 
     VoteeHome.menus.add({
-        title: 'questions example page',
-        link: 'questions example page',
-        roles: ['authenticated, student'],
+        roles: ['authenticated'],
+        title: 'Articles',
+        link: 'all articles',
         menu: 'voteeMain'
     });
 
     VoteeHome.menus.add({
-        'roles': ['authenticated'],
-        'title': 'Articles',
-        'link': 'all articles',
+        roles: ['authenticated'],
+        title: 'Create New Article',
+        link: 'create article',
         menu: 'voteeMain'
-    });
 
-    VoteeHome.menus.add({
-        'roles': ['authenticated'],
-        'title': 'Create New Article',
-        'link': 'create article',
-        menu: 'voteeMain'
     });
     // Set views path, template engine and default layout
     app.set('views', __dirname + '/server/views');

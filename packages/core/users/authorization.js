@@ -46,6 +46,41 @@ exports.requiresAdmin = function(req, res, next) {
 };
 
 /**
+ * Generic require Prof routing middleware
+ * Basic Role checking - future release with full permission system
+ */
+exports.requiresProf = function(req, res, next) {
+    if (!req.isAuthenticated()) {
+        return res.status(401).send('User is not authorized');
+    }
+    findUser(req.user._id, function(user) {
+        if (!user) return res.status(401).send('User is not authorized');
+
+        if (req.user.roles.indexOf('professor') === -1) return res.status(401).send('User is not authorized');
+        req.user = user;
+        next();
+    });
+};
+
+
+/**
+ * Generic require Student routing middleware
+ * Basic Role checking - future release with full permission system
+ */
+exports.requiresStudent = function(req, res, next) {
+    if (!req.isAuthenticated()) {
+        return res.status(401).send('User is not authorized');
+    }
+    findUser(req.user._id, function(user) {
+        if (!user) return res.status(401).send('User is not authorized');
+
+        if (req.user.roles.indexOf('student') === -1) return res.status(401).send('User is not authorized');
+        req.user = user;
+        next();
+    });
+};
+
+/**
  * Generic validates if the first parameter is a mongo ObjectId
  */
 exports.isMongoId = function(req, res, next) {

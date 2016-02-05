@@ -1,9 +1,14 @@
 'use strict';
 
-angular.module('mean.questions').factory('Questions', [
-  function() {
-    return {
-      name: 'questions'
-    };
+//Question service used for articles REST endpoint
+angular.module('mean.questions').factory('Questions', ['$resource',
+  function($resource) {
+    return $resource('api/questions/:questionId', {
+      questionId: '@_id'
+    }, {
+      update: {
+        method: 'PUT'
+      }
+    });
   }
 ]);
