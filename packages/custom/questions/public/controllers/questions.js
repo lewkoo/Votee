@@ -11,6 +11,9 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.isAuthorized = MeanUser.isProfessor;
         //console.log($scope.isAuthorized);
 
+        //default # of questions for prof
+        $scope.numberOfQuestions = 4;
+
         $scope.create = function(isValid) {
             if (isValid) {
                 var question = new Question($scope.question);
