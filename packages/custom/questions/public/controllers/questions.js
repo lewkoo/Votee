@@ -10,6 +10,8 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
         $scope.isAuthorized = MeanUser.isProfessor;
 
+        $scope.availableCircles = [];
+
         Circles.mine(function(acl) {
             $scope.availableCircles = acl.allowed;
             $scope.allDescendants = acl.descendants;

@@ -1,5 +1,14 @@
 <section data-ng-controller="QuestionsController" data-ng-init="find()">
     <ul class="questions unstyled">
+
+        <div class="form-group">
+            <div class="row">
+                <a href="/questions/create">
+                    <button type="create" class="btn btn-info">Create New Question</button>
+                </a>
+            </div>
+        </div>
+
         <li data-ng-repeat="question in questions">
             <span>{{question.created | date:'medium'}}</span> /
             <span>{{question.creator.name}}</span>

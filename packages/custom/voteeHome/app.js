@@ -53,17 +53,18 @@ VoteeHome.register(function(app, auth, database, system) {
     });*/
 
     VoteeHome.menus.add({
-        'roles': ['authenticated'],
-        'title': 'Articles',
-        'link': 'all articles',
+        roles: ['authenticated'],
+        title: 'Articles',
+        link: 'all articles',
         menu: 'voteeMain'
     });
 
     VoteeHome.menus.add({
-        'roles': ['authenticated'],
-        'title': 'Create New Article',
-        'link': 'create article',
+        roles: ['authenticated'],
+        title: 'Create New Article',
+        link: 'create article',
         menu: 'voteeMain'
+
     });
     // Set views path, template engine and default layout
     app.set('views', __dirname + '/server/views');

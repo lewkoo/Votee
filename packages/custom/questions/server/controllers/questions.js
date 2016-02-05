@@ -113,11 +113,11 @@ module.exports = function(Questions) {
                 user: {
                     name: req.user.name
                 },
-                name: req.article.title,
-                url: config.hostname + '/questions/' + req.article._id
+                name: req.question.title,
+                url: config.hostname + '/questions/' + req.question._id
             });
 
-            res.json(req.article);
+            res.json(req.question);
         },
         /**
          * List of Questions
