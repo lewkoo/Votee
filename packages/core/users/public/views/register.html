@@ -31,6 +31,21 @@
             <span class="pic username"></span>
         </div>
 
+        <!-- Taken from: https://docs.angularjs.org/api/ng/input/input%5Bradio%5D -->
+        <!--<div class="input-wrapper">-->
+        <label>Who are you?</label><br/>
+        <label>
+            <input type="radio" type="text" value="student" ng-model="reg.user.roles">
+            I am a Student
+        </label><br/>
+        <label>
+            <input type="radio" type="text" value="professor" ng-model="reg.user.roles">
+            I am a Professor
+        </label><br/><br/>
+        <div class="error_message">Please enter a correct info #</div>
+        <span class="pic roles"></span>
+        <!--</div>-->
+
         <div class="input-wrapper">
             <input required id="password_block" name="password" type="{{reg.input.type}}"
                    placeholder="{{reg.input.placeholder}}" ng-model="reg.user.password">

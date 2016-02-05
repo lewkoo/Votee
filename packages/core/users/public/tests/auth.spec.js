@@ -54,18 +54,28 @@
       it('should login with a correct user and password', function() {
 
         spyOn($rootScope, '$emit');
-        // test expected GET request
-        $httpBackend.when('POST', '/api/login').respond(200, {
+        // test expected POST request
+        $httpBackend.expectGET("/api/users/me").respond(201, '');
+        $httpBackend.expectPOST("/api/login").respond(200, {
           user: 'Fred'
         });
-        scope.login();
+        $httpBackend.expectGET("system/views/index.html").respond(201, '');
+        $httpBackend.expectGET("/api/circles/mine").respond(201, '{"allowed":["anonymous"],"descendants":{"anonymous":[]}}');
+
+        //$httpBackend.when('POST', '/api/login').respond(200, {
+        //  user: 'Fred'
+        //});
+
+        LoginCtrl.login();
+
         $httpBackend.flush();
         // test scope value
         expect($rootScope.user).toEqual('Fred');
         expect($rootScope.$emit).toHaveBeenCalledWith('loggedin');
         expect($location.url()).toEqual('/');
       });
-
+    });
+  });
 
 
       it('should fail to log in ', function() {
@@ -76,7 +86,7 @@
         expect(scope.loginerror).toEqual('Authentication failed.');
 
       });
-    });
+
 
     describe('RegisterCtrl', function() {
       beforeEach(function() {

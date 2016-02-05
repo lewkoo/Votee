@@ -1,0 +1,14 @@
+<section data-ng-controller="QuestionsController" data-ng-init="findOne()">
+  <span>{{question.created | date:'medium'}}</span> /
+  <span>{{question.creator.name}}</span>
+  <h2>{{question.title}}</h2>
+  <div data-ng-if="hasAuthorization(question)">
+    <a class="btn" href="/questions/{{question._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(question);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <!--<div>{{question.content}}</div>-->
+</section>
