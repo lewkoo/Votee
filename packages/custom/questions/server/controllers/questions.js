@@ -16,13 +16,14 @@ module.exports = function(Questions) {
          * Find question by id
          */
         question: function(req, res, next, id) {
-            Question.load(id, function(err, article) {
+            Question.load(id, function(err, question) {
                 if (err) return next(err);
-                if (!article) return next(new Error('Failed to load article ' + id));
-                req.article = article;
+                if (!question) return next(new Error('Failed to load question ' + id));
+                req.question = question;
                 next();
             });
         },
+
         /**
          * Create a question
          */
@@ -113,18 +114,17 @@ module.exports = function(Questions) {
                     name: req.user.name
                 },
                 name: req.article.title,
-                url: config.hostname + '/articles/' + req.article._id
+                url: config.hostname + '/questions/' + req.article._id
             });
 
             res.json(req.article);
         },
         /**
-         * List of Question
+         * List of Questions
          */
         all: function(req, res) {
-            var query = req.acl.query('Question');
 
-            query.find({}).sort('-created').populate('user', 'name username').exec(function(err, questions) {
+            Question.find({}).sort('-created').populate('creator','name username').exec(function(err, questions){
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot list the questions'
@@ -136,4 +136,4 @@ module.exports = function(Questions) {
 
         }
     };
-}
+};

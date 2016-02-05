@@ -9,7 +9,11 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.isAuthorized = MeanUser.isProfessor;
-        //console.log($scope.isAuthorized);
+
+        Circles.mine(function(acl) {
+            $scope.availableCircles = acl.allowed;
+            $scope.allDescendants = acl.descendants;
+        });
 
         $scope.create = function(isValid) {
             if (isValid) {

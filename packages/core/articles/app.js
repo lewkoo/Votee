@@ -18,7 +18,6 @@ Articles.register(function(app, auth, database, circles, swagger) {
 
   Articles.aggregateAsset('css', 'articles.css');
 
-  
   //We are adding a link to the main menu for all authenticated users
   Articles.menus.add({
     'roles': ['authenticated'],

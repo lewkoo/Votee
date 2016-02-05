@@ -27,7 +27,7 @@ module.exports = function(Questions, app, auth) {
     var questions = require('../controllers/questions')(Questions);
 
     app.route('/api/questions')
-        .get(questions.all, auth.requiresLogin)
+        .get(questions.all)
         .post(auth.requiresLogin, hasPermissions, questions.create);
     app.route('/api/questions/:questionsId')
         .get(auth.isMongoId, auth.requiresLogin, questions.show)
