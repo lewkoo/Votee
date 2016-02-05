@@ -506,5 +506,207 @@
         "user": "U0HV1T7F1",
         "text": "i hope thats it",
         "ts": "1453260340.000080"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "what's not included: \n\nprivate channel history and files\ndirect message history and files\nedit and deletion logs",
+        "ts": "1453260360.000081"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> uploaded a file: <https:\/\/4350team.slack.com\/files\/levko\/F0JT8KAEM\/best_comp_4350_team_slack_export_jan_19_2016.zip|Best COMP 4350 team Slack export Jan 19 2016.zip>",
+        "file": {
+            "id": "F0JT8KAEM",
+            "created": 1453260376,
+            "timestamp": 1453260376,
+            "name": "Best COMP 4350 team Slack export Jan 19 2016.zip",
+            "title": "Best COMP 4350 team Slack export Jan 19 2016.zip",
+            "mimetype": "application\/zip",
+            "filetype": "zip",
+            "pretty_type": "Zip",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 19739,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0JT8KAEM\/best_comp_4350_team_slack_export_jan_19_2016.zip?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0JT8KAEM\/download\/best_comp_4350_team_slack_export_jan_19_2016.zip?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0JT8KAEM\/best_comp_4350_team_slack_export_jan_19_2016.zip",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0JT8KAEM-053d7d5b36",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1453260376.000082"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "done",
+        "ts": "1453260380.000083"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I love Slack",
+        "ts": "1453260385.000084"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so fast and easy...",
+        "ts": "1453260389.000085"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i love giphy",
+        "ts": "1453260398.000086"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "lol",
+        "ts": "1453260400.000087"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "\/giphy oh yeah?",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/the-simpsons-9pJGnQowaIrOU>",
+                "image_url": "http:\/\/media0.giphy.com\/media\/9pJGnQowaIrOU\/giphy.gif",
+                "image_width": 245,
+                "image_height": 245,
+                "image_bytes": 450038,
+                "title": "oh yeah?",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/the-simpsons-9pJGnQowaIrOU"
+            }
+        ],
+        "ts": "1453260410.000088"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "favorite feature :joy:",
+        "ts": "1453260417.000089"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "its in json too :simple_smile:",
+        "ts": "1453260588.000090"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Here is the submission doc. Please, look at it and verify if everything is correct. \n\n<https:\/\/www.dropbox.com\/s\/98g94vuf8x5fnwc\/Iteration%200%20submission.pdf?dl=0>",
+        "ts": "1453269435.000091"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> shared a file: <https:\/\/4350team.slack.com\/files\/levko\/F0JTAUCMT\/iteration_0_submission.pdf|Iteration 0 submission.pdf>",
+        "file": {
+            "id": "F0JTAUCMT",
+            "created": 1453269437,
+            "timestamp": 1453269437,
+            "name": "Iteration 0 submission.pdf",
+            "title": "Iteration 0 submission.pdf",
+            "mimetype": "application\/pdf",
+            "filetype": "pdf",
+            "pretty_type": "PDF",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 18641,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "dropbox",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/www.dropbox.com\/s\/98g94vuf8x5fnwc\/Iteration%200%20submission.pdf?dl=0",
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0JTAUCMT\/iteration_0_submission.pdf",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1453269437.000092"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I have submitted it as a precaution",
+        "ts": "1453269488.000093"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I have also verified access to both GitHub and Trello from an anonymous browser window - all is good there",
+        "ts": "1453269555.000094"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "Looks good to me",
+        "ts": "1453269985.000095"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok cool. is there anything missing anywhere or are we all good for I0?",
+        "ts": "1453270128.000096"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "Just need everyone to check over the stories, I guess",
+        "ts": "1453270346.000097"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "looks good from what I can see, Im sure we can add small details later if need be",
+        "ts": "1453270491.000098"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Looks good to me, good job guys!",
+        "ts": "1453273081.000099"
     }
 ]
