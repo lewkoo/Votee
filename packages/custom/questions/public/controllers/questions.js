@@ -67,5 +67,23 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             }
         };
 
+        $scope.remove = function(question) {
+            console.log(question);
+            if (question) {
+                question.$remove(function(response) {
+                    for (var i in $scope.questions) {
+                        if ($scope.questions[i] === article) {
+                            $scope.questions.splice(i, 1);
+                        }
+                    }
+                    $location.path('questions');
+                });
+            } else {
+                $scope.article.$remove(function(response) {
+                    $location.path('questions');
+                });
+            }
+        };
+
     }
 ]);

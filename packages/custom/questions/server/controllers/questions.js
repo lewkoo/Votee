@@ -62,7 +62,7 @@ module.exports = function(Questions) {
             question.save(function(err) {
                 if (err) {
                     return res.status(500).json({
-                        error: 'Cannot update the article'
+                        error: 'Cannot update the question'
                     });
                 }
 
@@ -82,25 +82,25 @@ module.exports = function(Questions) {
          * Delete an article
          */
         destroy: function(req, res) {
-            var article = req.article;
+            var question = req.question;
 
 
-            article.remove(function(err) {
+            question.remove(function(err) {
                 if (err) {
                     return res.status(500).json({
-                        error: 'Cannot delete the article'
+                        error: 'Cannot delete the question'
                     });
                 }
 
-                Articles.events.publish({
+                Questions.events.publish({
                     action: 'deleted',
                     user: {
                         name: req.user.name
                     },
-                    name: article.title
+                    name: question.title
                 });
 
-                res.json(article);
+                res.json(question);
             });
         },
         /**
