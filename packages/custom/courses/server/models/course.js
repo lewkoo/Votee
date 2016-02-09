@@ -13,12 +13,18 @@ var mongoose = require('mongoose'),
  */
 var CourseSchema = new Schema({
 
-    created: {
+    created: { // the date a course was created
         type: Date,
         default: Date.now
     },
 
-    title: {
+    courseNumber: { // specifies
+        type: Number,
+        required: true,
+        unique: true
+    },
+
+    title: { // course title
         type: String,
         required: true,
         trim: true
