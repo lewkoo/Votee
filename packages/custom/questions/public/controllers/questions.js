@@ -15,6 +15,8 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         //$scope.isAuthorized = MeanUser.isProfessor;
 
         $scope.availableCircles = [];
+        //store options text in the array
+        $scope.optionsText = [];
 
         Circles.mine(function(acl) {
             $scope.availableCircles = acl.allowed;

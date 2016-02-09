@@ -38,7 +38,7 @@
             <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option1.$invalid }">
                 <label class="col-md-3 control-label">Option 1</label>
                 <div class="col-md-9">
-                    <input name="option1" type="text" class="form-control" data-ng-model="question.option1" id="option1" placeholder="Write question here" required>
+                    <input name="option1" type="text" class="form-control" data-ng-model="question.options[0]" id="option1" placeholder="Write question here" required>
                     <div ng-show="submitted && questionForm.option1.$invalid" class="help-block">
                         <p ng-show="questionForm.option1.$error.required">Question is required</p>
                     </div>
@@ -48,7 +48,7 @@
             <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option2.$invalid }">
                 <label class="col-md-3 control-label">Option 2</label>
                 <div class="col-md-9">
-                    <input name="option2" type="text" class="form-control" data-ng-model="question.option2" id="option2" placeholder="Write question here" required>
+                    <input name="option2" type="text" class="form-control" data-ng-model="question.options[1]" id="option2" placeholder="Write question here" required>
                     <div ng-show="submitted && questionForm.option2.$invalid" class="help-block">
                         <p ng-show="questionForm.option2.$error.required">Question is required</p>
                     </div>
@@ -58,7 +58,7 @@
             <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option3.$invalid }">
                 <label class="col-md-3 control-label">Option 3</label>
                 <div class="col-md-9">
-                    <input name="option3" type="text" class="form-control" data-ng-model="question.option3" id="option3" placeholder="Write question here" required>
+                    <input name="option3" type="text" class="form-control" data-ng-model="question.options[2]" id="option3" placeholder="Write question here" required>
                     <div ng-show="submitted && questionForm.option3.$invalid" class="help-block">
                         <p ng-show="questionForm.option3.$error.required">Question is required</p>
                     </div>
@@ -68,7 +68,7 @@
             <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option4.$invalid }">
                 <label class="col-md-3 control-label">Option 4</label>
                 <div class="col-md-9">
-                    <input name="option4" type="text" class="form-control" data-ng-model="question.option4" id="option4" placeholder="Write question here" required>
+                    <input name="option4" type="text" class="form-control" data-ng-model="question.options[3]" id="option4" placeholder="Write question here" required>
                     <div ng-show="submitted && questionForm.option4.$invalid" class="help-block">
                         <p ng-show="questionForm.option4.$error.required">Question is required</p>
                     </div>

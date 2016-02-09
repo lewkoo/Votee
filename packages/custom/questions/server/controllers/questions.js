@@ -29,7 +29,12 @@ module.exports = function(Questions) {
          */
         create: function(req, res) {
             var question = new Question(req.body);
+
+            //fill up the model with data from request
             question.creator = req.user;
+            question.type = "MULTIPLE-CHOICE";
+            question.answer = req.body.correctAnswer;
+            question.options = req.body.options;
 
             question.save(function(err) {
                 if (err) {

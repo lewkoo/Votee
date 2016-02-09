@@ -42,10 +42,21 @@ var QuestionSchema = new Schema({
         required: false
     }],
 
+    answer: {
+        type: String,
+        required: false,
+        trim: true
+    },
+
     creator: {
         type: Schema.ObjectId,
         ref: 'User',
         required: true
+    },
+
+    options: {
+        type: Object,
+        required: false
     }
 
 });
