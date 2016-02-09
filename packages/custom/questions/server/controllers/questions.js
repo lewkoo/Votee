@@ -51,7 +51,7 @@ module.exports = function(Questions) {
             });
         },
         /**
-         * Update an article
+         * Update question
          */
         update: function(req, res) {
             var question = req.question;
@@ -79,7 +79,7 @@ module.exports = function(Questions) {
             });
         },
         /**
-         * Delete an article
+         * Delete a question
          */
         destroy: function(req, res) {
             var question = req.question;
