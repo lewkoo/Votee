@@ -1,0 +1,15 @@
+<section data-ng-controller="QuestionsController" data-ng-init="findOne()">
+    <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="update(questionForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.title.$invalid }">
+            <label for="title" class="col-md-2 control-label">Title</label>
+            <div class="col-md-10">
+                <input name="title" type="text" class="form-control" data-ng-model="question.title" id="title" placeholder="Title" required>
+                <div ng-show="submitted && questionForm.title.$invalid" class="help-block">
+                    <p ng-show="questionForm.title.$error.required">Title is required</p>
+                </div>
+            </div>
+
+        </div>
+
+    </form>
+</section>
