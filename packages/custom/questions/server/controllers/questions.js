@@ -54,12 +54,12 @@ module.exports = function(Questions) {
          * Update an article
          */
         update: function(req, res) {
-            var article = req.article;
+            var question = req.question;
 
-            article = _.extend(article, req.body);
+            question = _.extend(question, req.body);
 
 
-            article.save(function(err) {
+            question.save(function(err) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot update the article'
@@ -71,11 +71,11 @@ module.exports = function(Questions) {
                     user: {
                         name: req.user.name
                     },
-                    name: article.title,
-                    url: config.hostname + '/articles/' + article._id
+                    name: question.title,
+                    url: config.hostname + '/questions/' + question._id
                 });
 
-                res.json(article);
+                res.json(question);
             });
         },
         /**

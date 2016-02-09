@@ -8,7 +8,11 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             name: 'questions'
         };
 
-        $scope.isAuthorized = MeanUser.isProfessor;
+        $scope.hasAuthorization = function(question) {
+            return MeanUser.isProfessor;
+        };
+
+        //$scope.isAuthorized = MeanUser.isProfessor;
 
         $scope.availableCircles = [];
 
@@ -44,6 +48,23 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             }, function(question) {
                 $scope.question = question;
             });
+        };
+
+        $scope.update = function(isValid) {
+            if (isValid) {
+                var question = $scope.question;
+                console.log(question);
+                if (!question.updated) {
+                    question.updated = [];
+                }
+                question.updated.push(new Date().getTime());
+
+                question.$update(function() {
+                    $location.path('questions/' + question._id);
+                });
+            } else {
+                $scope.submitted = true;
+            }
         };
 
     }

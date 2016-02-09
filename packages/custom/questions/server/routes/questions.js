@@ -2,7 +2,7 @@
 
 // Question authorization helper for profs
 var hasAuthorization = function(req, res, next) {
-    if (!req.question.user._id.equals(req.user._id)) {
+    if (!req.question.creator._id.equals(req.user._id)) {
         return res.status(401).send('User is not authorized');
     }
     next();
