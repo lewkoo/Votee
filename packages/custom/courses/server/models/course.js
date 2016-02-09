@@ -36,7 +36,7 @@ var CourseSchema = new Schema({
         trim: true
     },
 
-    professor: {
+    professor: { // TODO: perhaps, we should allow multiple professors into a course?
         type: Schema.ObjectId,
         ref: 'User',
         required: true
@@ -46,13 +46,14 @@ var CourseSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User',
         required: false
-    }], // this is how you store a collection of Mongoose objects
+    }], // collection of Students
 
     questions : [{
         type: Schema.ObjectId,
         ref: 'Question',
         required: false
     }] // collection of Questions
+
 });
 
 mongoose.model('Course', CourseSchema);
