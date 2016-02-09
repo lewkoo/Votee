@@ -8,7 +8,7 @@
  * Module dependencies.
  */
 var mongoose = require('mongoose'),
-    Question = mongoose.model('Course'),
+    Course = mongoose.model('Course'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -16,7 +16,14 @@ module.exports = function(Courses) {
 
     return{
 
-
+        course: function(req, res, next, id) {
+            Course.load(id, function(err, course){
+                if (err) return next(err);
+                if (!course) return next(new Error('Failed to load course ' + id));
+                req.course = course;
+                next();
+            });
+        }
 
     }; // END of return
 

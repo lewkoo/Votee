@@ -4,13 +4,19 @@
 'use strict';
 
 /**
- * Module dependencies.
+ * Model module dependencies.
  */
 
 var expect = require('expect.js'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Course = mongoose.model('Course');
+
+/**
+ * Controller module dependencies.
+ */
+var coursesController = require('Courses');
+
 
 /**
  * Globals
@@ -35,27 +41,30 @@ var generateRandomStudent = function generateRandomStudent(studentSequenceNumber
 
 };
 
+function generateProfsAndStudents() {
+    professor = new User({
+        name: 'Some professor',
+        email: 'prof@university.ca',
+        username: 'number1Prof1972',
+        password: 'youshallnotpass'
+    });
+    professor.roles.push('professor');
+    professor.save();
+
+    for (var i = 0; i < 5; i++) {
+        var student = generateRandomStudent(i);
+        student.roles.push('student');
+        student.save();
+        students.push(student);
+    } // generate 5 students
+
+}
 describe('<Unit Test>', function () {
     describe('Model Course:', function () {
         beforeEach(function (done) {
             this.timeout(10000);
 
-            professor = new User({
-                name: 'Some professor',
-                email: 'prof@university.ca',
-                username: 'number1Prof1972',
-                password: 'youshallnotpass'
-            });
-            professor.roles.push('professor');
-            professor.save();
-
-            for (var i = 0; i < 5; i++) {
-                var student = generateRandomStudent(i);
-                student.roles.push('student');
-                student.save();
-                students.push(student);
-            } // generate 5 students
-
+            generateProfsAndStudents();
 
             course = new Course({
                 title: 'Test Course 1',
@@ -64,7 +73,6 @@ describe('<Unit Test>', function () {
                 professor: professor,
                 students: students
             });
-
 
             course_2 = new Course({
                 title: 'Test Course 2',
@@ -161,4 +169,38 @@ describe('<Unit Test>', function () {
         });
 
     }); // END of Course model tests
+
+    describe('Controller Course:', function() {
+        beforeEach(function (done) {
+            this.timeout(10000);
+            generateProfsAndStudents();
+
+            course = new Course({
+                title: 'Test Course 1',
+                courseNumber: 4350,
+                description: 'This is a test 1',
+                professor: professor,
+                students: students
+            });
+
+            // ave that course in the testing DB
+            course.save();
+
+            done();
+        });
+
+
+        afterEach(function (done) {
+            this.timeout(10000);
+            course.remove(function () {
+                professor.remove();
+                students.forEach(function (entry) {
+                    entry.remove();
+                });
+            });
+            done();
+        });
+
+    }); // END of Course controller tests
+
 });// END of description of Unit Test Suite;
