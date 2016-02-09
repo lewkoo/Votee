@@ -37,6 +37,7 @@
     "lodash": "latest",
     "meanio": "latest",
     "mongoose": "latest",
+    "mongoose-schema-extend": "latest",
     "morgan": "latest",
     "ms": "latest",
     "nodemailer": "latest",

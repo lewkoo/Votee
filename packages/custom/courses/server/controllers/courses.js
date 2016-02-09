@@ -23,6 +23,24 @@ module.exports = function(Courses) {
                 req.course = course;
                 next();
             });
+        },
+
+        /**
+         * List of Courses
+         */
+
+        all: function(req, res) {
+
+            Course.find({}).sort('-created').populate('creator','name username').exec(function(err, courses){
+                if (err) {
+                    return res.status(500).json({
+                        error: 'Cannot list the courses'
+                    });
+                }
+
+                res.json(courses)
+            });
+
         }
 
     }; // END of return

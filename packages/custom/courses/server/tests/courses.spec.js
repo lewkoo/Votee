@@ -8,6 +8,7 @@
  */
 
 var expect = require('expect.js'),
+    request = require('supertest'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Course = mongoose.model('Course');
@@ -24,6 +25,8 @@ var coursesController = require('Courses');
 var professor;
 var students = [];
 var course;
+var course_id;
+
 var course_2;
 
 /**
@@ -88,7 +91,6 @@ describe('<Unit Test>', function () {
         describe('Method Save', function () {
 
             it('it should be able to save a course without problems', function (done) {
-                this.timeout(10000)
                 this.timeout(10000);
 
                 return course.save(function (err, data) {
@@ -186,9 +188,19 @@ describe('<Unit Test>', function () {
             // ave that course in the testing DB
             course.save();
 
+            course_id = course.id();
+
             done();
         });
 
+        describe('Testing the GET methods', function () {
+
+            it('it should be able to get the list of courses', function (done) {
+                request(app).get('')
+
+            });
+
+        });
 
         afterEach(function (done) {
             this.timeout(10000);
