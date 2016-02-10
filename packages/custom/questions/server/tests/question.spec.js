@@ -34,7 +34,9 @@ describe('<Unit Test>', function() {
             question = new Question({
                 title: 'Test question',
                 description: 'This is a question that has nothing to do with the course material',
-                creator: professor
+                creator: professor,
+                options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
+                answer: "Option3"
             });
 
             done();
@@ -50,6 +52,8 @@ describe('<Unit Test>', function() {
                     expect(data.title).to.equal('Test question');
                     expect(data.description).to.equal('This is a question that has nothing to do with the course material');
                     expect(data.creator).to.not.equal(null);
+                    expect(data.answer).to.equal('Option3');
+                    expect(data.options).to.not.equal(null);
                     expect(data.type).to.equal('MULTIPLE-CHOICE');
                     expect(data.answers.length).to.equal(0);
                     expect(data.created.length).to.not.equal(0);
@@ -84,6 +88,28 @@ describe('<Unit Test>', function() {
 
                 return question.save(function(err, data){
                     expect(err).to.not.be(null);
+                    done();
+                });
+            });
+
+            it('it should reject a null options', function(done){
+
+                this.timeout(10000);
+                question.options = null;
+
+                return question.save(function(err, data){
+                    expect(err).to.be(null);
+                    done();
+                });
+            });
+
+            it('it should reject a null answer', function(done){
+
+                this.timeout(10000);
+                question.answer = null;
+
+                return question.save(function(err, data){
+                    expect(err).to.be(null);
                     done();
                 });
             });
