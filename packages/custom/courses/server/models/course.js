@@ -56,4 +56,20 @@ var CourseSchema = new Schema({
 
 });
 
+/**
+ * Validations
+ */
+CourseSchema.path('title').validate(function(title) {
+    return !!title;
+}, 'Title cannot be blank');
+
+/**
+ * Statics
+ */
+CourseSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    })
+};
+
 mongoose.model('Course', CourseSchema);

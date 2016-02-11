@@ -89,11 +89,13 @@
     "karma-requirejs": "latest",
     "karma-script-launcher": "latest",
     "mocha": "latest",
+    "mongoose-schema-extend": "latest",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",
+    "should": "^8.2.2",
+    "should-http": "0.0.4",
     "supertest": "latest",
-    "through": "latest",
-    "mongoose-schema-extend": "latest"
+    "through": "latest"
   }
 }

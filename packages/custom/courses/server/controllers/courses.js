@@ -15,7 +15,9 @@ var mongoose = require('mongoose'),
 module.exports = function(Courses) {
 
     return{
-
+        /**
+         * Find course by id
+         */
         course: function(req, res, next, id) {
             Course.load(id, function(err, course){
                 if (err) return next(err);
@@ -24,11 +26,39 @@ module.exports = function(Courses) {
                 next();
             });
         },
+
+        /**
+         * Create a question
+         */
+        create: function(req, res) {
+            console.log("New Course received!");
+            var course = new Course(req.body);
+
+            course.save(function(err) {
+                if (err) {
+                    return res.status(500).json({
+                        error: 'Cannot save the course'
+                    });
+                }
+
+                Courses.events.publish({
+                    action: 'created',
+                    user: {
+                        name: req.user.name
+                    },
+                    url: config.hostname + '/courses/' + course._id,
+                    name: course.title
+                });
+
+                res.json(course);
+            });
+        },
+
         /**
          * Show a course
          */
         show: function(req, res) {
-
+            console.log("Request received!");
             Courses.events.publish({
                 action: 'viewed',
                 user: {
