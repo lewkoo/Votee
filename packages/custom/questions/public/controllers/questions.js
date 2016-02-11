@@ -18,6 +18,13 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         //store options text in the array
         $scope.optionsText = [];
 
+        //$scope.setSelected = function(selected) {
+        //    console.log(selected);
+        //    $scope.selected = selected;
+        //}
+
+        $scope.selectedAnswer ;
+
         Circles.mine(function(acl) {
             $scope.availableCircles = acl.allowed;
             $scope.allDescendants = acl.descendants;
@@ -86,6 +93,10 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 });
             }
         };
+
+        $scope.submitAnswer = function(form){
+            console.log(form)
+        }
 
     }
 ]);

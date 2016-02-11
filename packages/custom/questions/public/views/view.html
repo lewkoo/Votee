@@ -4,13 +4,38 @@
 
     <h2>{{question.title}}</h2>
 
+    <!--<div>{{question.content}}</div>-->
+    <!--TODO: add error chekcing to the form-->
+    <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="submitAnswer(selectedAnswer)"
+          novalidate>
+
+        <h3>Select your answer below: </h3>
+        <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
+        <div ng-repeat="option in question.options">
+            <label>{{option}}
+                <input type="radio" ng-model="$parent.selectedAnswer" name="name" value="{{$index}}"/>
+            </label>
+        </div>
+
+        <!--<h2>{{selectedAnswer}}</h2>-->
+
+        <!--TODO: use bootstrap to make layout better..-->
+        <br/>
+        <button type="submit" class="btn btn-info">Vote!</button>
+        <br/><br/>
+
+    </form>
+
+
     <div data-ng-if="hasAuthorization(question)">
+
         <a class="btn" href="/questions/{{question._id}}/edit">
             <i class="glyphicon glyphicon-edit"></i>
+            <p>Edit</p>
         </a>
         <a class="btn" data-ng-click="remove(question);">
             <i class="glyphicon glyphicon-trash"></i>
+            <p>Delete</p>
         </a>
     </div>
-    <!--<div>{{question.content}}</div>-->
 </section>
