@@ -31,8 +31,8 @@ module.exports = function(Courses, app, auth, database) {
       .post(auth.requiresLogin, hasPermissions, courses.create);
   app.route('/api/courses/:courseId')
       .get(auth.isMongoId, courses.show)
-      .put(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, courses.update)
-      .delete(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, courses.destroy);
+      //.put(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, courses.update)
+      //.delete(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, courses.destroy);
 
   // Finish with setting up the articleId param
   app.param('courseId', courses.course);

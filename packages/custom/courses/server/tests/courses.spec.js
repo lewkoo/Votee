@@ -185,7 +185,7 @@ describe('<Unit Test>', function () {
             done();
         });
 
-        describe('Testing the GET methods', function () {
+        describe('Testing the GET routes', function () {
 
             it('it should be able to get the list of courses', function (done) {
                 // prepare the request
@@ -208,6 +208,34 @@ describe('<Unit Test>', function () {
 
                 done();
             });
+
+            it('it should be able to get a single course fine', function (done){
+
+                // prepare the request - note the different route from the previous test!
+                request(courses).get('/api/courses/' + course.id) // request route - look for routes/courses.js
+                    .set('Accept', 'application/json')// request type - in this case, we want a JSON
+                    .expect('Content-Type', /json/) // specify the format to be JSON
+                    .expect(200) // specify the response code
+                    .end(function (err, res) { // perform this code when the request goes through
+
+                        res.body.should.be.an.Object.and.have.property('title', course.title);
+                        res.body.should.have.property('title', course.title);
+                        res.body.should.have.property('courseNumber', course.courseNumber);
+                        res.body.should.have.property('description', course.description);
+                        res.body.should.have.property('professor', course.professor);
+                        res.body.should.have.property('students', course.students).and.should.be.an.Array.and.have.lengthOf(5);
+                        res.body.should.have.property('questions', course.questions).and.should.be.an.Array.and.have.lengthOf(0);
+
+                    });
+
+                done();
+            });
+
+        });
+
+        describe('Testing the POST routes', function () {
+
+            
 
         });
 

@@ -24,7 +24,22 @@ module.exports = function(Courses) {
                 next();
             });
         },
+        /**
+         * Show a course
+         */
+        show: function(req, res) {
 
+            Courses.events.publish({
+                action: 'viewed',
+                user: {
+                    name: req.user.name
+                },
+                name: req.course.title,
+                url: config.hostname + '/courses/' + req.course._id
+            });
+
+            res.json(req.course);
+        },
         /**
          * List of Courses
          */
