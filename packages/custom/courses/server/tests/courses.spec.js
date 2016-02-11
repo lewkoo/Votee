@@ -11,13 +11,8 @@ var expect = require('expect.js'),
     request = require('supertest'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
-    Course = mongoose.model('Course');
-
-/**
- * Controller module dependencies.
- */
-var coursesController = require('Courses');
-
+    Course = mongoose.model('Course'),
+    courses = require('../controllers/courses.js'); // here is how you include a controller
 
 /**
  * Globals
@@ -25,8 +20,6 @@ var coursesController = require('Courses');
 var professor;
 var students = [];
 var course;
-var course_id;
-
 var course_2;
 
 /**
@@ -51,6 +44,7 @@ function generateProfsAndStudents() {
         username: 'number1Prof1972',
         password: 'youshallnotpass'
     });
+
     professor.roles.push('professor');
     professor.save();
 
@@ -172,7 +166,7 @@ describe('<Unit Test>', function () {
 
     }); // END of Course model tests
 
-    describe('Controller Course:', function() {
+    describe('Controller Course:', function () {
         beforeEach(function (done) {
             this.timeout(10000);
             generateProfsAndStudents();
@@ -188,16 +182,31 @@ describe('<Unit Test>', function () {
             // ave that course in the testing DB
             course.save();
 
-            course_id = course.id();
-
             done();
         });
 
         describe('Testing the GET methods', function () {
 
             it('it should be able to get the list of courses', function (done) {
-                request(app).get('')
+                // prepare the request
+                request(courses).get('/api/courses/') // request route - look for routes/courses.js
+                    .set('Accept', 'application/json')// request type - in this case, we want a JSON
+                    .expect('Content-Type', /json/) // specify the format to be JSON
+                    .expect(200) // specify the response code
+                    .end(function (err, res) { // perform this code when the request goes through
 
+                        // Perform validations, baby!
+                        res.body.should.be.an.Array.and.have.lengthOf(1);
+                        res.body[0].should.have.property('title', course.title);
+                        res.body[0].should.have.property('courseNumber', course.courseNumber);
+                        res.body[0].should.have.property('description', course.description);
+                        res.body[0].should.have.property('professor', course.professor);
+                        res.body[0].should.have.property('students', course.students).and.should.be.an.Array.and.have.lengthOf(5);
+                        res.body[0].should.have.property('questions', course.questions).and.should.be.an.Array.and.have.lengthOf(0);
+
+                    });
+
+                done();
             });
 
         });
