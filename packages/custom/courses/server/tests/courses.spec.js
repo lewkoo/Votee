@@ -9,6 +9,7 @@
 
 var expect = require('expect.js'),
     request = require('supertest'),
+    should = require('should'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Course = mongoose.model('Course'),
@@ -40,6 +41,7 @@ var generateRandomStudent = function generateRandomStudent(studentSequenceNumber
 };
 
 function generateProfsAndStudents() {
+
     professor = new User({
         name: 'Some professor',
         email: 'prof@university.ca',
@@ -59,6 +61,7 @@ function generateProfsAndStudents() {
 
 }
 describe('<Unit Test>', function () {
+
     describe('Model Course:', function () {
         beforeEach(function (done) {
             this.timeout(10000);
@@ -154,6 +157,8 @@ describe('<Unit Test>', function () {
                 students.forEach(function (entry) {
                     entry.remove();
                 });
+                // clear the array
+                students.splice(0,students.length);
             });
 
             course_2.remove(function () {
@@ -161,9 +166,12 @@ describe('<Unit Test>', function () {
                 students.forEach(function (entry) {
                     entry.remove();
                 });
+
+                // clear the array
+                students.splice(0,students.length);
+                done();
             });
 
-            done();
         });
 
     }); // END of Course model tests
@@ -171,6 +179,7 @@ describe('<Unit Test>', function () {
     describe('Controller Course:', function () {
         beforeEach(function (done) {
             this.timeout(10000);
+
             generateProfsAndStudents();
 
             course = new Course({
@@ -181,7 +190,7 @@ describe('<Unit Test>', function () {
                 students: students
             });
 
-            // ave that course in the testing DB
+            // save that course in the testing DB
             course.save();
 
             done();
@@ -201,25 +210,13 @@ describe('<Unit Test>', function () {
                     .end(function (err, res) { // perform this code when the request goes through
 
                         // Perform validations, baby!
-                        expect(err).to.be(null);
-                        expect(res.body).to.not.be(null);
-                        expect(res.body.length).to.be(1);
-                        expect(res.body[0].title).to.equal(course.title);
-                        expect(res.body[0].courseNumber).to.equal(course.courseNumber);
-                        expect(res.body[0].description).to.equal(course.description);
-                        expect(res.body[0].professor).to.equal(course.professor.id);
-                        expect(res.body[0].students).to.be.an('array');
-                        expect(res.body[0].students.length).to.be(5);
-
-
-                        /**res.body.should.be.an.Array.and.have.lengthOf(1);
+                        res.body.should.be.type('object');
                         res.body[0].should.have.property('title', course.title);
                         res.body[0].should.have.property('courseNumber', course.courseNumber);
                         res.body[0].should.have.property('description', course.description);
-                        res.body[0].should.have.property('professor', course.professor);
-                        res.body[0].should.have.property('students', course.students).and.should.be.an.Array.and.have.lengthOf(5);
-                        res.body[0].should.have.property('questions', course.questions).and.should.be.an.Array.and.have.lengthOf(0);
-                        */
+                        res.body[0].should.have.property('professor', course.professor.id);
+                        res.body[0].should.have.property('students').and.have.lengthOf(5);
+                        res.body[0].should.have.property('questions').and.have.lengthOf(0);
 
                         done();
 
@@ -233,7 +230,7 @@ describe('<Unit Test>', function () {
                 this.timeout(10000);
 
                 // prepare the request - note the different route from the previous test!
-                /**server.get('/api/courses/' + course._id) // request route - look for routes/courses.js
+                server.get('/api/courses/' + course._id) // request route - look for routes/courses.js
                     .set('Accept', 'application/json')// request type - in this case, we want a JSON
                     .expect('Content-Type', /json/) // specify the format to be JSON
                     .expect(200) // specify the response code
@@ -243,18 +240,13 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('title', course.title);
                         res.body.should.have.property('courseNumber', course.courseNumber);
                         res.body.should.have.property('description', course.description);
-                        res.body.should.have.property('professor', course.professor);
-                        res.body.should.have.property('students', course.students).and.should.be.an.Array.and.have.lengthOf(5);
-                        res.body.should.have.property('questions', course.questions).and.should.be.an.Array.and.have.lengthOf(0);
+                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('students').and.have.lengthOf(5);
+                        res.body.should.have.property('questions').and.have.lengthOf(0);
 
                         done();
 
                     });
-                */
-
-                done();
-
-
             });
 
         });
@@ -307,11 +299,15 @@ describe('<Unit Test>', function () {
             this.timeout(10000);
             course.remove(function () {
                 professor.remove();
-                students.forEach(function (entry) {
-                    entry.remove();
+                students.forEach(function (student) {
+                    student.remove();
                 });
+                // clear the array
+                students.splice(0,students.length);
+                done();
             });
-            done();
+
+
         });
 
     }); // END of Course controller tests
