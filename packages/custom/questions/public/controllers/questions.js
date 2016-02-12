@@ -81,14 +81,14 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             if (question) {
                 question.$remove(function(response) {
                     for (var i in $scope.questions) {
-                        if ($scope.questions[i] === article) {
+                        if ($scope.questions[i] === question) {
                             $scope.questions.splice(i, 1);
                         }
                     }
                     $location.path('questions');
                 });
             } else {
-                $scope.article.$remove(function(response) {
+                $scope.question.$remove(function(response) {
                     $location.path('questions');
                 });
             }
