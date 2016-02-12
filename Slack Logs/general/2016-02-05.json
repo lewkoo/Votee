@@ -1,0 +1,66 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "do you have a scanned version of this?",
+        "ts": "1454687874.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Jessica, I suggest you commit it to the master. make a folder for it though, as specified by Hadi",
+        "ts": "1454687927.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "ya for sure, I will! I was going to scan it and commit, just wanted to see what you guys thought of it first",
+        "ts": "1454688020.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "push straight to master :simple_smile:",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1454688691.000000"
+        },
+        "ts": "1454688687.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "How do you run the tests?",
+        "ts": "1454693612.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "npm test",
+        "ts": "1454693660.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "Cool, thanks.",
+        "ts": "1454693713.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or gulp test",
+        "ts": "1454693905.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "gulp test is better because it also takes into account your environment settings",
+        "ts": "1454693939.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "Also, thanks to you two for getting everything set up, and for all the work you've put into it so far!\nI had more trouble getting things set up than I expected, but I'll be doing much more work in the upcoming iterations... in the mean time, is there anything I need to work on now?",
+        "ts": "1454694313.000013"
+    }
+]

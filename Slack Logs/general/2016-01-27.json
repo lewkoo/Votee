@@ -1,0 +1,21 @@
+[
+    {
+        "type": "message",
+        "user": "USLACKBOT",
+        "text": "Reminder: start working on iteration.",
+        "ts": "1453945425.000003"
+    },
+    {
+        "text": "set up a reminder to \u201cAnother day to work on Votee! Vote on!\u201d in this channel at 8:14am today, Central Standard Time. ",
+        "type": "message",
+        "subtype": "reminder_add",
+        "user": "U0HV1T7F1",
+        "ts": "1453961654.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Yeah I'm gonna get going into this tomorrow I've been pretty busy so far this week unfortunately ",
+        "ts": "1453964218.000002"
+    }
+]

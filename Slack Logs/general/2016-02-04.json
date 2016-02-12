@@ -1,0 +1,167 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Did anyone do the diagram yet?",
+        "ts": "1454606954.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Cause I can finish that after my feature if it needs doing ",
+        "ts": "1454606983.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "We will be in the Mac lab today from 13:00 till 17:00 coding some stuff. ",
+        "ts": "1454608027.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I have a test until 3:30ish but I'll come meet with you guys right afterwards ",
+        "ts": "1454608440.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "The code is : 912 047",
+        "ts": "1454612062.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Which room is the Mac lab?",
+        "ts": "1454613008.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "4th floor",
+        "ts": "1454613036.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Is voting page that you guys are working on for the prof to create a question or for the student to vote on the questions? ",
+        "ts": "1454620225.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we are not working on the voting page. we are doing the question page at the moment - without the voting capability. \n\nSo, the profs will be able to create questions, students will be able to view them",
+        "ts": "1454620350.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Ok I'll implement a basic voting skeleton page so that I can add the confirmation functionality from the student side ",
+        "ts": "1454620385.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'll be working on the UML diagram tonight...i'll send what I have later on so you all can verify it! ",
+        "ts": "1454624768.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Jessica, did you draw the diagram yet?",
+        "ts": "1454639374.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I was talking to her about it I'm gonna help her out if she needs it so we'll get it done for sure ",
+        "ts": "1454640338.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Sorry I got caught up but I am still working on it. I'll give what I have before the morning! ",
+        "ts": "1454651232.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "This is my best explanation for the diagram. If I need any more detail or have to change any areas please let me know! I can make a nicer version once I know it is correct ",
+        "ts": "1454655621.000016"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0J3D11K5|sandersjess> shared a file: <https:\/\/4350team.slack.com\/files\/sandersjess\/F0LBTEK08\/uml__diagram_.jpg|UML  diagram>",
+        "file": {
+            "id": "F0LBTEK08",
+            "created": 1454655628,
+            "timestamp": 1454655628,
+            "name": "UML  diagram .jpg",
+            "title": "UML  diagram",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U0J3D11K5",
+            "editable": false,
+            "size": 1685022,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0LBTEK08\/uml__diagram_.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0LBTEK08\/download\/uml__diagram_.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__64.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__80.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__360.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_360_w": 270,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__480.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_480_w": 360,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__160.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__720.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_720_w": 540,
+            "thumb_720_h": 720,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__960.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_960_w": 720,
+            "thumb_960_h": 960,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0LBTEK08-8e99742e62\/uml__diagram__1024.jpg?t=xoxe-17979658209-20456109969-20456732791-9f5a2a818d",
+            "thumb_1024_w": 768,
+            "thumb_1024_h": 1024,
+            "image_exif_rotation": 1,
+            "original_w": 3264,
+            "original_h": 2448,
+            "permalink": "https:\/\/4350team.slack.com\/files\/sandersjess\/F0LBTEK08\/uml__diagram_.jpg",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0LBTEK08-d8cfdcde59",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0,
+            "reactions": [
+                {
+                    "name": "+1",
+                    "users": [
+                        "U0HUU655Y"
+                    ],
+                    "count": 1
+                }
+            ]
+        },
+        "user": "U0J3D11K5",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "<@U0J3D11K5|sandersjess>",
+        "bot_id": null,
+        "ts": "1454655663.000017"
+    }
+]
