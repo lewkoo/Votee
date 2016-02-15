@@ -29,7 +29,7 @@
  ===============================
  First, you will install NodeJS onto your machine.
  (1) To begin, go to https://nodejs.org/en/ to find the latest release for your current operating system.
- (2) Once you have completed this download, run through the installtion by clicking on the installer
+ (2) Once you have completed this download, run through the installation by clicking on the installer
  application (likely in your downloads folder).
  (3) Once you have navigated through the setup wizard choosing your desired options,
  you should have the NodeJS environment active on your machine.
