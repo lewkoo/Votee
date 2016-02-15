@@ -70,6 +70,6 @@
  Open a terminal and navigate to the folder where the application was checked out to. Make sure you are in the
  main Votee directory.
  In your terminal window type: npm install
- This will install all the necessary dependencies needed to run the proeject.
+ This will install all the necessary dependencies needed to run the project.
  After install is completed, in your terminal window type: node server. This will start a production version of the application.
  Open a web browser (Firefox or Chrome) and navigate to http://localhost:3000
