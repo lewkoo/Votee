@@ -27,9 +27,9 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://localhost:3000',
+  hostname: 'http://votee-project.herokuapp.com/',
   app: {
-    name: 'MEAN - A Modern Stack - Production'
+    name: 'Votee'
   },
   logging: {
     format: 'combined'

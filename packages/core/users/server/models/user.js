@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var mongoose  = require('mongoose'),
-    extend = require('mongoose-schema-extend'),
+    //extend = require('mongoose-schema-extend'),
     Schema    = mongoose.Schema,
     crypto    = require('crypto'),
     _   = require('lodash');
@@ -88,7 +88,6 @@ var UserSchema = new Schema({
 
 /**
  * Student model
- */
 
 var StudentSchema = UserSchema.extend({
     studentId: {
@@ -96,6 +95,8 @@ var StudentSchema = UserSchema.extend({
         unique: true
     }
 });
+
+*/
 
 /**
  * Virtuals
@@ -210,4 +211,4 @@ UserSchema.methods.toJSON = function() {
 };
 
 mongoose.model('User', UserSchema);
-mongoose.model('Student', StudentSchema);
+//mongoose.model('Student', StudentSchema);
