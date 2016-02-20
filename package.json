@@ -22,8 +22,8 @@
   "dependencies": {
     "assetmanager": "latest",
     "async": "latest",
-    "bower": "latest",
     "body-parser": "latest",
+    "bower": "latest",
     "compression": "latest",
     "connect-flash": "latest",
     "connect-modrewrite": "latest",
@@ -33,10 +33,12 @@
     "express": "latest",
     "forever": "latest",
     "gridfs-stream": "latest",
+    "harmony-proxy": "^0.1.0",
     "jsonwebtoken": "latest",
     "lodash": "latest",
     "meanio": "latest",
     "mongoose": "latest",
+    "mongoose-schema-extend": "latest",
     "morgan": "latest",
     "ms": "latest",
     "nodemailer": "latest",
@@ -52,8 +54,7 @@
     "serve-favicon": "latest",
     "shelljs": "latest",
     "swig": "latest",
-    "view-helpers": "latest",
-    "mongoose-schema-extend": "^0.2.2"
+    "view-helpers": "latest"
   },
   "devDependencies": {
     "del": "latest",
@@ -89,7 +90,6 @@
     "karma-requirejs": "latest",
     "karma-script-launcher": "latest",
     "mocha": "latest",
-    "mongoose-schema-extend": "^0.2.2",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",
