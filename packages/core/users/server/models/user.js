@@ -211,4 +211,4 @@ UserSchema.methods.toJSON = function() {
 };
 
 mongoose.model('User', UserSchema);
-mongoose.model('Student', StudentSchema);
+//mongoose.model('Student', StudentSchema);
