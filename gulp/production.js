@@ -51,8 +51,7 @@ gulp.task('prodServe', ['env:production'], function () {
     script: 'server.js',
     ext: 'html js',
     env: { 'NODE_ENV': 'production' } ,
-    ignore: ['./node_modules/**'],
-    nodeArgs: ['--harmony-proxies']
+    ignore: ['./node_modules/**']
   });
 });
 gulp.task('production',defaultTasks);

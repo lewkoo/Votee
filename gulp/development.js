@@ -66,7 +66,7 @@ gulp.task('devServe', ['env:development'], function () {
       '**/.bower-*',
       '**/tests'
     ],
-    nodeArgs: ['--debug', '--harmony-proxies'],
+    nodeArgs: ['--debug'],
     stdout: false
   }).on('readable', function() {
     this.stdout.on('data', function(chunk) {
