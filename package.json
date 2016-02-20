@@ -88,11 +88,11 @@
     "karma-requirejs": "latest",
     "karma-script-launcher": "latest",
     "mocha": "latest",
+    "mongoose-schema-extend": "^0.2.2",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",
     "supertest": "latest",
-    "through": "latest",
-    "mongoose-schema-extend": "latest"
+    "through": "latest"
   }
 }
