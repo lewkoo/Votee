@@ -53,7 +53,7 @@
     "shelljs": "latest",
     "swig": "latest",
     "view-helpers": "latest",
-    "mongoose-schema-extend": "^0.2.2",
+    "mongoose-schema-extend": "^0.2.2"
   },
   "devDependencies": {
     "del": "latest",
