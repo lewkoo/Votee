@@ -37,16 +37,16 @@ var QuestionSchema = new Schema({
         default: 'MULTIPLE-CHOICE'
     },
 
-    answers: [{
-        type: String,
-        required: false
-    }],
-
-    answer: {
-        type: String,
-        required: false,
-        trim: true
-    },
+    //answers: [{
+    //    type: String,
+    //    required: false
+    //}],
+    //
+    //answer: {
+    //    type: String,
+    //    required: false,
+    //    trim: true
+    //},
 
     creator: {
         type: Schema.ObjectId,

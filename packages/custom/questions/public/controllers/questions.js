@@ -48,6 +48,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.find = function() {
             Questions.query(function(questions) {
                 $scope.questions = questions;
+                console.log( MeanUser);
             });
         };
 
@@ -56,6 +57,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 questionId: $stateParams.questionId
             }, function(question) {
                 $scope.question = question;
+                console.log(MeanUser);
             });
         };
 
