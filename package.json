@@ -93,6 +93,6 @@
     "requirejs": "latest",
     "supertest": "latest",
     "through": "latest",
-    "mongoose-schema-extend": "latest"
+    "mongoose-schema-extend": "0.2.0"
   }
 }

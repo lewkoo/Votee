@@ -6,6 +6,7 @@
  */
 var mongoose = require('mongoose'),
     Question = mongoose.model('Question'),
+    //Answer = mongoose.model('Answer'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -29,12 +30,22 @@ module.exports = function(Questions) {
          */
         create: function(req, res) {
             var question = new Question(req.body);
+            //var answer = new Answer();
 
+            console.log(req.body);
             //fill up the model with data from request
             question.creator = req.user;
             question.type = "MULTIPLE-CHOICE";
             question.answer = req.body.correctAnswer;
             question.options = req.body.options;
+
+            console.log(req.body.type == 'multChoice');
+
+            //if(req.body.type == 'multChoice'){
+            //    question.correctAnswer = req.body.correctAnswer;
+            //}else {
+            //    //open ended question..could possiby have more options (quiz?)
+            //}
 
             question.save(function(err) {
                 if (err) {
@@ -123,6 +134,13 @@ module.exports = function(Questions) {
             });
 
             res.json(req.question);
+        },
+
+        /*
+         * vote for a question
+         */
+        vote: function(req, res){
+            //BIG TODO: lots and lots of stuff here...need to figure out DB structure for this as well
         },
         /**
          * List of Questions
