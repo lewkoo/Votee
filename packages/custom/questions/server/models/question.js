@@ -31,10 +31,10 @@ var QuestionSchema = new Schema({
     },
 
     type: {
-        type: String,
-        enum: ['MULTIPLE-CHOICE', 'OPEN-ENDED'],
-        required: true,
-        default: 'MULTIPLE-CHOICE'
+        type:       String,
+        enum:       ['MULTIPLE-CHOICE', 'OPEN-ENDED'],
+        required:   true,
+        default:    'MULTIPLE-CHOICE'
     },
 
     //answers: [{
@@ -42,22 +42,28 @@ var QuestionSchema = new Schema({
     //    required: false
     //}],
     //
-    //answer: {
-    //    type: String,
-    //    required: false,
-    //    trim: true
-    //},
+    answer: {
+        type: String,
+        required: true,
+        trim: true
+    },
 
     creator: {
-        type: Schema.ObjectId,
-        ref: 'User',
-        required: true
+        type:       Schema.ObjectId,
+        ref:        'User',
+        required:   true
     },
 
     options: {
-        type: Object,
-        required: false
-    }
+        type:       Object,
+        required:   false
+    },
+
+    answers:[{
+        type:       Schema.Types.ObjectId,
+        ref:        'Answer',
+        required:   'False'
+    }]
 
 });
 

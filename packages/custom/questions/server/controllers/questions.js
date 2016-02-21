@@ -66,6 +66,15 @@ module.exports = function(Questions) {
                 res.json(question);
             });
         },
+
+
+        /*
+         * vote for a question
+         */
+        vote: function(req, res){
+            //BIG TODO: lots and lots of stuff here...need to figure out DB structure for this as well
+        },
+
         /**
          * Update question
          */
@@ -136,12 +145,6 @@ module.exports = function(Questions) {
             res.json(req.question);
         },
 
-        /*
-         * vote for a question
-         */
-        vote: function(req, res){
-            //BIG TODO: lots and lots of stuff here...need to figure out DB structure for this as well
-        },
         /**
          * List of Questions
          */

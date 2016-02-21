@@ -45,10 +45,24 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             }
         };
 
+        $scope.vote = function(question){
+            console.log(question);
+            console.log(MeanUser);
+            console.log($scope.selectedAnswer);
+
+            var question = $scope.question;
+
+            //question.updated.push(new Date().getTime());
+
+            question.$update(function() {
+                $location.path('questions/' + question._id + '/vote');
+            });
+
+        };
+
         $scope.find = function() {
             Questions.query(function(questions) {
                 $scope.questions = questions;
-                console.log( MeanUser);
             });
         };
 
@@ -57,14 +71,12 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 questionId: $stateParams.questionId
             }, function(question) {
                 $scope.question = question;
-                console.log(MeanUser);
             });
         };
 
         $scope.update = function(isValid) {
             if (isValid) {
                 var question = $scope.question;
-                console.log(question);
                 if (!question.updated) {
                     question.updated = [];
                 }

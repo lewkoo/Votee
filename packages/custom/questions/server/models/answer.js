@@ -42,13 +42,13 @@ var MultipleChoiceSchema = AnswerSchema.extend({
         type: String,
         required: true,
         trim: true
-    },
-
-    correctAnswer: {
-        type: String,
-        required: true,
-        trim: true
     }
+    //
+    //correctAnswer: {
+    //    type: String,
+    //    required: true,
+    //    trim: true
+    //}
 });
 
 
