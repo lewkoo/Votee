@@ -33,9 +33,9 @@ module.exports = function(Questions, app, auth) {
         .get(auth.isMongoId, questions.show)
         .put(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, questions.update)
         .delete(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, questions.destroy);
-    app.route('/api/questions/:questionId/vote')
-        .post(auth.requiresLogin);
+    app.route('questions/vote/:questionId')
+        .post(auth.requiresLogin, questions.vote);
 
-    // Finish with setting up the articleId param
+    // Finish with setting up the questionID param
     app.param('questionId', questions.question);
 };

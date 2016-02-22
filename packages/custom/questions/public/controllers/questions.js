@@ -1,8 +1,8 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.questions').controller('QuestionsController', ['$scope', '$stateParams', 'Global', 'Questions', '$location', 'MeanUser', 'Circles',
-    function($scope,$stateParams, Global, Questions, $location, MeanUser, Circles) {
+angular.module('mean.questions').controller('QuestionsController', ['$scope', '$stateParams', 'Global', 'Questions', '$location', 'MeanUser', 'Circles', '$http',
+    function($scope,$stateParams, Global, Questions, $location, MeanUser, Circles, $http) {
         $scope.global = Global;
         $scope.package = {
             name: 'questions'
@@ -46,7 +46,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.vote = function(question){
-            console.log(question);
+            console.log(question.$update);
             console.log(MeanUser);
             console.log($scope.selectedAnswer);
 
@@ -54,8 +54,9 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
             //question.updated.push(new Date().getTime());
 
-            question.$update(function() {
-                $location.path('questions/' + question._id + '/vote');
+            question.$vote(function() {
+                $location.path('questions/' + question._id);
+                //$http.post('question/vote/' + question._id );
             });
 
         };
