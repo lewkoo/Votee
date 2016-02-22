@@ -61,12 +61,13 @@ module.exports = function(MeanUser) {
          */
         signout: function(req, res) {
 
+            /*
             MeanUser.events.publish({
                 action: 'logged_out',
                 user: {
                     name: req.user.name
                 }
-            });
+            });*/
 
             req.logout();
             res.redirect('/');

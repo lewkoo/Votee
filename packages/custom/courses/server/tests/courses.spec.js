@@ -182,6 +182,8 @@ describe('<Unit Test>', function () {
 
             generateProfsAndStudents();
 
+            professor.password = "test";
+
             course = new Course({
                 title: 'Test Course 1',
                 courseNumber: 4350,
@@ -192,6 +194,25 @@ describe('<Unit Test>', function () {
 
             // save that course in the testing DB
             course.save();
+
+
+            // log in
+            var loginJSON = new Object();
+            loginJSON.email = professor.email;
+            loginJSON.password = professor.password;
+            var jsonString= JSON.stringify(loginJSON);
+
+            /**
+            server.post('/api/login')
+                .set('Accept', 'application/json')
+                .set('Content-Type', 'application/x-www-form-urlencoded')
+                .send(jsonString)
+                .expect(200)
+                .end(function (err, res){
+
+                    console.log(err);
+                });
+            */
 
             done();
         });
@@ -235,6 +256,9 @@ describe('<Unit Test>', function () {
                     .expect('Content-Type', /json/) // specify the format to be JSON
                     .expect(200) // specify the response code
                     .end(function (err, res) { // perform this code when the request goes through
+
+                        console.log(err);
+
                         console.log("Reached validations");
                         res.body.should.be.an.Object.and.have.property('title', course.title);
                         res.body.should.have.property('title', course.title);

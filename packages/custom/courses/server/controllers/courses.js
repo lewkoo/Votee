@@ -58,7 +58,9 @@ module.exports = function(Courses) {
          * Show a course
          */
         show: function(req, res) {
+
             console.log("Request received!");
+
             Courses.events.publish({
                 action: 'viewed',
                 user: {
