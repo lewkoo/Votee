@@ -45,19 +45,18 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             }
         };
 
-        $scope.vote = function(question){
-            console.log(question.$update);
-            console.log(MeanUser);
-            console.log($scope.selectedAnswer);
-
+        $scope.vote = function(question) {
             var question = $scope.question;
-
-            //question.updated.push(new Date().getTime());
+            if (!question.updated) {
+                question.updated = [];
+            }
+            question.updated.push(new Date().getTime());
 
             question.$vote(function() {
-                $location.path('questions/' + question._id);
-                //$http.post('question/vote/' + question._id );
+                $location.path('questions/vote/' + question._id);
             });
+
+            console.log("END of function");
 
         };
 

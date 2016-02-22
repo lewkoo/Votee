@@ -6,8 +6,7 @@
 
     <!--<div>{{question.content}}</div>-->
     <!--TODO: add error chekcing to the form-->
-    <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="vote(question)"
-          novalidate>
+    <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="vote(questionForm)" novalidate>
 
         <h3>Select your answer below: </h3>
         <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
@@ -21,8 +20,8 @@
 
         <!--TODO: use bootstrap to make layout better..-->
         <br/>
-        <button type="submit" class="btn btn-info">Vote!</button>
-        <br/><br/>
+            <button type="submit" class="btn btn-info">Vote!</button>
+        <br/>
 
     </form>
 
