@@ -93,6 +93,8 @@ angular.module('mean.users').factory('MeanUser', [ '$rootScope', '$http', '$loca
       this.loginError = 0;
       this.registerError = 0;
       this.isAdmin = this.user.roles.indexOf('admin') > -1;
+      this.isProfessor = this.user.roles.indexOf('professor') > -1;
+      this.isStudent = this.user.roles.indexOf('student') > -1;
       // Add circles info to user
       $http.get('/api/circles/mine').success(function(acl) {
         if(self.aclDefer) {

@@ -1,0 +1,64 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Get a free Jet Brains licence for a year just by typing your Umanitoba email: \n\n<https:\/\/www.jetbrains.com\/student\/>",
+        "attachments": [
+            {
+                "service_name": "JetBrains",
+                "title": "Free for students: Professional developer tools from JetBrains",
+                "title_link": "https:\/\/www.jetbrains.com\/student\/",
+                "text": "JetBrains, Inc. is a technology-leading software development company specializing in the creation of intelligent development tools.",
+                "fallback": "JetBrains: Free for students: Professional developer tools from JetBrains",
+                "image_url": "http:\/\/resources.jetbrains.com\/assets\/media\/open-graph\/jetbrains_250x250.png",
+                "from_url": "https:\/\/www.jetbrains.com\/student\/",
+                "image_width": 250,
+                "image_height": 250,
+                "image_bytes": 16239,
+                "id": 1
+            }
+        ],
+        "ts": "1453596240.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Learning about <http:\/\/MEAN.io|MEAN.io> from its founder, CTO and the main maintainer, Lior Kesos: \n\n<https:\/\/www.youtube.com\/watch?v=oUtWtSF_VNY>",
+        "attachments": [
+            {
+                "service_name": "YouTube",
+                "service_url": "https:\/\/www.youtube.com\/",
+                "title": "Accelerate your MEAN Development",
+                "title_link": "https:\/\/www.youtube.com\/watch?v=oUtWtSF_VNY",
+                "author_name": "Rackspace Developers",
+                "author_link": "https:\/\/www.youtube.com\/user\/rackspacedeveloper",
+                "thumb_url": "https:\/\/i.ytimg.com\/vi\/oUtWtSF_VNY\/hqdefault.jpg",
+                "thumb_width": 480,
+                "thumb_height": 360,
+                "fallback": "YouTube Video: Accelerate your MEAN Development",
+                "video_html": "<iframe width=\"400\" height=\"225\" src=\"https:\/\/www.youtube.com\/embed\/oUtWtSF_VNY?feature=oembed&autoplay=1&iv_load_policy=3\" frameborder=\"0\" allowfullscreen><\/iframe>",
+                "video_html_width": 400,
+                "video_html_height": 225,
+                "from_url": "https:\/\/www.youtube.com\/watch?v=oUtWtSF_VNY",
+                "id": 1
+            }
+        ],
+        "ts": "1453596996.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Just watched it. This video really explains a lot of things.",
+        "ts": "1453602337.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I also suggest we use git flow for branching model. We use it at Honda Research Institute for manage projects that have 50+ people working at all times (ASIMO robot project) and git flow is essential. \n\nHere are the links: \n\n<http:\/\/nvie.com\/git-model\/>\n\nInstall a simple wrapper: \n\n<https:\/\/github.com\/nvie\/gitflow>",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1453603955.000000"
+        },
+        "ts": "1453603950.000007"
+    }
+]

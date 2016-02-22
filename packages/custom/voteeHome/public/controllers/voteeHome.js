@@ -8,5 +8,7 @@ angular.module('mean.voteeHome').controller('VoteeHomeController', ['$scope','$s
 	$scope.package = {
 	  name: 'voteeHome'
 	};
+
+
   }
 ]);
