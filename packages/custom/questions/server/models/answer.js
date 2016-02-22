@@ -18,7 +18,7 @@ var AnswerSchema = new Schema({
         default: Date.now
     },
 
-    creator: {
+    student: {
         type: Schema.ObjectId,
         ref: 'User',
         required: true

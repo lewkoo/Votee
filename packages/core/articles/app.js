@@ -55,7 +55,7 @@ Articles.register(function(app, auth, database, circles, swagger) {
     */
 
   // Only use swagger.add if /docs and the corresponding files exists
-  swagger.add(__dirname);
+  //swagger.add(__dirname);
 	
   return Articles;
 });
