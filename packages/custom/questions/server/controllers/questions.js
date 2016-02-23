@@ -80,6 +80,8 @@ module.exports = function(Questions) {
          * Update question
          */
         update: function(req, res) {
+            console.log("Updating question");
+
             var question = req.question;
 
             question = _.extend(question, req.body);
