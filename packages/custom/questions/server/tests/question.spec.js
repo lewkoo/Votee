@@ -4,7 +4,7 @@
 
 var expect = require('expect.js'),
     request = require('supertest'),
-    //should = require('should'),
+    should = require('should'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Question = mongoose.model('Question'),
@@ -130,6 +130,8 @@ describe('<Unit Test>', function() {
                     .expect('Content-Type', 'application/json')
                     .expect(200)
                     .end(function(err, res){
+                        //validate
+                        res.body.should.be.type('object');
                         done();
                     });
             });
