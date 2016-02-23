@@ -270,12 +270,8 @@ describe('<Unit Test>', function () {
                 server.get('/api/courses/' + courseId)
                     .set('Accept', 'appication/json')
                     .expect('Content-Type', /json/)
-                    .expect(500)
+                    .expect(500)// here, I am testing for code 500 only
                     .end(function (err, res){
-
-                        // Perform validations, baby!
-                        expect(err).to.not.be(null);
-
                         done();
                     });
             });
@@ -296,8 +292,6 @@ describe('<Unit Test>', function () {
                         done();
 
                     });
-
-
             });
 
             it('it should be saving a course without any problems', function (done){
@@ -363,6 +357,30 @@ describe('<Unit Test>', function () {
 
                     });
 
+
+            });
+
+            it('it should be failing to update a non-existing course', function (done){
+
+                this.timeout(10000);
+
+                // store the course object - we need it for sending
+                var courseObject = course;
+
+                // clear the database
+                Course.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                server.put('/api/courses/' + courseObject._id.toString())
+                    .send(course)
+                    .expect('Content-Type', /json/)
+                    .expect(500) // here, I am testing for code 500 only
+                    .end(function (err, res){
+
+                        done();
+                    });
 
             });
 

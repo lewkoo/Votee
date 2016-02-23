@@ -12,7 +12,25 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
+var errorString = "Error: the course can not be found";
+
 module.exports = function(Courses) {
+
+
+    function error(res) {
+        return res.status(500).json({
+            error: errorString
+        });
+    }
+
+    function validateCourse(req, res) {
+        if (req.course != null) {
+            res.json(req.course);
+        } else {
+            error(res);
+        }
+    }
+
 
     return{
         /**
@@ -21,8 +39,13 @@ module.exports = function(Courses) {
         course: function(req, res, next, id) {
             Course.load(id, function(err, course){
                 if (err) return next(err);
-                if (!course) return next();
-                req.course = course;
+                if (!course){
+                    req.course = null;
+                }
+                else
+                {
+                    req.course = course;
+                }
                 next();
             });
         },
@@ -58,6 +81,42 @@ module.exports = function(Courses) {
         },
 
         /**
+         * Delete an article
+         */
+        destroy: function(req, res) {
+            var course = req.course;
+
+            if(course != null)
+            {
+                course.remove(function(err) {
+                    if (err) {
+                        return res.status(500).json({
+                            error: 'Cannot delete the course'
+                        });
+                    }
+
+                    if(req.user != undefined)
+                    {
+                        Courses.events.publish({
+                            action: 'deleted',
+                            user: {
+                                name: req.user.name
+                            },
+                            name: course.title
+                        });
+                    }
+
+                    res.json(course);
+                });
+            }else
+            {
+                error(res);
+            }
+
+
+        },
+
+        /**
          * Update a course
          */
         update: function(req, res) {
@@ -65,27 +124,36 @@ module.exports = function(Courses) {
 
             course = _.extend(course, req.body);
 
-            course.save(function(err) {
-                if (err) {
-                    return res.status(500).json({
-                        error: 'Cannot update a course'
-                    });
-                }
+            if(course != null) // the course was found
+            {
+                course.save(function(err) {
+                    if (err) {
+                        return res.status(500).json({
+                            error: 'Cannot update a course'
+                        });
+                    }
 
-                if(req.user != undefined)
-                {
-                    Courses.events.publish({
-                        action: 'updated',
-                        user: {
-                            name: req.user.name
-                        },
-                        name: course.title,
-                        url: config.hostname + '/courses/' + course._id
-                    });
-                }
+                    if(req.user != undefined)
+                    {
+                        Courses.events.publish({
+                            action: 'updated',
+                            user: {
+                                name: req.user.name
+                            },
+                            name: course.title,
+                            url: config.hostname + '/courses/' + course._id
+                        });
+                    }
 
-                res.json(course);
-            });
+                    res.json(course);
+                });
+
+            }else
+            {
+                error(res);
+            }
+
+
         },
 
         /**
@@ -105,7 +173,7 @@ module.exports = function(Courses) {
                 });
             }
 
-            res.json(req.course);
+            validateCourse(req, res);
         },
         /**
          * List of Courses
