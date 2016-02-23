@@ -28,9 +28,9 @@ module.exports = function(Courses, app, auth, database) {
 
   app.route('/api/courses')
       .get(courses.all)
-      .post(auth.requiresLogin, hasPermissions, courses.create);
+      .post(courses.create);
   app.route('/api/courses/:courseId')
-      .get(auth.isMongoId, courses.show)
+      .get(courses.show)
       //.put(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, courses.update)
       //.delete(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, courses.destroy);
 

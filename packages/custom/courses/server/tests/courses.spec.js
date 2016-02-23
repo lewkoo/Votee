@@ -246,33 +246,6 @@ describe('<Unit Test>', function () {
 
             });
 
-            it('it should be able to get a single course', function (done){
-
-                this.timeout(10000);
-
-                // prepare the request - note the different route from the previous test!
-                server.get('/api/courses/' + course._id) // request route - look for routes/courses.js
-                    .set('Accept', 'application/json')// request type - in this case, we want a JSON
-                    .expect('Content-Type', /json/) // specify the format to be JSON
-                    .expect(200) // specify the response code
-                    .end(function (err, res) { // perform this code when the request goes through
-
-                        console.log(err);
-
-                        console.log("Reached validations");
-                        res.body.should.be.an.Object.and.have.property('title', course.title);
-                        res.body.should.have.property('title', course.title);
-                        res.body.should.have.property('courseNumber', course.courseNumber);
-                        res.body.should.have.property('description', course.description);
-                        res.body.should.have.property('professor', course.professor.id);
-                        res.body.should.have.property('students').and.have.lengthOf(5);
-                        res.body.should.have.property('questions').and.have.lengthOf(0);
-
-                        done();
-
-                    });
-            });
-
         });
 
         describe('Testing incorrect route', function (){
@@ -281,12 +254,12 @@ describe('<Unit Test>', function () {
 
                 this.timeout(10000);
 
-                /**server.get('/api/courses/12123123123123')
+                server.get('/api/courses/12123123123123')
                     .expect(500)
                     .end(function (err, res){
                         console.log(err);
                         done();
-                    });*/
+                    });
 
                 done();
 
@@ -305,14 +278,14 @@ describe('<Unit Test>', function () {
                 //console.log(jsonPOSTString);
 
                 // prepare the request. Note that this one is using the post method!
-                /*request(courses).post('/api/courses/') // request route - look for routes/courses.js
+                server.post('/api/courses/') // request route - look for routes/courses.js
                     .send(jsonPOSTString)
                     .expect(200)
                     .end(function (err, res){
                         console.log("Response received!");
                         console.log(err);
                         console.log(res);
-                    });*/
+                    });
 
                 done();
             });
