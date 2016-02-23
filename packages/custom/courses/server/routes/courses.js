@@ -31,9 +31,9 @@ module.exports = function(Courses, app, auth, database) {
       .post(courses.create);
   app.route('/api/courses/:courseId')
       .get(courses.show)
-      //.put(courses.update)
+      .put(courses.update);
       //.delete(courses.destroy);
 
-  // Finish with setting up the articleId param
+  // Finish with setting up the courseId param
   app.param('courseId', courses.course);
 };

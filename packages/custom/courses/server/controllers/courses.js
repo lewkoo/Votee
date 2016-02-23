@@ -21,7 +21,7 @@ module.exports = function(Courses) {
         course: function(req, res, next, id) {
             Course.load(id, function(err, course){
                 if (err) return next(err);
-                if (!course) return next(new Error('Failed to load course ' + id));
+                if (!course) return next();
                 req.course = course;
                 next();
             });
@@ -31,24 +31,58 @@ module.exports = function(Courses) {
          * Create a question
          */
         create: function(req, res) {
-            console.log("New Course received!");
             var course = new Course(req.body);
 
             course.save(function(err) {
                 if (err) {
+                    //console.log("Err: " + err);
                     return res.status(500).json({
                         error: 'Cannot save the course'
                     });
                 }
 
-                Courses.events.publish({
-                    action: 'created',
-                    user: {
-                        name: req.user.name
-                    },
-                    url: config.hostname + '/courses/' + course._id,
-                    name: course.title
-                });
+                if(req.user != undefined)
+                {
+                    Courses.events.publish({
+                        action: 'created',
+                        user: {
+                            name: req.user.name
+                        },
+                        url: config.hostname + '/courses/' + course._id,
+                        name: course.title
+                    });
+                }
+
+                res.json(course);
+            });
+        },
+
+        /**
+         * Update a course
+         */
+        update: function(req, res) {
+            var course = req.course;
+
+            course = _.extend(course, req.body);
+
+            course.save(function(err) {
+                if (err) {
+                    return res.status(500).json({
+                        error: 'Cannot update a course'
+                    });
+                }
+
+                if(req.user != undefined)
+                {
+                    Courses.events.publish({
+                        action: 'updated',
+                        user: {
+                            name: req.user.name
+                        },
+                        name: course.title,
+                        url: config.hostname + '/courses/' + course._id
+                    });
+                }
 
                 res.json(course);
             });
@@ -59,16 +93,17 @@ module.exports = function(Courses) {
          */
         show: function(req, res) {
 
-            console.log("Request received!");
-
-            Courses.events.publish({
-                action: 'viewed',
-                user: {
-                    name: req.user.name
-                },
-                name: req.course.title,
-                url: config.hostname + '/courses/' + req.course._id
-            });
+            if(req.user != undefined)
+            {
+                Courses.events.publish({
+                    action: 'viewed',
+                    user: {
+                        name: req.user.name
+                    },
+                    name: req.course.title,
+                    url: config.hostname + '/courses/' + req.course._id
+                });
+            }
 
             res.json(req.course);
         },

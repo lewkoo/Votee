@@ -14,7 +14,7 @@ var expect = require('expect.js'),
     User = mongoose.model('User'),
     Course = mongoose.model('Course'),
     mean = require('meanio'),
-    server = request.agent("http://localhost:" + mean.config.clean.http.port);
+    server = request("http://localhost:" + mean.config.clean.http.port);
 
 
 /**
@@ -195,25 +195,6 @@ describe('<Unit Test>', function () {
             // save that course in the testing DB
             course.save();
 
-
-            // log in
-            var loginJSON = new Object();
-            loginJSON.email = professor.email;
-            loginJSON.password = professor.password;
-            var jsonString= JSON.stringify(loginJSON);
-
-            /**
-            server.post('/api/login')
-                .set('Accept', 'application/json')
-                .set('Content-Type', 'application/x-www-form-urlencoded')
-                .send(jsonString)
-                .expect(200)
-                .end(function (err, res){
-
-                    console.log(err);
-                });
-            */
-
             done();
         });
 
@@ -246,54 +227,146 @@ describe('<Unit Test>', function () {
 
             });
 
-        });
-
-        describe('Testing incorrect route', function (){
-
-            it('it should be throwing an error when trying to access an incorrect route', function (done){
+            it('it should be able to get a single course that exists', function (done){
 
                 this.timeout(10000);
 
-                server.get('/api/courses/12123123123123')
-                    .expect(500)
+                //prepare the request
+                server.get('/api/courses/' + course._id.toString())
+                    .set('Accept', 'appication/json')
+                    .expect('Content-Type', /json/)
+                    .expect(200)
                     .end(function (err, res){
-                        expect(err).to.not.be(null);
+
+                        // Perform validations, baby!
+                        res.body.should.be.type('object');
+                        res.body.should.have.property('title', course.title);
+                        res.body.should.have.property('courseNumber', course.courseNumber);
+                        res.body.should.have.property('description', course.description);
+                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('students').and.have.lengthOf(5);
+                        res.body.should.have.property('questions').and.have.lengthOf(0);
+
                         done();
                     });
 
-                done();
 
+
+            });
+
+            it('it should fail to get a non existing course', function (done){
+
+                this.timeout(10000);
+
+                // store the ID
+                var courseId = course._id.toString();
+
+                // clear the database
+                Course.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                server.get('/api/courses/' + courseId)
+                    .set('Accept', 'appication/json')
+                    .expect('Content-Type', /json/)
+                    .expect(500)
+                    .end(function (err, res){
+
+                        // Perform validations, baby!
+                        expect(err).to.not.be(null);
+
+                        done();
+                    });
             });
 
         });
 
-        describe('Testing the POST routes', function () {
+        describe('Testing the POST routes - create a course', function () {
 
-            it('it should be able to post a new course', function (done){
+            it('it should fail to save a duplicate course', function (done){
                 // prepare the object to be sent
                 course.courseNumber = 1122;
                 course.title = "Testing course 2";
-                var jsonPOSTString = JSON.stringify(course);
-
-                //console.log(jsonPOSTString);
-
-                // prepare the request. Note that this one is using the post method!
                 server.post('/api/courses/') // request route - look for routes/courses.js
-                    .send(jsonPOSTString)
+                    .send(course)
                     .expect(200)
                     .end(function (err, res){
-                        console.log("Response received!");
-                        console.log(err);
-                        expect(err).to.be(null);
+                        expect(err).to.not.be(null);
+                        done();
 
                     });
 
-                done();
+
+            });
+
+            it('it should be saving a course without any problems', function (done){
+                // prepare the object to be sent
+                Course.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                course = new Course({
+                    title: 'Test Course 1',
+                    courseNumber: 1122,
+                    description: 'Testing course 2',
+                    professor: professor,
+                    students: students
+                });
+
+                server.post('/api/courses/') // request route - look for routes/courses.js
+                    .send(course)
+                    .expect(200)
+                    .end(function (err, res){
+                        expect(err).to.be(null);
+
+                        res.body.should.have.property('title', course.title);
+                        res.body.should.have.property('courseNumber', course.courseNumber);
+                        res.body.should.have.property('description', course.description);
+                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('students').and.have.lengthOf(5);
+                        res.body.should.have.property('questions').and.have.lengthOf(0);
+
+                        done();
+
+                    });
+
+
             });
 
         });
 
-        //describe('Testing the ')
+        describe('Testing the PUT routes - course update', function () {
+
+            it('it should be updating a course without any problems', function (done){
+
+                this.timeout(10000);
+
+                course.title = "Updated title";
+                course.courseNumber = 8888;
+
+                server.put('/api/courses/' + course._id.toString()) // request route - look for routes/courses.js
+                    .send(course)
+                    .expect(200)
+                    .end(function (err, res){
+                        expect(err).to.be(null);
+
+                        res.body.should.have.property('title', "Updated title");
+                        res.body.should.have.property('courseNumber', 8888);
+                        res.body.should.have.property('description', course.description);
+                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('students').and.have.lengthOf(5);
+                        res.body.should.have.property('questions').and.have.lengthOf(0);
+
+                        done();
+
+                    });
+
+
+            });
+
+        });
 
         afterEach(function (done) {
             this.timeout(10000);
