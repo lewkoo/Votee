@@ -3,9 +3,13 @@
  */
 
 var expect = require('expect.js'),
+    request = require('supertest'),
+    //should = require('should'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
-    Question = mongoose.model('Question');
+    Question = mongoose.model('Question'),
+    mean = require('meanio'),
+    server = request.agent('http://localhost:' + mean.config.clean.http.port);
 
 /**
  * Globals
@@ -115,8 +119,16 @@ describe('<Unit Test>', function() {
             });
         }); // END of method save testing
 
-        describe('Test API', function() {
-            //login
+        describe('Testing API to get all questions', function() {
+            it('it should be able to get the list of courses', function (done) {
+                server.get('/api/questions')
+                    .expect(200)
+                    .end(function(err, res){
+                        console.log(err);
+                        done();
+                    });
+            });
+
 
         });
 

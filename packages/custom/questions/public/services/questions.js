@@ -10,7 +10,8 @@ angular.module('mean.questions').factory('Questions', ['$resource',
         method: 'PUT'
       },
       vote: {
-        method: 'PUT'
+        method: 'PUT',
+        url: 'api/questions/vote/:questionId'
       }
     });
   }
