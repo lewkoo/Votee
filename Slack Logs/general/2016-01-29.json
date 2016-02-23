@@ -1,0 +1,284 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hi guys, \n\nI\u2019ve added a new package to the dependencies list, so you all have to run ```npm install``` in your Votee directory to get it",
+        "ts": "1454105408.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "the grades are up",
+        "ts": "1454110999.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "not sure what he mans we did not specify which stories are for iteration 1",
+        "ts": "1454111029.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we didn\u2019t specify which ones we will do in the iteration 1",
+        "ts": "1454111047.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "exactly...",
+        "ts": "1454111054.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "logic!",
+        "ts": "1454111056.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "!logic",
+        "ts": "1454111064.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "so voting logic  (voting page) will be in courses package?",
+        "ts": "1454111171.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "nope",
+        "ts": "1454111180.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "question",
+        "ts": "1454111187.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ahh i see",
+        "ts": "1454111190.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "courses is just an aggregate",
+        "ts": "1454111227.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if i wanna create new branch to work on, how do i do it with git flow?",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1454111268.000000"
+        },
+        "ts": "1454111262.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "from where? CMD?",
+        "ts": "1454111293.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or from IDE?",
+        "ts": "1454111297.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or webstorm",
+        "ts": "1454111301.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "for CMD, install as described: <https:\/\/github.com\/nvie\/gitflow\/wiki\/Installation>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "nvie\/gitflow",
+                "title_link": "https:\/\/github.com\/nvie\/gitflow\/wiki\/Installation",
+                "text": "gitflow - Git extensions to provide high-level repository operations for Vincent Driessen's branching model.",
+                "fallback": "GitHub: nvie\/gitflow",
+                "thumb_url": "https:\/\/avatars1.githubusercontent.com\/u\/83844?v=3&s=400",
+                "from_url": "https:\/\/github.com\/nvie\/gitflow\/wiki\/Installation",
+                "thumb_width": 400,
+                "thumb_height": 400,
+                "id": 1
+            }
+        ],
+        "ts": "1454111314.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "type ```git flow feature start XXX``` where XXX is the feature name",
+        "ts": "1454111333.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "from IDE, press on the Gitflow button and click start feature",
+        "ts": "1454111350.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "follow the pop ups...",
+        "ts": "1454111355.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "cool i see it",
+        "ts": "1454111362.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it will handle everything for you",
+        "ts": "1454111364.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and to merge my current branch to develop?",
+        "ts": "1454111371.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "finish feature?",
+        "ts": "1454111380.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1454111384.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "```git flow feature finish XXX```",
+        "ts": "1454111391.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "then ```git push```",
+        "ts": "1454111397.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "to push updated develop",
+        "ts": "1454111403.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "btw you getting any errors on the client side? after i pulled develope getting angularjs errors in console",
+        "ts": "1454111438.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "might be npm installation issue",
+        "ts": "1454111446.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "nope, can\u2019t be",
+        "ts": "1454111452.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "npm is back end only",
+        "ts": "1454111458.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but it also updates the front end by calling ```bower install```",
+        "ts": "1454111472.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Error: [$resource:badcfg] <http:\/\/errors.angularjs.org\/1.4.9\/$resource\/badcfg?p0=query&amp;p1=array&amp;p2=object&amp;p3=GET&amp;p4=tokens%2Ftitle>",
+        "attachments": [
+            {
+                "text": "AngularJS is what HTML would have been, had it been designed for building web-apps. Declarative templates with data-binding, MVC, dependency injection and great testability story all implemented with pure client-side JavaScript!",
+                "fallback": "AngularJS is what HTML would have been, had it been designed for building web-apps. Declarative templates with data-binding, MVC, dependency injection and great testability story all implemented with pure client-side JavaScript!",
+                "from_url": "http:\/\/errors.angularjs.org\/1.4.9\/$resource\/badcfg?p0=query&p1=array&p2=object&p3=GET&p4=tokens%2Ftitle",
+                "id": 1
+            }
+        ],
+        "ts": "1454111472.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "does it affect the behaviour ?",
+        "ts": "1454111510.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "doesnt seem like it, but i cant debug in console",
+        "ts": "1454111523.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "when does this happen?",
+        "ts": "1454111535.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which page?",
+        "ts": "1454111538.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "on all of them for me",
+        "ts": "1454111544.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "gonna try restating server",
+        "ts": "1454111552.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "run npm install again :simple_smile:",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1454111567.000000"
+        },
+        "ts": "1454111562.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "going for the 3rd time :simple_smile:",
+        "ts": "1454111585.000047"
+    }
+]

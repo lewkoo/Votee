@@ -50,4 +50,20 @@ var QuestionSchema = new Schema({
 
 });
 
+/**
+ * Validations
+ */
+QuestionSchema.path('title').validate(function(title) {
+    return !!title;
+}, 'Title cannot be blank');
+
+/**
+ * Statics
+ */
+QuestionSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    }).populate('creator', 'name username').exec(cb);
+};
+
 mongoose.model('Question', QuestionSchema);

@@ -22,8 +22,8 @@
   "dependencies": {
     "assetmanager": "latest",
     "async": "latest",
-    "bower": "latest",
     "body-parser": "latest",
+    "bower": "latest",
     "compression": "latest",
     "connect-flash": "latest",
     "connect-modrewrite": "latest",
@@ -33,10 +33,12 @@
     "express": "latest",
     "forever": "latest",
     "gridfs-stream": "latest",
+    "harmony-proxy": "^0.1.0",
     "jsonwebtoken": "latest",
     "lodash": "latest",
     "meanio": "latest",
     "mongoose": "latest",
+    "mongoose-schema-extend": "0.2.0",
     "morgan": "latest",
     "ms": "latest",
     "nodemailer": "latest",
@@ -87,12 +89,12 @@
     "karma-phantomjs-shim": "latest",
     "karma-requirejs": "latest",
     "karma-script-launcher": "latest",
+    "karma-spec-reporter": "0.0.24",
     "mocha": "latest",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",
     "supertest": "latest",
-    "through": "latest",
-    "mongoose-schema-extend": "latest"
+    "through": "latest"
   }
 }

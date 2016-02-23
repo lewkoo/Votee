@@ -1,5 +1,7 @@
 **[Vision Statement](https://docs.google.com/document/d/1CvnXLNxiKNNfu2M9UAxi4Pqej2G6_-8UjwUmqZ_DwPw/edit?usp=sharing)**
 
+**[Installation instructions](Documentation/Installation.md)**
+
 **[Trello (User Stories)](https://trello.com/b/WL7V6tmy/team-d-votee)**
 
 **[Meeting minutes](https://docs.google.com/document/d/11v5Q1EMSSffcXFhZ3_U-IiGAWo7Q3_ZtMn5ytjzdmgg/edit?usp=sharing)**

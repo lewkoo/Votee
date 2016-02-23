@@ -28,6 +28,11 @@ angular.module('mean.voteeHome').config(['$viewPathProvider','$stateProvider',
           url: '/studentLearnMore',
           templateUrl: 'voteeHome/views/studentLearnMore.html'
       });
+
+      $stateProvider.state('Tutorial', {
+          url: '/tutorial',
+          templateUrl: 'voteeHome/views/tutorial.html'
+      });
   }
 ]);
 

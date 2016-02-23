@@ -97,6 +97,8 @@ var StudentSchema = UserSchema.extend({
     }
 });
 
+
+
 /**
  * Virtuals
  */
