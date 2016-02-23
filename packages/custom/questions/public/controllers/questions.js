@@ -46,6 +46,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.vote = function(question) {
+            console.log("Submitting vote");
             var question = $scope.question;
             if (!question.updated) {
                 question.updated = [];
