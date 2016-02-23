@@ -257,7 +257,7 @@ describe('<Unit Test>', function () {
                 server.get('/api/courses/12123123123123')
                     .expect(500)
                     .end(function (err, res){
-                        console.log(err);
+                        expect(err).to.not.be(null);
                         done();
                     });
 
@@ -284,7 +284,8 @@ describe('<Unit Test>', function () {
                     .end(function (err, res){
                         console.log("Response received!");
                         console.log(err);
-                        console.log(res);
+                        expect(err).to.be(null);
+
                     });
 
                 done();
@@ -292,7 +293,7 @@ describe('<Unit Test>', function () {
 
         });
 
-        describe('Testing the ')
+        //describe('Testing the ')
 
         afterEach(function (done) {
             this.timeout(10000);
