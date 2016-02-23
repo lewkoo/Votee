@@ -145,14 +145,16 @@ module.exports = function(Questions) {
          */
         show: function(req, res) {
 
-            Questions.events.publish({
-                action: 'viewed',
-                user: {
-                    name: req.user.name
-                },
-                name: req.question.title,
-                url: config.hostname + '/questions/' + req.question._id
-            });
+            if(req.user != undefined){
+                Questions.events.publish({
+                    action: 'viewed',
+                    user: {
+                        name: req.user.name
+                    },
+                    name: req.question.title,
+                    url: config.hostname + '/questions/' + req.question._id
+                });
+            }
 
             res.json(req.question);
         },

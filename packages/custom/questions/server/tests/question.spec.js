@@ -125,6 +125,8 @@ describe('<Unit Test>', function() {
 
         describe('Testing API to get all questions', function() {
             it('it should be able to get the list of questions', function (done) {
+                this.timeout(10000);
+
                 server.get('/api/questions')
                     .set('Accept', 'application/json')
                     .expect('Content-Type', 'application/json')
@@ -135,7 +137,35 @@ describe('<Unit Test>', function() {
                         done();
                     });
             });
+
+            //it('it should be able to get the question that exists', function (done) {
+            //    this.timeout(10000);
+            //
+            //    server.get('/api/questions/'+question._id.toString())
+            //        .set('Accept', 'application/json')
+            //        .expect('Content-Type', /json/)
+            //        .expect(200)
+            //        .end(function(err, res){
+            //            //validate
+            //            //title: 'Test question',
+            //            //    description: 'This is a question that has nothing to do with the course material',
+            //            //    creator: professor,
+            //            //    options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
+            //            //answer: "Option3"
+            //            expect(err).to.be(null);
+            //            res.body.should.be.type('object');
+            //
+            //            res.body.should.have.property('title', question.title);
+            //            res.body.should.have.property('description', question.description);
+            //            res.body.should.have.property('creator', question.creator);
+            //            res.body.should.have.property('answer', question.answer);
+            //
+            //            done();
+            //        });
+            //});
         });
+
+
 
 
         afterEach(function(done) {
