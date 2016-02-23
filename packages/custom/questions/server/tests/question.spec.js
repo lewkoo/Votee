@@ -42,6 +42,8 @@ describe('<Unit Test>', function() {
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
                 answer: "Option3"
             });
+            question.save();
+
 
             done();
         }); // END of beforeEach
@@ -101,6 +103,8 @@ describe('<Unit Test>', function() {
                 this.timeout(10000);
                 question.options = null;
 
+                console.log(question.answer);
+
                 return question.save(function(err, data){
                     expect(err).to.be(null);
                     done();
@@ -110,7 +114,7 @@ describe('<Unit Test>', function() {
             it('it should reject a null answer', function(done){
 
                 this.timeout(10000);
-                question.answer = null;
+                question.answers = null;
 
                 return question.save(function(err, data){
                     expect(err).to.be(null);
@@ -120,20 +124,19 @@ describe('<Unit Test>', function() {
         }); // END of method save testing
 
         describe('Testing API to get all questions', function() {
-            it('it should be able to get the list of courses', function (done) {
+            it('it should be able to get the list of questions', function (done) {
                 server.get('/api/questions')
+                    .set('Accept', 'application/json')
+                    .expect('Content-Type', 'application/json')
                     .expect(200)
                     .end(function(err, res){
-                        console.log(err);
                         done();
                     });
             });
-
-
         });
 
 
-            afterEach(function(done) {
+        afterEach(function(done) {
             this.timeout(10000);
             professor.remove();
             question.remove();
