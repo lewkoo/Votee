@@ -39,9 +39,9 @@
 
             it("Has a menu",
             function() {
-                expect($scope.menus).toBeDefined();
-                expect($scope.menus).not.toBeNull();
-                expect($scope.menus.length).not.toBe(0);
+                expect(controller.menus).toBeDefined();
+                expect(controller.menus).not.toBeNull();
+                expect(controller.menus.length).not.toBe(0);
             });
         });
     });
