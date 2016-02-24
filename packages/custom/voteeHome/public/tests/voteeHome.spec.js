@@ -4,7 +4,10 @@
 
     describe("voteeHome", function() {
 
-        beforeEach(module('mean.voteeHome'));
+        beforeEach(function() {
+            module('mean');
+            module('mean.voteeHome');
+        });
 
         var $controller;
 
