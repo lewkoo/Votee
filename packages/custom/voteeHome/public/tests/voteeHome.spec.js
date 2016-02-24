@@ -10,6 +10,7 @@
         });
 
         var $controller;
+        var $scope;
 
         beforeEach(inject(function(_$controller_){
             // The injector unwraps the underscores (_) from around the parameter names when matching
@@ -18,7 +19,7 @@
 
         describe("voteeHome controller", function() {
             beforeEach(function() {
-                var $scope = {};
+                $scope = {};
                 var controller = $controller('VoteeHomeController', { $scope: $scope });
             });
 
@@ -30,7 +31,7 @@
         describe("header controller", function() {
 
             beforeEach(function() {
-                var $scope = {};
+                $scope = {};
                 var controller = $controller('VoteeHeaderController', { $scope: $scope });
             });
 
