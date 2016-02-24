@@ -386,6 +386,60 @@ describe('<Unit Test>', function () {
 
         });
 
+        describe('Testing the DELETE routes - course deletion', function () {
+
+            it('it should be able to delete a course without any problems', function (done){
+
+                this.timeout(10000);
+
+                // save the ID for later use
+                var courseId = course._id;
+
+                server.del('/api/courses/' + course._id.toString()) // request route - look for routes/courses.js
+                    .send(course)
+                    .expect(200)
+                    .end(function (err, res){
+                        expect(err).to.be(null);
+
+                        res.body.should.have.property('title', course.title);
+                        res.body.should.have.property('courseNumber', course.courseNumber);
+                        res.body.should.have.property('description', course.description);
+                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('students').and.have.lengthOf(5);
+                        res.body.should.have.property('questions').and.have.lengthOf(0);
+
+                        // test if the course is still in the model
+                        Course.load(courseId, function(err, course){
+                            expect(course).to.be(null);
+                            done();
+                        });
+
+                    });
+            });
+
+            it('it should fail when deleting a non-existing course', function (done){
+
+                this.timeout(10000);
+
+                // store the course object - we need it for sending
+                var courseObject = course;
+
+                // clear the database
+                Course.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                server.del('/api/courses/' + course._id.toString()) // request route - look for routes/courses.js
+                    .send(course)
+                    .expect(500)
+                    .end(function (err, res){
+                        done();
+                    });
+            });
+
+        });
+
         afterEach(function (done) {
             this.timeout(10000);
             course.remove(function () {
