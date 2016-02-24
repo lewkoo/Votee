@@ -1,14 +1,48 @@
 <section data-ng-controller="QuestionsController" data-ng-init="findOne()">
-  <span>{{question.created | date:'medium'}}</span> /
-  <span>{{question.creator.name}}</span>
-  <h2>{{question.title}}</h2>
-  <div data-ng-if="hasAuthorization(question)">
-    <a class="btn" href="/questions/{{question._id}}/edit">
-      <i class="glyphicon glyphicon-edit"></i>
-    </a>
-    <a class="btn" data-ng-click="remove(question);">
-      <i class="glyphicon glyphicon-trash"></i>
-    </a>
-  </div>
-  <!--<div>{{question.content}}</div>-->
+    <span>{{question.created | date:'medium'}}</span> /
+    <span>{{question.creator.name}}</span>
+
+    <h2>{{question.title}}</h2>
+
+    <!--<div>{{question.content}}</div>-->
+    <!--TODO: add error chekcing to the form-->
+    <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="vote(questionForm)" novalidate>
+
+        <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
+        <div data-ng-if="!hasVoted(question)">
+
+            <h3>Select your answer below: </h3>
+
+            <div ng-repeat="option in question.options">
+                <label>{{option}}
+                    <input type="radio" ng-model="$parent.selectedAnswer" name="name" value="{{$index}}"/>
+                </label>
+            </div>
+
+            <!--<h2>{{selectedAnswer}}</h2>-->
+
+            <!--TODO: use bootstrap to make layout better..-->
+            <br/>
+                <a ng-hide="hasAuthorization(question)" href="/questions/vote/{{question._id}}" class="btn btn-info">Vote!</a>
+            <br/>
+
+        </div>
+
+        <div data-ng-if="hasVoted(question)">
+            <h3>You have already voted and your answer to this question has been submitted.</h3>
+        </div>
+
+    </form>
+
+    <div data-ng-if="hasAuthorization(question)">
+
+        <a class="btn" href="/questions/{{question._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+            <p>Edit</p>
+        </a>
+        <a class="btn" data-ng-click="remove(question);">
+            <i class="glyphicon glyphicon-trash"></i>
+            <p>Delete</p>
+        </a>
+    </div>
 </section>

@@ -2,7 +2,7 @@
 
 // Question authorization helper for profs
 var hasAuthorization = function(req, res, next) {
-    if (!req.question.user._id.equals(req.user._id)) {
+    if (!req.question.creator._id.equals(req.user._id)) {
         return res.status(401).send('User is not authorized');
     }
     next();
@@ -28,12 +28,14 @@ module.exports = function(Questions, app, auth) {
 
     app.route('/api/questions')
         .get(questions.all)
-        .post(auth.requiresLogin, hasPermissions, questions.create);
+        .post(questions.create);
     app.route('/api/questions/:questionId')
-        .get(auth.isMongoId, questions.show)
-        .put(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, questions.update)
-        .delete(auth.isMongoId, auth.requiresLogin, auth.requiresProf, hasAuthorization, hasPermissions, questions.destroy);
+        .get(questions.show)
+        .put(questions.update)
+        .delete(questions.destroy);
+    app.route('/api/questions/vote/:questionId')
+        .put (questions.vote);
 
-    // Finish with setting up the articleId param
+    // Finish with setting up the questionID param
     app.param('questionId', questions.question);
 };
