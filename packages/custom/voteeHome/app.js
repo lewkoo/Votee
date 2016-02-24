@@ -41,12 +41,9 @@ VoteeHome.register(function(app, auth, database, system) {
         title: 'Questions',
         link: 'Questions',
         roles: ['authenticated'],
-        title: 'Articles',
-        link: 'all articles',
         menu: 'voteeMain'
     });
 
-    });
     // Set views path, template engine and default layout
     app.set('views', __dirname + '/server/views');
 
