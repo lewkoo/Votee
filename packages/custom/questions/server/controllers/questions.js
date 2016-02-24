@@ -6,7 +6,7 @@
  */
 var mongoose = require('mongoose'),
     Question = mongoose.model('Question'),
-    //Answer = mongoose.model('Answer'),
+    Answer = mongoose.model('Answer'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -81,8 +81,34 @@ module.exports = function(Questions) {
             question = _.extend(question, req.body);
 
             console.log(question);
+            var answer = new Answer();
+            answer.created = Date.now;
+            answer.student = req.user;
 
+            console.log(answer);
 
+            question.answers.push(answer);
+            console.log(question.answers.length);
+            console.log(question);
+
+            question.save(function(err) {
+                if (err) {
+                    return res.status(500).json({
+                        error: 'Cannot vote for the question'
+                    });
+                }
+
+                Questions.events.publish({
+                    action: 'voted',
+                    user: {
+                        name: req.user.name
+                    },
+                    name: question.title,
+                    url: config.hostname + '/questions/' + question._id
+                });
+
+                res.json(question);
+            });
         },
 
         /**

@@ -14,6 +14,24 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
         //$scope.isAuthorized = MeanUser.isProfessor;
 
+        $scope.hasVoted = function(question){
+
+            /*
+            for(var key in question.answers){
+                if(question.hasOwnProperty(key)){
+                    var answer = question.answers[key];
+                    console.log("Answer");
+                    console.log(answer);
+                    var creator = answer.student;
+                    console.log(creator);
+                    if(creator.equals(MeanUser._id)){
+                        return true;
+                    }
+                }
+            }*/
+            return false;
+        };
+
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];
