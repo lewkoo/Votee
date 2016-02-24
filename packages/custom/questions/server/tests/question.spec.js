@@ -159,7 +159,7 @@ describe('<Unit Test>', function() {
     }); // END of Course model tests
 
     //TODO: add controller test here
-    describe('Testing questions API', function() {
+    describe('Testing Question Controller', function() {
         beforeEach(function(done){
             this.timeout(10000);
 
@@ -187,68 +187,95 @@ describe('<Unit Test>', function() {
         }); // END of beforeEach
 
 
-        it('it should be able to get the list of all questions', function (done) {
-            this.timeout(10000);
+        describe('Testing the GET routes', function () {
+            it('it should be able to get the list of all questions', function (done) {
+                this.timeout(10000);
 
-            server.get('/api/questions')
-                .set('Accept', 'application/json')
-                .expect('Content-Type', 'application/json')
-                .expect(200)
-                .end(function(err, res){
-                    //validate
-                    res.body.should.be.type('object');
-                    //console.log(res.body[0]);
-                    res.body[0].should.have.property('title', question.title);
-                    res.body[0].should.have.property('description', question.description);
-                    res.body[0].should.have.property('options', question.options);
-                    res.body[0].should.have.property('answer', question.answer);
-                    res.body[0].should.have.property('answers').and.have.lengthOf(5);
-                    res.body[0].should.have.property('type', 'MULTIPLE-CHOICE');
+                server.get('/api/questions')
+                    .set('Accept', 'application/json')
+                    .expect('Content-Type', 'application/json')
+                    .expect(200)
+                    .end(function(err, res){
+                        //validate
+                        res.body.should.be.type('object');
+                        //console.log(res.body[0]);
+                        res.body[0].should.have.property('title', question.title);
+                        res.body[0].should.have.property('description', question.description);
+                        res.body[0].should.have.property('options', question.options);
+                        res.body[0].should.have.property('answer', question.answer);
+                        res.body[0].should.have.property('answers').and.have.lengthOf(5);
+                        res.body[0].should.have.property('type', 'MULTIPLE-CHOICE');
+                        done();
+                    });
+            });
+
+            it('it should be able to get a single question that exists', function (done){
+
+                this.timeout(10000);
+
+                //prepare the request
+                server.get('/api/questions/' + question._id.toString())
+                    .set('Accept', 'appication/json')
+                    .expect('Content-Type', /json/)
+                    .expect(200)
+                    .end(function (err, res){
+
+                        //console.log(res.body);
+                        // Perform validations, baby!
+                        res.body.should.be.type('object');
+                        //res.body.should.have.property('title', question.title);
+                        //res.body.should.have.property('description', question.description);
+                        //res.body.should.have.property('options', question.options);
+                        //res.body.should.have.property('answer', question.answer);
+                        //res.body.should.have.property('answers').and.have.lengthOf(5);
+                        //res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+
+                        done();
+                    });
+
+            });
+
+            it('it should fail to get a non existing question', function (done){
+
+                this.timeout(10000);
+
+                // store the ID
+                var questionID = question._id.toString();
+
+                // clear the database
+                Question.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                server.get('/api/questions/' + questionID)
+                    .set('Accept', 'appication/json')
+                    .expect('Content-Type', /json/)
+                    .expect(500)// here, I am testing for code 500 only
+                    .end(function (err, res){
+                        done();
+                    });
+                });//END TESTING GET ROUTES
+
+
+            afterEach(function(done) {
+                this.timeout(10000);
+                question.remove(function(){
+                    professor.remove();
+                    answers.forEach(function (answer) {
+                        answer.remove();
+                    });
+                    // clear the array
+                    answers.splice(0,answers.length);
                     done();
                 });
-        });
-
-        //it('it should be able to get the question that exists', function (done) {
-        //    this.timeout(10000);
-        //
-        //    server.get('/api/questions/'+question._id.toString())
-        //        .set('Accept', 'application/json')
-        //        .expect('Content-Type', /json/)
-        //        .expect(200)
-        //        .end(function(err, res){
-        //            //validate
-        //            //title: 'Test question',
-        //            //    description: 'This is a question that has nothing to do with the course material',
-        //            //    creator: professor,
-        //            //    options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-        //            //answer: "Option3"
-        //            expect(err).to.be(null);
-        //            res.body.should.be.type('object');
-        //
-        //            res.body.should.have.property('title', question.title);
-        //            res.body.should.have.property('description', question.description);
-        //            res.body.should.have.property('creator', question.creator);
-        //            res.body.should.have.property('answer', question.answer);
-        //
-        //            done();
-        //        });
-        //});
-    });
-
-
-
-
-    afterEach(function(done) {
-        this.timeout(10000);
-        question.remove(function(){
-            professor.remove();
-            answers.forEach(function (answer) {
-                answer.remove();
             });
-            // clear the array
-            answers.splice(0,answers.length);
-            done();
         });
+
+
+
+
+
     });
 
 }); // END of description of Unit Test Suite
