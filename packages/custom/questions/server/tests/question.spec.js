@@ -81,6 +81,7 @@ describe('<Unit Test>', function() {
                 this.timeout(10000);
 
                 return question.save(function(err, data){
+                    //console.log(err);
                     expect(err).to.be(null);
                     expect(data.title).to.equal('Test question');
                     expect(data.description).to.equal('This is a question that has nothing to do with the course material');
@@ -234,19 +235,20 @@ describe('<Unit Test>', function() {
                         //console.log(res.body);
                         // Perform validations, baby!
                         res.body.should.be.type('object');
-                        //res.body.should.have.property('title', question.title);
-                        //res.body.should.have.property('description', question.description);
-                        //res.body.should.have.property('options', question.options);
-                        //res.body.should.have.property('answer', question.answer);
-                        //res.body.should.have.property('answers').and.have.lengthOf(5);
-                        //res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+                        res.body.should.have.property('title', question.title);
+                        res.body.should.have.property('description', question.description);
+                        res.body.should.have.property('options', question.options);
+                        res.body.should.have.property('answer', question.answer);
+                        res.body.should.have.property('answers').and.have.lengthOf(5);
+                        res.body.should.have.property('type', 'MULTIPLE-CHOICE');
 
                         done();
                     });
 
             });
 
-            //TODO: QUestion function in server controller thrwos an error and test fails, need to fix
+            //TODO: Question function in server controller throws an error (as it should) and test fails. But it hard crashes
+            // TODO: need to fix
             //it('it should fail to get a non existing question', function (done){
             //
             //    this.timeout(10000);
@@ -270,6 +272,45 @@ describe('<Unit Test>', function() {
             //});
 
         });//END TESTING GET ROUTES
+
+        describe('Testing the POST routes - create a question', function () {
+
+            it('it should be saving a question without any problems', function (done){
+                // prepare the object to be sent
+                Question.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                question = new Question({
+                    title: 'Test question',
+                    description: 'This is a question that has nothing to do with the course material',
+                    creator: professor,
+                    options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
+                    answer: "Option3",
+                    answers: answers
+                });
+
+                server.post('/api/questions/') // request route - look for routes/question.js
+                    .send(question)
+                    .expect(200)
+                    .end(function (err, res){
+                        expect(err).to.be(null);
+                        res.body.should.have.property('title', question.title);
+                        res.body.should.have.property('description', question.description);
+                        res.body.should.have.property('options', question.options);
+                        res.body.should.have.property('answer', question.answer);
+                        res.body.should.have.property('answers').and.have.lengthOf(5);
+                        res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+
+                        done();
+
+                    });
+
+
+            });
+
+        });
 
 
 

@@ -39,16 +39,21 @@ module.exports = function(Questions) {
             var question = new Question(req.body);
             //var answer = new Answer();
 
-            console.log(req.body);
             //fill up the model with data from request
-            question.creator = req.user;
+            if(req.user != undefined){
+                question.creator = req.user;
+            } else {
+                question.creator = req.body.creator;
+            }
+            //TODO: read this from the request
+            question.title = req.body.title;
             question.type = "MULTIPLE-CHOICE";
-            question.answer = req.body.correctAnswer;
+            question.answer = req.body.answer;
             question.options = req.body.options;
 
-            console.log(req.body.type == 'multChoice');
+            //console.log(req.body.type == 'MULTIPLE-CHOICE');
 
-            //if(req.body.type == 'multChoice'){
+            //if(req.body.type == 'MULTIPLE-CHOICE'){
             //    question.correctAnswer = req.body.correctAnswer;
             //}else {
             //    //open ended question..could possiby have more options (quiz?)
@@ -56,19 +61,22 @@ module.exports = function(Questions) {
 
             question.save(function(err) {
                 if (err) {
+                    console.log(err);
                     return res.status(500).json({
                         error: 'Cannot save the question'
                     });
                 }
 
-                Questions.events.publish({
-                    action: 'created',
-                    user: {
-                        name: req.user.name
-                    },
-                    url: config.hostname + '/questions/' + question._id,
-                    name: question.title
-                });
+                if(req.user != undefined){
+                    Questions.events.publish({
+                        action: 'created',
+                        user: {
+                            name: req.user.name
+                        },
+                        url: config.hostname + '/questions/' + question._id,
+                        name: question.title
+                    });
+                }
 
                 res.json(question);
             });
@@ -82,21 +90,21 @@ module.exports = function(Questions) {
             //BIG TODO: lots and lots of stuff here...need to figure out DB structure for this as well
             console.log('VOTING!');
 
-            console.log(req.body);
+            //console.log(req.body);
             var question = req.question;
 
             question = _.extend(question, req.body);
 
-            console.log(question);
+            //console.log(question);
             var answer = new Answer();
             answer.created = Date.now;
             answer.student = req.user;
 
-            console.log(answer);
+            //console.log(answer);
 
             question.answers.push(answer);
-            console.log(question.answers.length);
-            console.log(question);
+            //console.log(question.answers);
+            //console.log(question);
 
             question.save(function(err) {
                 if (err) {
@@ -116,6 +124,12 @@ module.exports = function(Questions) {
 
                 res.json(question);
             });
+
+            //Question.find({})
+            //    .populate('answers')
+            //    .exec(function(error, questions){
+            //        console.log(questions);
+            //    });
         },
 
         /**
