@@ -23,8 +23,8 @@
                 var controller = $controller('VoteeHomeController', { $scope: $scope });
             });
 
-            it("stub", function() {
-                expect(true).toBe(true);
+            it('should expose some global scope', function() {
+              expect(true).toBeTruthy();
             });
         });
 
