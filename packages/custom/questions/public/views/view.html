@@ -22,8 +22,11 @@
             <!--<h2>{{selectedAnswer}}</h2>-->
 
             <!--TODO: use bootstrap to make layout better..-->
+
+            <!--href="/questions/vote/{{question._id}}-->
+
             <br/>
-                <a ng-hide="hasAuthorization(question)" href="/questions/vote/{{question._id}}" class="btn btn-info">Vote!</a>
+                <button ng-hide="hasAuthorization(question)" type="submit" class="btn btn-info">Vote!</button>
             <br/>
 
         </div>

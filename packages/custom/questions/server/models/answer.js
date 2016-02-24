@@ -22,13 +22,13 @@ var AnswerSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User',
         required: true
-    },
-
-    course: {
-        type: Schema.ObjectId,
-        ref: 'Course',
-        required: false
     }
+    //We are storing answers in a course for now
+    //course: {
+    //    type: Schema.ObjectId,
+    //    ref: 'Course',
+    //    required: false
+    //}
 
 });
 
