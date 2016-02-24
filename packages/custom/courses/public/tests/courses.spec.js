@@ -46,7 +46,7 @@
 
             $stateParams = _$stateParams_;
 
-            $httpBackend = $injector.get("$httpBackend");
+            $httpBackend = _$httpBackend_;
 
             $location = _$location_;
 
