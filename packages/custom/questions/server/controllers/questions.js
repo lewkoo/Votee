@@ -27,6 +27,13 @@ module.exports = function(Questions) {
 
         /**
          * Create a question
+         *
+         * @api {post} api/question/ Create a new question
+         * @apiName CreateQuestion
+         * @apiGroup Question
+         * @apiVersion 0.1.0
+         *
+         * @apiDescription This is Questions API
          */
         create: function(req, res) {
             var question = new Question(req.body);
@@ -112,7 +119,13 @@ module.exports = function(Questions) {
         },
 
         /**
-         * Update question
+         * Updates a Questions
+         *
+         * @api {put} api/question/:questionID Update a question
+         * @apiName Update
+         * @apiGroup Question
+         * @apiVersion 0.1.0
+         *
          */
         update: function(req, res) {
             console.log("Updating question");
@@ -142,7 +155,13 @@ module.exports = function(Questions) {
             });
         },
         /**
-         * Delete a question
+         * Delete a Question
+         *
+         * @api {delete} api/question/ Get a list of questions
+         * @apiName Destroy
+         * @apiGroup Question
+         * @apiVersion 0.1.0
+         *
          */
         destroy: function(req, res) {
             var question = req.question;
@@ -167,7 +186,15 @@ module.exports = function(Questions) {
             });
         },
         /**
-         * Show a question
+         * Show a Questions
+         *
+         * @api {get} api/question/:questionID Get a specific question
+         * @apiName Show
+         * @apiGroup Question
+         * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns specific questions
+         *
          */
         show: function(req, res) {
 
@@ -187,6 +214,14 @@ module.exports = function(Questions) {
 
         /**
          * List of Questions
+         *
+         * @api {get} api/question/ Get a list of questions
+         * @apiName All
+         * @apiGroup Question
+         * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns a list of all questions
+         *
          */
         all: function(req, res) {
 

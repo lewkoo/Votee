@@ -28,7 +28,7 @@ module.exports = function(Questions, app, auth) {
 
     app.route('/api/questions')
         .get(questions.all)
-        .post(auth.requiresLogin, hasPermissions, questions.create);
+        .post(questions.create);
     app.route('/api/questions/:questionId')
         .get(questions.show)
         .put(questions.update)
