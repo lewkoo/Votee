@@ -28,7 +28,6 @@ angular.module('mean.courses').config(['$stateProvider',
                     circles: ['authenticated'],
                     denyState: 'auth.login'
                 }
-
             });
     }
 ]);
