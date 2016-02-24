@@ -142,7 +142,7 @@ module.exports = function(Questions) {
          *
          */
         update: function(req, res) {
-            console.log("Updating question");
+            //console.log("Updating question");
 
             var question = req.question;
 
@@ -156,14 +156,17 @@ module.exports = function(Questions) {
                     });
                 }
 
-                Questions.events.publish({
-                    action: 'updated',
-                    user: {
-                        name: req.user.name
-                    },
-                    name: question.title,
-                    url: config.hostname + '/questions/' + question._id
-                });
+                if(req.user != undefined){
+                    Questions.events.publish({
+                        action: 'updated',
+                        user: {
+                            name: req.user.name
+                        },
+                        name: question.title,
+                        url: config.hostname + '/questions/' + question._id
+                    });
+                }
+
 
                 res.json(question);
             });
@@ -188,13 +191,15 @@ module.exports = function(Questions) {
                     });
                 }
 
-                Questions.events.publish({
-                    action: 'deleted',
-                    user: {
-                        name: req.user.name
-                    },
-                    name: question.title
-                });
+                if(req.user != undefined) {
+                    Questions.events.publish({
+                        action: 'deleted',
+                        user: {
+                            name: req.user.name
+                        },
+                        name: question.title
+                    });
+                }
 
                 res.json(question);
             });

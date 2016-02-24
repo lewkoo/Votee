@@ -306,14 +306,122 @@ describe('<Unit Test>', function() {
                         done();
 
                     });
+            });
+        });
+
+        describe('Testing the PUT routes - question update', function () {
+
+            it('it should be updating a question without any problems', function (done){
+
+                this.timeout(10000);
+
+                question.title = "Updated title";
+                question.description = "Updated description";
+                //TODO: add here test to change question options
+
+                server.put('/api/questions/' + question._id.toString()) // request route - look for routes/courses.js
+                    .send(question)
+                    .expect(200)
+                    .end(function (err, res){
+                        expect(err).to.be(null);
+                        //console.log(res.body);
+
+                        res.body.should.have.property('title', "Updated title");
+                        res.body.should.have.property('description', "Updated description");
+                        res.body.should.have.property('options', question.options);
+                        res.body.should.have.property('answer', question.answer);
+                        res.body.should.have.property('answers').and.have.lengthOf(5);
+                        res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+
+                        done();
+
+                    });
 
 
             });
 
+            //TODO: running into same issue as when getting a question that doesnt exist
+            //TODO: needs to be looked at and fixed (Problem is in server controller)
+            //it('it should be failing to update a non-existing question', function (done){
+            //
+            //    this.timeout(10000);
+            //
+            //    // store the question object - we need it for sending
+            //    var questionObject = question;
+            //
+            //    // clear the database
+            //    Question.remove({}, function(err){
+            //        //clearing the database
+            //        expect(err).to.be(null);
+            //    });
+            //
+            //    server.put('/api/questions/' + questionObject._id.toString())
+            //        .send(question)
+            //        .expect('Content-Type', /json/)
+            //        .expect(500) // here, I am testing for code 500 only
+            //        .end(function (err, res){
+            //
+            //            done();
+            //        });
+            //
+            //});
+
         });
 
+        describe('Testing the DELETE routes - question deletion', function () {
 
+            it('it should be able to delete a question without any problems', function (done){
 
+                this.timeout(10000);
+
+                // save the ID for later use
+                var questionID = question._id;
+
+                server.del('/api/questions/' + question._id.toString()) // request route - look for routes/questions.js
+                    .send(question)
+                    .expect(200)
+                    .end(function (err, res){
+                        expect(err).to.be(null);
+
+                        res.body.should.have.property('title', question.title);
+                        res.body.should.have.property('description', question.description);
+                        res.body.should.have.property('options', question.options);
+                        res.body.should.have.property('answer', question.answer);
+                        res.body.should.have.property('answers').and.have.lengthOf(5);
+                        res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+
+                        // test if the question is still in the model
+                        Question.load(questionID, function(err, question){
+                            expect(question).to.be(null);
+                            done();
+                        });
+
+                    });
+            });
+
+            //TODO: throws same error as GET and POST update methods that do not exist
+            //TODO: the request should fail as expected, just needed to be fixed in the server controller
+            //it('it should fail when deleting a non-existing question', function (done){
+            //
+            //    this.timeout(10000);
+            //
+            //    // store the question object - we need it for sending
+            //    var questionObject = question;
+            //
+            //    // clear the database
+            //    Question.remove({}, function(err){
+            //        //clearing the database
+            //        expect(err).to.be(null);
+            //    });
+            //
+            //    server.del('/api/questions/' + question._id.toString()) // request route - look for routes/questions.js
+            //        .send(question)
+            //        .expect(500)
+            //        .end(function (err, res){
+            //            done();
+            //        });
+            //});
+        });
 
             afterEach(function(done) {
                 this.timeout(10000);
@@ -327,7 +435,5 @@ describe('<Unit Test>', function() {
                     done();
                 }); //remove
             });//aftereach
-
         });
-
 }); // END of description of Unit Test Suite
