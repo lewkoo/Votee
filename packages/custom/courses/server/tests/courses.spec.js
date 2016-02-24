@@ -60,6 +60,7 @@ function generateProfsAndStudents() {
     } // generate 5 students
 
 }
+
 describe('<Unit Test>', function () {
 
     describe('Model Course:', function () {
