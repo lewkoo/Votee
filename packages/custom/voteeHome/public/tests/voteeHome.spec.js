@@ -10,6 +10,8 @@
         });
 
         var $controller;
+
+        var controller;
         var $scope;
 
         beforeEach(inject(function(_$controller_){
@@ -20,7 +22,7 @@
         describe("voteeHome controller", function() {
             beforeEach(function() {
                 $scope = {};
-                var controller = $controller('VoteeHomeController', { $scope: $scope });
+                controller = $controller('VoteeHomeController', { $scope: $scope });
             });
 
             it('should expose some global scope', function() {
@@ -32,7 +34,7 @@
 
             beforeEach(function() {
                 $scope = {};
-                var controller = $controller('VoteeHeaderController', { $scope: $scope });
+                controller = $controller('VoteeHeaderController', { $scope: $scope });
             });
 
             it("Has a menu",
