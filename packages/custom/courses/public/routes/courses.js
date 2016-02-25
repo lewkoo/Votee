@@ -5,7 +5,7 @@ angular.module('mean.courses').config(['$stateProvider',
         $stateProvider
             .state('Courses', {
                 url: '/courses',
-                templateUrl: 'courses/views/index.html'
+                templateUrl: 'courses/views/list.html'
             })
             .state('create course', {
                 url: '/courses/create',
