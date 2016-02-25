@@ -47,6 +47,39 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             }
         };
 
+        $scope.update = function(isValid) {
+            if (isValid) {
+                var course = $scope.course;
+                if (!course.updated) {
+                    course.updated = [];
+                }
+                course.updated.push(new Date().getTime());
+
+                course.$update(function() {
+                    $location.path('courses/' + course._id);
+                });
+            } else {
+                $scope.submitted = true;
+            }
+        };
+
+        $scope.remove = function(course) {
+            if (course) {
+                course.$remove(function(response) {
+                    for (var i in $scope.courses) {
+                        if ($scope.courses[i] === course) {
+                            $scope.courses.splice(i, 1);
+                        }
+                    }
+                    $location.path('courses');
+                });
+            } else {
+                $scope.course.$remove(function(response) {
+                    $location.path('courses');
+                });
+            }
+        };
+
         $scope.findOne = function() {
             Courses.get({
                 courseId: $stateParams.courseId
