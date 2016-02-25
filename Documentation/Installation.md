@@ -21,7 +21,13 @@ Install the latest stable release of the following:
 
 ### Debian/Ubuntu based
 
+Ubuntu ships with an outdated version of nodejs.  
+The following command will add an updated repository.
+
     curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+
+Install nodejs, mongodb, and git.
+
     sudo apt-get install nodejs mongodb git
 
 ## Get the code
