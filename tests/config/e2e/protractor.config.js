@@ -15,6 +15,10 @@ exports.config = {
     }
   ],
 
+  params: {
+      testEmail: 'email@example.com',
+      testPassword: 'password'
+  },
 
   onPrepare: function(){
     //Creates independent results files for each browser
