@@ -21,7 +21,7 @@ angular.module('mean.circles').config(['$stateProvider',
       $rootScope.$on('$stateChangeStart', function(e, toState) {
         var acl = MeanUser.acl;
         // If the route has a circle requirement on it validate it
-        if(acl.allowed !== undefined && toState.requiredCircles && angular.isArray(toState.requiredCircles.circles)) {
+        if(typeof acl.allowed === "undefined" && toState.requiredCircles && angular.isArray(toState.requiredCircles.circles)) {
           for(var j = 0; j < toState.requiredCircles.circles.length; j++) {
             var requiredCircle = toState.requiredCircles.circles[j];
             // If MeanUser hasn't loaded yet, request circles directly
