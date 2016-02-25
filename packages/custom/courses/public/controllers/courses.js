@@ -17,8 +17,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
         $scope.create = function(isValid) {
             if(isValid) {
 
-                car course = new Courses($scope.course);
-                /*var course = new Courses({
+                var course = new Courses({
                     title: $scope.title,
                     courseNumber: $scope.courseNumber,
                     description: $scope.description,
@@ -27,7 +26,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                     students: $scope.students,
                     created: $scope.created,
                     __v: $scope.__v
-                });*/
+                });
 
                 course.$save(function(response){
                    $location.path('courses/' + response._id);
@@ -41,6 +40,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                 $scope.students = [];
                 $scope.created = '';
                 $scope.__v = 0;
+
 
             } else {
                 $scope.submitted = true;
