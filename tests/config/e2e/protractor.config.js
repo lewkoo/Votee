@@ -1,14 +1,5 @@
 var jasmineReporters = require('jasmine-reporters');
 
-var ConsoleReporter = jasmineRequire.ConsoleReporter();
-jasmine.getEnv().addReporter(new ConsoleReporter({
-    timer: new jasmine.Timer,
-    print: function() {
-        console.log.apply(console, arguments);
-    },
-    showColors: true
-}));
-
 exports.config = {
   baseUrl: 'http://localhost:3001',
   framework: 'jasmine2',
@@ -24,7 +15,7 @@ exports.config = {
     }
   ],
 
-/*
+
   onPrepare: function(){
     //Creates independent results files for each browser
     //Otherwise they run at the same time and overwrite each other
@@ -41,5 +32,4 @@ exports.config = {
       }));
     });
   }
-*/
 };
