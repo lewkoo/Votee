@@ -16,16 +16,17 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
         $scope.hasVoted = function(question){
 
-           /*
+/*
             for(var key in question.answers){
                 var answer = question.answers[key];
 
-                console.log(answer);
-                var creator = answer.student;
-                console.log(creator);
-                if(creator.equals(MeanUser._id)){
-                        return true;
-                }
+                //console.log(answer);
+                //var creator = answer.student;
+
+                console.log("Question creator: " + question.creator);
+                //if(creator.equals(MeanUser._id)){
+                //        return true;
+                //}
             }*/
             return false;
         };

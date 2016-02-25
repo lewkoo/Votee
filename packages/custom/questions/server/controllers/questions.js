@@ -125,6 +125,10 @@ module.exports = function(Questions) {
                     });
                 }
 
+                console.log("Actually saving the answer");
+                answer.save();
+                console.log("Answer saved, bitches");
+
                 Questions.events.publish({
                     action: 'voted',
                     user: {
