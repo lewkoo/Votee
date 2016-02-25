@@ -236,8 +236,6 @@ describe('<Unit Test>', function() {
 
             });
 
-            //TODO: Question function in server controller throws an error (as it should) and test fails. But it hard crashes
-            // TODO: need to fix
             it('it should fail to get a non existing question', function (done){
 
                 this.timeout(10000);
@@ -328,8 +326,6 @@ describe('<Unit Test>', function() {
 
             });
 
-            //TODO: running into same issue as when getting a question that doesnt exist
-            //TODO: needs to be looked at and fixed (Problem is in server controller)
             it('it should be failing to update a non-existing question', function (done){
 
                 this.timeout(10000);
@@ -389,8 +385,6 @@ describe('<Unit Test>', function() {
                     });
             });
 
-            //TODO: throws same error as GET and POST update methods that do not exist
-            //TODO: the request should fail as expected, just needed to be fixed in the server controller
             it('it should fail when deleting a non-existing question', function (done){
 
                 this.timeout(10000);
