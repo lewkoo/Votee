@@ -103,6 +103,24 @@
 
         });
 
+        it('$scope.findOne() should create an array with one question object fetched ' +
+            'from XHR using a questionID URL parameter', function() {
+            // fixture URL parament
+            $stateParams.questionId = '56cf5578b387fd7c940cb9be';
+
+            // test expected GET request with response object
+            $httpBackend.expectGET('api\/questions\/'+ $stateParams.questionId).respond(testQuetionsData());
+
+            // run controller
+            scope.findOne();
+            $httpBackend.flush();
+
+            //console.log(scope.questions);
+            // test scope value
+            expect(scope.question).toEqualData(testQuetionsData());
+
+        });
+
 
 
     });
