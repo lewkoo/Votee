@@ -65,4 +65,13 @@ To start a production server, instead run
 
 ## Running end to end Selenium tests
 
-    gulp e2e
+Before running end to end tests, you must create the test user. Start a local Votee server and use the registration page to add a user with the following information.
+
+Full Name: ``Test User``  
+Email Address: ``email@example.com``  
+Username: ``testuser``  
+Password: ``password``
+
+Once the test user has been created, you can run end to end tests with the following command.
+
+    gulp e2e.test
