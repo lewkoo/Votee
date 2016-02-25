@@ -75,7 +75,6 @@ describe('<Unit Test>', function() {
                 this.timeout(10000);
 
                 return question.save(function(err, data){
-                    //console.log(err);
                     expect(err).to.be(null);
                     expect(data.title).to.equal('Test question');
                     expect(data.description).to.equal('This is a question that has nothing to do with the course material');
@@ -124,8 +123,6 @@ describe('<Unit Test>', function() {
 
                 this.timeout(10000);
                 question.options = null;
-
-                console.log(question.answer);
 
                 return question.save(function(err, data){
                     expect(err).to.be(null);
@@ -204,7 +201,6 @@ describe('<Unit Test>', function() {
                     .end(function(err, res){
                         //validate
                         res.body.should.be.type('object');
-                        //console.log(res.body[0]);
                         res.body[0].should.have.property('title', question.title);
                         res.body[0].should.have.property('description', question.description);
                         res.body[0].should.have.property('options', question.options);
@@ -226,7 +222,6 @@ describe('<Unit Test>', function() {
                     .expect(200)
                     .end(function (err, res){
 
-                        //console.log(res.body);
                         // Perform validations, baby!
                         res.body.should.be.type('object');
                         res.body.should.have.property('title', question.title);
@@ -318,7 +313,6 @@ describe('<Unit Test>', function() {
                     .expect(200)
                     .end(function (err, res){
                         expect(err).to.be(null);
-                        //console.log(res.body);
 
                         res.body.should.have.property('title', "Updated title");
                         res.body.should.have.property('description', "Updated description");
