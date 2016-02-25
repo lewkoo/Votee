@@ -207,7 +207,63 @@
 
         });
 
+        describe('update() function tests ', function() {
 
-    });
+            it('$scote.update() with valid form data should send a PUT request ' +
+            'with the form input values and then ' +
+            'locate to updated object URL', function(Courses){
+
+                // mock course object from form
+                var course = new Courses(testCourseData());
+
+                // mock article in scope
+                scope.course = course;
+
+                // test PUT happens correctly
+                $httpBackend.expectPUT(/api\/courses\/([0-9a-fA-F]{24})$/, testCourseData()).respond();
+
+                // run controller
+                scope.update(true);
+                $httpBackend.flush();
+
+                // test URL location to new object
+                expect($location.path()).toBe('/courses/' + testCourseData()._id);
+
+            });
+
+        });
+
+        describe('remove() function tests ', function() {
+
+            it('$scope.remove() with valid form data should send a DELETE request ' +
+            'with the form intput values and then ' +
+            'locate to updated object URL', function(Courses){
+
+                // fixture rideshare
+                var course = new Courses({
+                    _id: '56c8bdfaf82d7bd71d40de08'
+                });
+
+                // mock rideshares in scope
+                scope.courses = [];
+                scope.courses.push(course);
+
+                // test expected rideshare DELETE request
+                $httpBackend.expectDELETE(/api\/courses\/([0-9a-fA-F]{24})$/).respond(204);
+
+                // run controller
+                scope.remove(course);
+                $httpBackend.flush();
+
+                // test after successful delete URL location articles list
+                //expect($location.path()).toBe('/articles');
+                expect(scope.courses.length).toBe(0);
+
+            });
+
+        });
+
+
+        });
 
 }());

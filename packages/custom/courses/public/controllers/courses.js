@@ -8,6 +8,18 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             name: 'courses'
         };
 
+        $scope.canCreateCourses = function()
+        {
+            console.log("In canCreateCourses");
+
+            return (MeanUser.isProfessor || MeanUser.isAdmin);
+        };
+
+        $scope.hasAuthorization = function(course) {
+            if (!course || !course.user) return false;
+            return MeanUser.isAdmin || course.user._id === MeanUser.user._id;
+        };
+
         $scope.find = function() {
             Courses.query(function(courses) {
                 $scope.courses = courses;
@@ -29,7 +41,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                 });
 
                 course.$save(function(response){
-                   $location.path('courses/' + response._id);
+                    $location.path('courses/' + response._id);
                 });
 
                 $scope.title = '';
@@ -44,6 +56,39 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
 
             } else {
                 $scope.submitted = true;
+            }
+        };
+
+        $scope.update = function(isValid) {
+            if (isValid) {
+                var course = $scope.course;
+                if (!course.updated) {
+                    course.updated = [];
+                }
+                course.updated.push(new Date().getTime());
+
+                course.$update(function() {
+                    $location.path('courses/' + course._id);
+                });
+            } else {
+                $scope.submitted = true;
+            }
+        };
+
+        $scope.remove = function(course) {
+            if (course) {
+                course.$remove(function(response) {
+                    for (var i in $scope.courses) {
+                        if ($scope.courses[i] === course) {
+                            $scope.courses.splice(i, 1);
+                        }
+                    }
+                    $location.path('courses');
+                });
+            } else {
+                $scope.course.$remove(function(response) {
+                    $location.path('courses');
+                });
             }
         };
 
