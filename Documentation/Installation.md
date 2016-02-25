@@ -12,7 +12,8 @@ Install the latest stable release of the following:
 ### Windows
 - Download and install [Node.js](https://nodejs.org/en/download/)
 - Follow the installation guide for [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
-- Download and install [Git](http://git-scm.com/downloads)
+- Download and install [Git](http://git-scm.com/downloads)  
+You'll need git bash in order to run the rest of the commands.
 
 ### OS X
 - Download and install [Node.js](https://nodejs.org/en/download/)
@@ -36,7 +37,8 @@ Install nodejs, mongodb, and git.
 
 ## Prerequisite packages
 
-In your terminal, navigate to the Votee code folder and run the following commands.
+In your terminal, navigate to the Votee code folder and run the following commands.  
+*On Windows, make sure you use Git Bash to run these commands.*
 
     npm install -g gulp bower
     npm install
