@@ -50,6 +50,11 @@
 
             $location = _$location_;
 
+            // mock these requests
+            $httpBackend.expectGET('/api\/users\/me').respond(200);
+            $httpBackend.when('GET','voteeHome\/views\/index.html').respond(200);
+            $httpBackend.when('GET','/api\/circles\/mine').respond(200);
+
         }));
 
         var testCourseData = function() {
@@ -74,10 +79,8 @@
 
         it('$scope.find() should find courses ', function() {
 
+            // mock the expected response to a GET request
 
-            console.log($httpBackend);
-
-            // mock the expected responce to a GET request
             $httpBackend.expectGET(/api\/courses$/).respond([{
                 "_id" : "56c8bdfaf82d7bd71d40de08",
                 "title" : "Test Course 1",
@@ -95,12 +98,12 @@
                 "created" : "2016-02-20T19:26:50.874Z",
                 "__v" : 0
             }]);
-
+            
             scope.find();
             $httpBackend.flush();
 
             // test the return value
-            expect(scope.courses).toEqualData(testCourseData());
+            expect(scope.courses[0]).toEqualData(testCourseData());
 
         });
 

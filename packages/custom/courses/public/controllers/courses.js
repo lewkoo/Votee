@@ -9,8 +9,9 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
         };
 
         $scope.find = function() {
-            Courses.query(function(questions) {
-                $scope.questions = questions;
+            console.log(Courses);
+            Courses.query(function(courses) {
+                $scope.courses = courses;
             });
         };
 
