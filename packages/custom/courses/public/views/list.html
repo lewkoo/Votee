@@ -3,7 +3,7 @@
         <div class="form-group">
             <div class="row">
                 <a href="/courses/create">
-                    <button type="create" class="btn btn-info">Create New Course</button>
+                    <button data-ng-if="canCreateCourses()" type="create" class="btn btn-info">Create New Course</button>
                 </a>
             </div>
         </div>

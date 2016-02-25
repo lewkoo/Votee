@@ -8,6 +8,18 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             name: 'courses'
         };
 
+        $scope.canCreateCourses = function()
+        {
+            console.log("In canCreateCourses");
+
+            return (MeanUser.isProfessor || MeanUser.isAdmin);
+        };
+
+        $scope.hasAuthorization = function(course) {
+            if (!course || !course.user) return false;
+            return MeanUser.isAdmin || course.user._id === MeanUser.user._id;
+        };
+
         $scope.find = function() {
             Courses.query(function(courses) {
                 $scope.courses = courses;
@@ -29,7 +41,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                 });
 
                 course.$save(function(response){
-                   $location.path('courses/' + response._id);
+                    $location.path('courses/' + response._id);
                 });
 
                 $scope.title = '';

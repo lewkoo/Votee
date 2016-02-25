@@ -69,7 +69,7 @@ CourseSchema.path('title').validate(function(title) {
 CourseSchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
-    }).populate('user', 'name username').exec(cb);
+    }).populate('professor').populate('students').exec(cb);
 };
 
 mongoose.model('Course', CourseSchema);
