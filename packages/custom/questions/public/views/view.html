@@ -13,10 +13,16 @@
 
             <h3>Select your answer below: </h3>
 
-            <div ng-repeat="option in question.options">
-                <label>{{option}}
-                    <input type="radio" ng-model="$parent.selectedAnswer" name="name" value="{{$index}}"/>
-                </label>
+            <!--TODO: (preivous code) remove when surely not needed-->
+            <!--<div ng-repeat="option in question.options">-->
+                <!--<label>{{option}}-->
+                    <!--<input type="radio" ng-model="$parent.selectedAnswer" name="name" ng-value="$index"/>-->
+                <!--</label>-->
+            <!--</div>-->
+
+            <div ng-repeat="option in question.options" class="row-fluid">
+                <label><input type="radio" name="meaningless" ng-value="(( $index ))" ng-model="selectedAnswer.index" />
+                    &nbsp;{{option}}</label>
             </div>
 
             <!--<h2>{{selectedAnswer}}</h2>-->
@@ -26,7 +32,7 @@
             <!--href="/questions/vote/{{question._id}}-->
 
             <br/>
-                <button ng-hide="hasAuthorization(question)" type="submit" class="btn btn-info">Vote!</button>
+                <button type="submit" class="btn btn-info">Vote!</button>
             <br/>
 
         </div>

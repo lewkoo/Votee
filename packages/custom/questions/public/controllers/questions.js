@@ -33,13 +33,14 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];
+        $scope.selectedAnswer = { index: 0 };
 
         //$scope.setSelected = function(selected) {
         //    console.log(selected);
         //    $scope.selected = selected;
         //}
 
-        $scope.selectedAnswer ;
+        //$scope.selectedAnswer ;
 
         Circles.mine(function(acl) {
             $scope.availableCircles = acl.allowed;
@@ -88,6 +89,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 questionId: $stateParams.questionId
             }, function(question) {
                 $scope.question = question;
+                //console.log($scope.question.options[0]);
             });
         };
 

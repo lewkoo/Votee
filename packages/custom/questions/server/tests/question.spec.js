@@ -25,12 +25,6 @@ var answers  = [];
  */
 
 var generateRandomAnswers = function generateRandomAnswers(answerSequenceNumber) {
-    //billy = new User({
-    //    name: 'Student ' + answerSequenceNumber,
-    //    email: 'student' + answerSequenceNumber + '@university.ca',
-    //    username: 'student' + answerSequenceNumber,
-    //    password: 'iwillpassthrough'
-    //});
 
     return new Answer({
         student: {
