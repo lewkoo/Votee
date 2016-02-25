@@ -98,7 +98,7 @@
                 "created" : "2016-02-20T19:26:50.874Z",
                 "__v" : 0
             }]);
-            
+
             scope.find();
             $httpBackend.flush();
 
