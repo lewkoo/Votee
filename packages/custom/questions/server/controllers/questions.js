@@ -10,7 +10,16 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
+var errorString = "Error: the question can not be found";
+
+
 module.exports = function(Questions) {
+
+    function error(res) {
+        return res.status(500).json({
+            error: errorString
+        });
+    }
 
     return {
         /**
@@ -65,7 +74,6 @@ module.exports = function(Questions) {
 
             question.save(function(err) {
                 if (err) {
-                    console.log(err);
                     return res.status(500).json({
                         error: 'Cannot save the question'
                     });
@@ -146,39 +154,40 @@ module.exports = function(Questions) {
          *
          */
         update: function(req, res) {
-            //console.log("Updating question");
-
             var question = req.question;
 
             question = _.extend(question, req.body);
 
 
-            question.save(function(err) {
-                if (err) {
-                    return res.status(500).json({
-                        error: 'Cannot update the question'
-                    });
-                }
+            if(question != null){
+                question.save(function(err) {
+                    if (err) {
+                        return res.status(500).json({
+                            error: 'Cannot update the question'
+                        });
+                    }
 
-                if(req.user != undefined){
-                    Questions.events.publish({
-                        action: 'updated',
-                        user: {
-                            name: req.user.name
-                        },
-                        name: question.title,
-                        url: config.hostname + '/questions/' + question._id
-                    });
-                }
+                    if(req.user != undefined){
+                        Questions.events.publish({
+                            action: 'updated',
+                            user: {
+                                name: req.user.name
+                            },
+                            name: question.title,
+                            url: config.hostname + '/questions/' + question._id
+                        });
+                    }
+                    res.json(question);
+                });
+            } else {
+                error(res);
+            }
 
-
-                res.json(question);
-            });
         },
         /**
          * Delete a Question
          *
-         * @api {delete} api/question/ Get a list of questions
+         * @api {delete} api/question/:questionID  Delete a question
          * @apiName Destroy
          * @apiGroup Question
          * @apiVersion 0.1.0
@@ -187,26 +196,30 @@ module.exports = function(Questions) {
         destroy: function(req, res) {
             var question = req.question;
 
+            if(question != null){
+                question.remove(function(err) {
+                    if (err) {
+                        return res.status(500).json({
+                            error: 'Cannot delete the question'
+                        });
+                    }
 
-            question.remove(function(err) {
-                if (err) {
-                    return res.status(500).json({
-                        error: 'Cannot delete the question'
-                    });
-                }
+                    if(req.user != undefined) {
+                        Questions.events.publish({
+                            action: 'deleted',
+                            user: {
+                                name: req.user.name
+                            },
+                            name: question.title
+                        });
+                    }
 
-                if(req.user != undefined) {
-                    Questions.events.publish({
-                        action: 'deleted',
-                        user: {
-                            name: req.user.name
-                        },
-                        name: question.title
-                    });
-                }
+                    res.json(question);
+                });
+            } else {
+                error(res);
+            }
 
-                res.json(question);
-            });
         },
         /**
          * Show a Questions
