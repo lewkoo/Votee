@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "crypt": "0.0.1",
     "del": "latest",
     "expect.js": "latest",
     "gulp": "latest",
