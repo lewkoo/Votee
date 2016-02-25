@@ -231,6 +231,14 @@ module.exports = function(Questions) {
             res.json(req.question);
         },
 
+
+        answer: function(req, res) {
+            var question = req.question;
+
+            res.json(question);
+            return question.answer;
+        },
+
         /**
          * List of Questions
          *
