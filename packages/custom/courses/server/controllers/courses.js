@@ -24,7 +24,7 @@ module.exports = function(Courses) {
     }
 
     function validateCourse(req, res) {
-        if (req.course != null) {
+        if (req.course !== null) {
             res.json(req.course);
         } else {
             error(res);
@@ -51,20 +51,56 @@ module.exports = function(Courses) {
         },
 
         /**
-         * Create a question
+         * Create a course
+         *
+         * @api {post} api/courses/ Create a new course
+         * @apiName CreateCourse
+         * @apiGroup Courses
+         * @apiVersion 0.1.0
+         *
+         * @apiDescription This is Courses API
+         *
+         * @apiParam {String} courseNumber Mandatory courseNumber
+         * @apiParam {String} title Mandatory course title string
+         *
+         * @apiParamExample {x-www-form-urlencoded} Request-example
+         * {
+         *   courseNumber: 4380
+         *   title: Software Engineering
+         * }
+         *
+         * @apiSuccess returns newly created course object
+         *
+         * @apiSuccessExample Example of successful response
+         * {
+         *    "_id" : "56d0d98c8aac33e7505c9cb4",
+         *    "professor" : "56cfc9e4554036bf1ddc6764",
+         *    "title" : "Soft Eng",
+         *    "courseNumber" : 4380,
+         *    "description" : "Cool course",
+         *    "questions" : [],
+         *    "students" : [],
+         *    "created" : "2016-02-26T23:02:36.118Z",
+         *    "__v" : 0
+         * }
          */
         create: function(req, res) {
             var course = new Course(req.body);
 
+            if(req.user !== undefined)
+            {
+                course.professor = req.user;
+            }
+
             course.save(function(err) {
                 if (err) {
-                    //console.log('Err: ' + err);
+                    console.log('Err: ' + err);
                     return res.status(500).json({
                         error: 'Cannot save the course'
                     });
                 }
 
-                if(req.user != undefined)
+                if(req.user !== undefined)
                 {
                     Courses.events.publish({
                         action: 'created',
@@ -81,12 +117,40 @@ module.exports = function(Courses) {
         },
 
         /**
-         * Delete an article
+         * Delete a Course
+         *
+         * @api {delete} api/courses/:courseID  Delete a course
+         * @apiName Destroy
+         * @apiGroup Courses
+         * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns deleted object
+         *
+         * @apiSuccessExample Example of successful response
+         * {
+         *    "_id" : "56d0d98c8aac33e7505c9cb4",
+         *    "professor" : "56cfc9e4554036bf1ddc6764",
+         *    "title" : "Soft Eng",
+         *    "courseNumber" : 4380,
+         *    "description" : "Cool course",
+         *    "questions" : [],
+         *    "students" : [],
+         *    "created" : "2016-02-26T23:02:36.118Z",
+         *    "__v" : 0
+         * }
+         *
+         *   @apiError Course to Delete not found
+         *
+         *   @apiErrorExample Example of GET api/courses/56cdbe3e7f6fce18121d0f91 after DELETE api/courses/56cdbe3e7f6fce18121d0f91
+         *  {
+         *      null
+         *  }
+         *
          */
         destroy: function(req, res) {
             var course = req.course;
 
-            if(course != null)
+            if(course !== null)
             {
                 course.remove(function(err) {
                     if (err) {
@@ -95,7 +159,7 @@ module.exports = function(Courses) {
                         });
                     }
 
-                    if(req.user != undefined)
+                    if(req.user !== undefined)
                     {
                         Courses.events.publish({
                             action: 'deleted',
@@ -117,14 +181,43 @@ module.exports = function(Courses) {
         },
 
         /**
-         * Update a course
+         * Updates a Course
+         *
+         * @api {put} api/courses/:courseID Update a course
+         * @apiName Update
+         * @apiGroup Courses
+         * @apiVersion 0.1.0
+         *
+         * @apiParam {String} title
+         * @apiParam {String} description
+         *
+         * @apiParamExample {x-www-form-urlencoded} Request-example
+         * {
+         *   "title" : "Updated new title",
+         *   "description" : "Updated new description"
+         * }
+         *
+         * @apiSuccess returns updated question object
+         *
+         * @apiSuccessExample Example of successful response
+         * {
+         *    "_id" : "56d0d98c8aac33e7505c9cb4",
+         *    "professor" : "56cfc9e4554036bf1ddc6764",
+         *    "title" : "Updated new title",
+         *    "courseNumber" : 4380,
+         *    "description" : "Updated new description",
+         *    "questions" : [],
+         *    "students" : [],
+         *    "created" : "2016-02-26T23:02:36.118Z",
+         *    "__v" : 0
+         * }
          */
         update: function(req, res) {
             var course = req.course;
 
             course = _.extend(course, req.body);
 
-            if(course != null) // the course was found
+            if(course !== null) // the course was found
             {
                 course.save(function(err) {
                     if (err) {
@@ -133,7 +226,7 @@ module.exports = function(Courses) {
                         });
                     }
 
-                    if(req.user != undefined)
+                    if(req.user !== undefined)
                     {
                         Courses.events.publish({
                             action: 'updated',
@@ -157,11 +250,32 @@ module.exports = function(Courses) {
         },
 
         /**
-         * Show a course
+         * Show a Course
+         *
+         * @api {get} api/courses/:courseId Get a specific course
+         * @apiName Show
+         * @apiGroup Courses
+         * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns specific course by parameter ID
+         *
+         * @apiSuccessExample Example of GET api/courses/56d062c9f86af3c022bf6f0e
+         * {
+         *    "_id" : "56d0d98c8aac33e7505c9cb4",
+         *    "professor" : "56cfc9e4554036bf1ddc6764",
+         *    "title" : "Updated new title",
+         *    "courseNumber" : 4380,
+         *    "description" : "Updated new description",
+         *    "questions" : [],
+         *    "students" : [],
+         *    "created" : "2016-02-26T23:02:36.118Z",
+         *    "__v" : 0
+         * }
+         *
          */
         show: function(req, res) {
 
-            if(req.user != undefined)
+            if(req.user !== undefined)
             {
                 Courses.events.publish({
                     action: 'viewed',
@@ -175,10 +289,43 @@ module.exports = function(Courses) {
 
             validateCourse(req, res);
         },
+
         /**
          * List of Courses
+         *
+         * @api {get} api/courses/ Get a list of courses
+         * @apiName All
+         * @apiGroup Courses
+         * @apiVersion 0.1.0
+         *
+         * @apiSuccess {Object} returns array of course objects
+         *
+         * @apiSuccessExample Example of GET api/courses
+         *
+         *[
+         * {
+         *    "_id" : "56d0d98c8aac33e7505c9cb4",
+         *    "professor" : "56cfc9e4554036bf1ddc6764",
+         *    "title" : "Updated new title",
+         *    "courseNumber" : 4380,
+         *    "description" : "Updated new description",
+         *    "questions" : [],
+         *    "students" : [],
+         *    "created" : "2016-02-26T23:02:36.118Z",
+         *    "__v" : 0
+         * },
+         * * {
+         *    "_id" : "56d0d68d8bcc33e7505c9cb4",
+         *    "professor" : "56cfc9e4554036bf1ddc6764",
+         *    "title" : "Updated new title 2",
+         *    "courseNumber" : 4380,
+         *    "description" : "Updated new description 2",
+         *    "questions" : [],
+         *    "students" : [],
+         *    "created" : "2016-02-26T23:01:36.118Z",
+         *    "__v" : 0
+         * } ]
          */
-
         all: function(req, res) {
 
             Course.find({})

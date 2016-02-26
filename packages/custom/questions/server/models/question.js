@@ -81,8 +81,8 @@ QuestionSchema.path('title').validate(function(title) {
 QuestionSchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
-    }).populate('creator', 'name username').populate({
-        path: 'answers',
+    }).populate('creator', 'name username')
+        .populate({path: 'answers',
         // Get friends of friends - populate the 'friends' array for every friend
         populate: { path: 'student' }
     }).exec(cb);

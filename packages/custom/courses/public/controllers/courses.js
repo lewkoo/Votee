@@ -10,10 +10,10 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
 
         $scope.canCreateCourses = function()
         {
-            console.log('In canCreateCourses');
-
             return (MeanUser.isProfessor || MeanUser.isAdmin);
         };
+
+        $scope.canEditCourses = $scope.canCreateCourses;
 
         $scope.hasAuthorization = function(course) {
             if (!course || !course.user) return false;
@@ -30,13 +30,13 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             if(isValid) {
 
                 var course = new Courses({
-                    title: $scope.title,
-                    courseNumber: $scope.courseNumber,
-                    description: $scope.description,
-                    professor: $scope.professor,
-                    questions: $scope.questions,
-                    students: $scope.students,
-                    created: $scope.created,
+                    title: $scope.course.title,
+                    courseNumber: $scope.course.courseNumber,
+                    description: $scope.course.description,
+                    professor: $scope.course.professor,
+                    questions: $scope.course.questions,
+                    students: $scope.course.students,
+                    created: $scope.course.created,
                     __v: $scope.__v
                 });
 
@@ -44,13 +44,13 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                     $location.path('courses/' + response._id);
                 });
 
-                $scope.title = '';
-                $scope.courseNumber = 0;
-                $scope.description = '';
-                $scope.professor = '';
-                $scope.questions = [];
-                $scope.students = [];
-                $scope.created = '';
+                $scope.course.title = '';
+                $scope.course.courseNumber = 0;
+                $scope.course.description = '';
+                $scope.course.professor = '';
+                $scope.course.questions = [];
+                $scope.course.students = [];
+                $scope.course.created = '';
                 $scope.__v = 0;
 
 

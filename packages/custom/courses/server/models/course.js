@@ -41,7 +41,7 @@ var CourseSchema = new Schema({
     professor: { // TODO: perhaps, we should allow multiple professors into a course?
         type: Schema.ObjectId,
         ref: 'User',
-        required: true
+        required: false
     },
 
     students : [{

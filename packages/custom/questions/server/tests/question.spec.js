@@ -19,22 +19,36 @@ var expect = require('expect.js'),
 
 var professor;
 var question;
+var students = [];
 var answers  = [];
 
 /**
  * Test Suites
  */
 
+var generateRandomStudent = function generateRandomStudent(studentSequenceNumber) {
+
+    return new User({
+        name: 'Student ' + studentSequenceNumber,
+        email: 'student' + studentSequenceNumber + '@university.ca',
+        username: 'student' + studentSequenceNumber,
+        password: 'iwillpassthrough'
+    });
+
+};
+
 var generateRandomAnswers = function generateRandomAnswers(answerSequenceNumber) {
 
+    var student = generateRandomStudent(answerSequenceNumber);
+    student.roles.push('student');
+    student.save();
+    students.push(student);
+
     return new Answer({
-        student: {
-            name: 'Student ' + answerSequenceNumber,
-            email: 'student' + answerSequenceNumber + '@university.ca',
-            username: 'student' + answerSequenceNumber,
-            password: 'iwillpassthrough'
-        }
+        answer: "Option3",
+        student: student
     });
+
 }; //generateRandomQuestions
 
 function generateAnswers() {
@@ -417,6 +431,12 @@ describe('<Unit Test>', function() {
                     });
                     // clear the array
                     answers.splice(0,answers.length);
+
+                    students.forEach(function (student) {
+                        student.remove();
+                    });
+                    // clear the array
+                    students.splice(0,students.length);
                     done();
                 }); //remove
             });//aftereach
