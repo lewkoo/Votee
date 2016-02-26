@@ -11,7 +11,8 @@ angular.module('mean.voteeHome').controller('VoteeHeaderController', ['$scope', 
 	    user: MeanUser.user,
 	    isAdmin: MeanUser.isAdmin,
         isProfessor: MeanUser.isProfessor,
-		isStudent: MeanUser.isStudent
+		isStudent: MeanUser.isStudent,
+		userId: MeanUser.userId
 	};
 
 	// Default hard coded menu items for main menu
