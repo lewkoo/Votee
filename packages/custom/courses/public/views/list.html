@@ -10,9 +10,9 @@
 
         <li data-ng-repeat="course in courses">
             <span>{{course.created | date:'medium'}}</span> /
-            <span>{{course.creator.name}}</span>
+            <span> Taught by: {{course.professor.name}}</span>
             <h2>
-                <a data-ng-href="/courses/{{course._id}}">{{course.title}}</a>
+                <a data-ng-href="/courses/{{course._id}}">{{course.title}} - {{course.courseNumber}}</a>
             </h2>
 
             <h3>
