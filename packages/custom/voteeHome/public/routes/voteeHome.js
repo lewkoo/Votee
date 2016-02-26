@@ -19,6 +19,16 @@ angular.module('mean.voteeHome').config(['$viewPathProvider','$stateProvider',
           templateUrl: 'voteeHome/views/prof.html'
       });
 
+      $stateProvider.state('ProfLearnMore', {
+          url: '/profLearnMore',
+          templateUrl: 'voteeHome/views/profLearnMore.html'
+      });
+
+      $stateProvider.state('StudentLearnMore', {
+          url: '/studentLearnMore',
+          templateUrl: 'voteeHome/views/studentLearnMore.html'
+      });
+
       $stateProvider.state('Tutorial', {
           url: '/tutorial',
           templateUrl: 'voteeHome/views/tutorial.html'

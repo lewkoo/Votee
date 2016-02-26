@@ -13,12 +13,18 @@ var mongoose = require('mongoose'),
  */
 var CourseSchema = new Schema({
 
-    created: {
+    created: { // the date a course was created
         type: Date,
         default: Date.now
     },
 
-    title: {
+    courseNumber: { // specifies
+        type: Number,
+        required: true,
+        unique: true
+    },
+
+    title: { // course title
         type: String,
         required: true,
         trim: true
@@ -30,7 +36,7 @@ var CourseSchema = new Schema({
         trim: true
     },
 
-    professor: {
+    professor: { // TODO: perhaps, we should allow multiple professors into a course?
         type: Schema.ObjectId,
         ref: 'User',
         required: true
@@ -40,13 +46,30 @@ var CourseSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User',
         required: false
-    }], // this is how you store a collection of Mongoose objects
+    }], // collection of Students
 
     questions : [{
         type: Schema.ObjectId,
         ref: 'Question',
         required: false
     }] // collection of Questions
+
 });
+
+/**
+ * Validations
+ */
+CourseSchema.path('title').validate(function(title) {
+    return !!title;
+}, 'Title cannot be blank');
+
+/**
+ * Statics
+ */
+CourseSchema.statics.load = function(id, cb) {
+    this.findOne({
+        _id: id
+    }).populate('professor').populate('students').exec(cb);
+};
 
 mongoose.model('Course', CourseSchema);

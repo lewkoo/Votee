@@ -61,12 +61,13 @@ module.exports = function(MeanUser) {
          */
         signout: function(req, res) {
 
+            /*
             MeanUser.events.publish({
                 action: 'logged_out',
                 user: {
                     name: req.user.name
                 }
-            });
+            });*/
 
             req.logout();
             res.redirect('/');
@@ -164,6 +165,7 @@ module.exports = function(MeanUser) {
          * Send User
          */
         me: function(req, res) {
+
             if (!req.user || !req.user.hasOwnProperty('_id')) return res.send(null);
 
             User.findOne({

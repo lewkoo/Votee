@@ -16,13 +16,12 @@ VoteeHome.register(function(app, auth, database, system) {
   //We enable routing. By default the Package Object is passed to the routes
   VoteeHome.routes(app, auth, database);
 
-  //We are adding a link to the main menu for all authenticated users
-  //VoteeHome.menus.add({
-  //      title: 'Votee home',
-  //      link: 'voteeHome',
-  //      roles: ['authenticated', 'anonymous'],
-  //      menu: 'voteeMain'
-  //  });
+    VoteeHome.menus.add({
+        title: 'Courses',
+        link: 'Courses',
+        roles: [ 'authenticated' ],
+        menu: 'voteeMain'
+    });
 
     VoteeHome.menus.add({
         title: 'Students',
@@ -45,27 +44,6 @@ VoteeHome.register(function(app, auth, database, system) {
         menu: 'voteeMain'
     });
 
-    /*VoteeHome.menus.add({
-        title: 'your courses',
-        link: 'your courses',
-        roles: ['authenticated, student'],
-        menu: 'voteeMain'
-    });*/
-
-    //VoteeHome.menus.add({
-    //    roles: ['authenticated'],
-    //    title: 'Articles',
-    //    link: 'all articles',
-    //    menu: 'voteeMain'
-    //});
-    //
-    //VoteeHome.menus.add({
-    //    roles: ['authenticated'],
-    //    title: 'Create New Article',
-    //    link: 'create article',
-    //    menu: 'voteeMain'
-    //
-    //});
     // Set views path, template engine and default layout
     app.set('views', __dirname + '/server/views');
 

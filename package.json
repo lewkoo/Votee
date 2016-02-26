@@ -33,10 +33,12 @@
     "express": "latest",
     "forever": "latest",
     "gridfs-stream": "latest",
+    "harmony-proxy": "^0.1.0",
     "jsonwebtoken": "latest",
     "lodash": "latest",
     "meanio": "latest",
     "mongoose": "latest",
+    "mongoose-schema-extend": "^0.2.0",
     "morgan": "latest",
     "ms": "latest",
     "nodemailer": "latest",
@@ -55,6 +57,8 @@
     "view-helpers": "latest"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "crypt": "0.0.1",
     "del": "latest",
     "expect.js": "latest",
     "gulp": "latest",
@@ -71,6 +75,7 @@
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "have": "^0.4.0",
     "jasmine": "latest",
     "jasmine-reporters": "latest",
     "jshint-stylish": "latest",
@@ -87,12 +92,16 @@
     "karma-phantomjs-shim": "latest",
     "karma-requirejs": "latest",
     "karma-script-launcher": "latest",
+    "karma-spec-reporter": "0.0.24",
     "mocha": "latest",
+    "phantomjs-prebuilt": "^2.1.4",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",
+    "run-sequence": "^1.1.5",
+    "should": "^8.2.2",
+    "should-http": "0.0.4",
     "supertest": "latest",
-    "through": "latest",
-    "mongoose-schema-extend": "latest"
+    "through": "latest"
   }
 }

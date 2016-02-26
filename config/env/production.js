@@ -1,7 +1,13 @@
 'use strict';
 
 module.exports = {
-  db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-prod',
+
+  // below is for our own AWS deployment
+  db: 'mongodb://ec2-52-37-76-156.us-west-2.compute.amazonaws.com:27017/mean-prod',
+  // below is for MongoLab
+  //db: 'mongodb://production:prod8765@ds059898.mongolab.com:59898/mean-prod',
+  // below is for localhost:
+  //db: 'mongodb://' + (process.env.DB_PORT_27017_TCP_ADDR || 'localhost') + '/mean-prod',
   /**
    * Database options that will be passed directly to mongoose.connect
    * Below are some examples.
@@ -26,9 +32,9 @@ module.exports = {
     }
     */
   },
-  hostname: 'http://localhost:3000',
+  hostname: 'http://votee-project.herokuapp.com/',
   app: {
-    name: 'MEAN - A Modern Stack - Production'
+    name: 'Votee'
   },
   logging: {
     format: 'combined'
