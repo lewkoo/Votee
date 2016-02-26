@@ -48,16 +48,52 @@ module.exports = function(Questions) {
          * @apiVersion 0.1.0
          *
          * @apiDescription This is Questions API
+         *
+         * @apiParam {String} title Mandatory question title
+         * @apiParam {Object} options Mandatory options object. eg. { '0': 'Opt1', '1': 'opt2', '2': 'opt3', '3': 'opt3' }
+         * @apiParam {String} answer Mandatory answer. eg. 2
+         * @apiParam {creator} id of the creator e.g. 56b2a9b3897e13640eeba6e9
+         *
+         * @apiParamExample {x-www-form-urlencoded} Request-example
+         * {
+         *   title: this is a new Q
+         *   options: { '0': 'kkk', '1': 'kkk', '2': 'llk', '3': 'mm123' }
+         *   answer: 1
+         *   creator: 56b2a9b3897e13640eeba6e9
+         * }
+         *
+         * @apiSuccess returns newly created question object
+         *
+         * @apiSuccessExample Example of DELETE api/questions/56cdbe3e7f6fce18121d0f91
+         * {
+         *     "__v": 0,
+         *     "title": "this is a new Q",
+         *     "options": "{ '0': 'kkk', '1': 'kkk', '2': 'llk', '3': 'mm123' }",
+         *     "answer": "1",
+         *     "creator": "56b2a9b3897e13640eeba6e9",
+         *     "_id": "56d0d788500d71c7b948bb0e",
+         *     "answers": [],
+         *     "type": "MULTIPLE-CHOICE",
+         *     "created": "2016-02-26T22:54:00.170Z"
+         *   }
          */
         create: function(req, res) {
             var question = new Question(req.body);
-            //var answer = new Answer();
+            //var answer = new Answer();;
 
             //fill up the model with data from request
             if(req.user != undefined){
                 question.creator = req.user;
             } else {
-                question.creator = req.body.creator;
+                console.log("before fail?");
+                if(req.body.creator != undefined){
+                    question.creator = req.body.creator;
+                }
+                else{
+                    return res.status(500).json({
+                        error: 'Cannot create question, creator not specified'
+                    });
+                }
             }
             //TODO: read this from the request
             question.title = req.body.title;
@@ -156,13 +192,31 @@ module.exports = function(Questions) {
          * @apiGroup Question
          * @apiVersion 0.1.0
          *
+         * @apiParam {String} title
+         *
+         * @apiParamExample {x-www-form-urlencoded} Request-example
+         * {
+         *   "title" : "Updated new title"
+         * }
+         *
          * @apiSuccess returns updated question object
          *
-         * @apiHeaderExample {json} Request-Example:
+         * @apiSuccessExample Example of DELETE api/questions/56cdbe3e7f6fce18121d0f91
          *  {
-         *      "title": "Updated title 3"
-         *  }
-         *
+         *     "_id": "56d0d788500d71c7b948bb0e",
+         *     "title": "updated Title from postman",
+         *     "options": "{ '0': 'kkk', '1': 'kkk', '2': 'llk', '3': 'mm123' }",
+         *     "answer": "1",
+         *     "creator": {
+         *       "_id": "56b2a9b3897e13640eeba6e9",
+         *       "username": "test",
+         *       "name": "yuriy"
+         *     },
+         *     "__v": 0,
+         *     "answers": [],
+         *     "type": "MULTIPLE-CHOICE",
+         *     "created": "2016-02-26T22:54:00.170Z"
+         *   }
          */
         update: function(req, res) {
             var question = req.question;
