@@ -62,20 +62,20 @@
          * */
         var postCourseData = function() {
             return {
-                "title" : "Test Course 1",
-                "courseNumber" : 4350,
-                "description" : "This is a test 1",
-                "professor" : "56c8bdfaf82d7bd71d40de02",
-                "questions" : [],
-                "students" : [
-                    "56c8bdfaf82d7bd71d40de03",
-                    "56c8bdfaf82d7bd71d40de04",
-                    "56c8bdfaf82d7bd71d40de05",
-                    "56c8bdfaf82d7bd71d40de06",
-                    "56c8bdfaf82d7bd71d40de07"
+                'title' : 'Test Course 1',
+                'courseNumber' : 4350,
+                'description' : 'This is a test 1',
+                'professor' : '56c8bdfaf82d7bd71d40de02',
+                'questions' : [],
+                'students' : [
+                    '56c8bdfaf82d7bd71d40de03',
+                    '56c8bdfaf82d7bd71d40de04',
+                    '56c8bdfaf82d7bd71d40de05',
+                    '56c8bdfaf82d7bd71d40de06',
+                    '56c8bdfaf82d7bd71d40de07'
                 ],
-                "created" : "2016-02-20T19:26:50.874Z",
-                "__v" : 0
+                'created' : '2016-02-20T19:26:50.874Z',
+                '__v' : 0
             };
         };
 
@@ -85,7 +85,7 @@
          * */
         var testCourseData = function() {
             var additionalData = postCourseData();
-            additionalData._id = "56c8bdfaf82d7bd71d40de08";
+            additionalData._id = '56c8bdfaf82d7bd71d40de08';
             return additionalData;
         };
 
@@ -96,21 +96,21 @@
                 // mock the expected response to a GET request
 
                 $httpBackend.expectGET(/api\/courses$/).respond([{
-                    "_id" : "56c8bdfaf82d7bd71d40de08",
-                    "title" : "Test Course 1",
-                    "courseNumber" : 4350,
-                    "description" : "This is a test 1",
-                    "professor" : "56c8bdfaf82d7bd71d40de02",
-                    "questions" : [],
-                    "students" : [
-                        "56c8bdfaf82d7bd71d40de03",
-                        "56c8bdfaf82d7bd71d40de04",
-                        "56c8bdfaf82d7bd71d40de05",
-                        "56c8bdfaf82d7bd71d40de06",
-                        "56c8bdfaf82d7bd71d40de07"
+                    '_id' : '56c8bdfaf82d7bd71d40de08',
+                    'title' : 'Test Course 1',
+                    'courseNumber' : 4350,
+                    'description' : 'This is a test 1',
+                    'professor' : '56c8bdfaf82d7bd71d40de02',
+                    'questions' : [],
+                    'students' : [
+                        '56c8bdfaf82d7bd71d40de03',
+                        '56c8bdfaf82d7bd71d40de04',
+                        '56c8bdfaf82d7bd71d40de05',
+                        '56c8bdfaf82d7bd71d40de06',
+                        '56c8bdfaf82d7bd71d40de07'
                     ],
-                    "created" : "2016-02-20T19:26:50.874Z",
-                    "__v" : 0
+                    'created' : '2016-02-20T19:26:50.874Z',
+                    '__v' : 0
                 }]);
 
                 scope.find();
@@ -170,17 +170,17 @@
                 // fixture mock form input values
                 scope.title = 'Test Course 1';
                 scope.courseNumber = 4350;
-                scope.description = "This is a test 1";
-                scope.professor = "56c8bdfaf82d7bd71d40de02";
+                scope.description = 'This is a test 1';
+                scope.professor = '56c8bdfaf82d7bd71d40de02';
                 scope.questions = [];
                 scope.students = [
-                    "56c8bdfaf82d7bd71d40de03",
-                    "56c8bdfaf82d7bd71d40de04",
-                    "56c8bdfaf82d7bd71d40de05",
-                    "56c8bdfaf82d7bd71d40de06",
-                    "56c8bdfaf82d7bd71d40de07"
+                    '56c8bdfaf82d7bd71d40de03',
+                    '56c8bdfaf82d7bd71d40de04',
+                    '56c8bdfaf82d7bd71d40de05',
+                    '56c8bdfaf82d7bd71d40de06',
+                    '56c8bdfaf82d7bd71d40de07'
                 ];
-                scope.created = "2016-02-20T19:26:50.874Z";
+                scope.created = '2016-02-20T19:26:50.874Z';
                 scope.__v = 0;
 
                 // test post request is sent
