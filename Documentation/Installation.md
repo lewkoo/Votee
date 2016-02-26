@@ -62,3 +62,7 @@ To start a production server, instead run
 ## Running unit tests
 
     gulp test
+
+## Running end to end Selenium tests
+
+    gulp e2e.test

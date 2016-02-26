@@ -7,6 +7,7 @@
 var mongoose = require('mongoose'),
     Question = mongoose.model('Question'),
     Answer = mongoose.model('Answer'),
+    //MultipleChoice = mongoose.model('MultipleChoice'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -107,27 +108,29 @@ module.exports = function(Questions) {
 
             question = _.extend(question, req.body);
 
-            //console.log(question);
-            var answer = new Answer();
-            answer.created = Date.now;
-            answer.student = req.user;
+            // create a new Answer object
+            var answer = new Answer({
+                student : req.user,
+                answer: req.body.selectedAnswer
+            });
 
-            //console.log(answer);
+            // save it. if any errors hapen, developer will be notified
+            answer.save(function (err) {
+                if(err){
+                    console.log(res, err);
+                }
+            });
 
+            // add a reference to the list of answers for this question
             question.answers.push(answer);
-            //console.log(question.answers);
-            //console.log(question);
 
+            // save the question itself
             question.save(function(err) {
                 if (err) {
                     return res.status(500).json({
                         error: 'Cannot vote for the question'
                     });
                 }
-
-                console.log("Actually saving the answer");
-                answer.save();
-                console.log("Answer saved, bitches");
 
                 Questions.events.publish({
                     action: 'voted',
