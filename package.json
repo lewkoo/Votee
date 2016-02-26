@@ -58,6 +58,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
+    "crypt": "0.0.1",
     "del": "latest",
     "expect.js": "latest",
     "gulp": "latest",
@@ -93,6 +94,7 @@
     "karma-script-launcher": "latest",
     "karma-spec-reporter": "0.0.24",
     "mocha": "latest",
+    "phantomjs-prebuilt": "^2.1.4",
     "protractor": "latest",
     "require-dir": "latest",
     "requirejs": "latest",

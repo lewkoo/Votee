@@ -217,9 +217,13 @@ describe('<Unit Test>', function () {
                         res.body[0].should.have.property('title', course.title);
                         res.body[0].should.have.property('courseNumber', course.courseNumber);
                         res.body[0].should.have.property('description', course.description);
-                        res.body[0].should.have.property('professor', course.professor.id);
+                        res.body[0].should.have.property('professor');
+                        res.body[0].professor._id.should.be.equal(course.professor.id.toString());
                         res.body[0].should.have.property('students').and.have.lengthOf(5);
                         res.body[0].should.have.property('questions').and.have.lengthOf(0);
+
+
+
 
                         done();
 
@@ -244,7 +248,8 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('title', course.title);
                         res.body.should.have.property('courseNumber', course.courseNumber);
                         res.body.should.have.property('description', course.description);
-                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('professor');
+                        res.body.professor._id.should.be.equal(course.professor.id.toString());
                         res.body.should.have.property('students').and.have.lengthOf(5);
                         res.body.should.have.property('questions').and.have.lengthOf(0);
 
@@ -319,7 +324,7 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('title', course.title);
                         res.body.should.have.property('courseNumber', course.courseNumber);
                         res.body.should.have.property('description', course.description);
-                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('professor');
                         res.body.should.have.property('students').and.have.lengthOf(5);
                         res.body.should.have.property('questions').and.have.lengthOf(0);
 
@@ -350,7 +355,8 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('title', "Updated title");
                         res.body.should.have.property('courseNumber', 8888);
                         res.body.should.have.property('description', course.description);
-                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('professor');
+                        res.body.professor._id.should.be.equal(course.professor.id.toString());
                         res.body.should.have.property('students').and.have.lengthOf(5);
                         res.body.should.have.property('questions').and.have.lengthOf(0);
 
@@ -405,7 +411,8 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('title', course.title);
                         res.body.should.have.property('courseNumber', course.courseNumber);
                         res.body.should.have.property('description', course.description);
-                        res.body.should.have.property('professor', course.professor.id);
+                        res.body.should.have.property('professor');
+                        res.body.professor._id.should.be.equal(course.professor.id.toString());
                         res.body.should.have.property('students').and.have.lengthOf(5);
                         res.body.should.have.property('questions').and.have.lengthOf(0);
 
