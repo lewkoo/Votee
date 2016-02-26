@@ -64,14 +64,19 @@ module.exports = function(Questions) {
          *
          * @apiSuccess returns newly created question object
          *
-         * @apiSuccessExample Example of DELETE api/questions/56cdbe3e7f6fce18121d0f91
+         * @apiSuccessExample Example of POST api/questions/
          * {
-         *     "__v": 0,
-         *     "title": "this is a new Q",
+         *    {
+         *     "_id": "56d0d788500d71c7b948bb0e",
+         *     "title": "updated Title from postman",
          *     "options": "{ '0': 'kkk', '1': 'kkk', '2': 'llk', '3': 'mm123' }",
          *     "answer": "1",
-         *     "creator": "56b2a9b3897e13640eeba6e9",
-         *     "_id": "56d0d788500d71c7b948bb0e",
+         *     "creator": {
+         *       "_id": "56b2a9b3897e13640eeba6e9",
+         *       "username": "test",
+         *       "name": "yuriy"
+         *     },
+         *     "__v": 1,
          *     "answers": [],
          *     "type": "MULTIPLE-CHOICE",
          *     "created": "2016-02-26T22:54:00.170Z"
@@ -182,14 +187,14 @@ module.exports = function(Questions) {
          *
          * @apiParam {String} title
          *
-         * @apiParamExample {x-www-form-urlencoded} Request-example
+         * @apiParamExample Request-example
          * {
          *   "title" : "Updated new title"
          * }
          *
          * @apiSuccess returns updated question object
          *
-         * @apiSuccessExample Example of DELETE api/questions/56cdbe3e7f6fce18121d0f91
+         * @apiSuccessExample Example of PUT api/questions/56cdbe3e7f6fce18121d0f91
          *  {
          *     "_id": "56d0d788500d71c7b948bb0e",
          *     "title": "updated Title from postman",
