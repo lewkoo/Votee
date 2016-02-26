@@ -58,31 +58,31 @@
         }));
 
         /*
-        * Returns a sample JSON response without Mongo ID
-        * */
+         * Returns a sample JSON response without Mongo ID
+         * */
         var postCourseData = function() {
-          return {
-              "title" : "Test Course 1",
-              "courseNumber" : 4350,
-              "description" : "This is a test 1",
-              "professor" : "56c8bdfaf82d7bd71d40de02",
-              "questions" : [],
-              "students" : [
-                  "56c8bdfaf82d7bd71d40de03",
-                  "56c8bdfaf82d7bd71d40de04",
-                  "56c8bdfaf82d7bd71d40de05",
-                  "56c8bdfaf82d7bd71d40de06",
-                  "56c8bdfaf82d7bd71d40de07"
-              ],
-              "created" : "2016-02-20T19:26:50.874Z",
-              "__v" : 0
-          };
+            return {
+                "title" : "Test Course 1",
+                "courseNumber" : 4350,
+                "description" : "This is a test 1",
+                "professor" : "56c8bdfaf82d7bd71d40de02",
+                "questions" : [],
+                "students" : [
+                    "56c8bdfaf82d7bd71d40de03",
+                    "56c8bdfaf82d7bd71d40de04",
+                    "56c8bdfaf82d7bd71d40de05",
+                    "56c8bdfaf82d7bd71d40de06",
+                    "56c8bdfaf82d7bd71d40de07"
+                ],
+                "created" : "2016-02-20T19:26:50.874Z",
+                "__v" : 0
+            };
         };
 
         /*
-        *
-        * Returns a sample JSON response with a Mongo ID
-        * */
+         *
+         * Returns a sample JSON response with a Mongo ID
+         * */
         var testCourseData = function() {
             var additionalData = postCourseData();
             additionalData._id = "56c8bdfaf82d7bd71d40de08";
@@ -210,8 +210,8 @@
         describe('update() function tests ', function() {
 
             it('$scote.update() with valid form data should send a PUT request ' +
-            'with the form input values and then ' +
-            'locate to updated object URL', function(Courses){
+                'with the form input values and then ' +
+                'locate to updated object URL', function(Courses){
 
                 // mock course object from form
                 var course = new Courses(testCourseData());
@@ -236,8 +236,8 @@
         describe('remove() function tests ', function() {
 
             it('$scope.remove() with valid form data should send a DELETE request ' +
-            'with the form intput values and then ' +
-            'locate to updated object URL', function(Courses){
+                'with the form intput values and then ' +
+                'locate to updated object URL', function(Courses){
 
                 // fixture rideshare
                 var course = new Courses({
@@ -263,7 +263,17 @@
 
         });
 
+        describe('canCreateCourses function tests', function(MeanUser){
+
+            it('canCreateCourses should return true if MeanUser is a professor and/or admin', function(){
+
+
+
+            });
+
 
         });
+
+    });
 
 }());
