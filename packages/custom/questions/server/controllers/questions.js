@@ -100,9 +100,6 @@ module.exports = function(Questions) {
          * vote for a question
          */
         vote: function(req, res){
-            //BIG TODO: lots and lots of stuff here...need to figure out DB structure for this as well
-            console.log('VOTING!');
-
             //console.log(req.body);
             var question = req.question;
 
