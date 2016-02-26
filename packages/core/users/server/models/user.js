@@ -155,6 +155,9 @@ UserSchema.methods.isProfessor = function() {
     return this.roles.indexOf('professor') !== -1;
 };
 
+UserSchema.methods.userId = function() {
+    return this._id;
+};
 /**
  * IsStudent - check if the user is a student
  *

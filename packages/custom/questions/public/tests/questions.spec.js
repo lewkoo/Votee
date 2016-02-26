@@ -63,23 +63,23 @@
 
         var postQuestionData = function() {
             return {
-                //"_id": "56cf5578b387fd7c940cb9be",
-                //"creator": "56b2a9b3897e13640eeba6e9",
-                "title": "New q",
-                "options": {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"},
-                "answer": "2",
-                "answers": [
-                    "56cf557fb387fd7c940cb9bf"
+                //'_id': '56cf5578b387fd7c940cb9be',
+                //'creator': '56b2a9b3897e13640eeba6e9',
+                'title': 'New q',
+                'options': {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'},
+                'answer': '2',
+                'answers': [
+                    '56cf557fb387fd7c940cb9bf'
                 ],
-                "type": "MULTIPLE-CHOICE",
-                //"created": "2016-02-25T19:26:48.686Z",
-                "__v": 1
+                'type': 'MULTIPLE-CHOICE',
+                //'created': '2016-02-25T19:26:48.686Z',
+                '__v': 1
             };
         }; //testQuestionsData
 
         var postQuestionID = function(){
           return {
-              "_id": "56cf5578b387fd7c940cb9be"
+              '_id': '56cf5578b387fd7c940cb9be'
           }
         };
 
@@ -88,7 +88,7 @@
          */
         var testQuestionData = function(){
             var additionalData = postQuestionData();
-            additionalData._id = "56cf5578b387fd7c940cb9be";
+            additionalData._id = '56cf5578b387fd7c940cb9be';
             return additionalData;
         };
 
@@ -97,17 +97,17 @@
             // mock the expected response to a GET request
 
             $httpBackend.expectGET(/api\/questions$/).respond([{
-                "_id": "56cf5578b387fd7c940cb9be",
-                //"creator": "56b2a9b3897e13640eeba6e9",
-                "title": "New q",
-                "options": {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"},
-                "answer": "2",
-                "answers": [
-                    "56cf557fb387fd7c940cb9bf"
+                '_id': '56cf5578b387fd7c940cb9be',
+                //'creator': '56b2a9b3897e13640eeba6e9',
+                'title': 'New q',
+                'options': {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'},
+                'answer': '2',
+                'answers': [
+                    '56cf557fb387fd7c940cb9bf'
                 ],
-                "type": "MULTIPLE-CHOICE",
-                //"created": "2016-02-25T19:26:48.686Z",
-                "__v": 1
+                'type': 'MULTIPLE-CHOICE',
+                //'created': '2016-02-25T19:26:48.686Z',
+                '__v': 1
             }]);
 
             scope.find();
@@ -155,27 +155,27 @@
 
             $httpBackend.when('GET','/questions/views/view.html').respond(200);
 
-            //"creator": "56b2a9b3897e13640eeba6e9",
-            //    "title": "New q",
-            //    "options": {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"},
-            //"answer": "2",
-            //    "answers": [
-            //    "56cf557fb387fd7c940cb9bf"
+            //'creator': '56b2a9b3897e13640eeba6e9',
+            //    'title': 'New q',
+            //    'options': {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'},
+            //'answer': '2',
+            //    'answers': [
+            //    '56cf557fb387fd7c940cb9bf'
             //],
-            //    "type": "MULTIPLE-CHOICE",
-            //    "created": "2016-02-25T19:26:48.686Z",
-            //    "__v": 1
+            //    'type': 'MULTIPLE-CHOICE',
+            //    'created': '2016-02-25T19:26:48.686Z',
+            //    '__v': 1
             // fixture mock form input values
             scope.question = {};
             scope.question.title = 'New q';
-            scope.question.options =  {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"};
-            scope.question.answer = "2";
-            //scope.professor = "56c8bdfaf82d7bd71d40de02";
-            scope.question.type = "MULTIPLE-CHOICE";
+            scope.question.options =  {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'};
+            scope.question.answer = '2';
+            //scope.professor = '56c8bdfaf82d7bd71d40de02';
+            scope.question.type = 'MULTIPLE-CHOICE';
             scope.question.answers = [
-                "56cf557fb387fd7c940cb9bf"
+                '56cf557fb387fd7c940cb9bf'
             ];
-            scope.question.created = "2016-02-25T19:26:48.686Z";
+            scope.question.created = '2016-02-25T19:26:48.686Z';
             scope.question.__v = 1;
 
             // test post request is sent

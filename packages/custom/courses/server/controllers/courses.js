@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
-var errorString = "Error: the course can not be found";
+var errorString = 'Error: the course can not be found';
 
 module.exports = function(Courses) {
 
@@ -58,7 +58,7 @@ module.exports = function(Courses) {
 
             course.save(function(err) {
                 if (err) {
-                    //console.log("Err: " + err);
+                    //console.log('Err: ' + err);
                     return res.status(500).json({
                         error: 'Cannot save the course'
                     });
