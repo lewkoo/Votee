@@ -16,18 +16,17 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
         $scope.hasVoted = function(question){
 
-            /*
+/*
             for(var key in question.answers){
-                if(question.hasOwnProperty(key)){
-                    var answer = question.answers[key];
-                    console.log("Answer");
-                    console.log(answer);
-                    var creator = answer.student;
-                    console.log(creator);
-                    if(creator.equals(MeanUser._id)){
-                        return true;
-                    }
-                }
+                var answer = question.answers[key];
+
+                //console.log(answer);
+                //var creator = answer.student;
+
+                console.log("Question creator: " + question.creator);
+                //if(creator.equals(MeanUser._id)){
+                //        return true;
+                //}
             }*/
             return false;
         };
@@ -35,13 +34,14 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];
+        $scope.selectedAnswer = { index: 0 };
 
         //$scope.setSelected = function(selected) {
         //    console.log(selected);
         //    $scope.selected = selected;
         //}
 
-        $scope.selectedAnswer ;
+        //$scope.selectedAnswer ;
 
         Circles.mine(function(acl) {
             $scope.availableCircles = acl.allowed;
@@ -50,7 +50,17 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
         $scope.create = function(isValid) {
             if (isValid) {
-                var question = new Questions($scope.question);
+                //var question = new Questions($scope.question);
+
+                var question = new Questions({
+                    "title": $scope.question.title,
+                    "options": $scope.question.options,
+                    "answer": $scope.question.answer,
+                    "answers": $scope.question.answers,
+                    "type": $scope.question.type,
+                    //"created": "2016-02-25T19:26:48.686Z",
+                    "__v": 1
+                });
 
                 question.$save(function(response) {
                     $location.path('questions/' + response._id);
@@ -90,6 +100,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 questionId: $stateParams.questionId
             }, function(question) {
                 $scope.question = question;
+                //console.log($scope.question.options[0]);
             });
         };
 

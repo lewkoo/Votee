@@ -25,12 +25,6 @@ var answers  = [];
  */
 
 var generateRandomAnswers = function generateRandomAnswers(answerSequenceNumber) {
-    //billy = new User({
-    //    name: 'Student ' + answerSequenceNumber,
-    //    email: 'student' + answerSequenceNumber + '@university.ca',
-    //    username: 'student' + answerSequenceNumber,
-    //    password: 'iwillpassthrough'
-    //});
 
     return new Answer({
         student: {
@@ -81,7 +75,6 @@ describe('<Unit Test>', function() {
                 this.timeout(10000);
 
                 return question.save(function(err, data){
-                    //console.log(err);
                     expect(err).to.be(null);
                     expect(data.title).to.equal('Test question');
                     expect(data.description).to.equal('This is a question that has nothing to do with the course material');
@@ -130,8 +123,6 @@ describe('<Unit Test>', function() {
 
                 this.timeout(10000);
                 question.options = null;
-
-                console.log(question.answer);
 
                 return question.save(function(err, data){
                     expect(err).to.be(null);
@@ -210,7 +201,6 @@ describe('<Unit Test>', function() {
                     .end(function(err, res){
                         //validate
                         res.body.should.be.type('object');
-                        //console.log(res.body[0]);
                         res.body[0].should.have.property('title', question.title);
                         res.body[0].should.have.property('description', question.description);
                         res.body[0].should.have.property('options', question.options);
@@ -232,7 +222,6 @@ describe('<Unit Test>', function() {
                     .expect(200)
                     .end(function (err, res){
 
-                        //console.log(res.body);
                         // Perform validations, baby!
                         res.body.should.be.type('object');
                         res.body.should.have.property('title', question.title);
@@ -247,29 +236,27 @@ describe('<Unit Test>', function() {
 
             });
 
-            //TODO: Question function in server controller throws an error (as it should) and test fails. But it hard crashes
-            // TODO: need to fix
-            //it('it should fail to get a non existing question', function (done){
-            //
-            //    this.timeout(10000);
-            //
-            //    // store the ID
-            //    var questionID = question._id.toString();
-            //
-            //    // clear the database
-            //    Question.remove({}, function(err){
-            //        //clearing the database
-            //        expect(err).to.be(null);
-            //    });
-            //
-            //    server.get('/api/questions/' + questionID)
-            //        .set('Accept', 'appication/json')
-            //        .expect('Content-Type', /json/)
-            //        .expect(500)// here, I am testing for code 500 only
-            //        .end(function (err, res){
-            //            done();
-            //        });
-            //});
+            it('it should fail to get a non existing question', function (done){
+
+                this.timeout(10000);
+
+                // store the ID
+                var questionID = question._id.toString();
+
+                // clear the database
+                Question.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                server.get('/api/questions/' + questionID)
+                    .set('Accept', 'appication/json')
+                    .expect('Content-Type', /json/)
+                    .expect(500)// here, I am testing for code 500 only
+                    .end(function (err, res){
+                        done();
+                    });
+            });
 
         });//END TESTING GET ROUTES
 
@@ -324,7 +311,6 @@ describe('<Unit Test>', function() {
                     .expect(200)
                     .end(function (err, res){
                         expect(err).to.be(null);
-                        //console.log(res.body);
 
                         res.body.should.have.property('title', "Updated title");
                         res.body.should.have.property('description', "Updated description");
@@ -340,31 +326,31 @@ describe('<Unit Test>', function() {
 
             });
 
-            //TODO: running into same issue as when getting a question that doesnt exist
-            //TODO: needs to be looked at and fixed (Problem is in server controller)
-            //it('it should be failing to update a non-existing question', function (done){
-            //
-            //    this.timeout(10000);
-            //
-            //    // store the question object - we need it for sending
-            //    var questionObject = question;
-            //
-            //    // clear the database
-            //    Question.remove({}, function(err){
-            //        //clearing the database
-            //        expect(err).to.be(null);
-            //    });
-            //
-            //    server.put('/api/questions/' + questionObject._id.toString())
-            //        .send(question)
-            //        .expect('Content-Type', /json/)
-            //        .expect(500) // here, I am testing for code 500 only
-            //        .end(function (err, res){
-            //
-            //            done();
-            //        });
-            //
-            //});
+            it('it should be failing to update a non-existing question', function (done){
+
+                this.timeout(10000);
+
+                // store the question object - we need it for sending
+                var questionObject = question;
+
+                // clear the database
+                Question.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                console.log("before PUT");
+
+                server.put('/api/questions/' + questionObject._id.toString())
+                    .send(question)
+                    .expect('Content-Type', /json/)
+                    .expect(500) // here, I am testing for code 500 only
+                    .end(function (err, res){
+
+                        done();
+                    });
+
+            });
 
         });
 
@@ -399,28 +385,26 @@ describe('<Unit Test>', function() {
                     });
             });
 
-            //TODO: throws same error as GET and POST update methods that do not exist
-            //TODO: the request should fail as expected, just needed to be fixed in the server controller
-            //it('it should fail when deleting a non-existing question', function (done){
-            //
-            //    this.timeout(10000);
-            //
-            //    // store the question object - we need it for sending
-            //    var questionObject = question;
-            //
-            //    // clear the database
-            //    Question.remove({}, function(err){
-            //        //clearing the database
-            //        expect(err).to.be(null);
-            //    });
-            //
-            //    server.del('/api/questions/' + question._id.toString()) // request route - look for routes/questions.js
-            //        .send(question)
-            //        .expect(500)
-            //        .end(function (err, res){
-            //            done();
-            //        });
-            //});
+            it('it should fail when deleting a non-existing question', function (done){
+
+                this.timeout(10000);
+
+                // store the question object - we need it for sending
+                var questionObject = question;
+
+                // clear the database
+                Question.remove({}, function(err){
+                    //clearing the database
+                    expect(err).to.be(null);
+                });
+
+                server.del('/api/questions/' + question._id.toString()) // request route - look for routes/questions.js
+                    .send(question)
+                    .expect(500)
+                    .end(function (err, res){
+                        done();
+                    });
+            });
         });
 
             afterEach(function(done) {

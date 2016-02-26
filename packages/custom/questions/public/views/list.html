@@ -4,7 +4,7 @@
         <div class="form-group">
             <div class="row">
                 <a href="/questions/create">
-                    <button type="create" class="btn btn-info">Create New Question</button>
+                    <button data-ng-hide="!hasAuthorization(question)" type="create" class="btn btn-info">Create New Question</button>
                 </a>
             </div>
         </div>

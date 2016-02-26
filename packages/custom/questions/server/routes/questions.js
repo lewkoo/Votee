@@ -34,7 +34,8 @@ module.exports = function(Questions, app, auth) {
         .put(questions.update)
         .delete(questions.destroy);
     app.route('/api/questions/vote/:questionId')
-        .put (questions.vote);
+        .put (questions.vote)
+        .get (questions.answer);
 
     // Finish with setting up the questionID param
     app.param('questionId', questions.question);

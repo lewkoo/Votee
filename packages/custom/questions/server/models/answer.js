@@ -2,8 +2,8 @@
  * Created by Yuriy on 2/11/2016.
  */
 /**
-* Module dependencies
-*/
+ * Module dependencies
+ */
 var mongoose = require('mongoose'),
     extend = require('mongoose-schema-extend'),
     Schema = mongoose.Schema;
@@ -22,13 +22,12 @@ var AnswerSchema = new Schema({
         type: Schema.ObjectId,
         ref: 'User',
         required: true
+    },
+    answer: {
+        type: String,
+        required: true,
+        trim: true
     }
-    //We are storing answers in a course for now
-    //course: {
-    //    type: Schema.ObjectId,
-    //    ref: 'Course',
-    //    required: false
-    //}
 
 });
 
@@ -38,11 +37,7 @@ var AnswerSchema = new Schema({
  */
 
 var MultipleChoiceSchema = AnswerSchema.extend({
-    answer: {
-        type: String,
-        required: true,
-        trim: true
-    }
+    //TODO: add something here
     //
     //correctAnswer: {
     //    type: String,
@@ -57,24 +52,20 @@ var MultipleChoiceSchema = AnswerSchema.extend({
  */
 
 var LongAnswerSchema = AnswerSchema.extend({
-    answer: {
-        type: String,
-        required: true,
-        trim: true
-    }
+    //TODO: add something here
 });
 
 /**
  * Validations
  */
-//AnswerSchema.path('mp_answer').validate(function(mp_answer) {
-//    return !!mp_answer;
-//}, 'Answer cannot be blank');
+AnswerSchema.path('student').validate(function(student) {
+    return !!student;
+}, 'Student cannot be blank');
 
 /**
  * Statics
  */
-//QuestionSchema.statics.load = function(id, cb) {
+//AnswerSchema.statics.load = function(id, cb) {
 //    this.findOne({
 //        _id: id
 //    }).populate('creator', 'name username').exec(cb);
