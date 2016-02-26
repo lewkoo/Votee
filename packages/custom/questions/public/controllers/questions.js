@@ -49,7 +49,17 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
         $scope.create = function(isValid) {
             if (isValid) {
-                var question = new Questions($scope.question);
+                //var question = new Questions($scope.question);
+
+                var question = new Questions({
+                    "title": $scope.question.title,
+                    "options": $scope.question.options,
+                    "answer": $scope.question.answer,
+                    "answers": $scope.question.answers,
+                    "type": $scope.question.type,
+                    //"created": "2016-02-25T19:26:48.686Z",
+                    "__v": 1
+                });
 
                 question.$save(function(response) {
                     $location.path('questions/' + response._id);

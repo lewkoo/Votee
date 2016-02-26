@@ -61,10 +61,10 @@
 
         }));
 
-        var testQuetionsData = function() {
+        var postQuestionData = function() {
             return {
-                "_id": "56cf5578b387fd7c940cb9be",
-                "creator": "56b2a9b3897e13640eeba6e9",
+                //"_id": "56cf5578b387fd7c940cb9be",
+                //"creator": "56b2a9b3897e13640eeba6e9",
                 "title": "New q",
                 "options": {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"},
                 "answer": "2",
@@ -72,10 +72,25 @@
                     "56cf557fb387fd7c940cb9bf"
                 ],
                 "type": "MULTIPLE-CHOICE",
-                "created": "2016-02-25T19:26:48.686Z",
+                //"created": "2016-02-25T19:26:48.686Z",
                 "__v": 1
             };
         }; //testQuestionsData
+
+        var postQuestionID = function(){
+          return {
+              "_id": "56cf5578b387fd7c940cb9be"
+          }
+        };
+
+        /*
+         * returns a simple JSON response with a MONGO ID
+         */
+        var testQuestionData = function(){
+            var additionalData = postQuestionData();
+            additionalData._id = "56cf5578b387fd7c940cb9be";
+            return additionalData;
+        };
 
         it('$scope.find() should find questions ', function() {
 
@@ -83,7 +98,7 @@
 
             $httpBackend.expectGET(/api\/questions$/).respond([{
                 "_id": "56cf5578b387fd7c940cb9be",
-                "creator": "56b2a9b3897e13640eeba6e9",
+                //"creator": "56b2a9b3897e13640eeba6e9",
                 "title": "New q",
                 "options": {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"},
                 "answer": "2",
@@ -91,7 +106,7 @@
                     "56cf557fb387fd7c940cb9bf"
                 ],
                 "type": "MULTIPLE-CHOICE",
-                "created": "2016-02-25T19:26:48.686Z",
+                //"created": "2016-02-25T19:26:48.686Z",
                 "__v": 1
             }]);
 
@@ -99,8 +114,20 @@
             $httpBackend.flush();
 
             // test the return value
-            expect(scope.questions[0]).toEqualData(testQuetionsData());
+            expect(scope.questions[0]).toEqualData(testQuestionData());
 
+        });
+
+        it('$scope.find() should list no questions if server returns nothing', function(){
+            $httpBackend.expectGET(/api\/questions$/).respond([{
+                // return nothing
+            }]);
+
+            scope.find();
+            $httpBackend.flush();
+
+            // test the return value
+            expect(scope.questions[0]).toEqualData({});
         });
 
         it('$scope.findOne() should create an array with one question object fetched ' +
@@ -109,7 +136,7 @@
             $stateParams.questionId = '56cf5578b387fd7c940cb9be';
 
             // test expected GET request with response object
-            $httpBackend.expectGET('api\/questions\/'+ $stateParams.questionId).respond(testQuetionsData());
+            $httpBackend.expectGET('api\/questions\/'+ $stateParams.questionId).respond(testQuestionData());
 
             // run controller
             scope.findOne();
@@ -117,9 +144,61 @@
 
             //console.log(scope.questions);
             // test scope value
-            expect(scope.question).toEqualData(testQuetionsData());
+            expect(scope.question).toEqualData(testQuestionData());
 
         });
+
+
+        it('$scope.create() with valid form data should send a POST request ' +
+            'with the form input values and then ' +
+            'locate to new object URL', function() {
+
+            $httpBackend.when('GET','/questions/views/view.html').respond(200);
+
+            //"creator": "56b2a9b3897e13640eeba6e9",
+            //    "title": "New q",
+            //    "options": {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"},
+            //"answer": "2",
+            //    "answers": [
+            //    "56cf557fb387fd7c940cb9bf"
+            //],
+            //    "type": "MULTIPLE-CHOICE",
+            //    "created": "2016-02-25T19:26:48.686Z",
+            //    "__v": 1
+            // fixture mock form input values
+            scope.question = {};
+            scope.question.title = 'New q';
+            scope.question.options =  {"0": "sdsdj", "1": "kkk", "2": "nnn", "3": "dfd"};
+            scope.question.answer = "2";
+            //scope.professor = "56c8bdfaf82d7bd71d40de02";
+            scope.question.type = "MULTIPLE-CHOICE";
+            scope.question.answers = [
+                "56cf557fb387fd7c940cb9bf"
+            ];
+            scope.question.created = "2016-02-25T19:26:48.686Z";
+            scope.question.__v = 1;
+
+            // test post request is sent
+            $httpBackend.expectPOST('api\/questions', postQuestionData()).respond(testQuestionData());
+
+            // Run controller
+            scope.create(true);
+            $httpBackend.flush();
+
+            console.log(scope.question);
+            // test form input(s) are reset
+            expect(scope.question.title).not.toBeDefined();
+            expect(scope.question.options).not.toBeDefined();
+            expect(scope.question.answer).not.toBeDefined();
+            expect(scope.question.type).not.toBeDefined();
+            expect(scope.question.answers).not.toBeDefined();
+            expect(scope.question.__v).not.toBeDefined();
+
+            // test URL location to new object
+            expect($location.path()).toBe('/questions/' + postQuestionID()._id);
+
+        });
+
 
 
 
