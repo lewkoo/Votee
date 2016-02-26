@@ -19,22 +19,36 @@ var expect = require('expect.js'),
 
 var professor;
 var question;
+var students = [];
 var answers  = [];
 
 /**
  * Test Suites
  */
 
+var generateRandomStudent = function generateRandomStudent(studentSequenceNumber) {
+
+    return new User({
+        name: 'Student ' + studentSequenceNumber,
+        email: 'student' + studentSequenceNumber + '@university.ca',
+        username: 'student' + studentSequenceNumber,
+        password: 'iwillpassthrough'
+    });
+
+};
+
 var generateRandomAnswers = function generateRandomAnswers(answerSequenceNumber) {
 
+    var student = generateRandomStudent(answerSequenceNumber);
+    student.roles.push('student');
+    student.save();
+    students.push(student);
+
     return new Answer({
-        student: {
-            name: 'Student ' + answerSequenceNumber,
-            email: 'student' + answerSequenceNumber + '@university.ca',
-            username: 'student' + answerSequenceNumber,
-            password: 'iwillpassthrough'
-        }
+        answer: "Option3",
+        student: student
     });
+
 }; //generateRandomQuestions
 
 function generateAnswers() {
@@ -63,7 +77,7 @@ describe('<Unit Test>', function() {
                 description: 'This is a question that has nothing to do with the course material',
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                answer: "Option3"
+                answer: 'Option3'
             });
             question.save();
 
@@ -182,7 +196,7 @@ describe('<Unit Test>', function() {
                 description: 'This is a question that has nothing to do with the course material',
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                answer: "Option3",
+                answer: 'Option3',
                 answers: answers
             });
             question.save();
@@ -275,7 +289,7 @@ describe('<Unit Test>', function() {
                     description: 'This is a question that has nothing to do with the course material',
                     creator: professor,
                     options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                    answer: "Option3",
+                    answer: 'Option3',
                     answers: answers
                 });
 
@@ -303,8 +317,8 @@ describe('<Unit Test>', function() {
 
                 this.timeout(10000);
 
-                question.title = "Updated title";
-                question.description = "Updated description";
+                question.title = 'Updated title';
+                question.description = 'Updated description';
                 //TODO: add here test to change question options
 
                 server.put('/api/questions/' + question._id.toString()) // request route - look for routes/courses.js
@@ -313,8 +327,8 @@ describe('<Unit Test>', function() {
                     .end(function (err, res){
                         expect(err).to.be(null);
 
-                        res.body.should.have.property('title', "Updated title");
-                        res.body.should.have.property('description', "Updated description");
+                        res.body.should.have.property('title', 'Updated title');
+                        res.body.should.have.property('description', 'Updated description');
                         res.body.should.have.property('options', question.options);
                         res.body.should.have.property('answer', question.answer);
                         res.body.should.have.property('answers').and.have.lengthOf(5);
@@ -340,7 +354,7 @@ describe('<Unit Test>', function() {
                     expect(err).to.be(null);
                 });
 
-                console.log("before PUT");
+                console.log('before PUT');
 
                 server.put('/api/questions/' + questionObject._id.toString())
                     .send(question)
@@ -417,6 +431,12 @@ describe('<Unit Test>', function() {
                     });
                     // clear the array
                     answers.splice(0,answers.length);
+
+                    students.forEach(function (student) {
+                        student.remove();
+                    });
+                    // clear the array
+                    students.splice(0,students.length);
                     done();
                 }); //remove
             });//aftereach

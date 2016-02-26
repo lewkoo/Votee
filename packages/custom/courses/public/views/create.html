@@ -1,12 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<section data-ng-controller="CoursesController">
+    <form name="courseForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(questionForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && courseForm.title.$invalid }">
+            <label class="col-md-3 control-label">Course title</label>
+            <div class="col-md-9">
+                <input name="title" type="text" class="form-control" data-ng-model="course.title" id="title" placeholder="Entre course title here" required>
+                <div ng-show="submitted && courseForm.title.$invalid" class="help-block">
+                    <p ng-show="courseForm.title.$error.required">Course ttle is required</p>
+                </div>
+            </div>
+        </div>
 
 
-
-</body>
-</html>
+    </form>
+</section>

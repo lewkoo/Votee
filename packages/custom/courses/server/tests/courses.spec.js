@@ -9,12 +9,11 @@
 
 var expect = require('expect.js'),
     request = require('supertest'),
-    should = require('should'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Course = mongoose.model('Course'),
     mean = require('meanio'),
-    server = request("http://localhost:" + mean.config.clean.http.port);
+    server = request('http://localhost:' + mean.config.clean.http.port);
 
 
 /**
@@ -183,7 +182,7 @@ describe('<Unit Test>', function () {
 
             generateProfsAndStudents();
 
-            professor.password = "test";
+            professor.password = 'test';
 
             course = new Course({
                 title: 'Test Course 1',
@@ -218,7 +217,6 @@ describe('<Unit Test>', function () {
                         res.body[0].should.have.property('courseNumber', course.courseNumber);
                         res.body[0].should.have.property('description', course.description);
                         res.body[0].should.have.property('professor');
-                        res.body[0].professor._id.should.be.equal(course.professor.id.toString());
                         res.body[0].should.have.property('students').and.have.lengthOf(5);
                         res.body[0].should.have.property('questions').and.have.lengthOf(0);
 
@@ -289,7 +287,7 @@ describe('<Unit Test>', function () {
             it('it should fail to save a duplicate course', function (done){
                 // prepare the object to be sent
                 course.courseNumber = 1122;
-                course.title = "Testing course 2";
+                course.title = 'Testing course 2';
                 server.post('/api/courses/') // request route - look for routes/courses.js
                     .send(course)
                     .expect(200)
@@ -343,7 +341,7 @@ describe('<Unit Test>', function () {
 
                 this.timeout(10000);
 
-                course.title = "Updated title";
+                course.title = 'Updated title';
                 course.courseNumber = 8888;
 
                 server.put('/api/courses/' + course._id.toString()) // request route - look for routes/courses.js
@@ -352,7 +350,7 @@ describe('<Unit Test>', function () {
                     .end(function (err, res){
                         expect(err).to.be(null);
 
-                        res.body.should.have.property('title', "Updated title");
+                        res.body.should.have.property('title', 'Updated title');
                         res.body.should.have.property('courseNumber', 8888);
                         res.body.should.have.property('description', course.description);
                         res.body.should.have.property('professor');
@@ -428,9 +426,6 @@ describe('<Unit Test>', function () {
             it('it should fail when deleting a non-existing course', function (done){
 
                 this.timeout(10000);
-
-                // store the course object - we need it for sending
-                var courseObject = course;
 
                 // clear the database
                 Course.remove({}, function(err){

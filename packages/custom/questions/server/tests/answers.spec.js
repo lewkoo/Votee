@@ -1,6 +1,7 @@
 /**
  * Created by lewkoo on 2016-01-29.
  */
+'use strict';
 
 var expect = require('expect.js'),
     request = require('supertest'),
@@ -43,7 +44,7 @@ describe('<Unit Test>', function() {
                 description: 'This is a question that has nothing to do with the course material',
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                answer: "Option3"
+                answer: 'Option3'
             });
             question.save();
 

@@ -2,6 +2,8 @@
  * Created by lewkoo on 2016-01-27.
  */
 
+'use strict';
+
 /**
  * Module dependencies
  */

@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
-var errorString = "Error: the course can not be found";
+var errorString = 'Error: the course can not be found';
 
 module.exports = function(Courses) {
 
@@ -24,7 +24,7 @@ module.exports = function(Courses) {
     }
 
     function validateCourse(req, res) {
-        if (req.course != null) {
+        if (req.course !== null) {
             res.json(req.course);
         } else {
             error(res);
@@ -58,13 +58,13 @@ module.exports = function(Courses) {
 
             course.save(function(err) {
                 if (err) {
-                    //console.log("Err: " + err);
+                    //console.log('Err: ' + err);
                     return res.status(500).json({
                         error: 'Cannot save the course'
                     });
                 }
 
-                if(req.user != undefined)
+                if(req.user !== undefined)
                 {
                     Courses.events.publish({
                         action: 'created',
@@ -86,7 +86,7 @@ module.exports = function(Courses) {
         destroy: function(req, res) {
             var course = req.course;
 
-            if(course != null)
+            if(course !== null)
             {
                 course.remove(function(err) {
                     if (err) {
@@ -95,7 +95,7 @@ module.exports = function(Courses) {
                         });
                     }
 
-                    if(req.user != undefined)
+                    if(req.user !== undefined)
                     {
                         Courses.events.publish({
                             action: 'deleted',
@@ -124,7 +124,7 @@ module.exports = function(Courses) {
 
             course = _.extend(course, req.body);
 
-            if(course != null) // the course was found
+            if(course !== null) // the course was found
             {
                 course.save(function(err) {
                     if (err) {
@@ -133,7 +133,7 @@ module.exports = function(Courses) {
                         });
                     }
 
-                    if(req.user != undefined)
+                    if(req.user !== undefined)
                     {
                         Courses.events.publish({
                             action: 'updated',
@@ -161,7 +161,7 @@ module.exports = function(Courses) {
          */
         show: function(req, res) {
 
-            if(req.user != undefined)
+            if(req.user !== undefined)
             {
                 Courses.events.publish({
                     action: 'viewed',

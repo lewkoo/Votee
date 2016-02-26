@@ -2,7 +2,7 @@
 
 (function() {
 
-    describe("voteeHome", function() {
+    describe('voteeHome', function() {
 
         beforeEach(function() {
             module('mean');
@@ -19,7 +19,7 @@
             $controller = _$controller_;
         }));
 
-        describe("voteeHome controller", function() {
+        describe('voteeHome controller', function() {
             beforeEach(function() {
                 $scope = {};
                 controller = $controller('VoteeHomeController', { $scope: $scope });
@@ -30,14 +30,14 @@
             });
         });
 
-        describe("header controller", function() {
+        describe('header controller', function() {
 
             beforeEach(function() {
                 $scope = {};
                 controller = $controller('VoteeHeaderController', { $scope: $scope });
             });
 
-            it("Has a menu",
+            it('Has a menu',
             function() {
                 expect(controller.menus).toBeDefined();
                 expect(controller.menus).not.toBeNull();

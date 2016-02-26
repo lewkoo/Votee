@@ -52,13 +52,13 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 //var question = new Questions($scope.question);
 
                 var question = new Questions({
-                    "title": $scope.question.title,
-                    "options": $scope.question.options,
-                    "answer": $scope.question.answer,
-                    "answers": $scope.question.answers,
-                    "type": $scope.question.type,
-                    //"created": "2016-02-25T19:26:48.686Z",
-                    "__v": 1
+                    'title': $scope.question.title,
+                    'options': $scope.question.options,
+                    'answer': $scope.question.answer,
+                    'answers': $scope.question.answers,
+                    'type': $scope.question.type,
+                    //'created": "2016-02-25T19:26:48.686Z',
+                    '__v': 1
                 });
 
                 question.$save(function(response) {
@@ -73,7 +73,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.vote = function(question) {
-            console.log("Submitting vote");
+            console.log('Submitting vote');
             var question = $scope.question;
             //add selected answer to reques
             question.selectedAnswer = $scope.selectedAnswer.index;
@@ -87,7 +87,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 $location.path('questions/vote/' + question._id);
             });
 
-            console.log("END of function");
+            console.log('END of function');
 
         };
 

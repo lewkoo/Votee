@@ -1,6 +1,8 @@
 /**
  * Created by Yuriy on 2/11/2016.
  */
+'use strict';
+
 /**
  * Module dependencies
  */
