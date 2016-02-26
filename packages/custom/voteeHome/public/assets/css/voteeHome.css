@@ -14,3 +14,17 @@ i.glyphicon {
     float: none;
     margin: 0 auto;
 }
+
+.flex {
+    display:flex;
+    align-items: stretch;
+}
+
+.box {
+    display:flex;
+    flex-direction: column;
+}
+
+.space {
+    flex:1;
+}
