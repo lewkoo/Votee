@@ -42,7 +42,7 @@ module.exports = function(Questions) {
         /**
          * Create a question
          *
-         * @api {post} api/question/ Create a new question
+         * @api {post} api/questions/ Create a new question
          * @apiName CreateQuestion
          * @apiGroup Question
          * @apiVersion 0.1.0
@@ -96,13 +96,10 @@ module.exports = function(Questions) {
         },
 
 
-        /*
+        /* TODO: add api DOCS
          * vote for a question
          */
         vote: function(req, res){
-            //BIG TODO: lots and lots of stuff here...need to figure out DB structure for this as well
-            console.log('VOTING!');
-
             //console.log(req.body);
             var question = req.question;
 
@@ -154,10 +151,17 @@ module.exports = function(Questions) {
         /**
          * Updates a Questions
          *
-         * @api {put} api/question/:questionID Update a question
+         * @api {put} api/questions/:questionID Update a question
          * @apiName Update
          * @apiGroup Question
          * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns updated question object
+         *
+         * @apiHeaderExample {json} Request-Example:
+         *  {
+         *      "title": "Updated title 3"
+         *  }
          *
          */
         update: function(req, res) {
@@ -194,10 +198,61 @@ module.exports = function(Questions) {
         /**
          * Delete a Question
          *
-         * @api {delete} api/question/:questionID  Delete a question
+         * @api {delete} api/questions/:questionID  Delete a question
          * @apiName Destroy
          * @apiGroup Question
          * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns deleted object
+         *
+         * @apiSuccessExample Example of DELETE api/questions/56cdbe3e7f6fce18121d0f91
+         * {
+         *     "_id": "56cdbe3e7f6fce18121d0f91",
+         *     "creator": {
+         *       "_id": "56a438f67c239e7040c61a07",
+         *       "username": "test",
+         *       "name": "Bryan"
+         *     },
+         *     "title": "From web",
+         *     "options": {
+         *       "0": "wev",
+         *       "1": "bbb",
+         *       "2": "bb",
+         *       "3": "jjj"
+         *     },
+         *     "answer": "1",
+         *     "__v": 1,
+         *     "answers": [
+         *       {
+         *         "_id": "56cfc7d3023517942b86d77d",
+         *         "student": {
+         *           "_id": "56a438f67c239e7040c61a07",
+         *           "email": "test@gmail.com",
+         *           "username": "test",
+         *           "name": "Bryan",
+         *           "__v": 0,
+         *           "provider": "local",
+         *           "roles": [
+         *            "authenticated",
+         *             "admin",
+         *             "professor"
+         *           ]
+         *         },
+         *         "answer": "TEST",
+         *         "__v": 0,
+         *         "created": "2016-02-26T03:34:43.544Z"
+         *       }
+         *     ],
+         *     "type": "MULTIPLE-CHOICE",
+         *     "created": "2016-02-24T14:29:18.469Z"
+         *   }
+         *
+         *   @apiError Question to Delete not found
+         *
+         *   @apiErrorExample Example of GET api/questions/56cdbe3e7f6fce18121d0f91 after DELETE api/questions/56cdbe3e7f6fce18121d0f91
+         *  {
+         *      null
+         *  }
          *
          */
         destroy: function(req, res) {
@@ -231,12 +286,74 @@ module.exports = function(Questions) {
         /**
          * Show a Questions
          *
-         * @api {get} api/question/:questionID Get a specific question
+         * @api {get} api/questions/:questionID Get a specific question
          * @apiName Show
          * @apiGroup Question
          * @apiVersion 0.1.0
          *
-         * @apiSuccess returns specific questions
+         * @apiSuccess returns specific questions by parameter ID
+         *
+         * @apiSuccessExample Example of GET api/questions/56d062c9f86af3c022bf6f0e
+         *{
+         *     "_id": "56d062c9f86af3c022bf6f0e",
+         *     "creator": {
+         *       "_id": "56a438f67c239e7040c61a07",
+         *       "username": "test",
+         *       "name": "Bryan"
+         *     },
+         *     "title": "What is the ebst movie?",
+         *     "options": {
+         *       "0": "not sure",
+         *       "1": "Start wars",
+         *       "2": "Lord of rings",
+         *       "3": "Deadpool"
+         *     },
+         *     "answer": "3",
+         *     "__v": 2,
+         *     "answers": [
+         *       {
+         *         "_id": "56d063ace672c5f427200fc9",
+         *         "student": {
+         *           "_id": "56a438f67c239e7040c61a07",
+         *           "email": "test@gmail.com",
+         *           "username": "test",
+         *           "name": "Bryan",
+         *           "__v": 0,
+         *           "provider": "local",
+         *           "roles": [
+         *             "authenticated",
+         *             "admin",
+         *             "professor"
+         *           ]
+         *         },
+         *         "answer": "3",
+         *         "__v": 0,
+         *         "created": "2016-02-26T14:39:40.531Z"
+         *       },
+         *       {
+         *         "_id": "56d06560536996f82477ffbe",
+         *         "student": {
+         *           "_id": "56a438f67c239e7040c61a07",
+         *           "email": "test@gmail.com",
+         *           "username": "test",
+         *           "name": "Bryan",
+         *           "__v": 0,
+         *           "provider": "local",
+         *           "roles": [
+         *             "authenticated",
+         *             "admin",
+         *             "professor"
+         *           ]
+         *         },
+         *         "answer": "1",
+         *         "__v": 0,
+         *         "created": "2016-02-26T14:46:56.708Z"
+         *       }
+         *     ],
+         *     "type": "MULTIPLE-CHOICE",
+         *     "created": "2016-02-26T14:35:53.762Z"
+         *   }
+         *
          *
          */
         show: function(req, res) {
@@ -266,13 +383,67 @@ module.exports = function(Questions) {
         /**
          * List of Questions
          *
-         * @api {get} api/question/ Get a list of questions
+         * @api {get} api/questions/ Get a list of questions
          * @apiName All
          * @apiGroup Question
          * @apiVersion 0.1.0
          *
-         * @apiSuccess returns a list of all questions
+         * @apiSuccess {Object} returns array of question objects
          *
+         * @apiSuccessExample Example of GET api/questions
+         *
+         *[
+         *{
+         *( "_id": "56d062c9f86af3c022bf6f0e",
+         *  "creator": {
+         *    "_id": "56a438f67c239e7040c61a07",
+         *    "username": "test",
+         *    "name": "Bryan"
+         *  },
+         *  "title": "What is the ebst movie?",
+         *  "options": {
+         *   "0": "not sure",
+         *    "1": "Start wars",
+         *    "2": "Lord of rings",
+         *    "3": "Deadpool"
+         *  },
+         *  "answer": "3",
+         *  "__v": 2,
+         *  "answers": [
+         *    "56d063ace672c5f427200fc9",
+         *    "56d06560536996f82477ffbe"
+         *  ],
+         *  "type": "MULTIPLE-CHOICE",
+         *  "created": "2016-02-26T14:35:53.762Z"
+         *},
+         *{
+         *  "_id": "56cdc4f2e7895cec2959e1f9",
+         *  "creator": {
+         *    "_id": "56a438f67c239e7040c61a07",
+         *    "username": "test",
+         *    "name": "Bryan"
+         *  },
+         *  "title": "dfd",
+         *  "options": {
+         *    "0": "cvc",
+         *    "1": "c",
+         *    "2": "cv",
+         *    "3": "cvc"
+         *  },
+         *  "answer": "0",
+         *  "__v": 17,
+         *  "answers": [
+         *    "56cfc6196dda272428c93417",
+         *    "56cfc686df0c241c370b69ec",
+         *    "56cfc689df0c241c370b69ed",
+         *    "56cfc6a8df0c241c370b69ee",
+         *    "56cfc74026dd1c0436e1c0bf",
+         *    "56cfc74326dd1c0436e1c0c0",
+         *    "56cfc83a2fafa42c31dbc931"
+         *  ],
+         *  "type": "MULTIPLE-CHOICE",
+         *  "created": "2016-02-24T14:57:54.961Z"
+         * }, ]
          */
         all: function(req, res) {
 

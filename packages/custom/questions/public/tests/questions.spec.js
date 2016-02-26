@@ -185,7 +185,7 @@
             scope.create(true);
             $httpBackend.flush();
 
-            console.log(scope.question);
+            //console.log(scope.question);
             // test form input(s) are reset
             expect(scope.question.title).not.toBeDefined();
             expect(scope.question.options).not.toBeDefined();
@@ -199,6 +199,53 @@
 
         });
 
+        it('$scote.update() with valid form data should send a PUT request ' +
+            'with the form input values and then ' +
+            'locate to updated object URL', function(Questions){
+
+            // mock question object from form
+            var question = new Questions(testQuestionData());
+
+            // mock question in scope
+            scope.question = question;
+
+            // test PUT happens correctly
+            $httpBackend.expectPUT(/api\/courses\/([0-9a-fA-F]{24})$/, testQuestionData()).respond();
+
+            // run controller
+            scope.update(true);
+            $httpBackend.flush();
+
+            // test URL location to new object
+            expect($location.path()).toBe('/courses/' + testQuestionData()._id);
+
+        });
+
+        it('$scope.remove() with valid form data should send a DELETE request ' +
+            'with the form input values and then ' +
+            'locate to updated object URL', function(Questions){
+
+            // fixture rideshare
+            var question = new Questions({
+                _id: '56cf5578b387fd7c940cb9be'
+            });
+
+            // mock rideshares in scope
+            scope.questions = [];
+            scope.questions.push(question);
+
+            // test expected rideshare DELETE request
+            $httpBackend.expectDELETE(/api\/courses\/([0-9a-fA-F]{24})$/).respond(204);
+
+            // run controller
+            scope.remove(course);
+            $httpBackend.flush();
+
+            // test after successful delete URL location articles list
+            //expect($location.path()).toBe('/articles');
+            expect(scope.questions.length).toBe(0);
+
+        });
 
 
 
