@@ -6,6 +6,7 @@
 
     <!--<div>{{question.content}}</div>-->
     <!--TODO: add error chekcing to the form-->
+
     <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="vote(questionForm)" novalidate>
 
         <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
@@ -36,12 +37,11 @@
             <br/>
 
         </div>
-
-        <div data-ng-if="hasVoted(question)">
-            <h3>You have already voted and your answer to this question has been submitted.</h3>
-        </div>
-
     </form>
+
+    <div data-ng-if="hasVoted(question)">
+        <h3>You have already voted and your answer to this question has been submitted.</h3>
+    </div>
 
     <div data-ng-if="hasAuthorization(question)">
 

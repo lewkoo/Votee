@@ -58,7 +58,7 @@ module.exports = function(Courses) {
 
             course.save(function(err) {
                 if (err) {
-                    //console.log("Err: " + err);
+                    //console.log('Err: ' + err);
                     return res.status(500).json({
                         error: 'Cannot save the course'
                     });

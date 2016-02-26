@@ -7,8 +7,8 @@
  * Model module dependencies.
  */
 
-var request = require('supertest'),
-    //should = require('should'),
+var expect = require('expect.js'),
+    request = require('supertest'),
     mongoose = require('mongoose'),
     User = mongoose.model('User'),
     Course = mongoose.model('Course'),

@@ -15,20 +15,26 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         //$scope.isAuthorized = MeanUser.isProfessor;
 
         $scope.hasVoted = function(question){
+            var equal = false;
 
-/*
+            //console.log('Length: '+ question.answers.length);
             for(var key in question.answers){
                 var answer = question.answers[key];
 
-                //console.log(answer);
-                //var creator = answer.student;
+                //console.log('Answer: ' + answer);
+                var creator = answer.student;
 
-                console.log("Question creator: " + question.creator);
-                //if(creator.equals(MeanUser._id)){
-                //        return true;
-                //}
-            }*/
-            return false;
+                //console.log('creator: ' + creator);
+                //console.log('stud id: ' + answer.student._id);
+                //console.log('mean id: ' + MeanUser.userId);
+                if(angular.equals(answer.student._id, MeanUser._id)){
+                //if(JSON.stringify(answer.student._id)===JSON.stringify(MeanUser._id)){
+                       // console.log('EQUAL!');
+                        equal = true;
+                        break;
+                }
+            }
+            return equal;
         };
 
         $scope.availableCircles = [];
@@ -53,13 +59,13 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 //var question = new Questions($scope.question);
 
                 var question = new Questions({
-                    "title": $scope.question.title,
-                    "options": $scope.question.options,
-                    "answer": $scope.question.answer,
-                    "answers": $scope.question.answers,
-                    "type": $scope.question.type,
-                    //"created": "2016-02-25T19:26:48.686Z",
-                    "__v": 1
+                    'title': $scope.question.title,
+                    'options': $scope.question.options,
+                    'answer': $scope.question.answer,
+                    'answers': $scope.question.answers,
+                    'type': $scope.question.type,
+                    //'created": "2016-02-25T19:26:48.686Z',
+                    '__v': 1
                 });
 
                 question.$save(function(response) {
@@ -74,8 +80,11 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.vote = function(question) {
-            console.log("Submitting vote");
+            console.log('Submitting vote');
             var question = $scope.question;
+            //add selected answer to reques
+            question.selectedAnswer = $scope.selectedAnswer.index;
+
             if (!question.updated) {
                 question.updated = [];
             }
@@ -85,7 +94,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 $location.path('questions/vote/' + question._id);
             });
 
-            console.log("END of function");
+            console.log('END of function');
 
         };
 

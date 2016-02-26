@@ -1,6 +1,7 @@
 /**
  * Created by lewkoo on 2016-01-29.
  */
+'use strict';
 
 var expect = require('expect.js'),
     request = require('supertest'),
@@ -62,7 +63,7 @@ describe('<Unit Test>', function() {
                 description: 'This is a question that has nothing to do with the course material',
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                answer: "Option3"
+                answer: 'Option3'
             });
             question.save();
 
@@ -181,7 +182,7 @@ describe('<Unit Test>', function() {
                 description: 'This is a question that has nothing to do with the course material',
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                answer: "Option3",
+                answer: 'Option3',
                 answers: answers
             });
             question.save();
@@ -274,7 +275,7 @@ describe('<Unit Test>', function() {
                     description: 'This is a question that has nothing to do with the course material',
                     creator: professor,
                     options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                    answer: "Option3",
+                    answer: 'Option3',
                     answers: answers
                 });
 
@@ -302,8 +303,8 @@ describe('<Unit Test>', function() {
 
                 this.timeout(10000);
 
-                question.title = "Updated title";
-                question.description = "Updated description";
+                question.title = 'Updated title';
+                question.description = 'Updated description';
                 //TODO: add here test to change question options
 
                 server.put('/api/questions/' + question._id.toString()) // request route - look for routes/courses.js
@@ -312,8 +313,8 @@ describe('<Unit Test>', function() {
                     .end(function (err, res){
                         expect(err).to.be(null);
 
-                        res.body.should.have.property('title', "Updated title");
-                        res.body.should.have.property('description', "Updated description");
+                        res.body.should.have.property('title', 'Updated title');
+                        res.body.should.have.property('description', 'Updated description');
                         res.body.should.have.property('options', question.options);
                         res.body.should.have.property('answer', question.answer);
                         res.body.should.have.property('answers').and.have.lengthOf(5);
@@ -339,7 +340,7 @@ describe('<Unit Test>', function() {
                     expect(err).to.be(null);
                 });
 
-                console.log("before PUT");
+                console.log('before PUT');
 
                 server.put('/api/questions/' + questionObject._id.toString())
                     .send(question)

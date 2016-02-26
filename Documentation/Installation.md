@@ -5,18 +5,18 @@
 ### Quick start
 Install the latest stable release of the following:
 
-- Node.js - [Download](https://nodejs.org/en/download/)
+- Node.js - [Download](https://nodejs.org/en/download/stable/)
 - MongoDB - [Download](https://www.mongodb.org/downloads)
 - Git - [Download](http://git-scm.com/downloads)
 
 ### Windows
-- Download and install [Node.js](https://nodejs.org/en/download/)
+- Download and install [Node.js](https://nodejs.org/en/download/stable/)
 - Follow the installation guide for [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
 - Download and install [Git](http://git-scm.com/downloads)  
 You'll need git bash in order to run the rest of the commands.
 
 ### OS X
-- Download and install [Node.js](https://nodejs.org/en/download/)
+- Download and install [Node.js](https://nodejs.org/en/download/stable/)
 - Follow the installation guide for [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-os-x/)
 - Download and install [Git](http://git-scm.com/downloads)
 
