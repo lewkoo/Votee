@@ -44,7 +44,7 @@ module.exports = function(Questions) {
          *
          * @api {post} api/questions/ Create a new question
          * @apiName CreateQuestion
-         * @apiGroup Question
+         * @apiGroup Questions
          * @apiVersion 0.1.0
          *
          * @apiDescription This is Questions API
@@ -177,7 +177,7 @@ module.exports = function(Questions) {
          *
          * @api {put} api/questions/:questionID Update a question
          * @apiName Update
-         * @apiGroup Question
+         * @apiGroup Questions
          * @apiVersion 0.1.0
          *
          * @apiParam {String} title
@@ -242,7 +242,7 @@ module.exports = function(Questions) {
          *
          * @api {delete} api/questions/:questionID  Delete a question
          * @apiName Destroy
-         * @apiGroup Question
+         * @apiGroup Questions
          * @apiVersion 0.1.0
          *
          * @apiSuccess returns deleted object
@@ -330,7 +330,7 @@ module.exports = function(Questions) {
          *
          * @api {get} api/questions/:questionID Get a specific question
          * @apiName Show
-         * @apiGroup Question
+         * @apiGroup Questions
          * @apiVersion 0.1.0
          *
          * @apiSuccess returns specific questions by parameter ID
@@ -427,7 +427,7 @@ module.exports = function(Questions) {
          *
          * @api {get} api/questions/ Get a list of questions
          * @apiName All
-         * @apiGroup Question
+         * @apiGroup Questions
          * @apiVersion 0.1.0
          *
          * @apiSuccess {Object} returns array of question objects
