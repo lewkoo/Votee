@@ -17,19 +17,12 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.hasVoted = function(question){
             var equal = false;
 
-            //console.log("Length: "+ question.answers.length);
             for(var key in question.answers){
                 var answer = question.answers[key];
 
-                //console.log("Answer: " + answer);
                 var creator = answer.student;
 
-                //console.log("creator: " + creator);
-                //console.log("stud id: " + answer.student._id);
-                //console.log("mean id: " + MeanUser.userId);
-                if(angular.equals(answer.student._id, MeanUser._id)){
-                //if(JSON.stringify(answer.student._id)===JSON.stringify(MeanUser._id)){
-                       // console.log("EQUAL!");
+                if(angular.equals(answer.student._id, MeanUser.userId)){
                         equal = true;
                         break;
                 }
