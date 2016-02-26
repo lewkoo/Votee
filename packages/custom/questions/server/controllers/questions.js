@@ -7,6 +7,7 @@
 var mongoose = require('mongoose'),
     Question = mongoose.model('Question'),
     Answer = mongoose.model('Answer'),
+    //MultipleChoice = mongoose.model('MultipleChoice'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -108,14 +109,29 @@ module.exports = function(Questions) {
             question = _.extend(question, req.body);
 
             //console.log(question);
-            var answer = new Answer();
-            answer.created = Date.now;
-            answer.student = req.user;
 
-            //console.log(answer);
+            /*
+            if(question.type == 'MULTIPLE-CHOICE')
+            {
+                // create a new MultipleChoise
+            }else if (question.type == 'OPEN-ENDED')
+            {
+                // create a new OPEN-ended one
+            }
+             */
+
+            var answer = new Answer({
+                created : Date.now,
+                student : req.user,
+                answer: "TEST"
+            });
+
+            answer.save();
+
+            console.log("Here is what in the answer object: " + answer);
 
             question.answers.push(answer);
-            //console.log(question.answers);
+            console.log(question.answers);
             //console.log(question);
 
             question.save(function(err) {
@@ -124,10 +140,6 @@ module.exports = function(Questions) {
                         error: 'Cannot vote for the question'
                     });
                 }
-
-                console.log("Actually saving the answer");
-                answer.save();
-                console.log("Answer saved, bitches");
 
                 Questions.events.publish({
                     action: 'voted',
