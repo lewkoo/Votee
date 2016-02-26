@@ -54,7 +54,7 @@ angular.module('mean').controller('TokensController', ['$scope', 'Global', 'Toke
 			$scope.sort = 'title';
 			$scope.reverse = true;
 			if (!$scope.global.langs)
-				$scope.global.langs = [{"identifier":"en"}];
+				$scope.global.langs = [{'identifier':'en'}];
 			if (!$scope.global.lang)
 				$scope.global.lang = 'en';
 

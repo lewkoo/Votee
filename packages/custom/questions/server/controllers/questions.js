@@ -11,7 +11,7 @@ var mongoose = require('mongoose'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
-var errorString = "Error: the question can not be found";
+var errorString = 'Error: the question can not be found';
 
 
 module.exports = function(Questions) {
@@ -61,7 +61,7 @@ module.exports = function(Questions) {
             }
             //TODO: read this from the request
             question.title = req.body.title;
-            question.type = "MULTIPLE-CHOICE";
+            question.type = 'MULTIPLE-CHOICE';
             question.answer = req.body.answer;
             question.options = req.body.options;
 

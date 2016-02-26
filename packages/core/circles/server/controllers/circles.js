@@ -1,3 +1,5 @@
+'use strict';
+
 var mongoose = require('mongoose'),
     Circle = mongoose.model('Circle');
 
@@ -122,14 +124,14 @@ module.exports = function(Circles, app) {
 
             roles.forEach(function(role) {
                 if (req.acl.circles[role]) {
-                    
+
                     if (list.indexOf(role) === -1) list.push(role);
                     req.acl.circles[role].decendants.forEach(function(descendent) {
 
                         if (list.indexOf(descendent) === -1) {
                             list.push(descendent);
                         }
-                        
+
                     });
                     userRoles[role] = req.acl.circles[role];
                 }
@@ -142,7 +144,7 @@ module.exports = function(Circles, app) {
             }
 
             req.acl.user = {
-                tree: tree, 
+                tree: tree,
                 circles: userRoles,
                 allowed: list,
             };

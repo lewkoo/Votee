@@ -10,7 +10,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
 
         $scope.canCreateCourses = function()
         {
-            console.log("In canCreateCourses");
+            console.log('In canCreateCourses');
 
             return (MeanUser.isProfessor || MeanUser.isAdmin);
         };

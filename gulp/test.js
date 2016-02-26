@@ -62,7 +62,7 @@ function processIncludes(aggregatedAssets) {
         aggregatedAssets[i] = aggregatedAssets[i].slice(1);
         if(aggregatedAssets[i].indexOf('bower_components/') === -1) {
             var index = aggregatedAssets[i].indexOf('/') + 1;
-            aggregatedAssets[i] = aggregatedAssets[i].substring(0, index) + "public/" + aggregatedAssets[i].substring(index);
+            aggregatedAssets[i] = aggregatedAssets[i].substring(0, index) + 'public/' + aggregatedAssets[i].substring(index);
         }
         try {
             fs.lstatSync(__dirname + '/../packages/core/' + aggregatedAssets[i]);
