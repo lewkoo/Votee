@@ -217,7 +217,6 @@ describe('<Unit Test>', function () {
                         res.body[0].should.have.property('courseNumber', course.courseNumber);
                         res.body[0].should.have.property('description', course.description);
                         res.body[0].should.have.property('professor');
-                        res.body[0].professor._id.should.be.equal(course.professor.id.toString());
                         res.body[0].should.have.property('students').and.have.lengthOf(5);
                         res.body[0].should.have.property('questions').and.have.lengthOf(0);
 
