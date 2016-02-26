@@ -108,32 +108,23 @@ module.exports = function(Questions) {
 
             question = _.extend(question, req.body);
 
-            //console.log(question);
-
-            /*
-            if(question.type == 'MULTIPLE-CHOICE')
-            {
-                // create a new MultipleChoise
-            }else if (question.type == 'OPEN-ENDED')
-            {
-                // create a new OPEN-ended one
-            }
-             */
-
+            // create a new Answer object
             var answer = new Answer({
-                created : Date.now,
                 student : req.user,
-                answer: "TEST"
+                answer: "TEST" // TODO: this should be replaced with the selected answer!
             });
 
-            answer.save();
+            // save it. if any errors hapen, developer will be notified
+            answer.save(function (err) {
+                if(err){
+                    console.log(res, err);
+                }
+            });
 
-            console.log("Here is what in the answer object: " + answer);
-
+            // add a reference to the list of answers for this question
             question.answers.push(answer);
-            console.log(question.answers);
-            //console.log(question);
 
+            // save the question itself
             question.save(function(err) {
                 if (err) {
                     return res.status(500).json({
