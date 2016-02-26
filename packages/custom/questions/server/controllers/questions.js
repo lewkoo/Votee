@@ -111,7 +111,7 @@ module.exports = function(Questions) {
             // create a new Answer object
             var answer = new Answer({
                 student : req.user,
-                answer: "TEST" // TODO: this should be replaced with the selected answer!
+                answer: req.body.selectedAnswer
             });
 
             // save it. if any errors hapen, developer will be notified

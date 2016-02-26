@@ -76,6 +76,9 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.vote = function(question) {
             console.log("Submitting vote");
             var question = $scope.question;
+            //add selected answer to reques
+            question.selectedAnswer = $scope.selectedAnswer.index;
+
             if (!question.updated) {
                 question.updated = [];
             }
