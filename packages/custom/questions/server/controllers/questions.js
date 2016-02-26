@@ -85,7 +85,6 @@ module.exports = function(Questions) {
             if(req.user != undefined){
                 question.creator = req.user;
             } else {
-                console.log("before fail?");
                 if(req.body.creator != undefined){
                     question.creator = req.body.creator;
                 }
@@ -95,19 +94,11 @@ module.exports = function(Questions) {
                     });
                 }
             }
-            //TODO: read this from the request
+            //TODO: refactor
             question.title = req.body.title;
             question.type = 'MULTIPLE-CHOICE';
             question.answer = req.body.answer;
             question.options = req.body.options;
-
-            //console.log(req.body.type == 'MULTIPLE-CHOICE');
-
-            //if(req.body.type == 'MULTIPLE-CHOICE'){
-            //    question.correctAnswer = req.body.correctAnswer;
-            //}else {
-            //    //open ended question..could possiby have more options (quiz?)
-            //}
 
             question.save(function(err) {
                 if (err) {
@@ -133,12 +124,13 @@ module.exports = function(Questions) {
 
 
         /* TODO: add api DOCS
+         *
+         * API route is not available for this iteration as well as docs
+         * Moved to the next iteration.
          * vote for a question
          */
         vote: function(req, res){
-            //console.log(req.body);
             var question = req.question;
-
             question = _.extend(question, req.body);
 
             // create a new Answer object
@@ -150,7 +142,9 @@ module.exports = function(Questions) {
             // save it. if any errors hapen, developer will be notified
             answer.save(function (err) {
                 if(err){
-                    console.log(res, err);
+                    return res.status(500).json({
+                        error: 'Cannot vote for the question'
+                    });
                 }
             });
 
@@ -176,12 +170,6 @@ module.exports = function(Questions) {
 
                 res.json(question);
             });
-
-            //Question.find({})
-            //    .populate('answers')
-            //    .exec(function(error, questions){
-            //        console.log(questions);
-            //    });
         },
 
         /**
