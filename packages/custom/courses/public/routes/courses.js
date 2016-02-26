@@ -15,7 +15,7 @@ angular.module('mean.courses').config(['$stateProvider',
                 }
             })
             .state('edit course', {
-                url: '/courses/edit',
+                url: '/courses/:courseId/edit',
                 templateUrl: 'courses/views/edit.html',
                 requiredCircles: {
                     circles: ['can edit courses']

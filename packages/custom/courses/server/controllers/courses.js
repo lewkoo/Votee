@@ -56,9 +56,14 @@ module.exports = function(Courses) {
         create: function(req, res) {
             var course = new Course(req.body);
 
+            if(req.user !== undefined)
+            {
+                course.professor = req.user;
+            }
+
             course.save(function(err) {
                 if (err) {
-                    //console.log('Err: ' + err);
+                    console.log('Err: ' + err);
                     return res.status(500).json({
                         error: 'Cannot save the course'
                     });
