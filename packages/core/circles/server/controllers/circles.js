@@ -1,5 +1,3 @@
-'use strict';
-
 var mongoose = require('mongoose'),
     Circle = mongoose.model('Circle');
 
