@@ -21,10 +21,17 @@ i.glyphicon {
 }
 
 .box {
+    flex:1;
     display:flex;
     flex-direction: column;
 }
 
 .space {
     flex:1;
+}
+
+@media (max-width: 992px) {
+    .flex {
+        flex-direction: column;
+    }
 }
