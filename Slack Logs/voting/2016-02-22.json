@@ -1,0 +1,91 @@
+[
+    {
+        "user": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HV1T7F1|yuriy> has joined the channel",
+        "ts": "1456167861.000002"
+    },
+    {
+        "user": "U0HV1T7F1",
+        "purpose": "Voting related only",
+        "type": "message",
+        "subtype": "channel_purpose",
+        "text": "<@U0HV1T7F1|yuriy> set the channel purpose: Voting related only",
+        "ts": "1456167861.000003"
+    },
+    {
+        "user": "U0HV4EBMJ",
+        "inviter": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HV4EBMJ|tboswick> has joined the channel",
+        "ts": "1456167862.000004"
+    },
+    {
+        "user": "U0J3D11K5",
+        "inviter": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0J3D11K5|sandersjess> has joined the channel",
+        "ts": "1456167862.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "For all your voting questions, concerns or anything else related to voting page :simple_smile:",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456167894.000000"
+        },
+        "ts": "1456167883.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": ":blush:",
+        "ts": "1456168760.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I think Tyler is going to work on making the front end stuff look nice. I am looking into making sure a user hasn't voted already when the user opens a question ",
+        "ts": "1456171799.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Ill also try to work on the creation of an answer and everything ",
+        "ts": "1456171840.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if ill make some progress ill let you know",
+        "ts": "1456171874.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah im gonna look at\/research that issue with the backend call as well",
+        "ts": "1456175594.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "also if you guys are gonna work on the branch, can you checkout with a new branch? just so we dont have to merge all the time...",
+        "ts": "1456191265.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "but version control is so much fun :wink:",
+        "ts": "1456191638.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "who doesnt love resolving conflicts?",
+        "ts": "1456191653.000015"
+    }
+]

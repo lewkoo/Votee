@@ -1,0 +1,426 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>: do you think checking for which user has voted for question or not going to be done today?",
+        "ts": "1456505224.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I got to the point where I was comparing the studentID and current usersid ....sometimes the comparison would work and other times not",
+        "ts": "1456505313.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I feel I am doing the comparison in the wrong place. Do you have a suggestion? ",
+        "ts": "1456505333.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "where are you doing things right now?",
+        "ts": "1456505347.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Sorry I am on my way to the school now. I will be there at 11:30 ",
+        "ts": "1456506147.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": " I figured out how to check if the user has voted! ",
+        "ts": "1456512538.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "nice!",
+        "ts": "1456512559.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i changed the front end html for voting",
+        "ts": "1456512574.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just so you know in case you have older version :simple_smile:",
+        "ts": "1456512596.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Hmm I probably do ya haha",
+        "ts": "1456512656.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Well I merged with develop ",
+        "ts": "1456512664.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i didnt merge it to develope",
+        "ts": "1456512675.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "But all that would be in submitAnswer?",
+        "ts": "1456512676.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeap",
+        "ts": "1456512681.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Crap okay haha. So I should merge my branch with submit answer then? ",
+        "ts": "1456512750.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just merge submitAnswer into yours",
+        "ts": "1456512769.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "origin&gt;submitAnswer",
+        "ts": "1456512777.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im in class till 3:30 so no more changes will be coming",
+        "ts": "1456512816.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":upside_down_face:",
+        "ts": "1456512821.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Kk I'll see how it goes :yum:",
+        "ts": "1456512913.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I am having issues running the tests on my machine(long story)...I would give them a quick run before the push please :)",
+        "ts": "1456515434.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeah 1 is failing for me too",
+        "ts": "1456515450.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "but i had the same issue since yesterday",
+        "ts": "1456515460.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "everything else passes",
+        "ts": "1456515464.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "so dont worry i pushed your changes",
+        "ts": "1456515469.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Great!",
+        "ts": "1456515480.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>: if you want to the page where user has voted already also could use some nicer look",
+        "ts": "1456515839.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/www.dropbox.com\/s\/0021x93rwez8n49\/Screenshot%202016-02-26%2013.43.38.png?dl=0>",
+        "ts": "1456515841.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "whoever is doing designing could let their imagination go wild there",
+        "ts": "1456515902.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":simple_smile:",
+        "ts": "1456515905.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "plus same things will also apply to courses html (design)",
+        "ts": "1456516017.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I ran npm install and messed my machine...is there other commands I have to run after the install?",
+        "ts": "1456516187.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "whats the error?",
+        "ts": "1456516201.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "run gulp through phpstorm and check the console to see if there are missing packages",
+        "ts": "1456516276.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "if youre missing something, you can npm install \"whatever\"",
+        "ts": "1456516290.000037"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0J3D11K5|sandersjess> shared a file: <https:\/\/4350team.slack.com\/files\/sandersjess\/F0P938X5G\/slack_for_ios_upload.jpg|Slack for iOS Upload>",
+        "file": {
+            "id": "F0P938X5G",
+            "created": 1456516248,
+            "timestamp": 1456516248,
+            "name": "Slack for iOS Upload.jpg",
+            "title": "Slack for iOS Upload",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U0J3D11K5",
+            "editable": false,
+            "size": 3471273,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P938X5G\/slack_for_ios_upload.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P938X5G\/download\/slack_for_ios_upload.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_64.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_80.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_360.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360_w": 360,
+            "thumb_360_h": 270,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_480.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_480_w": 480,
+            "thumb_480_h": 360,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_160.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_720.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720_w": 720,
+            "thumb_720_h": 540,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_960.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_960_w": 960,
+            "thumb_960_h": 720,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P938X5G-f8bc15977b\/slack_for_ios_upload_1024.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 768,
+            "image_exif_rotation": 1,
+            "original_w": 3264,
+            "original_h": 2448,
+            "permalink": "https:\/\/4350team.slack.com\/files\/sandersjess\/F0P938X5G\/slack_for_ios_upload.jpg",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0P938X5G-0cddb4c3d6",
+            "channels": [
+                "C0NFY2E9H"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0J3D11K5",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "<@U0J3D11K5|sandersjess>",
+        "bot_id": null,
+        "ts": "1456516320.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "oh yeah",
+        "ts": "1456516335.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "This error this happens when I run gulp",
+        "ts": "1456516339.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ok listen up",
+        "ts": "1456516340.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "use your finder",
+        "ts": "1456516348.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "go to the project directory",
+        "ts": "1456516353.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "go into node_modules folder",
+        "ts": "1456516360.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and remove mongoose-extend",
+        "ts": "1456516365.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just move that folder to thrash",
+        "ts": "1456516370.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "when you delete it, go back to root of project",
+        "ts": "1456516397.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Mongoose-schema-extend?",
+        "ts": "1456516414.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and run npm install mongoose-schema-extend@0.2.0",
+        "ts": "1456516415.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yes, you need earlier version of it",
+        "ts": "1456516428.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "so delete it from node_modules folder and run that command",
+        "ts": "1456516442.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i said to use finder, because phpstorm didnt allow me to remove it :simple_smile:",
+        "ts": "1456516522.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we actually might not be using this package at all ( if i remember correctly after yesterdays changes)",
+        "ts": "1456516591.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Kk I ran all the commands and just trying to run gulp again, we'll see if it works! ",
+        "ts": "1456516790.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if you run npm install again it will update it to latest version\u2026just make sure you check package.json file",
+        "ts": "1456516844.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "All working, thanks!! ",
+        "ts": "1456516900.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "So when you run npm-install it updates it to a later version than we want then?",
+        "ts": "1456516922.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "it checks package.json file for dependecies and versions",
+        "ts": "1456517005.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "check yours to make sure mongoose-schema-extend is set to version 0.2.0",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456517022.000000"
+        },
+        "ts": "1456517019.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Great okay. Thanks so much for your help, sorry if you guys had already explained all that ",
+        "ts": "1456517546.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "also i havent written tests for voting",
+        "ts": "1456517918.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I\u2019ll help you with that today",
+        "ts": "1456519850.000063"
+    }
+]

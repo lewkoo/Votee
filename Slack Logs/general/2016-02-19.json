@@ -1,0 +1,31 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hi guys, \n\nIn about 30 minutes to one hour I managed to deploy MEAN onto a Heroku instance. If you would like to know what that is, how to do it, etc. - message me and I will be happy to explain. \n\nProduction version is running up at: <http:\/\/votee-project.herokuapp.com\/>",
+        "attachments": [
+            {
+                "service_name": "MEAN - A Modern Stack",
+                "title": "Votee - Votee",
+                "title_link": "http:\/\/votee-project.herokuapp.com\/",
+                "text": "MEAN - A Modern Stack: MongoDB, ExpressJS, AngularJS, NodeJS. (BONUS: Passport User Support).",
+                "fallback": "MEAN - A Modern Stack: Votee - Votee",
+                "from_url": "http:\/\/votee-project.herokuapp.com\/",
+                "id": 1
+            }
+        ],
+        "ts": "1455947251.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Everything you commit to ```master``` will also automatically be deployed via a daily build. It is part of Heroku\u2019s CI that I enabled.",
+        "ts": "1455947292.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so from now on - watch out when you commit to master :simple_smile:",
+        "ts": "1455947310.000005"
+    }
+]

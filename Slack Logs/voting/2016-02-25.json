@@ -1,0 +1,174 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>:  you good with that controller and routes?",
+        "ts": "1456430216.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "ya I'm going to create a new branch and try it out, i'll let you know how it goes",
+        "ts": "1456430262.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "cool, ive been on tests for past few days...",
+        "ts": "1456430359.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "so a front end Questions controller will call a back end Answers controller....is it required to still have the front end Answers controller?",
+        "ts": "1456434240.000005"
+    },
+    {
+        "user": "U0HUU655Y",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HUU655Y|levko> has joined the channel",
+        "ts": "1456436672.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Say hello to our new member",
+        "ts": "1456436721.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Dont be shy",
+        "ts": "1456436727.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":simple_smile:",
+        "ts": "1456436729.000009"
+    },
+    {
+        "user": "U0HUU655Y",
+        "type": "message",
+        "subtype": "channel_leave",
+        "text": "<@U0HUU655Y|levko> has left the channel",
+        "ts": "1456436743.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>: can you explain?",
+        "ts": "1456436787.000011"
+    },
+    {
+        "user": "U0HUU655Y",
+        "inviter": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HUU655Y|levko> has joined the channel",
+        "ts": "1456436825.000012"
+    },
+    {
+        "user": "U0HUU655Y",
+        "type": "message",
+        "subtype": "channel_leave",
+        "text": "<@U0HUU655Y|levko> has left the channel",
+        "ts": "1456436842.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "you will have to make a call to answers route with the answers ID",
+        "ts": "1456436877.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "to get that answer",
+        "ts": "1456436883.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<http:\/\/mongoosejs.com\/docs\/populate.html>",
+        "ts": "1456436932.000016"
+    },
+    {
+        "user": "U0HUU655Y",
+        "inviter": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HUU655Y|levko> has joined the channel",
+        "ts": "1456437101.000017"
+    },
+    {
+        "user": "U0HUU655Y",
+        "type": "message",
+        "subtype": "channel_leave",
+        "text": "<@U0HUU655Y|levko> has left the channel",
+        "ts": "1456437112.000018"
+    },
+    {
+        "user": "U0HUU655Y",
+        "inviter": "U0HV1T7F1",
+        "type": "message",
+        "subtype": "channel_join",
+        "text": "<@U0HUU655Y|levko> has joined the channel",
+        "ts": "1456437132.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, fine.",
+        "ts": "1456437141.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "what\u2019s up?",
+        "ts": "1456437145.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "\/giphy hi",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/hello-adele-im-sorry-but-the-beginning-of-song-its-very-familiar-BVStb13YiR5Qs>",
+                "image_url": "http:\/\/media1.giphy.com\/media\/BVStb13YiR5Qs\/giphy.gif",
+                "image_width": 500,
+                "image_height": 353,
+                "image_bytes": 769652,
+                "title": "hi",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/hello-adele-im-sorry-but-the-beginning-of-song-its-very-familiar-BVStb13YiR5Qs"
+            }
+        ],
+        "ts": "1456437174.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3D11K5>: you will need to add a call to `populate()` in `QuestionSchema.statics.load. This is the code you are looking for: \n\n```\/**\n * Statics\n *\/\nQuestionSchema.statics.load = function(id, cb) {\n    this.findOne({\n        _id: id\n    }).populate('creator', 'name username').populate('answers').exec(cb);```",
+        "ts": "1456437466.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "note an extra call to `populate(\u2018answers\u2019)`",
+        "ts": "1456437486.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>: i pushed some voting code to submitAnswer",
+        "ts": "1456461616.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just few minor lines",
+        "ts": "1456461621.000028"
+    }
+]
