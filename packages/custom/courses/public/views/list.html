@@ -1,0 +1,25 @@
+<section data-ng-controller="CoursesController" data-ng-init="find()" data-ng-hide=!isAuthorized>
+    <ul class="courses unstyled">
+        <div class="form-group">
+            <div class="row">
+                <a href="/courses/create">
+                    <button data-ng-hide="!canCreateCourses()" type="create" class="btn btn-info">Create a New Course</button>
+                </a>
+            </div>
+        </div>
+
+        <li data-ng-repeat="course in courses">
+            <span>{{course.created | date:'medium'}}</span> /
+            <span> Taught by: {{course.professor.name}}</span>
+            <h2>
+                <a data-ng-href="/courses/{{course._id}}">{{course.title}} - {{course.courseNumber}}</a>
+            </h2>
+
+            <h3>
+                {{course.description}}
+            </h3>
+
+        </li>
+
+    </ul>
+</section>

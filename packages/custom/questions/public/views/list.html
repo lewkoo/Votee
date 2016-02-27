@@ -1,21 +1,46 @@
 <section data-ng-controller="QuestionsController" data-ng-init="find()">
-    <ul class="questions unstyled">
+    <ul class="questions unstyled" data-ng-hide=!isAuthorized>
+
+
+        <table>
+            <td><img src="/voteeHome/assets/img/hatlogo.png" /></td>
+            <td><div style="text-align: center;"><h2>Questions</h2></div></td>
+        </table>
 
         <div class="form-group">
             <div class="row">
-                <a href="/questions/create">
-                    <button type="create" class="btn btn-info">Create New Question</button>
+                <a href="index" class="btn btn-default btn-primary">Home</a>
+                <a href="/student/profile" class="btn btn-default btn-primary">Student Profile</a>
+                <a href="/professors/profile">
+                    <button data-ng-hide="!hasAuthorization(question)" class="btn btn-default btn-primary">Professor Profile</button>
                 </a>
+                <br><hr>
+                <a href="/questions/create">
+                    <button id="createQuestionButton" data-ng-hide="!hasAuthorization(question)" type="create" class="btn btn-warning">Create New Question</button>
+                </a>
+
             </div>
         </div>
 
+        <br>
+
+        <div class="well panel panel-default">
+            <div class="panel-body">
+
         <li data-ng-repeat="question in questions">
-            <span>{{question.created | date:'medium'}}</span> /
+            <span>{{question.created | date:'medium'}}</span> by
             <span>{{question.creator.name}}</span>
             <h2>
-                <a data-ng-href="/questions/{{question._id}}">{{question.title}}</a>
+                <div class="col-xs-12 col-sm-5">
+                <a data-ng-href="/questions/{{question._id}}" class="btn btn-block btn-danger">{{question.title}}</a>
+                </div>
             </h2>
+            <hr>
+            <hr>
         </li>
+            </div>
+        </div>
+
     </ul>
-    <h1 data-ng-hide="!questions || questions.length || !isAuthorized">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
+    <h1 data-ng-hide="!questions || questions.length || !hasAuthorization(question)">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
 </section>

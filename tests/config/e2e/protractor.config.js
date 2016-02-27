@@ -1,13 +1,9 @@
 var jasmineReporters = require('jasmine-reporters');
 
-var ConsoleReporter = jasmineRequire.ConsoleReporter();
-jasmine.getEnv().addReporter(new ConsoleReporter({
-    timer: new jasmine.Timer,
-    print: function() {
-        console.log.apply(console, arguments);
-    },
-    showColors: true
-}));
+var testName = 'Test User';
+var testUsername = 'testuser';
+var testEmail = 'email@test.com';
+var testPassword = 'password';
 
 exports.config = {
   baseUrl: 'http://localhost:3001',
@@ -23,8 +19,14 @@ exports.config = {
       browserName: 'firefox'
     }
   ],
+  directConnect: true,
+  params: {
+      testName: testName,
+      testEmail: testEmail,
+      testUsername: testUsername,
+      testPassword: testPassword
+  },
 
-/*
   onPrepare: function(){
     //Creates independent results files for each browser
     //Otherwise they run at the same time and overwrite each other
@@ -39,7 +41,16 @@ exports.config = {
         filePrefix: browserPrefix,
         consolidateAll: false
       }));
+
+      browser.get('/auth/register');
+
+      element(by.id('name')).sendKeys(testName);
+      element(by.id('email_block')).sendKeys(testEmail);
+      element(by.id('username')).sendKeys(testUsername);
+      element(by.id('password_block')).sendKeys(testPassword);
+      element(by.id('confirm_password')).sendKeys(testPassword);
+      element(by.id('professorRadio')).click();
+      element(by.css('.submit_button')).click();
     });
   }
-*/
 };

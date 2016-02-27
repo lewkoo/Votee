@@ -32,6 +32,14 @@ angular.module('mean.questions').config(['$stateProvider',
                     circles: ['authenticated'],
                     denyState: 'auth.login'
                 }
+            })
+            .state('vote', {
+                url: '/questions/vote/:questionId',
+                templateUrl: '/questions/views/view.html',
+                requiredCircles: {
+                    circles: ['authenticated'],
+                    denyState: 'auth.login'
+                }
             });
     }
 ]);

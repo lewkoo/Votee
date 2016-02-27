@@ -1,12 +1,12 @@
 'use strict';
 
 /*
-var cl = console.log;
-console.log = function(){
-  console.trace();
-  cl.apply(console,arguments);
-};
-*/
+ var cl = console.log;
+ console.log = function(){
+ console.trace();
+ cl.apply(console,arguments);
+ };
+ */
 
 // Requires meanio .
 var mean = require('meanio');
@@ -17,9 +17,9 @@ var deferred = require('q').defer();
 // Code to run if we're in the master process or if we are not in debug mode/ running tests
 
 if ((cluster.isMaster) &&
-  (process.execArgv.indexOf('--debug') < 0) &&
-  (process.env.NODE_ENV!=='test') && (process.env.NODE_ENV!=='development') &&
-  (process.execArgv.indexOf('--singleProcess')<0)) {
+    (process.execArgv.indexOf('--debug') < 0) &&
+    (process.env.NODE_ENV!=='test') && (process.env.NODE_ENV!=='development') &&
+    (process.execArgv.indexOf('--singleProcess')<0)) {
 //if (cluster.isMaster) {
 
     console.log('for real!');
@@ -51,11 +51,11 @@ if ((cluster.isMaster) &&
 // Creates and serves mean application
 
     mean.serve({ workerid: workerId /* more options placeholder*/ }, function (app) {
-      var config = app.config.clean;
-      var port = config.https && config.https.port ? config.https.port : config.http.port;
-      console.log('Mean app started on port ' + port + ' (' + process.env.NODE_ENV + ') cluster.worker.id:', workerId);
+        var config = app.config.clean;
+        var port = config.https && config.https.port ? config.https.port : config.http.port;
+        console.log('Mean app started on port ' + port + ' (' + process.env.NODE_ENV + ') cluster.worker.id:', workerId);
 
-      deferred.resolve(app);
+        deferred.resolve(app);
     });
 }
 

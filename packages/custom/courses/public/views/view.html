@@ -1,0 +1,17 @@
+<section data-ng-controller="CoursesController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
+    <span>{{course.created | date:'medium'}}</span> /
+    <span> Taught by: {{course.professor.name}}</span>
+
+    <h2>{{course.title}} - {{course.courseNumber}}</h2>
+
+    <div data-ng-if="canEditCourses(course)">
+        <a class="btn" href="/courses/{{course._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+        </a>
+        <a class="btn" data-ng-click="remove(course);">
+            <i class="glyphicon glyphicon-trash"></i>
+        </a>
+    </div>
+    <h3>{{course.description}}</h3>
+
+</section>

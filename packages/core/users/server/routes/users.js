@@ -42,6 +42,7 @@ module.exports = function(MeanUser, app, auth, database, passport) {
         .post(passport.authenticate('local', {
           failureFlash: false
         }), function(req, res) {
+          console.log(req.user);
           var payload = req.user;
           var escaped = JSON.stringify(payload);
           escaped = encodeURI(escaped);

@@ -9,9 +9,9 @@ module.exports = {
   assets: {
     hash: false
   },
-  logging: {
-    format: 'common'
-  },
+  /*logging: {
+    format: 'tiny'
+  },*/
   app: {
     name: 'MEAN - A Modern Stack - Test'
   },

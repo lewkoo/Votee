@@ -10,13 +10,21 @@ angular.module('mean.voteeHome').config(['$viewPathProvider','$stateProvider',
 
       $stateProvider.state('Students', {
         url: '/student/profile',
-        templateUrl: 'voteeHome/views/student.html'
+        templateUrl: 'voteeHome/views/student.html',
+        requiredCircles : {
+              circles: ['authenticated'],
+              denyState: 'auth.login'
+          }
       });
 
       //implement professor main page
       $stateProvider.state('Professors', {
           url: '/professors/profile',
-          templateUrl: 'voteeHome/views/prof.html'
+          templateUrl: 'voteeHome/views/prof.html',
+          requiredCircles : {
+              circles: ['authenticated'],
+              denyState: 'auth.login'
+          }
       });
 
       $stateProvider.state('ProfLearnMore', {

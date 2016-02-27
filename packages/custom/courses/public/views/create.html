@@ -1,0 +1,40 @@
+<section data-ng-controller="CoursesController" data-ng-hide=!isAuthorized>
+    <form name="courseForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(courseForm.$valid)" novalidate>
+        <div class="form-group" ng-class="{ 'has-error' : submitted && courseForm.title.$invalid }">
+            <label class="col-md-3 control-label">Course title</label>
+            <div class="col-md-9">
+                <input name="title" type="text" class="form-control" data-ng-model="course.title" id="title" placeholder="Entre course title here" required>
+                <div ng-show="submitted && courseForm.title.$invalid" class="help-block">
+                    <p ng-show="courseForm.title.$error.required">Course title is required</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error' : submitted && courseForm.title.$invalid }">
+            <label class="col-md-3 control-label">Course number</label>
+            <div class="col-md-9">
+                <input name="courseNumber" type="number" class="form-control" data-ng-model="course.courseNumber" id="courseNumber" placeholder="Entre course number here" required>
+                <div ng-show="submitted && courseForm.courseNumber.$invalid" class="help-block">
+                    <p ng-show="courseForm.courseNumber.$error.required">Course number is required</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{ 'has-error' : submitted && courseForm.content.$invalid }">
+            <label for="description" class="col-md-3 control-label">Description</label>
+            <div class="col-md-9">
+                <textarea name="description" data-ng-model="course.description" id="description" cols="30" rows="10" placeholder="Course description" class="form-control" required></textarea>
+                <div ng-show="submitted && courseForm.content.$invalid" class="help-block">
+                    <p ng-show="courseForm.content.$error.required">Description is required</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-3 col-md-9">
+                <button type="submit" class="btn btn-info">Create course</button>
+            </div>
+        </div>
+
+    </form>
+</section>

@@ -1,6 +1,7 @@
 /**
  * Created by lewkoo on 2016-01-27.
  */
+'use strict';
 
 /**
  * Module dependencies
@@ -31,22 +32,39 @@ var QuestionSchema = new Schema({
     },
 
     type: {
-        type: String,
-        enum: ['MULTIPLE-CHOICE', 'OPEN-ENDED'],
-        required: true,
-        default: 'MULTIPLE-CHOICE'
+        type:       String,
+        enum:       ['MULTIPLE-CHOICE', 'OPEN-ENDED'],
+        required:   true,
+        default:    'MULTIPLE-CHOICE'
     },
 
-    answers: [{
+    //answers: [{
+    //    type: String,
+    //    required: false
+    //}],
+    //
+    answer: {
         type: String,
-        required: false
-    }],
+        required: true,
+        trim: true
+    },
 
     creator: {
-        type: Schema.ObjectId,
-        ref: 'User',
-        required: true
-    }
+        type:       Schema.ObjectId,
+        ref:        'User',
+        required:   true
+    },
+
+    options: {
+        type:       Object,
+        required:   false
+    },
+
+    answers:[{
+        type:       mongoose.Schema.Types.ObjectId,
+        ref:        'Answer',
+        required:   'False'
+    }]
 
 });
 
@@ -63,7 +81,11 @@ QuestionSchema.path('title').validate(function(title) {
 QuestionSchema.statics.load = function(id, cb) {
     this.findOne({
         _id: id
-    }).populate('creator', 'name username').exec(cb);
+    }).populate('creator', 'name username')
+        .populate({path: 'answers',
+        // Get friends of friends - populate the 'friends' array for every friend
+        populate: { path: 'student' }
+    }).exec(cb);
 };
 
 mongoose.model('Question', QuestionSchema);
