@@ -4,6 +4,29 @@ describe('Questions', function(){
     var passwordInput;
     var submitButton;
 
+    beforeAll(function() {
+        // Start with a question to test against.
+        browser.get('/questions/create');
+
+        multiChoiceRadio = element(by.id('multiChoiceRadio'));
+        multiChoiceTitleInput = element(by.id('multiChoiceTitle'));
+        option1Input = element(by.id('option1'));
+        option2Input = element(by.id('option2'));
+        option3Input = element(by.id('option3'));
+        option4Input = element(by.id('option4'));
+        answerDropdown = element(by.id('answerDropdown'));
+        multiChoiceSubmit = element(by.id('submitMultiChoice'));
+
+        multiChoiceRadio.click();
+        multiChoiceTitleInput.sendKeys('What is the answer to life the universe and everything?');
+        option1Input.sendKeys('Love');
+        option2Input.sendKeys('Happiness');
+        option3Input.sendKeys('42');
+        option4Input.sendKeys("It's all a lie");
+        answerDropdown.$('[value="3"]').click();
+        multiChoiceSubmit.click();
+    });
+
     beforeEach(function() {
         browser.get('/questions');
 
@@ -49,6 +72,16 @@ describe('Questions', function(){
             multiChoiceSubmit.click();
 
             expect(element(by.css('.panel-title')).getText()).toBe('question title');
+        });
+    });
+
+    describe('list', function() {
+        beforeEach(function() {
+            browser.get('/questions');
+        });
+
+        it('should list questions', function(){
+            expect(element(by.cssContainingText('a','What is the answer to life the universe and everything?')).isPresent()).toBeTruthy();
         });
     });
 });
