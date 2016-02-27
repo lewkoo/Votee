@@ -12,7 +12,7 @@
 
 **Reasons for choosing MEAN are outlined below and [here](https://github.com/lewkoo/Votee/wiki/Reasons-for-choosing-MEAN-stack)** 
 
-**Discussiong from Slack: [#general](http://www.googledrive.com/host/0B67iyt815Os7SGU4NUZDcmRPaG8) and [#project_idea](http://www.googledrive.com/host/0B67iyt815Os7MEVrcFVMNnlEVm8)**
+**Discussion from Slack: [here](https://rawgit.com/lewkoo/Votee/master/slack2html/html/index.html)**
 
 
 
