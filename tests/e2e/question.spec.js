@@ -1,8 +1,5 @@
 describe('Questions', function(){
-    var loginForm;
-    var emailInput;
-    var passwordInput;
-    var submitButton;
+    var testQuestionUrl;
 
     beforeAll(function() {
         // Start with a question to test against.
@@ -25,6 +22,10 @@ describe('Questions', function(){
         option4Input.sendKeys("It's all a lie");
         answerDropdown.$('[value="3"]').click();
         multiChoiceSubmit.click();
+
+        browser.getLocationAbsUrl().then(function(url) {
+            testQuestionUrl = url;
+        });
     });
 
     beforeEach(function() {
@@ -81,7 +82,21 @@ describe('Questions', function(){
         });
 
         it('should list questions', function(){
-            expect(element(by.cssContainingText('a','What is the answer to life the universe and everything?')).isPresent()).toBeTruthy();
+            expect(element(by.linkText('What is the answer to life the universe and everything?')).isPresent()).toBeTruthy();
+        });
+    });
+
+    describe('edit', function() {
+        beforeEach(function() {
+            browser.get(testQuestionUrl);
+        });
+
+        it('should change title', function(){
+            element(by.id('editButton')).click();
+            element(by.id('title')).sendKeys(protractor.Key.CONTROL, 'a', protractor.Key.NULL,'New Title');
+            element(by.buttonText('Edit')).click();
+
+            expect(element(by.css('.panel-title')).getText()).toBe('New Title');
         });
     });
 });
