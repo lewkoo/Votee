@@ -12,7 +12,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             return MeanUser.isProfessor;
         };
 
-        //$scope.isAuthorized = MeanUser.isProfessor;
+        $scope.isAuthorized = (MeanUser.isStudent || MeanUser.isProfessor || MeanUser.isAdmin);
 
         $scope.hasVoted = function(question){
             var equal = false;
