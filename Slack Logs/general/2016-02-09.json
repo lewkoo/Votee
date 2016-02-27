@@ -1,0 +1,337 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "We're going to Mac lab after class coding and stuff. ",
+        "ts": "1455039066.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "\/giphy code",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/technoir-movie-film-cinemagraph-zXmbOaTpbY6mA>",
+                "image_url": "http:\/\/media1.giphy.com\/media\/zXmbOaTpbY6mA\/giphy.gif",
+                "image_width": 500,
+                "image_height": 211,
+                "image_bytes": 997744,
+                "title": "code",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/technoir-movie-film-cinemagraph-zXmbOaTpbY6mA"
+            }
+        ],
+        "ts": "1455040601.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "for the question model, \u201canswer\u201d array will store questions?",
+        "ts": "1455046108.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i.e. if its a multiple choice question, where are the questions stored?",
+        "ts": "1455046137.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "sounds like answers should store answers",
+        "ts": "1455046151.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "\/giphy captain obvious",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/patrick-kane-1988-hockey-otp-ChWRNnTSlK0eY>",
+                "image_url": "http:\/\/media1.giphy.com\/media\/ChWRNnTSlK0eY\/giphy.gif",
+                "image_width": 500,
+                "image_height": 240,
+                "image_bytes": 1921798,
+                "title": "captain obvious",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/patrick-kane-1988-hockey-otp-ChWRNnTSlK0eY"
+            }
+        ],
+        "ts": "1455046181.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "then will need to modfiy question model :simple_smile:",
+        "ts": "1455046198.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "do it",
+        "ts": "1455046204.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "any recommendations on which data type should we store options in?",
+        "ts": "1455046309.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "do some research, see what you find and post your solution here - we\u2019ll see",
+        "ts": "1455046361.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "here is an article on how you can test server-side *express.js* controllers - <https:\/\/thewayofcode.wordpress.com\/2013\/04\/21\/how-to-build-and-test-rest-api-with-nodejs-express-mocha\/>",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1455046923.000000"
+        },
+        "ts": "1455046916.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "hmm i could store each option seperately in model, i.e. option1: \u2026, option2: \u2026,  etc.",
+        "ts": "1455048402.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yeah, but then you have a fixed redundancy: all questions will have a static number of answer fields",
+        "ts": "1455048455.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which might not be filled",
+        "ts": "1455048464.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "for open-ended questions",
+        "ts": "1455048474.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or for questions that have 2 possible answers \u2026",
+        "ts": "1455048485.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "true dat",
+        "ts": "1455048515.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is a difficult question, though.",
+        "ts": "1455048531.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "its a design question, depending on which way we wanna go",
+        "ts": "1455048548.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "well, we definitely want to support N possible answers with multiple choise",
+        "ts": "1455048569.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "could get just MP choices to work for now",
+        "ts": "1455048571.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "not a fixed value",
+        "ts": "1455048573.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "then later add open ended",
+        "ts": "1455048581.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that would be best, yes",
+        "ts": "1455048587.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "because for open ended Q\u2019s, how will we know if the answer is correct or not?",
+        "ts": "1455048614.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im guessing prof will need to look at each one seperately? =&gt; tedious",
+        "ts": "1455048641.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we do not - we give an option to mark to the professor",
+        "ts": "1455048644.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes!",
+        "ts": "1455048649.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is their job",
+        "ts": "1455048653.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I agree just get multiple questions done without a fixed number of answers...then open ended afterward when we can ",
+        "ts": "1455048741.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "If it's too tedious to mark one at a time, maybe make a feature to have the answers forwarded to a marker or database with marker access? ",
+        "ts": "1455048808.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV4EBMJ>: absolutely. you are getting assigned to that feature :simple_smile:",
+        "ts": "1455048854.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Haha nvm that feature ",
+        "ts": "1455048882.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": ":p ",
+        "ts": "1455048887.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "what editor\/UI are you guys using to build these? I was porting stuff to an eclipse javascript builder last iteration but is there a better setup?",
+        "ts": "1455048949.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "eclipse?!?!?!?!!?!?",
+        "ts": "1455048970.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah lol",
+        "ts": "1455048975.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/www.jetbrains.com\/webstorm\/>",
+        "attachments": [
+            {
+                "service_name": "JetBrains",
+                "title": "WebStorm: The Smartest JavaScript IDE",
+                "title_link": "https:\/\/www.jetbrains.com\/webstorm\/",
+                "text": "WebStorm is a lightweight yet powerful JavaScript IDE, perfectly equipped for client-side development and server-side development with Node.js.",
+                "fallback": "JetBrains: WebStorm: The Smartest JavaScript IDE",
+                "image_url": "http:\/\/resources.jetbrains.com\/assets\/media\/open-graph\/webstorm_250x250.png",
+                "from_url": "https:\/\/www.jetbrains.com\/webstorm\/",
+                "image_width": 250,
+                "image_height": 250,
+                "image_bytes": 34279,
+                "id": 1
+            }
+        ],
+        "ts": "1455049039.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ah ok, yeah i saw that program too ill give er a go",
+        "ts": "1455049082.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or any text editor",
+        "ts": "1455049095.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I believe I posted a few comments about the IDE last month.",
+        "ts": "1455049105.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "text editor + cmd line is your friend",
+        "ts": "1455049107.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "(text edit + terminal) &gt; eclipse",
+        "ts": "1455049127.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "haha probably",
+        "ts": "1455049142.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I just knew how to do git with eclipse better than anywhere else, so thats what I went with",
+        "ts": "1455049191.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I presume WebStorm has the same facilities for VCS, but alternatively you can use GitHub GUI or even command-line",
+        "ts": "1455049371.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Server side controller testing tutorial: <https:\/\/masteringmean.com\/lessons\/211-Testing-MEAN-Applications-Mocha>\n\nGo into the *\"Testing the Express controller\u201d* example",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1455050433.000000"
+        },
+        "ts": "1455050428.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "link wont open, just google \"mastering mean testing the express controller\u201d and it will be the first link",
+        "ts": "1455050632.000054"
+    }
+]

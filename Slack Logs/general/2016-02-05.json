@@ -62,5 +62,107 @@
         "user": "U0J06U3E3",
         "text": "Also, thanks to you two for getting everything set up, and for all the work you've put into it so far!\nI had more trouble getting things set up than I expected, but I'll be doing much more work in the upcoming iterations... in the mean time, is there anything I need to work on now?",
         "ts": "1454694313.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "thanks Steve, i think everything is good to go for the marker for now. Other then that any Trello stories are available :simple_smile:",
+        "ts": "1454695884.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "shouldnt feature\/votingPage branch be deleted from repo after release?",
+        "ts": "1454697974.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "do whatever you want with it - it is merged into both develop and master",
+        "ts": "1454698099.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "merged master into develop",
+        "ts": "1454698137.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you can continue to work on it",
+        "ts": "1454698146.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I've gotta add a lot of functionality back end for that voting branch for the confirmation steps to work too so just chuck it wherever it fits for now ",
+        "ts": "1454698306.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I'd suggest we keep these branches. We don't have a branch overload (yet) so we are fine with not deleting them. ",
+        "ts": "1454698365.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "There also must be a way to protect a branch from deletion using git ...",
+        "ts": "1454698387.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Alternatively you can keep a local copy. In that case, even if someone removes it from the remote, you can push it back up",
+        "ts": "1454698434.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i think you can revert if you delete a branch, but yes should keep them for now",
+        "ts": "1454698443.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Branch deletion is destructive. GitHub has branch protection in the repo settings, I think that only the repo owner can turn it on.",
+        "ts": "1454698565.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I'll do that then",
+        "ts": "1454698630.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "There shouldn't be anything not committed inside that branch so it's not a huge deal we can just create another branch on i2 no? ",
+        "ts": "1454698716.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "If it's merged somewhere else you won't lose anything by deleting it.",
+        "ts": "1454698844.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "which branch are we talking about? the one that that was merged into master?",
+        "ts": "1454698883.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Yeah I think it was merged already anyways ",
+        "ts": "1454698982.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I believe do lose information about the merge history when you delete, but that's not likely important to us.",
+        "ts": "1454699048.000030"
     }
 ]

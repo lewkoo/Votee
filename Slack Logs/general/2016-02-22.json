@@ -1,0 +1,92 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Room is 420 right?",
+        "ts": "1456160928.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Yup the code is 912 047",
+        "ts": "1456161469.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Pretty sure anyways haha",
+        "ts": "1456161481.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we will be in the lab tomorrow after soft eng to do some work",
+        "ts": "1456165869.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0HV4EBMJ>: <@U0J3D11K5>: if you guys have any questions or my explanation was bad  :simple_smile:",
+        "ts": "1456165913.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0HUU655Y>: <https:\/\/github.com\/jaredhanson\/passport-http-bearer>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "jaredhanson\/passport-http-bearer",
+                "title_link": "https:\/\/github.com\/jaredhanson\/passport-http-bearer",
+                "text": "passport-http-bearer - HTTP Bearer authentication strategy for Passport and Node.js.",
+                "fallback": "GitHub: jaredhanson\/passport-http-bearer",
+                "thumb_url": "https:\/\/avatars1.githubusercontent.com\/u\/10355?v=3&s=400",
+                "from_url": "https:\/\/github.com\/jaredhanson\/passport-http-bearer",
+                "thumb_width": 400,
+                "thumb_height": 400,
+                "id": 1
+            }
+        ],
+        "ts": "1456168645.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Before that create field called 'token' in your user table and generate token.\n ```app.use(function (req, res, next) {\n        if (req.query.access_token) {\n                    passport.authenticate('bearer', function(err, user) {\n                if (err || !user) {\n                    return res.send(401, {\n                        message: 'User is not logged in'\n                    });\n                }\n                req.login(user, function(err) {\n                    if (err) {\n                        return res.send(401, {\n                            message: 'User is not logged in'\n                        });\n                    }\n                                    next();\n                });\n            })( req, res, next );\n        } else {\n            next();\n        }\n    }); ```",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456168757.000000"
+        },
+        "ts": "1456168686.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you want me to path up the framework? :simple_smile:",
+        "ts": "1456168686.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just something i looked up while in class",
+        "ts": "1456168768.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I don\u2019t know dude, I think it is simpler to just \u2026 not do it",
+        "ts": "1456168800.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "fair enough",
+        "ts": "1456168892.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0J06U3E3",
+        "text": "Hey everyone,\nSome stuff has come up in the last few weeks and I had to make the decision to drop this course. I'm sorry for any trouble that this causes. I wish you all the best with your classes, and I hope the project goes well!\nCheers,\nSteve",
+        "ts": "1456211717.000002"
+    }
+]

@@ -1,0 +1,978 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "for example, one can submit a question without selecting an answer, throws 500 -&gt; needs validation",
+        "ts": "1456493818.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and doing validations client side without hitting submit",
+        "ts": "1456493938.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "everything for a better user experience",
+        "ts": "1456493983.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I just finished the validation so an answer is required when creating a question",
+        "ts": "1456503021.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I have it in my answerController branch so I can merge it later. I just put validation in the create.html, hope that is enough",
+        "ts": "1456503081.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "You should merge it to develop once you are done with it",
+        "ts": "1456503215.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Then develop needs to be merged into submitAnswer",
+        "ts": "1456503238.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Okay so merge my branch with develop... Then merge develop into submitAnswer",
+        "ts": "1456503338.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I am getting some sort of CRLF line seperators warning ",
+        "ts": "1456504006.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Is the warning that CRLF will be converted to LF?\nYou should be able to commit anyway.",
+        "ts": "1456504243.000011"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0J3D11K5|sandersjess> uploaded a file: <https:\/\/4350team.slack.com\/files\/sandersjess\/F0P81EL5C\/slack_for_ios_upload.jpg|Slack for iOS Upload>",
+        "file": {
+            "id": "F0P81EL5C",
+            "created": 1456504286,
+            "timestamp": 1456504286,
+            "name": "Slack for iOS Upload.jpg",
+            "title": "Slack for iOS Upload",
+            "mimetype": "image\/jpeg",
+            "filetype": "jpg",
+            "pretty_type": "JPEG",
+            "user": "U0J3D11K5",
+            "editable": false,
+            "size": 3886900,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P81EL5C\/slack_for_ios_upload.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P81EL5C\/download\/slack_for_ios_upload.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_64.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_80.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_360.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360_w": 360,
+            "thumb_360_h": 270,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_480.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_480_w": 480,
+            "thumb_480_h": 360,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_160.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_720.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720_w": 720,
+            "thumb_720_h": 540,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_960.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_960_w": 960,
+            "thumb_960_h": 720,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_1024.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 768,
+            "image_exif_rotation": 1,
+            "original_w": 3264,
+            "original_h": 2448,
+            "permalink": "https:\/\/4350team.slack.com\/files\/sandersjess\/F0P81EL5C\/slack_for_ios_upload.jpg",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0P81EL5C-21ea27cef5",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0J3D11K5",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0J3D11K5|sandersjess>",
+        "bot_id": null,
+        "ts": "1456504294.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Fix and commit.",
+        "ts": "1456504352.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Kk that's what I did. I just wanted to be sure before merging with develop, thanks!",
+        "ts": "1456504405.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Weird. Where did the CRLF line endings come from in OS X ... ",
+        "ts": "1456504475.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'm not really sure. I merged develop into features\/answerController and it happened ",
+        "ts": "1456504540.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I would guess that someone else committed them from a Windows machine",
+        "ts": "1456504596.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Haha, Yuriy works on Windows. :-) never mind. ",
+        "ts": "1456505652.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Let's meet in the lab at 3:30 today. I'll bring timbits for everyone to celebrate!",
+        "ts": "1456505680.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":+1::skin-tone-2:",
+        "ts": "1456506075.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Yes, free food Yuriy...",
+        "ts": "1456506109.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "well thats one of the ways to lure me :simple_smile:",
+        "ts": "1456506138.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'll grab the timbits levko, I'm on my way to school and can grab them on the way! :blush:",
+        "ts": "1456506557.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "My carpool leaves before then. I'll join you guys from slack.",
+        "ts": "1456508953.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Thanks Jessica!",
+        "ts": "1456509731.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "No worries! ",
+        "ts": "1456510070.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "<@U0J3A5RML>: for some reason the 'use strict' statement you added in your last develop commit breaks my circles.js",
+        "ts": "1456510105.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Delete your database and restart the server. Let us know if the issue persists ",
+        "ts": "1456510154.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "mean-dev is the one to delete",
+        "ts": "1456510167.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Is it the 'Drop database' through webstorm? ",
+        "ts": "1456510235.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "'use strict' prevents the use of undeclared variables.",
+        "ts": "1456510243.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Shouldn't have anything to do with the database.",
+        "ts": "1456510269.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I probably should have tested that commit better.",
+        "ts": "1456510277.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "It says 'TypeError: cannot assign read only property 'children' of circles ",
+        "ts": "1456510313.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Comment put use strict and it works fine ",
+        "ts": "1456510320.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "*out",
+        "ts": "1456510327.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "It also disallows writing to read-only properties.",
+        "ts": "1456510404.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "The circles package isn't ours right?",
+        "ts": "1456510414.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it isn't",
+        "ts": "1456510421.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Sorry guys, I took it out.",
+        "ts": "1456510577.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Will be in the lab at 2:30",
+        "ts": "1456514343.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "gotta go for the test.",
+        "ts": "1456514351.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "actually, if the test isn't hard, I might be earlier",
+        "ts": "1456514361.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ill come at 3:30",
+        "ts": "1456514374.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I have an HCI meeting at 2:30 but will come 3:30!",
+        "ts": "1456514411.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I completed the check for users votes! I merged my branch answersController with submitAnswer ",
+        "ts": "1456514525.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "excellent",
+        "ts": "1456514534.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Should I merge it into the actual submitAnswer Branxh?",
+        "ts": "1456514551.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Did anyone look at that front end validation on create question. Cause I will if it hasn't yet ",
+        "ts": "1456514592.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "I will merge your changes and push :)",
+        "ts": "1456514620.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I did it, I added validation for the answer field ",
+        "ts": "1456514622.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Perfect thanks yuriy!",
+        "ts": "1456514636.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0HV4EBMJ>: you can check API POST requests and see if they are working",
+        "ts": "1456514697.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>: answerController branch?",
+        "ts": "1456514722.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Yes. Maybe take a look just to verify if you have time :)",
+        "ts": "1456514743.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i trust you :simple_smile:",
+        "ts": "1456514753.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "are the tests passing?",
+        "ts": "1456514764.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "whoever was making front end changes, front page looks weird on my machine",
+        "ts": "1456515133.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "what about it...?",
+        "ts": "1456515152.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/www.dropbox.com\/s\/o5r6qra4krqb2uf\/Screenshot%202016-02-26%2013.33.21.png?dl=0>",
+        "ts": "1456515199.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "new user tutorial is too long",
+        "ts": "1456515221.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "like the paragraph?",
+        "ts": "1456515262.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "the button",
+        "ts": "1456515270.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "hmmm... theyre all in the preset columns",
+        "ts": "1456515291.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "all of them are way too big imo and \u201cnew user tutorial\u201d goes off screen",
+        "ts": "1456515292.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok ill shrink them down",
+        "ts": "1456515298.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Also, front end for displaying questions needs work...",
+        "ts": "1456515328.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "its just goes down\u2026looks bad",
+        "ts": "1456515336.000069"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and Create new Q is out of place",
+        "ts": "1456515350.000070"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah i didnt look at the questions display page",
+        "ts": "1456515359.000071"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ill fix that page up",
+        "ts": "1456515376.000072"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "it is all part of front end :simple_smile:",
+        "ts": "1456515400.000073"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "also Vote button on student page is not needed,  vote for which course??? maybe browse questions\/courses instead would be better?",
+        "ts": "1456515587.000074"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "kk.  I just kept it around cause it was there originally",
+        "ts": "1456515615.000075"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just from design view, that hat would look nice in the Student info box on the right",
+        "ts": "1456515651.000076"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'll help with the front end stuff right now... is there a specific branch for those changes at all?",
+        "ts": "1456515681.000077"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "same goes for professor page, unless you want to create new design",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456515704.000000"
+        },
+        "ts": "1456515701.000078"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "feel free to branch off fom submitAnswer :simple_smile:",
+        "ts": "1456515727.000080"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "i can probably knock it out real quick",
+        "ts": "1456515787.000081"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "fixed.",
+        "ts": "1456517608.000082"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "now just courses page and questions page",
+        "ts": "1456517623.000083"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "<@U0J3D11K5>: are you looking at one of these? I can look at the other",
+        "ts": "1456517847.000084"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'm fixing up the front page buttons cuz they go a little weird when the browser is small \nI'm also doing the vote successful page ",
+        "ts": "1456517910.000085"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok. ill leave your commit to the homepage then and ill do the courses and questions pages.  I made some changes to the student page tho ill commit those",
+        "ts": "1456517952.000086"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just for the future (or maybe even today) angularjs has sorting capabilities",
+        "ts": "1456518634.000087"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "so frontend can add sorting of questions\/courses",
+        "ts": "1456518653.000088"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "<@U0J3A5RML>: did you figure out the front page buttons or do you want us to try it?",
+        "ts": "1456524492.000089"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I haven't looked at it yet.",
+        "ts": "1456524537.000090"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'll do it now.",
+        "ts": "1456524758.000091"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok i tested out and pushed all the front end stuff back to develop",
+        "ts": "1456524953.000092"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "just need that homepage and then levkos courses stuff",
+        "ts": "1456524974.000093"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "You've got fancy buttons",
+        "ts": "1456526051.000094"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "nice looks good",
+        "ts": "1456526258.000095"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "has anyone been sucessfull in creating a question\/course\/article using API?",
+        "ts": "1456526961.000096"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV1T7F1>: fixed it",
+        "ts": "1456527067.000097"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "<@U0J3A5RML>: when your front end part is complete you can merge your changes and delete front end interface branch",
+        "ts": "1456527115.000098"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "we're done with it now",
+        "ts": "1456527133.000099"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Okay. I'm finished as well. Go ahead and merge it. It will be a bit before I'm back at my laptop.",
+        "ts": "1456527971.000100"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "merge what?",
+        "ts": "1456527985.000101"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "The front end branch.",
+        "ts": "1456528206.000102"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "e2eTests?",
+        "ts": "1456528221.000103"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "is that merged?",
+        "ts": "1456528239.000104"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I've got more that's not finished on that branch.",
+        "ts": "1456528270.000105"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "But the latest completed changes are pushed.",
+        "ts": "1456528288.000106"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "are we merging it for release?",
+        "ts": "1456528289.000107"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "And merged with develop",
+        "ts": "1456528296.000108"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "make sure everyone writes everything thats not finished\/moved for next iteration in a document",
+        "ts": "1456528297.000109"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "marker will want to see that",
+        "ts": "1456528304.000110"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and justifications  as well",
+        "ts": "1456528317.000111"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Don't merge the ProfInterfqce Branch it can actually be deleted ",
+        "ts": "1456528371.000112"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, I\u2019ll delete it",
+        "ts": "1456528437.000113"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "any other branches need to be deleted?",
+        "ts": "1456528443.000114"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "because what I was planning on doing is to merge all of them to develop and delete them all",
+        "ts": "1456528538.000115"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "student vote confirmation just delte",
+        "ts": "1456528550.000116"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "delete it",
+        "ts": "1456528553.000117"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but I need to know if there are branches that I need to keep",
+        "ts": "1456528555.000118"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "If <@U0HV1T7F1> merged answerController into submitAnswer than that one is good to delete. I believe he did today",
+        "ts": "1456528561.000119"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV4EBMJ>: deleted that one",
+        "ts": "1456528586.000120"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3D11K5>: I\u2019ll check with him on that one",
+        "ts": "1456528594.000121"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Delete anything that's merged somewhere else. If people are still using them, they'll show up again when they push.",
+        "ts": "1456528625.000122"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is hard to determine if a branch was merged into develop",
+        "ts": "1456528688.000123"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "do you know a good way?",
+        "ts": "1456528694.000124"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "never mind, I found a way",
+        "ts": "1456528722.000125"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I would just look down the branch visualization.",
+        "ts": "1456528744.000126"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I am about to delete these branches: \n\n - e2eTests\n - documentationUpdate\n - professorRegisterForm\n - modelDesign",
+        "ts": "1456528808.000127"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "anyone has any objections ?",
+        "ts": "1456528814.000128"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "to the best of my knowledge, these have been merged into develop",
+        "ts": "1456528829.000129"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "frontEndInterface shouldn't have any conflicts so it can probably be deleted also",
+        "ts": "1456528834.000130"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Im not 100% sure of that though",
+        "ts": "1456528842.000131"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "frontEndInterface needs to be merged and then it can be deleted.",
+        "ts": "1456528916.000132"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>: done",
+        "ts": "1456528975.000133"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "any objections to those 4 branches?",
+        "ts": "1456528991.000134"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "none from me.  looks fine.",
+        "ts": "1456529012.000135"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Nope",
+        "ts": "1456529046.000136"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, we are down to two feature branches.",
+        "ts": "1456529075.000137"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we will merge those once we are happy with them",
+        "ts": "1456529083.000138"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "readme.txt got readded to develop in documentation.  i believe it is obsolete now",
+        "ts": "1456529247.000139"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "removed it",
+        "ts": "1456529505.000140"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>: merged your changes into release branch",
+        "ts": "1456533183.000141"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'm just going to keep writing and pushing end to end tests tonight.",
+        "ts": "1456533252.000142"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "do so on release\/v0.2 branch, please",
+        "ts": "1456533291.000143"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Will do.",
+        "ts": "1456533327.000144"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Pushed the release",
+        "ts": "1456535019.000145"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "from now on, commit only to master directly",
+        "ts": "1456535030.000146"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 3bfb181 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456535243.000147"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 9ef523b of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456535446.000148"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version d438f3e of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456536531.000149"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Where is heroku deploying to anyway? Do we have a URL?",
+        "ts": "1456536612.000150"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "added it to the README.md",
+        "ts": "1456536622.000151"
+    }
+]

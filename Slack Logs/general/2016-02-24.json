@@ -1,0 +1,442 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "got your AWS account back?",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456343423.000000"
+        },
+        "ts": "1456343411.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Updated the DB path for AWS in production.",
+        "ts": "1456343420.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Pushed to master",
+        "ts": "1456343431.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Heroku should re-deploy now, then I will test if it works",
+        "ts": "1456343444.000006"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version b4df5db of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456343687.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "works fine",
+        "ts": "1456343755.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Are either of you guys in the Mac lab right now?",
+        "ts": "1456343781.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "on a lecture now. what\u2019s up?",
+        "ts": "1456343792.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "same at a lecture",
+        "ts": "1456343847.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Okay no worries. I have a question but its hard to explain over chat haha ",
+        "ts": "1456343871.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I can drop by at 14:30. will you still be around?",
+        "ts": "1456343888.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "That would be awesome :blush:",
+        "ts": "1456343935.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay",
+        "ts": "1456344024.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV1T7F1>: no, I will not deploy everything there",
+        "ts": "1456344034.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is a pain",
+        "ts": "1456344037.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "heroku is already doing a lot for us and I love automatic re-deploy too much to lose it.",
+        "ts": "1456344057.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "AWS does have that, but it has that somewhere and somehow",
+        "ts": "1456344066.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and I got no time to do it",
+        "ts": "1456344071.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if someone want to play with it - go ahead :simple_smile:",
+        "ts": "1456344084.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV1T7F1>: how is your documentation project going?",
+        "ts": "1456344206.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "when can I have an example of how to document courses API?",
+        "ts": "1456344226.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/github.com\/lewkoo\/Votee\/blob\/feature\/submitAnswer\/packages\/custom\/questions\/server\/controllers\/questions.js#L29>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "lewkoo\/Votee",
+                "title_link": "https:\/\/github.com\/lewkoo\/Votee\/blob\/feature\/submitAnswer\/packages\/custom\/questions\/server\/controllers\/questions.js#L29",
+                "text": "Votee is a class voting software",
+                "fallback": "GitHub: lewkoo\/Votee",
+                "thumb_url": "https:\/\/avatars2.githubusercontent.com\/u\/2424251?v=3&s=400",
+                "from_url": "https:\/\/github.com\/lewkoo\/Votee\/blob\/feature\/submitAnswer\/packages\/custom\/questions\/server\/controllers\/questions.js#L29",
+                "thumb_width": 400,
+                "thumb_height": 400,
+                "id": 1
+            }
+        ],
+        "ts": "1456344328.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just add similar comments",
+        "ts": "1456344348.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "will we be doing a sample JSON payload?",
+        "ts": "1456344371.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so, for question, it will contain a sample JSON payload for a request. \n\nsay you want to create a new question via API call. will we be posting a sample JSON payload for that PUT request?",
+        "ts": "1456344430.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I hope I am making myself clear...",
+        "ts": "1456344438.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ohh like an example?",
+        "ts": "1456344445.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes",
+        "ts": "1456344448.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "in the API doc?",
+        "ts": "1456344449.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes",
+        "ts": "1456344451.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yes, one can add that",
+        "ts": "1456344455.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "how?",
+        "ts": "1456344461.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "RTFM?",
+        "ts": "1456344470.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "pretty much lol, ill add some tonight",
+        "ts": "1456344482.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, nevermind",
+        "ts": "1456344487.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I\u2019ll RTFM",
+        "ts": "1456344496.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "@apiExample :simple_smile:",
+        "ts": "1456344503.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1456344509.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3D11K5>: coming",
+        "ts": "1456345210.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV1T7F1>: fixing your bugs, bro",
+        "ts": "1456346439.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": ":simple_smile:",
+        "ts": "1456346440.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "I never said there weren't any:upside_down_face:  ",
+        "ts": "1456346477.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I guess copy-paste method is tricky \u2026 \u00af\\_(\u30c4)_\/\u00af",
+        "ts": "1456346818.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "who puts a button in &lt;a&gt;&lt;\/a&gt; clause? :simple_smile:",
+        "ts": "1456346834.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "That wasn't me :)",
+        "ts": "1456346885.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I didn\u2019t say who did it :simple_smile: it is not relevant :simple_smile:",
+        "ts": "1456346921.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "There should be a button that calls vote method in controller. It was working ",
+        "ts": "1456346949.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "That was my bad I made a silly change and forgot to fix it. Levko saved the day yet again :)",
+        "ts": "1456347279.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>: did you just fix that injection error when `$httpBackend` is undefined?",
+        "ts": "1456357528.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if so, I gotta merge your commits because those are my issues exactly - injection in frontEndTests",
+        "ts": "1456357561.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Maybe? The messages I was getting were fairly obtuse.",
+        "ts": "1456357662.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, I\u2019ll merge...",
+        "ts": "1456357778.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Make sure you get those last two commits in order to see a completely working test system.",
+        "ts": "1456357850.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep, I got them",
+        "ts": "1456357864.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "my last one is: Use the correct object.",
+        "ts": "1456357877.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "a556885de4e2aa9066e692b778c4694736e961b1",
+        "ts": "1456357880.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Yup",
+        "ts": "1456357882.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "cool",
+        "ts": "1456357886.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Okay, so I managed to write one test for the front end that is actually doing something useful. \n\nEssentially, it mocks a backend GET response to statically return a specified JSON. Then, it pipes that request through a front end controller, thus testing it.",
+        "ts": "1456359307.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I will commit now so you can take a look, if interested.",
+        "ts": "1456359323.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is in courses\/public\/tests folder",
+        "ts": "1456359331.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV4EBMJ>: please, do not delete `server.js` file. It is actually responsible for starting up the web server. Very important file. No delete. ",
+        "ts": "1456361764.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah that was accidental",
+        "ts": "1456361774.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "im not sure why that happened, I just added a few lines to two questions files",
+        "ts": "1456361800.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Perhaps, it should be restored in that branch ...",
+        "ts": "1456361984.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "im copying it back over, ill commit it back into the branch",
+        "ts": "1456362004.000069"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Thanks :-)",
+        "ts": "1456362270.000070"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "thats really odd that that even happened, cause I didn't even commit the entire project directory, just the files I updated",
+        "ts": "1456362313.000071"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "My last commit was a little weird so please just let me know if it causes issues :slightly_smiling_face:",
+        "ts": "1456378075.000072"
+    }
+]

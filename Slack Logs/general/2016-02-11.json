@@ -1,0 +1,156 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Unbelievable, but this is a valid test code in Mocha testing framework\n\n```res.body[0].should.have.property('students', course.students).and.should.be.an.Array.and.have.lengthOf(5);```",
+        "ts": "1455224088.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "english :simple_smile:",
+        "ts": "1455224110.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it tests if the response JSON has a property students, and that this property is an array and that it has the length of 5",
+        "ts": "1455224128.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I guess I should have been taking more English classes",
+        "ts": "1455224162.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "less comp sci classes",
+        "ts": "1455224167.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "LOL",
+        "ts": "1455224174.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": ":joy:",
+        "ts": "1455224316.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Everyone has their own preference in the readability\/conciseness trade off?",
+        "ts": "1455224451.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Seems a little awful to me.",
+        "ts": "1455224459.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you could break it apart into several statements. how would you do it? :simple_smile:",
+        "ts": "1455224491.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Another tip: \n\nwhen installing a new package via npm, you can give it a flag ```--save-dev``` and it will automatically add it to the *package.json* file\n\nHere is an example: \n\n```npm install --save-dev should```\n\nwhere *should* is the name of the package",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1455227296.000000"
+        },
+        "ts": "1455227268.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "are you adding new package? :simple_smile:",
+        "ts": "1455227351.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes",
+        "ts": "1455227358.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "which one?",
+        "ts": "1455227364.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "hm\u2026read the text above?",
+        "ts": "1455227382.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ohh should",
+        "ts": "1455227411.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "lol",
+        "ts": "1455227412.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "all for testing",
+        "ts": "1455227429.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "this one impacts only testing, yes",
+        "ts": "1455227445.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "should be have a seperate model for answers?",
+        "ts": "1455231163.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "absolutely",
+        "ts": "1455231176.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "to store the answer and student id?",
+        "ts": "1455231178.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "definitely",
+        "ts": "1455231183.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and tests for it",
+        "ts": "1455231187.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":+1::skin-tone-2:",
+        "ts": "1455231196.000028"
+    }
+]
