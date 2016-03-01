@@ -48,7 +48,11 @@ In your terminal, navigate to the Votee code folder and run the following comman
 *Before running Votee, make sure that you have started mongod.  
 Instructions for doing so are located in the relevant installation guides in the dependencies section above.*
 
-To run Votee on your local machine, run
+To run Votee on your local machine, first change directory
+
+    cd Src/Web
+
+then run
 
     gulp
 
