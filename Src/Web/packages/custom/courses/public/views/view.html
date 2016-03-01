@@ -1,4 +1,4 @@
-<section data-ng-controller="CoursesController" data-ng-init="findOne()">
+<section data-ng-controller="CoursesController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
     <span>{{course.created | date:'medium'}}</span> /
     <span> Taught by: {{course.professor.name}}</span>
 

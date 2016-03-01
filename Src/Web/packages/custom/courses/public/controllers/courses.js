@@ -20,6 +20,8 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             return MeanUser.isAdmin || course.user._id === MeanUser.user._id;
         };
 
+        $scope.isAuthorized = (MeanUser.isStudent || MeanUser.isProfessor || MeanUser.isAdmin);
+
         $scope.find = function() {
             Courses.query(function(courses) {
                 $scope.courses = courses;
@@ -37,7 +39,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                     questions: $scope.course.questions,
                     students: $scope.course.students,
                     created: $scope.course.created,
-                    __v: $scope.__v
+                    __v: $scope.course.__v
                 });
 
                 course.$save(function(response){
@@ -51,7 +53,7 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
                 $scope.course.questions = [];
                 $scope.course.students = [];
                 $scope.course.created = '';
-                $scope.__v = 0;
+                $scope.course.__v = 0;
 
 
             } else {

@@ -168,20 +168,21 @@
                 $httpBackend.when('GET','/courses/views/view.html').respond(200);
 
                 // fixture mock form input values
-                scope.title = 'Test Course 1';
-                scope.courseNumber = 4350;
-                scope.description = 'This is a test 1';
-                scope.professor = '56c8bdfaf82d7bd71d40de02';
-                scope.questions = [];
-                scope.students = [
+                scope.course = {};
+                scope.course.title = 'Test Course 1';
+                scope.course.courseNumber = 4350;
+                scope.course.description = 'This is a test 1';
+                scope.course.professor = '56c8bdfaf82d7bd71d40de02';
+                scope.course.questions = [];
+                scope.course.students = [
                     '56c8bdfaf82d7bd71d40de03',
                     '56c8bdfaf82d7bd71d40de04',
                     '56c8bdfaf82d7bd71d40de05',
                     '56c8bdfaf82d7bd71d40de06',
                     '56c8bdfaf82d7bd71d40de07'
                 ];
-                scope.created = '2016-02-20T19:26:50.874Z';
-                scope.__v = 0;
+                scope.course.created = '2016-02-20T19:26:50.874Z';
+                scope.course.__v = 0;
 
                 // test post request is sent
                 $httpBackend.expectPOST('api\/courses', postCourseData()).respond(testCourseData());
@@ -191,14 +192,14 @@
                 $httpBackend.flush();
 
                 // test form input(s) are reset
-                expect(scope.title).toEqual('');
-                expect(scope.courseNumber).toEqual(0);
-                expect(scope.description).toEqual('');
-                expect(scope.professor).toEqual('');
-                expect(scope.questions).toEqual([]);
-                expect(scope.students).toEqual([]);
-                expect(scope.created).toEqual('');
-                expect(scope.__v).toEqual(0);
+                expect(scope.course.title).toEqual('');
+                expect(scope.course.courseNumber).toEqual(0);
+                expect(scope.course.description).toEqual('');
+                expect(scope.course.professor).toEqual('');
+                expect(scope.course.questions).toEqual([]);
+                expect(scope.course.students).toEqual([]);
+                expect(scope.course.created).toEqual('');
+                expect(scope.course.__v).toEqual(0);
 
                 // test URL location to new object
                 expect($location.path()).toBe('/courses/' + testCourseData()._id);

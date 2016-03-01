@@ -1,0 +1,350 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "are you guys working on figuring out voting as well?",
+        "ts": "1456253951.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "just creating a branch now!",
+        "ts": "1456253985.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if you want to come to the dark side at the back of the room lol",
+        "ts": "1456254021.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Did something go weird wth the create questions page?",
+        "ts": "1456267023.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "hope not.  I changed a logo image file but the rest of the stuff ive been doing is for the stylesheets that I havent committed... the other commits were in different branches",
+        "ts": "1456267182.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "create Q's?",
+        "ts": "1456267232.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "whats wrong there?",
+        "ts": "1456267236.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": " I merged with the newest submitAnswer branch and now the create questions page won't allow me to create one...the form is messed up ",
+        "ts": "1456267411.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I don't think there was issues with the merge and I never changed the create functionality but I dunno haha",
+        "ts": "1456267442.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "hmm ill check",
+        "ts": "1456267473.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i had an issue during testing while tying to retrieve specific question",
+        "ts": "1456267512.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "It's probably a merge issue but check just in case!",
+        "ts": "1456267525.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i had to comment those lines out but they shouldnt conflict with question",
+        "ts": "1456267550.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just merged",
+        "ts": "1456267966.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "running npm install since i added some packages earlier and im at home pc",
+        "ts": "1456267980.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Oh it was definitely my error so scratch all that, got it all fixed.  sorry : p",
+        "ts": "1456268496.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im gonna try writing some tets since tests are worth 50% of the mark",
+        "ts": "1456269664.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i gues if we dont have features and just test, one can get a good grade",
+        "ts": "1456269699.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'm trying to create the answer object and put it into the question when they vote ",
+        "ts": "1456269777.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Then also check if user has voted already when they open the question ",
+        "ts": "1456269804.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeah, we will also need to add the user object to the Answer?",
+        "ts": "1456269840.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or prehaps have a list of students in a question that voted",
+        "ts": "1456269862.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Hmm ya I was thinking that list of answers in the question would store an answer object with the user ID and maybe they're selection ?",
+        "ts": "1456271103.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Yes",
+        "ts": "1456271154.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Okay awesome ",
+        "ts": "1456271179.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Mongoose extend is the package for inheritance in mongoose",
+        "ts": "1456271203.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "My Internet is down at home. Can't do much",
+        "ts": "1456271216.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "nvm back up",
+        "ts": "1456271345.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Okay I have the answer object in there. When you print things to the console on front end where does it go again?",
+        "ts": "1456272236.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Just trying to debug something ",
+        "ts": "1456272250.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "in your run console",
+        "ts": "1456272252.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "nice!",
+        "ts": "1456272256.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or wherever you run your project",
+        "ts": "1456272282.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I thought only backend stuff goes to the console ",
+        "ts": "1456272289.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ohhh sorry",
+        "ts": "1456272300.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i read back end",
+        "ts": "1456272305.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "its the console in your browser",
+        "ts": "1456272311.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Command + Option + J (Mac) or Control + Shift + J (Windows\/Linux).",
+        "ts": "1456272331.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Oh awesome thank you!!",
+        "ts": "1456272387.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "nice one :simple_smile:",
+        "ts": "1456273707.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Thanks! I didn't store the actual answer value in there yet but I'll put that in soon as well",
+        "ts": "1456274708.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i update the branch with courses branch",
+        "ts": "1456279813.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "also commented some logs from voting, just remove them if you needed, i was trying something",
+        "ts": "1456279835.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "is voting branch done now for that feature?",
+        "ts": "1456283294.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "not even close :simple_smile:",
+        "ts": "1456283313.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "what do you need me to do for it",
+        "ts": "1456283328.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "hmmm",
+        "ts": "1456283346.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we are at part of storing answers in Question",
+        "ts": "1456283365.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im doing some tests and api",
+        "ts": "1456283374.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we will probably will need an API route to get answers",
+        "ts": "1456283397.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "in parallel to the questions route more or less?",
+        "ts": "1456283464.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "pretty much",
+        "ts": "1456283482.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just api route for now im guessing",
+        "ts": "1456283494.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i guess it will be just 1 route to start",
+        "ts": "1456283512.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "that will get all answers to 1 question",
+        "ts": "1456283519.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "based on questionID",
+        "ts": "1456283527.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok ill work on that.  ive been messing around with the css bootstrap all day and it seems pretty useless to make these tweaks right now that im doing when everything isnt done yet lol",
+        "ts": "1456283551.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Hey yuriy did you write any tests for the question vote method yet?",
+        "ts": "1456293742.000002"
+    }
+]

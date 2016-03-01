@@ -1,0 +1,416 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "not yet",
+        "ts": "1456319995.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i am currently messing with tests, probably will take most of today and tomorrow and its just getting basic ones to work",
+        "ts": "1456325483.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ok, got the question creation working through API as well as tests. Committed it to the branch. More tests will be coming later",
+        "ts": "1456326295.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Nice :+1::skin-tone-2:",
+        "ts": "1456328395.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "is the answer return stuff that youre working on going to return an answer from the question controller or is there a separate one being created for answers?  Cause I'm trying to figure out the routing for the answer route file and need to know for the get request where the method is located",
+        "ts": "1456356585.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "I'm not home. Ask in general.  I can tell in few hours",
+        "ts": "1456356783.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok.  more of  a question for <@U0J3D11K5> cause I think she was working on the answer component",
+        "ts": "1456356812.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "not entirely sure what you're asking....but the vote function on the questions controller will create a new Answer object to store inside the question",
+        "ts": "1456356987.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "im just trying to figure out where the route to return an answer is getting called from I guess so it seems like it would also be in the vote method through the questions controller",
+        "ts": "1456357224.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "ya like inside the vote function is where the users answer will be stored so that makes sense",
+        "ts": "1456357594.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "kk",
+        "ts": "1456358092.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0HV4EBMJ>:  why did you delete server.js???",
+        "ts": "1456361485.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "it is quiet important file",
+        "ts": "1456361515.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "if i did it was unintentional",
+        "ts": "1456361516.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "you can revert",
+        "ts": "1456361522.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I just added some code to the questions controller and the questions route",
+        "ts": "1456361536.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "please revert it and commit \"proper\" commit :simple_smile:",
+        "ts": "1456361545.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "didnt I just change two files when i committed? that was my intention",
+        "ts": "1456361570.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/github.com\/lewkoo\/Votee\/commit\/69dc0fe1da61991b8a9984ee4728cde43902542a>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "added get for answer return on vote function to return the correct an\u2026 \u00b7 lewkoo\/Votee@69dc0fe \u00b7 GitHub",
+                "title_link": "https:\/\/github.com\/lewkoo\/Votee\/commit\/69dc0fe1da61991b8a9984ee4728cde43902542a",
+                "text": "\u2026swer",
+                "fallback": "GitHub: added get for answer return on vote function to return the correct an\u2026 \u00b7 lewkoo\/Votee@69dc0fe",
+                "thumb_url": "https:\/\/avatars1.githubusercontent.com\/u\/16709516?v=3&s=200",
+                "from_url": "https:\/\/github.com\/lewkoo\/Votee\/commit\/69dc0fe1da61991b8a9984ee4728cde43902542a",
+                "thumb_width": 184,
+                "thumb_height": 184,
+                "id": 1
+            }
+        ],
+        "ts": "1456361580.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "lol well whoops",
+        "ts": "1456361611.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "how do i fix it?",
+        "ts": "1456361621.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<https:\/\/4350team.slack.com\/archives\/voting\/p1456191265000013>",
+        "attachments": [
+            {
+                "color": "4D394B",
+                "from_url": "https:\/\/4350team.slack.com\/archives\/voting\/p1456191265000013",
+                "fallback": "[February 22nd, 2016 5:34 PM] yuriy: also if you guys are gonna work on the branch, can you checkout with a new branch? just so we dont have to merge all the time...",
+                "author_subname": "yuriy",
+                "ts": "1456191265.000013",
+                "text": "also if you guys are gonna work on the branch, can you checkout with a new branch? just so we dont have to merge all the time...",
+                "author_link": "https:\/\/4350team.slack.com\/team\/yuriy",
+                "author_icon": "https:\/\/avatars.slack-edge.com\/2016-01-19\/18925192422_96a84dd50e421137e32b_48.jpg",
+                "mrkdwn_in": [
+                    "text"
+                ],
+                "id": 1
+            }
+        ],
+        "ts": "1456361744.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah my bad lol Im not great at git yet",
+        "ts": "1456362349.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i reset HEAD",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456362423.000000"
+        },
+        "ts": "1456362411.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "you might need to re push",
+        "ts": "1456362442.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "for your changes",
+        "ts": "1456362445.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I am trying to access the selected answer through the questions controller but having troubles. Do you guys have any ideas? ",
+        "ts": "1456362496.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "front end or back?",
+        "ts": "1456362628.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Front",
+        "ts": "1456362647.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and please <@U0HV4EBMJ> create a seperate branch so this doesnt happen :simple_smile:",
+        "ts": "1456362656.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "you mean a new local branch, yes?",
+        "ts": "1456362671.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "not just local",
+        "ts": "1456362677.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "hmm",
+        "ts": "1456362686.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i had it working before",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456362693.000000"
+        },
+        "ts": "1456362690.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "let me see what levko commited",
+        "ts": "1456362713.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "you should pass it to function",
+        "ts": "1456362720.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and you can get it from there",
+        "ts": "1456362725.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Pass as an actual parameter?",
+        "ts": "1456362744.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeah hes doing it",
+        "ts": "1456362749.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "thats how it was before",
+        "ts": "1456362759.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "what are you trying to do?",
+        "ts": "1456362804.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "it should be as simple as as ```question.answer```",
+        "ts": "1456362886.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "in the controller that is",
+        "ts": "1456362900.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":simple_smile:",
+        "ts": "1456362904.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "unless i got it wrong?",
+        "ts": "1456362911.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Oh not the real answer, I mean the uses selected answe from the radio buttons",
+        "ts": "1456362923.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ahhhh",
+        "ts": "1456362935.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "So it should be something like $scope.selectedAnswer or something? I've been trying to figure out how it is passed to controller",
+        "ts": "1456362978.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yes",
+        "ts": "1456362996.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I want to access that value in the vote function",
+        "ts": "1456362999.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I tried $scope.selectedAnswer and it is undefined so I'm confused haha it seems like that should be right from what I looked up but can't seem to get the value",
+        "ts": "1456363074.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "hmm good Q's",
+        "ts": "1456363215.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "need to do some research",
+        "ts": "1456363222.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if the for loop messes with things, we might just hardcode 4 buttons",
+        "ts": "1456363248.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "more code, but if  it works, can be refactored later",
+        "ts": "1456363272.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if ypu find solution let us know, i wont be able to look till tomorrow",
+        "ts": "1456363407.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "i think it works with the loop, just changes how you access it, so I will look into it and let you know!",
+        "ts": "1456363461.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ok i got a qucikfix",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456372548.000000"
+        },
+        "ts": "1456372542.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "going to push changes",
+        "ts": "1456372556.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "to access: ```$scope.selectedAnswer ``` it will give you the index",
+        "ts": "1456372703.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "You pushed a changed so now that will get the index? Nice! ",
+        "ts": "1456373565.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Sorry I was at hockey so had to stop looking at it for a bit",
+        "ts": "1456373588.000068"
+    }
+]

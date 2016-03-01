@@ -309,4 +309,773 @@ So, the profs will be able to create questions, students will be able to view th
 <div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 17:38</div><div class="msg">gulp test is better because it also takes into account your environment settings</div></div></div><br/>
 <div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 17:45</div><div class="msg">Also, thanks to you two for getting everything set up, and for all the work you've put into it so far!
 I had more trouble getting things set up than I expected, but I'll be doing much more work in the upcoming iterations... in the mean time, is there anything I need to work on now?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:11</div><div class="msg">thanks Steve, i think everything is good to go for the marker for now. Other then that any Trello stories are available :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:46</div><div class="msg">shouldnt feature/votingPage branch be deleted from repo after release?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:48</div><div class="msg">do whatever you want with it - it is merged into both develop and master</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:48</div><div class="msg">merged master into develop</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:49</div><div class="msg">you can continue to work on it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:51</div><div class="msg">I've gotta add a lot of functionality back end for that voting branch for the confirmation steps to work too so just chuck it wherever it fits for now </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:52</div><div class="msg">I'd suggest we keep these branches. We don't have a branch overload (yet) so we are fine with not deleting them. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:53</div><div class="msg">There also must be a way to protect a branch from deletion using git ...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:53</div><div class="msg">Alternatively you can keep a local copy. In that case, even if someone removes it from the remote, you can push it back up</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:54</div><div class="msg">i think you can revert if you delete a branch, but yes should keep them for now</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:56</div><div class="msg">Branch deletion is destructive. GitHub has branch protection in the repo settings, I think that only the repo owner can turn it on.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:57</div><div class="msg">I'll do that then</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 18:58</div><div class="msg">There shouldn't be anything not committed inside that branch so it's not a huge deal we can just create another branch on i2 no? </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 19:00</div><div class="msg">If it's merged somewhere else you won't lose anything by deleting it.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 19:01</div><div class="msg">which branch are we talking about? the one that that was merged into master?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 19:03</div><div class="msg">Yeah I think it was merged already anyways </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-05 19:04</div><div class="msg">I believe do lose information about the merge history when you delete, but that's not likely important to us.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-08 18:40</div><div class="msg">set up a reminder to ?Grab a task and start implementing a feature? in this channel at 1pm today, Central Standard Time. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-08 19:00</div><div class="msg">Reminder: Grab a task and start implementing a feature.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 04:32</div><div class="msg">How do we wanna set up questions page when creating new q's. i.e. Have option to select open ended/multiple choice and provide a template when one is chosen?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 07:32</div><div class="msg">I think for now we just make it have a text box to type a question and default to 4 blanks (buttons) to click responses </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 17:31</div><div class="msg">We're going to Mac lab after class coding and stuff. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 17:56</div><div class="msg">/giphy code</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:28</div><div class="msg">for the question model, ?answer? array will store questions?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:28</div><div class="msg">i.e. if its a multiple choice question, where are the questions stored?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:29</div><div class="msg">sounds like answers should store answers</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:29</div><div class="msg">/giphy captain obvious</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:29</div><div class="msg">then will need to modfiy question model :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:30</div><div class="msg">do it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:31</div><div class="msg">any recommendations on which data type should we store options in?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:32</div><div class="msg">do some research, see what you find and post your solution here - we?ll see</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 19:41</div><div class="msg">here is an article on how you can test server-side *express.js* controllers - <a href="https://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/">https://thewayofcode.wordpress.com/2013/04/21/how-to-build-and-test-rest-api-with-nodejs-express-mocha/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:06</div><div class="msg">hmm i could store each option seperately in model, i.e. option1: ?, option2: ?,  etc.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:07</div><div class="msg">yeah, but then you have a fixed redundancy: all questions will have a static number of answer fields</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:07</div><div class="msg">which might not be filled</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:07</div><div class="msg">for open-ended questions</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:08</div><div class="msg">or for questions that have 2 possible answers ?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:08</div><div class="msg">true dat</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:08</div><div class="msg">it is a difficult question, though.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:09</div><div class="msg">its a design question, depending on which way we wanna go</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:09</div><div class="msg">well, we definitely want to support N possible answers with multiple choise</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:09</div><div class="msg">could get just MP choices to work for now</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:09</div><div class="msg">not a fixed value</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:09</div><div class="msg">then later add open ended</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:09</div><div class="msg">that would be best, yes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:10</div><div class="msg">because for open ended Q?s, how will we know if the answer is correct or not?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:10</div><div class="msg">im guessing prof will need to look at each one seperately? =&gt; tedious</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:10</div><div class="msg">we do not - we give an option to mark to the professor</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:10</div><div class="msg">yes!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:10</div><div class="msg">it is their job</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:12</div><div class="msg">I agree just get multiple questions done without a fixed number of answers...then open ended afterward when we can </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:13</div><div class="msg">If it's too tedious to mark one at a time, maybe make a feature to have the answers forwarded to a marker or database with marker access? </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:14</div><div class="msg">@: absolutely. you are getting assigned to that feature :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:14</div><div class="msg">Haha nvm that feature </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:14</div><div class="msg">:p </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:15</div><div class="msg">what editor/UI are you guys using to build these? I was porting stuff to an eclipse javascript builder last iteration but is there a better setup?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:16</div><div class="msg">eclipse?!?!?!?!!?!?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:16</div><div class="msg">yeah lol</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:17</div><div class="msg"><a href="https://www.jetbrains.com/webstorm/">https://www.jetbrains.com/webstorm/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:18</div><div class="msg">ah ok, yeah i saw that program too ill give er a go</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:18</div><div class="msg">or any text editor</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:18</div><div class="msg">I believe I posted a few comments about the IDE last month.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:18</div><div class="msg">text editor + cmd line is your friend</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:18</div><div class="msg">(text edit + terminal) &gt; eclipse</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:19</div><div class="msg">haha probably</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:19</div><div class="msg">I just knew how to do git with eclipse better than anywhere else, so thats what I went with</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:22</div><div class="msg">I presume WebStorm has the same facilities for VCS, but alternatively you can use GitHub GUI or even command-line</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:40</div><div class="msg">Server side controller testing tutorial: <a href="https://masteringmean.com/lessons/211-Testing-MEAN-Applications-Mocha">https://masteringmean.com/lessons/211-Testing-MEAN-Applications-Mocha</a>
+
+Go into the *"Testing the Express controller?* example</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-09 20:43</div><div class="msg">link wont open, just google "mastering mean testing the express controller? and it will be the first link</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:54</div><div class="msg">Unbelievable, but this is a valid test code in Mocha testing framework
+
+```res.body[0].should.have.property('students', course.students).and.should.be.an.Array.and.have.lengthOf(5);```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:55</div><div class="msg">english :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:55</div><div class="msg">it tests if the response JSON has a property students, and that this property is an array and that it has the length of 5</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:56</div><div class="msg">I guess I should have been taking more English classes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:56</div><div class="msg">less comp sci classes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:56</div><div class="msg">LOL</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 20:58</div><div class="msg">:joy:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:00</div><div class="msg">Everyone has their own preference in the readability/conciseness trade off?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:00</div><div class="msg">Seems a little awful to me.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:01</div><div class="msg">you could break it apart into several statements. how would you do it? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:47</div><div class="msg">Another tip: 
+
+when installing a new package via npm, you can give it a flag ```--save-dev``` and it will automatically add it to the *package.json* file
+
+Here is an example: 
+
+```npm install --save-dev should```
+
+where *should* is the name of the package</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:49</div><div class="msg">are you adding new package? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:49</div><div class="msg">yes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:49</div><div class="msg">which one?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:49</div><div class="msg">hm?read the text above?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:50</div><div class="msg">ohh should</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:50</div><div class="msg">lol</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:50</div><div class="msg">all for testing</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 21:50</div><div class="msg">this one impacts only testing, yes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 22:52</div><div class="msg">should be have a seperate model for answers?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 22:52</div><div class="msg">absolutely</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 22:52</div><div class="msg">to store the answer and student id?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 22:53</div><div class="msg">definitely</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 22:53</div><div class="msg">and tests for it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-11 22:53</div><div class="msg">:+1::skin-tone-2:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:23</div><div class="msg">Anyone would like to do an installation guide? (see profs email)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:30</div><div class="msg">by the way, this relates to the Iteration 1 - the one we submitted last week - not the next one</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:36</div><div class="msg">preferable done today...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:36</div><div class="msg">yep</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:42</div><div class="msg">I can just copy it from my old repo...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:44</div><div class="msg">is it similar?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:44</div><div class="msg">or the same? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:44</div><div class="msg">almost identical</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:44</div><div class="msg">When was this email sent? I don't have it.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:44</div><div class="msg">today at 12:20</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:44</div><div class="msg">want it forwarded?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:56</div><div class="msg">this.is.the.installation.steps.js</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:57</div><div class="msg">?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 18:59</div><div class="msg">It's a name for the guide, inspired by the test suite </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 19:00</div><div class="msg">sure, you can name it that, if you wish :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 19:01</div><div class="msg">I can do it. What exactly do I need to say in it </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 19:03</div><div class="msg">essentially, we are asked to produce an installation guide for our project on a clean state computer. so that would be instructions on how to install our project and all dependencies</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 19:04</div><div class="msg">Ok I'll work on it after my OS class </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 19:04</div><div class="msg">sweet, thanks</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 19:16</div><div class="msg">It came through. Just took some time to show up in gmail.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:24</div><div class="msg">make sure you include MongoDB and NodeJS installation instructions as well</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:25</div><div class="msg">and to have mongod running as well...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:44</div><div class="msg">I'll just put the entire MEAN installation then since it covers all of that</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:45</div><div class="msg">this:
+$ sudo npm install -g mean-cli</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:45</div><div class="msg">mean-cli is not needed to run the project</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:46</div><div class="msg">just node and mongo?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:47</div><div class="msg">you need to explain how they need to install prereqs, how to checkout repo and how to run</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:48</div><div class="msg">ok well that should be included if I just tell them to install the MEAN environment, unless you think its better to just install NodeJS and mongoDB separately</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:49</div><div class="msg">need to be more specific on how to install this MEAN environment, Installation Guide...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:50</div><div class="msg">how can they install everything together?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:50</div><div class="msg">yeah ill go step by step then</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:50</div><div class="msg">sound good :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 20:51</div><div class="msg">the more specific, the more user friendly it is</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 21:31</div><div class="msg">alright i committed what I had, the studentvoteconfirmation branch is probably useless now, i was working on it last iteration lol but the readme should be in the documentation</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-12 21:32</div><div class="msg">feel free to add or change stuff</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-20 05:47</div><div class="msg">Hi guys, 
+
+In about 30 minutes to one hour I managed to deploy MEAN onto a Heroku instance. If you would like to know what that is, how to do it, etc. - message me and I will be happy to explain. 
+
+Production version is running up at: <a href="http://votee-project.herokuapp.com/">http://votee-project.herokuapp.com/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-20 05:48</div><div class="msg">Everything you commit to ```master``` will also automatically be deployed via a daily build. It is part of Heroku?s CI that I enabled.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-20 05:48</div><div class="msg">so from now on - watch out when you commit to master :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-20 19:17</div><div class="msg">guys, make sure you when you install mongoose-schema-extend@0.2.0 otherwise your branch wont work</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:23</div><div class="msg">Q; for submitting answers, we will need to have one to many relationship in mongo. Should we just have a collection of answers within a question collection?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:24</div><div class="msg">and users as well, since we need to know if the user voted or not</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:24</div><div class="msg">perhaps, a collection of answers in a question</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:24</div><div class="msg">there is a difference between a) possible answers and b) votes cast by users</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:25</div><div class="msg">yeah, so when a question is created its just a question</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:25</div><div class="msg">yep</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:25</div><div class="msg">and i guess that questions could store a collection of Answers which are made when a user actually votes on a voting page</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:26</div><div class="msg">yes. we would like to store votes made by students in a question</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:26</div><div class="msg">and answer will need to have a User as well</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:26</div><div class="msg">yes, it does</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-21 17:26</div><div class="msg">ok, makes sense</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 01:30</div><div class="msg">Hello to everyone, 
+
+I would like to cite the comment made by the marker, in case you have not seen it: 
+
+&gt; ?...but I couldn?t see your member?s contributions detail plus out 4 people which have committed to your GitHub[,] 2 members committed less than 50 lines of code and one member just 3 lines of code, all members should contribute towards your implementation!"
+
+It is funny to see that markers have committed more towards our project than some developers. 
+
+Come on, guys, how about getting some work done? It is difficult to be pulling all the weight.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:43</div><div class="msg">I understand, I think it would be beneficial for us to all have an in person meeting tomorrow? It would be good to all get together and discuss where we are at as well as maybe assign more specific tasks so individuals are more productive</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:44</div><div class="msg">absolutely. I am down for that.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:44</div><div class="msg">I think it will really help move things along and take some of the weight off you and yuriy</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:45</div><div class="msg">I am available all day until 4:00, not sure when is best for everyone else?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:46</div><div class="msg">I am available after 11:30 till 1:30.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:46</div><div class="msg">I just have a class at 1:30 also </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 02:52</div><div class="msg">i have classes 12:30 - 3:30</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:06</div><div class="msg">Here is a doodle:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:06</div><div class="msg"><a href="http://doodle.com/poll/fq7vhzdn88ahp9dd">http://doodle.com/poll/fq7vhzdn88ahp9dd</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:14</div><div class="msg">looks like tomorrow at 11:30 in the Mac Lab works</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:15</div><div class="msg">Sounds good :+1::skin-tone-2:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:15</div><div class="msg">Kk</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:21</div><div class="msg">Good for me as well</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:53</div><div class="msg">Yuriy, I took a look at your code. I know what?s wrong.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:54</div><div class="msg">in front end, AngularJS can provide you with these action methods, one for each CRUD operation: 
+
+```{ 'get':    {method:'GET'},
+  'save':   {method:'POST'},
+  'query':  {method:'GET', isArray:true},
+  'remove': {method:'DELETE'},
+  'delete': {method:'DELETE'} };```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:54</div><div class="msg">You are calling your own method ```vote```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:55</div><div class="msg">which is not going to work</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:55</div><div class="msg">yes i got to that point :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:55</div><div class="msg">you?ll need to store the answer data in a question object on front end</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:55</div><div class="msg">then call save</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:55</div><div class="msg">or update</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:56</div><div class="msg">I believe update is better</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:56</div><div class="msg">alternatively, you can define your custom methods!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:56</div><div class="msg">i see...its been a long day</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:56</div><div class="msg">ohh really?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:56</div><div class="msg">yes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:56</div><div class="msg">```{
+  vote: {method:'POST', params:{vote:true}}
+ });```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:57</div><div class="msg">I?ll put it in the code and commit for you</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 03:57</div><div class="msg">one sec</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 17:08</div><div class="msg">Room is 420 right?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 17:17</div><div class="msg">Yup the code is 912 047</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 17:18</div><div class="msg">Pretty sure anyways haha</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 18:31</div><div class="msg">we will be in the lab tomorrow after soft eng to do some work</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 18:31</div><div class="msg">@: @: if you guys have any questions or my explanation was bad  :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 19:17</div><div class="msg">@: <a href="https://github.com/jaredhanson/passport-http-bearer">https://github.com/jaredhanson/passport-http-bearer</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 19:18</div><div class="msg">Before that create field called 'token' in your user table and generate token.
+ ```app.use(function (req, res, next) {
+        if (req.query.access_token) {
+                    passport.authenticate('bearer', function(err, user) {
+                if (err || !user) {
+                    return res.send(401, {
+                        message: 'User is not logged in'
+                    });
+                }
+                req.login(user, function(err) {
+                    if (err) {
+                        return res.send(401, {
+                            message: 'User is not logged in'
+                        });
+                    }
+                                    next();
+                });
+            })( req, res, next );
+        } else {
+            next();
+        }
+    }); ```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 19:18</div><div class="msg">you want me to path up the framework? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 19:19</div><div class="msg">just something i looked up while in class</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 19:20</div><div class="msg">I don?t know dude, I think it is simpler to just ? not do it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-22 19:21</div><div class="msg">fair enough</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 07:15</div><div class="msg">Hey everyone,
+Some stuff has come up in the last few weeks and I had to make the decision to drop this course. I'm sorry for any trouble that this causes. I wish you all the best with your classes, and I hope the project goes well!
+Cheers,
+Steve</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 15:29</div><div class="msg">I think I've figured out why the voting path isn't working, although I'm not yet sure how to fix it in angular. It seems that both question updating and question voting are using the same path. By placing a debug message in the server side question.update function, you can see it called when clicking the vote button.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 15:59</div><div class="msg">Yes that's correct.  We're trying to figure out how to make it call vote function.  </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 16:00</div><div class="msg">And if you wanna work on that branch pls checkout a different local copy please. So we don't have to deal with merges. Thanks.  </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 19:43</div><div class="msg">npm install phantomjs-prebuilt</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 19:53</div><div class="msg">does anyone had an issue when you remove a testing function from code it still runs it when I call npm test ?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 20:06</div><div class="msg">more like : ?I didn?t know that I had another file with a bunch of tests there? ? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:46</div><div class="msg">My AWS account it blocked. WTF. Contacted support to unlock it. Amazon...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:46</div><div class="msg">will deploy production DB there once they activate it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:47</div><div class="msg">I might also consider a full deployment on AWS instead of heroku front end - AWS back end combo.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:47</div><div class="msg">is it an easy thing to do or should we do something to help?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:47</div><div class="msg">what are your thoughts? should we put everything on one side? or have front-end - back-end separate?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:47</div><div class="msg">it is super easy :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:48</div><div class="msg">just need to get access to AWS instance</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:49</div><div class="msg">ah ok,  well i'd just do whatever is easiest.  Itll probably make it easier for the team trying to make the mobile app</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:50</div><div class="msg">for mobile - it won?t matter, really. they still will be accessing Heroku - that is where the server is running. 
+
+for me, it is simpler to just run MongoDB on AWS and update the config on Heroku to access that DB instead of one that I am already hosting.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:51</div><div class="msg">if someone want to get some experience with AWS - feel free to do this, I can provide you with pointers</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:51</div><div class="msg">it is really simple</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:51</div><div class="msg">otherwise, I will do it :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:53</div><div class="msg">Im just doing some css stuff that I havent committed, but I could give it a try... ive never done AWS stuff before though lol</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:53</div><div class="msg">AWS is basically a remote shell access to a virtual computer.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:54</div><div class="msg">you type commands into it and it runs them.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:54</div><div class="msg">just like on your local machine.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:54</div><div class="msg">AWS offers *a lot* of different services.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:54</div><div class="msg">the one we are interested in is a free tier EC 2 instance</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:55</div><div class="msg">and before you do anything, make sure that AWS does not have your Amazon credit card on file.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:55</div><div class="msg">because if your traffic reaches out of the free tier limitations, they will shamelessly start charging you :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:56</div><div class="msg">with too-easy-to-ignore warnings</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:56</div><div class="msg">i literally just went to their site and am going through the signup and it wants me to enter a credit card and wont let me proceed...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:56</div><div class="msg">haha</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:56</div><div class="msg">yep</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:56</div><div class="msg">now it is different, I guess...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:56</div><div class="msg">maybe that is why my account it blocked - they do not have my credit card on file</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:57</div><div class="msg">possible.  I wonder if we will still be required to use it then for the project</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:57</div><div class="msg">the requirements clearly state - ?deploy back end on AWS'</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:58</div><div class="msg">which means - ?type in your credit card details? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:58</div><div class="msg">maybe the prof gets a cut from amazon lol</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:58</div><div class="msg">anyways, we still have time for my account to get unblocked</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:58</div><div class="msg">yeah let us know what happens and we can figure it out</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 22:58</div><div class="msg">let?s give them a day or two</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:02</div><div class="msg">well this is fun... tried to rerun the app since i got home and now localhost:3000 is giving me a blank browser window...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:02</div><div class="msg">yep. is your server running?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:02</div><div class="msg">yep</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:03</div><div class="msg">tried refreshing?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:03</div><div class="msg">yeah. might be caching old data or something maybe a reboot</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:03</div><div class="msg">which branch?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:04</div><div class="msg">main page</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:04</div><div class="msg">i was looking at css stuff</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:04</div><div class="msg">i mightve broke something</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:04</div><div class="msg">voteeMainpage i believe</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:04</div><div class="msg">that branch is REALLY obsolete</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:04</div><div class="msg">if it is not pushed, I can?t check it out for you</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:05</div><div class="msg">*obsolete</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:05</div><div class="msg">like 40 commits behind master :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:05</div><div class="msg">what?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:05</div><div class="msg">gonna update it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:05</div><div class="msg">it was merged to develop and released but the branch wasnt delted</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:06</div><div class="msg">I merged develop into it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:06</div><div class="msg">I?ll clean up branches after release</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:06</div><div class="msg">@: do a ```git pull```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:06</div><div class="msg">kk</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:06</div><div class="msg">see if the issue persists</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:08</div><div class="msg">got it. nice.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:14</div><div class="msg">did that fix your problem, @ ?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:15</div><div class="msg">yeah all good</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:15</div><div class="msg">@: <a href="https://getbootstrap.com/css/">https://getbootstrap.com/css/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:15</div><div class="msg">just use bootstrap class for frontend, unless you want to add something else</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:16</div><div class="msg">yeah thats what ive been looking at</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:17</div><div class="msg">added an integration to this channel: <a href="https://4350team.slack.com/services/B0NNT64GY">https://4350team.slack.com/services/B0NNT64GY</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:24</div><div class="msg">doing a test deploy on heroku.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:24</div><div class="msg">should finish with a message here :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:27</div><div class="msg">technically, the database is already hosted on AWS :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:27</div><div class="msg">but this is what Hadi would call cheating</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:27</div><div class="msg">anyone interested? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:28</div><div class="msg"><a href="https://www.dropbox.com/s/6oxwmqgedwk0439/Screenshot%202016-02-23%2017.28.05.png?dl=0">https://www.dropbox.com/s/6oxwmqgedwk0439/Screenshot%202016-02-23%2017.28.05.png?dl=0</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:28</div><div class="msg">@levko shared a file: <a href="https://4350team.slack.com/files/levko/F0NNR5G03/screenshot_2016-02-23_17.28.05.png">https://4350team.slack.com/files/levko/F0NNR5G03/screenshot_2016-02-23_17.28.05.png</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:28</div><div class="msg">Under *Sandbox*</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:28</div><div class="msg">:simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:28</div><div class="msg">did I deploy MongoDB on AWS? nope.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:29</div><div class="msg">where is MongoDB deployed? on AWS</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:29</div><div class="msg">I need to talk to him about this :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:29</div><div class="msg">see if this is cheating or not</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:29</div><div class="msg">email?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:30</div><div class="msg">it will take me 10 paragraphs to explain this in email</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:33</div><div class="msg"><mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 3460cad of <a href="http://votee-project.herokuapp.com">http://votee-project.herokuapp.com</a>.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:34</div><div class="msg">nice</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:34</div><div class="msg">yep. heroku deployment bot works.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:34</div><div class="msg">if you want access to our Heroku project - it is free - let me know, I will add you</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:56</div><div class="msg">gonna try writing API docs</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:56</div><div class="msg">it is simple - we just have to provide API docs for 2 packages :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:56</div><div class="msg">questions and courses</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:56</div><div class="msg">and users</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:56</div><div class="msg">fuck :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:56</div><div class="msg">yes, i wanna make it look nice</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:57</div><div class="msg"><a href="http://apidocjs.com/">http://apidocjs.com/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:57</div><div class="msg">you can add these comments in the routes.js</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:57</div><div class="msg">then this tool will generate the docs for you</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:57</div><div class="msg">and yes, they will look nice</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:57</div><div class="msg">was looking at raml</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:57</div><div class="msg">here is an example: <a href="http://apidocjs.com/example/">http://apidocjs.com/example/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:58</div><div class="msg">raml looks like it is far too complex for your purpouses</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-23 23:58</div><div class="msg">yeap its better for bigger projects lol</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:00</div><div class="msg">apidocsjs seems to do what we want</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:00</div><div class="msg">I can then host the generated API docs website somewhere</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:00</div><div class="msg">so that the team that will be doing the mobile app can see that stuff</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:12</div><div class="msg">okay, I am done with the course controller tests</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:13</div><div class="msg">if you need help with testing the server side controller - let me know</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:52</div><div class="msg">@yuriy uploaded a file: <a href="https://4350team.slack.com/files/yuriy/F0NNY75JQ/pasted_image_at_2016_02_23_06_51_pm.png">https://4350team.slack.com/files/yuriy/F0NNY75JQ/pasted_image_at_2016_02_23_06_51_pm.png</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 00:52</div><div class="msg">sneak peek of the questions API doc :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:50</div><div class="msg">got your AWS account back?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:50</div><div class="msg">Updated the DB path for AWS in production.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:50</div><div class="msg">Pushed to master</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:50</div><div class="msg">Heroku should re-deploy now, then I will test if it works</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:54</div><div class="msg"><mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version b4df5db of <a href="http://votee-project.herokuapp.com">http://votee-project.herokuapp.com</a>.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:55</div><div class="msg">works fine</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:56</div><div class="msg">Are either of you guys in the Mac lab right now?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:56</div><div class="msg">on a lecture now. what?s up?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:57</div><div class="msg">same at a lecture</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:57</div><div class="msg">Okay no worries. I have a question but its hard to explain over chat haha </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:58</div><div class="msg">I can drop by at 14:30. will you still be around?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 19:58</div><div class="msg">That would be awesome :blush:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:00</div><div class="msg">okay</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:00</div><div class="msg">@: no, I will not deploy everything there</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:00</div><div class="msg">it is a pain</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:00</div><div class="msg">heroku is already doing a lot for us and I love automatic re-deploy too much to lose it.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:01</div><div class="msg">AWS does have that, but it has that somewhere and somehow</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:01</div><div class="msg">and I got no time to do it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:01</div><div class="msg">if someone want to play with it - go ahead :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:03</div><div class="msg">@: how is your documentation project going?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:03</div><div class="msg">when can I have an example of how to document courses API?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:05</div><div class="msg"><a href="https://github.com/lewkoo/Votee/blob/feature/submitAnswer/packages/custom/questions/server/controllers/questions.js#L29">https://github.com/lewkoo/Votee/blob/feature/submitAnswer/packages/custom/questions/server/controllers/questions.js#L29</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:05</div><div class="msg">just add similar comments</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:06</div><div class="msg">will we be doing a sample JSON payload?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">so, for question, it will contain a sample JSON payload for a request. 
+
+say you want to create a new question via API call. will we be posting a sample JSON payload for that PUT request?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">I hope I am making myself clear...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">ohh like an example?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">yes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">in the API doc?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">yes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">yes, one can add that</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">how?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:07</div><div class="msg">RTFM?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:08</div><div class="msg">pretty much lol, ill add some tonight</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:08</div><div class="msg">okay, nevermind</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:08</div><div class="msg">I?ll RTFM</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:08</div><div class="msg">@apiExample :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:08</div><div class="msg">yep</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:20</div><div class="msg">@: coming</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:40</div><div class="msg">@: fixing your bugs, bro</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:40</div><div class="msg">:simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:41</div><div class="msg">I never said there weren't any:upside_down_face:  </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:46</div><div class="msg">I guess copy-paste method is tricky ? ¯\_(?)_/¯</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:47</div><div class="msg">who puts a button in &lt;a&gt;&lt;/a&gt; clause? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:48</div><div class="msg">That wasn't me :)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:48</div><div class="msg">I didn?t say who did it :simple_smile: it is not relevant :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:49</div><div class="msg">There should be a button that calls vote method in controller. It was working </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 20:54</div><div class="msg">That was my bad I made a silly change and forgot to fix it. Levko saved the day yet again :)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:45</div><div class="msg">@: did you just fix that injection error when `$httpBackend` is undefined?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:46</div><div class="msg">if so, I gotta merge your commits because those are my issues exactly - injection in frontEndTests</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:47</div><div class="msg">Maybe? The messages I was getting were fairly obtuse.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:49</div><div class="msg">okay, I?ll merge...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:50</div><div class="msg">Make sure you get those last two commits in order to see a completely working test system.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:51</div><div class="msg">yep, I got them</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:51</div><div class="msg">my last one is: Use the correct object.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:51</div><div class="msg">a556885de4e2aa9066e692b778c4694736e961b1</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:51</div><div class="msg">Yup</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-24 23:51</div><div class="msg">cool</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:15</div><div class="msg">Okay, so I managed to write one test for the front end that is actually doing something useful. 
+
+Essentially, it mocks a backend GET response to statically return a specified JSON. Then, it pipes that request through a front end controller, thus testing it.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:15</div><div class="msg">I will commit now so you can take a look, if interested.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:15</div><div class="msg">it is in courses/public/tests folder</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:56</div><div class="msg">@: please, do not delete `server.js` file. It is actually responsible for starting up the web server. Very important file. No delete. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:56</div><div class="msg">yeah that was accidental</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:56</div><div class="msg">im not sure why that happened, I just added a few lines to two questions files</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 00:59</div><div class="msg">Perhaps, it should be restored in that branch ...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 01:00</div><div class="msg">im copying it back over, ill commit it back into the branch</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 01:04</div><div class="msg">Thanks :-)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 01:05</div><div class="msg">thats really odd that that even happened, cause I didn't even commit the entire project directory, just the files I updated</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 05:27</div><div class="msg">My last commit was a little weird so please just let me know if it causes issues :slightly_smiling_face:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 13:05</div><div class="msg">@: which one? :upside_down_face:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 15:56</div><div class="msg">submitAnswer, though Levko has checked in since then. I think it is fine just thought I'd make sure haha</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 17:22</div><div class="msg">The marker had an error running our project last iteration. Since I'm not sure how to reproduce his error, I've redone the installation instructions to hopefully be more explicit and succinct. If you have a chance please test the instructions on a fresh computer and let me know if there are missing steps.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 17:28</div><div class="msg">I know for windows based install if you don't use powershell to install, some of the dependencies don't install properly on a regular command prompt with npm install </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 17:29</div><div class="msg">Git bash works for me</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 17:32</div><div class="msg">I'll bet that's the problem then. The screenshot the marker left shows the default Windows command prompt.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 17:33</div><div class="msg">Sure enough, the mean docs have an understated comment about using git bash on Windows.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 18:47</div><div class="msg">So, who?s going to do the end-to-end selenium testing? :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 18:57</div><div class="msg">I'll look into it.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:00</div><div class="msg">thanks</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:06</div><div class="msg">@:  I can help you with the testing, just let me know what I can do </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:07</div><div class="msg">Alright. I'm just looking through the docs on <a href="http://seleniumhq.org">http://seleniumhq.org</a> so far.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:08</div><div class="msg">I think we can get by with only using the IDE generated tests</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:09</div><div class="msg">and we can have a separate instruction manual on how to execute those</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:09</div><div class="msg"><a href="http://docs.seleniumhq.org/projects/ide/">http://docs.seleniumhq.org/projects/ide/</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:18</div><div class="msg">Is there a way to query for an Answer object based on id through the front end questions controller?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:18</div><div class="msg">or i suppose, can i create a way?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:30</div><div class="msg">yes, there is. This is for the front-end controller. Example on how to find an articles object:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 19:30</div><div class="msg">```$scope.findOne = function() {
+      Articles.get({
+        articleId: $stateParams.articleId
+      }, function(article) {
+        $scope.article = article;
+      });
+    };```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 22:30</div><div class="msg">@: are you working on end to end testing?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 22:30</div><div class="msg">Yeah, working on it.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-25 22:31</div><div class="msg">:+1:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:36</div><div class="msg">I'm stuck on the end to end testing. For some reason login doesn't seem to work when running in the selenium environment, which is sort of a prerequisite to testing our pages.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:36</div><div class="msg">is it using mean-test DB?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:37</div><div class="msg">you might be logging in with a user that does not exist in that DB</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:37</div><div class="msg">I think it should be using the same database as everything else.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:37</div><div class="msg">there is a separate DB for testing - mean-test</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:38</div><div class="msg">I haven't yet found confirmation for that though.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:38</div><div class="msg">Does mean-test have a default user we can use?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:38</div><div class="msg">nope, it does not</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:38</div><div class="msg">your test needs to create one</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 00:40</div><div class="msg">Right</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:00</div><div class="msg">is someone gonna merge all the branches back before we submit?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:01</div><div class="msg">Whoever is working on them should merge them when they are finished.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:02</div><div class="msg">how do i do that without breaking everything? lol I dont wanna mess it up</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:02</div><div class="msg">I don't think we are really ready to release tonight. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:03</div><div class="msg">ok i can figure it out tomorrow</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:04</div><div class="msg">I suggest you guys try to figure out how to save an answer to a question. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:04</div><div class="msg">Not releasing. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:04</div><div class="msg">Releasing is a couple of commands away</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:04</div><div class="msg">Features are not :-)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:05</div><div class="msg">ok i just meant to merge voteehome to the main branch cause I made a bunch of front end changes in there, but ill take a look at voting branch again</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:09</div><div class="msg">steps to merge are:
+
+*Commit all changes
+git checkout develop
+git pull
+git checkout myCoolBranch
+git merge develop
+*resolve merge conflicts</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:10</div><div class="msg">git checkout develop
+git merge myCoolBranch
+git push</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:10</div><div class="msg">perfect. thanks</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:12</div><div class="msg">Keep in mind that if you do have merge conflicts, you need to run
+git add .
+git commit
+after fixing the conflicts</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 01:38</div><div class="msg">develop now has some end to end tests that can be used as examples for anyone interested.
+
+tests are located under ``tests/e2e/``
+tests are run with ``gulp e2e.test``</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:23</div><div class="msg">@, thanks for that
+
+I would like to mention what I found out to be wrong with the submitting a vote - maybe one of you can take it from there and figure it out. 
+
+Essentially, all the action happens in the server-side `questions.js` controller in function `vote`
+
+This function is responsible for saving a vote cast by a user. The problem is the following: 
+
+`answer.save()` where `answer` is an instance of `Answer` schema object does not save the object in the model. 
+
+In fact, there is no collection for Answers. Calling save() should, in theory, create one, but this does not happen.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:25</div><div class="msg">I have been looking at it, but I'm not too familiar with everything so I haven't had any luck. Is the answer schema the only one with extend? </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:26</div><div class="msg">yes, it is, but I found that extend has no effect on this</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:26</div><div class="msg">And it doesn't need to be a package either correct?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:26</div><div class="msg">that didn?t help either</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:27</div><div class="msg">what branch is the most up to date with all the vote submission/answers stuff</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:27</div><div class="msg">Haha okay. Well I have been researching it for a while, I will let you know if I find anything helpful </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:27</div><div class="msg">I want to pull an update</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:28</div><div class="msg">@: submitAnswer. It doesn?t not have my modifications, but they are irrelevant. I can push them to a new branch if you are interested
+
+@: this is what I am doing right now</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:33</div><div class="msg">yes, I do have a viable solution.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:33</div><div class="msg">nice</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:35</div><div class="msg">There is an error when I hit `answers.save()` 
+
+Here it is: 
+
+```render: [Function] } { [ValidationError: Answer validation failed]
+  message: 'Answer validation failed',
+  name: 'ValidationError',
+  errors: 
+   { created: 
+      { [CastError: Cast to Date failed for value "function now() { [native code] }" at path "created"]
+        message: 'Cast to Date failed for value "function now() { [native code] }" at path "created"',
+        name: 'CastError',
+        kind: 'Date',
+        value: [Function: now],
+        path: 'created',
+        reason: undefined } } }```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:37</div><div class="msg">thats the code for recording when date/time the answer is submitted</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:38</div><div class="msg">there should be a line somewhere that is type casting date when it should be saving as an array I believe</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:38</div><div class="msg">I had used Date.now to set the created for the new answer object</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:39</div><div class="msg">yes, that is exactly what is happening - you can set it, but it won?t be saved in the DB</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:39</div><div class="msg">if you set it to Date.now</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:41</div><div class="msg">strange. Okay but the default is set to Date.now, so will it work that way or still cause issues?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:42</div><div class="msg">if you don?t set it when creating a new Answer object, it fails with the same problem</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:42</div><div class="msg">but now at least we know what?s up</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:43</div><div class="msg">oh okay but still a good find!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:43</div><div class="msg">It looks to me like Date.now isn't being called.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:44</div><div class="msg">It's trying to cast to a Date object but it has a function. What happens if you replace 'Date.now' with 'Date.now()'</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:44</div><div class="msg">same thing</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:44</div><div class="msg">just tried it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:44</div><div class="msg">odd.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:44</div><div class="msg">trying new Date().getTime()</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:45</div><div class="msg">solved it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:46</div><div class="msg">and while doing that I also figured out how to authorize REST requests</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:46</div><div class="msg">Fantasti</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:46</div><div class="msg">hooray!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:46</div><div class="msg">c</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:48</div><div class="msg">@, you will not believe this. Remember we had no clue what to do with the token? It turns out that you have to authorize your requests like this: 
+
+In your request Header, you put ?authorization? as you key and ```Bearer eyJhbGciOiJIUzI1NiJ9.JTdCJTIyX192JTIyOjAsJTIyZW1haWwlMjI6JTIycHJvZjFAZ21haWwuY29tJTIyLCUyMnVzZXJuYW1lJTIyOiUyMnByb2YlMjIsJTIybmFtZSUyMjolMjJMZXZrbyUyMiwlMjJfaWQlMjI6JTIyNTZjZjlhNWRlMjZmOTk4OGFhNWUwOThlJTIyLCUyMnByb3ZpZGVyJTIyOiUyMmxvY2FsJTIyLCUyMnJvbGVzJTIyOiU1QiUyMnByb2Zlc3NvciUyMiwlMjJhdXRoZW50aWNhdGVkJTIyJTVEJTdE.wEmEYbpa84zF0JW_Yu6H2kjFmATi_8KPY_L6tn3z2-k``` as your value</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:48</div><div class="msg">where that random string is your token</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:48</div><div class="msg">That's unintuitive.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:49</div><div class="msg">we were missing two things here: 1) the ?authorization? being the key, 2) token being proceeded by the `Bearer ` string.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:49</div><div class="msg">I know</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:49</div><div class="msg">it is frankly ridiculous</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:49</div><div class="msg">but that is how browser authenticates</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:49</div><div class="msg">which is where I took it from - a browser request header :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:49</div><div class="msg">reverse-engineer my ass...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:53</div><div class="msg">as for answers ...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:53</div><div class="msg"><a href="https://www.dropbox.com/s/eaczmq77ap9o33a/Screenshot%202016-02-25%2020.53.31.png?dl=0">https://www.dropbox.com/s/eaczmq77ap9o33a/Screenshot%202016-02-25%2020.53.31.png?dl=0</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:53</div><div class="msg">@levko shared a file: <a href="https://4350team.slack.com/files/levko/F0P5CFFUN/screenshot_2016-02-25_20.53.31.png">https://4350team.slack.com/files/levko/F0P5CFFUN/screenshot_2016-02-25_20.53.31.png</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:53</div><div class="msg">record saved</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:54</div><div class="msg">I?ll clean up the code and push so that whoever is working on questions can finish it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 02:54</div><div class="msg">I have courses feature to do :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:00</div><div class="msg">done. Answers are now saved.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:06</div><div class="msg">For those who listened to today lecture about static testing: we actually do have this facility and it is called `jshint`</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:06</div><div class="msg">you can run it by typing `gulp jshint`</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:06</div><div class="msg">it is also executed every time you change a file with a server running</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:07</div><div class="msg">the less errors and warning we get when running it- the better</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:07</div><div class="msg">usually it is something simple like single quotes should be used instead of double quotes</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:08</div><div class="msg">Do we have tools for doing static analysis on the css and html portions as well?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:08</div><div class="msg">i think that he said all the static testing was for next iteration on other people's projects</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:09</div><div class="msg">@: yes, we do, at least for css - run `gulp csslint`</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:09</div><div class="msg">@: we are not required to do so, but it is extremely useful as outlined in the lecture today - the second biggest danger is not using them at all :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:10</div><div class="msg">good point :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:15</div><div class="msg">or in webstorm if you can setup a gulp task which points to gulpfile to inlcude all of the tasks :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:15</div><div class="msg">there is actually a separate menu in WebStorm which will list all available gulp tasks for you</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:17</div><div class="msg">did I merge it right or did I break it? lol</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:17</div><div class="msg">looks fine to me</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:17</div><div class="msg">perfect</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:18</div><div class="msg">make sure to remove `'feature/voteeMainPage?` branch</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:18</div><div class="msg">from remote</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:18</div><div class="msg">you can do this by : ```git push origin ?delete feature/voteeMainPage```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:19</div><div class="msg">and then remove locally 
+
+```git branch -D feature/voteeMainPage```</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:20</div><div class="msg">oh, and when I said fine, I meant that the merge looks fine to me. whether or not it breaks the code on `develop` is another story</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:20</div><div class="msg">you should check out develop and test, at least a little bit</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:21</div><div class="msg">it had no conflicts with the code that was there because it was mostly changes to the UI but I will definitely double check</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:21</div><div class="msg">make sure you run ```npm test ``` before merging important things too</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:21</div><div class="msg">it is common practice to test before you push, even if you changes a few lines</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:22</div><div class="msg">yeah I did check when I merged before I pushed it back out to develop</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:22</div><div class="msg">That's perfect.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:24</div><div class="msg">I was just gonna ask if deleting it through phpstorm is a solution but you got it already :stuck_out_tongue:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:24</div><div class="msg">oh, they might have that option, but command line is just faster and easier :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:24</div><div class="msg">if anyone needs it, I still have it on my local machine</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:47</div><div class="msg">just a heads up we will need to  perform validation for pretty much all forms on front end</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:47</div><div class="msg">i believe you can validate using angularjs without submitting the form (front end validations)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:47</div><div class="msg">oh, and it must be done by tomorrow night :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:47</div><div class="msg">validation examples are on sign up form</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:47</div><div class="msg">lots of them</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:48</div><div class="msg">validation is performed on the front end</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:48</div><div class="msg">i.e. something like disabling create button if the field is empty</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:48</div><div class="msg">back end validations are also needed</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:48</div><div class="msg">examples of that are also present</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:49</div><div class="msg">but front end is what the marker will actually see :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 03:50</div><div class="msg">it will look nicely with bootstrap css</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 06:46</div><div class="msg">which front end page specifically are we referring to as needing validation.  The create questions page already requires you to fill out all the fields before the create button will submit a new question.  If you try click it with the fields empty, you get feedback to fill in the fields</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 13:36</div><div class="msg">for example, one can submit a question without selecting an answer, throws 500 -&gt; needs validation</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 13:38</div><div class="msg">and doing validations client side without hitting submit</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 13:39</div><div class="msg">everything for a better user experience</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:10</div><div class="msg">I just finished the validation so an answer is required when creating a question</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:11</div><div class="msg">I have it in my answerController branch so I can merge it later. I just put validation in the create.html, hope that is enough</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:13</div><div class="msg">You should merge it to develop once you are done with it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:13</div><div class="msg">Then develop needs to be merged into submitAnswer</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:15</div><div class="msg">Okay so merge my branch with develop... Then merge develop into submitAnswer</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:26</div><div class="msg">I am getting some sort of CRLF line seperators warning </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:30</div><div class="msg">Is the warning that CRLF will be converted to LF?
+You should be able to commit anyway.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:31</div><div class="msg">@sandersjess uploaded a file: <a href="https://4350team.slack.com/files/sandersjess/F0P81EL5C/slack_for_ios_upload.jpg">https://4350team.slack.com/files/sandersjess/F0P81EL5C/slack_for_ios_upload.jpg</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:32</div><div class="msg">Fix and commit.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:33</div><div class="msg">Kk that's what I did. I just wanted to be sure before merging with develop, thanks!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:34</div><div class="msg">Weird. Where did the CRLF line endings come from in OS X ... </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:35</div><div class="msg">I'm not really sure. I merged develop into features/answerController and it happened </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:36</div><div class="msg">I would guess that someone else committed them from a Windows machine</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:54</div><div class="msg">Haha, Yuriy works on Windows. :-) never mind. </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 16:54</div><div class="msg">Let's meet in the lab at 3:30 today. I'll bring timbits for everyone to celebrate!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 17:01</div><div class="msg">:+1::skin-tone-2:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 17:01</div><div class="msg">Yes, free food Yuriy...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 17:02</div><div class="msg">well thats one of the ways to lure me :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 17:09</div><div class="msg">I'll grab the timbits levko, I'm on my way to school and can grab them on the way! :blush:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 17:49</div><div class="msg">My carpool leaves before then. I'll join you guys from slack.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:02</div><div class="msg">Thanks Jessica!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:07</div><div class="msg">No worries! </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:08</div><div class="msg">@: for some reason the 'use strict' statement you added in your last develop commit breaks my circles.js</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:09</div><div class="msg">Delete your database and restart the server. Let us know if the issue persists </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:09</div><div class="msg">mean-dev is the one to delete</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:10</div><div class="msg">Is it the 'Drop database' through webstorm? </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:10</div><div class="msg">'use strict' prevents the use of undeclared variables.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:11</div><div class="msg">Shouldn't have anything to do with the database.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:11</div><div class="msg">I probably should have tested that commit better.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:11</div><div class="msg">It says 'TypeError: cannot assign read only property 'children' of circles </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:12</div><div class="msg">Comment put use strict and it works fine </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:12</div><div class="msg">*out</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:13</div><div class="msg">It also disallows writing to read-only properties.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:13</div><div class="msg">The circles package isn't ours right?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:13</div><div class="msg">it isn't</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 18:16</div><div class="msg">Sorry guys, I took it out.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:19</div><div class="msg">Will be in the lab at 2:30</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:19</div><div class="msg">gotta go for the test.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:19</div><div class="msg">actually, if the test isn't hard, I might be earlier</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:19</div><div class="msg">ill come at 3:30</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:20</div><div class="msg">I have an HCI meeting at 2:30 but will come 3:30!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:22</div><div class="msg">I completed the check for users votes! I merged my branch answersController with submitAnswer </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:22</div><div class="msg">excellent</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:22</div><div class="msg">Should I merge it into the actual submitAnswer Branxh?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:23</div><div class="msg">Did anyone look at that front end validation on create question. Cause I will if it hasn't yet </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:23</div><div class="msg">I will merge your changes and push :)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:23</div><div class="msg">I did it, I added validation for the answer field </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:23</div><div class="msg">Perfect thanks yuriy!</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:24</div><div class="msg">@: you can check API POST requests and see if they are working</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:25</div><div class="msg">@: answerController branch?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:25</div><div class="msg">Yes. Maybe take a look just to verify if you have time :)</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:25</div><div class="msg">i trust you :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:26</div><div class="msg">are the tests passing?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:32</div><div class="msg">whoever was making front end changes, front page looks weird on my machine</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:32</div><div class="msg">what about it...?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:33</div><div class="msg"><a href="https://www.dropbox.com/s/o5r6qra4krqb2uf/Screenshot%202016-02-26%2013.33.21.png?dl=0">https://www.dropbox.com/s/o5r6qra4krqb2uf/Screenshot%202016-02-26%2013.33.21.png?dl=0</a></div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:33</div><div class="msg">new user tutorial is too long</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:34</div><div class="msg">like the paragraph?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:34</div><div class="msg">the button</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:34</div><div class="msg">hmmm... theyre all in the preset columns</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:34</div><div class="msg">all of them are way too big imo and ?new user tutorial? goes off screen</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:34</div><div class="msg">ok ill shrink them down</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:35</div><div class="msg">Also, front end for displaying questions needs work...</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:35</div><div class="msg">its just goes down?looks bad</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:35</div><div class="msg">and Create new Q is out of place</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:35</div><div class="msg">yeah i didnt look at the questions display page</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:36</div><div class="msg">ill fix that page up</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:36</div><div class="msg">it is all part of front end :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:39</div><div class="msg">also Vote button on student page is not needed,  vote for which course??? maybe browse questions/courses instead would be better?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:40</div><div class="msg">kk.  I just kept it around cause it was there originally</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:40</div><div class="msg">just from design view, that hat would look nice in the Student info box on the right</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:41</div><div class="msg">I'll help with the front end stuff right now... is there a specific branch for those changes at all?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:41</div><div class="msg">same goes for professor page, unless you want to create new design</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:42</div><div class="msg">feel free to branch off fom submitAnswer :simple_smile:</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 19:43</div><div class="msg">i can probably knock it out real quick</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:13</div><div class="msg">fixed.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:13</div><div class="msg">now just courses page and questions page</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:17</div><div class="msg">@: are you looking at one of these? I can look at the other</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:18</div><div class="msg">I'm fixing up the front page buttons cuz they go a little weird when the browser is small 
+I'm also doing the vote successful page </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:19</div><div class="msg">ok. ill leave your commit to the homepage then and ill do the courses and questions pages.  I made some changes to the student page tho ill commit those</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:30</div><div class="msg">just for the future (or maybe even today) angularjs has sorting capabilities</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 20:30</div><div class="msg">so frontend can add sorting of questions/courses</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:08</div><div class="msg">@: did you figure out the front page buttons or do you want us to try it?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:08</div><div class="msg">I haven't looked at it yet.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:12</div><div class="msg">I'll do it now.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:15</div><div class="msg">ok i tested out and pushed all the front end stuff back to develop</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:16</div><div class="msg">just need that homepage and then levkos courses stuff</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:34</div><div class="msg">You've got fancy buttons</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:37</div><div class="msg">nice looks good</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:49</div><div class="msg">has anyone been sucessfull in creating a question/course/article using API?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:51</div><div class="msg">@: fixed it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:51</div><div class="msg">@: when your front end part is complete you can merge your changes and delete front end interface branch</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 22:52</div><div class="msg">we're done with it now</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:06</div><div class="msg">Okay. I'm finished as well. Go ahead and merge it. It will be a bit before I'm back at my laptop.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:06</div><div class="msg">merge what?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:10</div><div class="msg">The front end branch.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:10</div><div class="msg">e2eTests?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:10</div><div class="msg">is that merged?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">I've got more that's not finished on that branch.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">But the latest completed changes are pushed.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">are we merging it for release?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">And merged with develop</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">make sure everyone writes everything thats not finished/moved for next iteration in a document</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">marker will want to see that</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:11</div><div class="msg">and justifications  as well</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:12</div><div class="msg">Don't merge the ProfInterfqce Branch it can actually be deleted </div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:13</div><div class="msg">okay, I?ll delete it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:14</div><div class="msg">any other branches need to be deleted?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:15</div><div class="msg">because what I was planning on doing is to merge all of them to develop and delete them all</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:15</div><div class="msg">student vote confirmation just delte</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:15</div><div class="msg">delete it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:15</div><div class="msg">but I need to know if there are branches that I need to keep</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:16</div><div class="msg">If @ merged answerController into submitAnswer than that one is good to delete. I believe he did today</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:16</div><div class="msg">@: deleted that one</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:16</div><div class="msg">@: I?ll check with him on that one</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:17</div><div class="msg">Delete anything that's merged somewhere else. If people are still using them, they'll show up again when they push.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:18</div><div class="msg">it is hard to determine if a branch was merged into develop</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:18</div><div class="msg">do you know a good way?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:18</div><div class="msg">never mind, I found a way</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:19</div><div class="msg">I would just look down the branch visualization.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:20</div><div class="msg">I am about to delete these branches: 
+
+ - e2eTests
+ - documentationUpdate
+ - professorRegisterForm
+ - modelDesign</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:20</div><div class="msg">anyone has any objections ?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:20</div><div class="msg">to the best of my knowledge, these have been merged into develop</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:20</div><div class="msg">frontEndInterface shouldn't have any conflicts so it can probably be deleted also</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:20</div><div class="msg">Im not 100% sure of that though</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:21</div><div class="msg">frontEndInterface needs to be merged and then it can be deleted.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:22</div><div class="msg">@: done</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:23</div><div class="msg">any objections to those 4 branches?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:23</div><div class="msg">none from me.  looks fine.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:24</div><div class="msg">Nope</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:24</div><div class="msg">okay, we are down to two feature branches.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:24</div><div class="msg">we will merge those once we are happy with them</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:27</div><div class="msg">readme.txt got readded to develop in documentation.  i believe it is obsolete now</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-26 23:31</div><div class="msg">removed it</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 00:33</div><div class="msg">@: merged your changes into release branch</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 00:34</div><div class="msg">I'm just going to keep writing and pushing end to end tests tonight.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 00:34</div><div class="msg">do so on release/v0.2 branch, please</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 00:35</div><div class="msg">Will do.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:03</div><div class="msg">Pushed the release</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:03</div><div class="msg">from now on, commit only to master directly</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:07</div><div class="msg"><mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 3bfb181 of <a href="http://votee-project.herokuapp.com">http://votee-project.herokuapp.com</a>.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:10</div><div class="msg"><mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 9ef523b of <a href="http://votee-project.herokuapp.com">http://votee-project.herokuapp.com</a>.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:28</div><div class="msg"><mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version d438f3e of <a href="http://votee-project.herokuapp.com">http://votee-project.herokuapp.com</a>.</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:30</div><div class="msg">Where is heroku deploying to anyway? Do we have a URL?</div></div></div><br/>
+<div><img src="" /><div class="message"><div class="username"></div><div class="time">2016-02-27 01:30</div><div class="msg">added it to the README.md</div></div></div><br/>
 </div></body></html>

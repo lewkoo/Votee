@@ -1,4 +1,4 @@
-<section data-ng-controller="QuestionsController">
+<section data-ng-controller="QuestionsController" data-ng-hide=!isAuthorized>
     <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(questionForm.$valid)" novalidate>
         <label>
             <input type="radio" id="multiChoiceRadio" ng-model="question.type" value="MULTIPLE-CHOICE"> Multiple Choice

@@ -1,0 +1,270 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Q; for submitting answers, we will need to have one to many relationship in mongo. Should we just have a collection of answers within a question collection?",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456075427.000000"
+        },
+        "ts": "1456075408.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and users as well, since we need to know if the user voted or not",
+        "ts": "1456075450.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "perhaps, a collection of answers in a question",
+        "ts": "1456075451.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "there is a difference between a) possible answers and b) votes cast by users",
+        "ts": "1456075483.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeah, so when a question is created its just a question",
+        "ts": "1456075509.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1456075527.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and i guess that questions could store a collection of Answers which are made when a user actually votes on a voting page",
+        "ts": "1456075537.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes. we would like to store votes made by students in a question",
+        "ts": "1456075573.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and answer will need to have a User as well",
+        "ts": "1456075584.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, it does",
+        "ts": "1456075597.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ok, makes sense",
+        "ts": "1456075609.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hello to everyone, \n\nI would like to cite the comment made by the marker, in case you have not seen it: \n\n&gt; \u201c...but I couldn\u2019t see your member\u2019s contributions detail plus out 4 people which have committed to your GitHub[,] 2 members committed less than 50 lines of code and one member just 3 lines of code, all members should contribute towards your implementation!\"\n\nIt is funny to see that markers have committed more towards our project than some developers. \n\nCome on, guys, how about getting some work done? It is difficult to be pulling all the weight.",
+        "ts": "1456104606.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I understand, I think it would be beneficial for us to all have an in person meeting tomorrow? It would be good to all get together and discuss where we are at as well as maybe assign more specific tasks so individuals are more productive",
+        "ts": "1456109031.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "absolutely. I am down for that.",
+        "ts": "1456109060.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I think it will really help move things along and take some of the weight off you and yuriy",
+        "ts": "1456109099.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I am available all day until 4:00, not sure when is best for everyone else?",
+        "ts": "1456109138.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I am available after 11:30 till 1:30.",
+        "ts": "1456109169.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I just have a class at 1:30 also ",
+        "ts": "1456109213.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i have classes 12:30 - 3:30",
+        "ts": "1456109526.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Here is a doodle:",
+        "ts": "1456110371.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<http:\/\/doodle.com\/poll\/fq7vhzdn88ahp9dd>",
+        "attachments": [
+            {
+                "title": "Doodle: Votee team meeting",
+                "title_link": "http:\/\/doodle.com\/poll\/fq7vhzdn88ahp9dd",
+                "text": "Doodle radically simplifies the process of scheduling events, meetings, appointments, etc. Herding cats gets 2x faster with Doodle. For free!",
+                "fallback": "Doodle: Votee team meeting",
+                "image_url": "http:\/\/doodle.com\/graphics\/static\/facebookSharingThumbnail.png",
+                "from_url": "http:\/\/doodle.com\/poll\/fq7vhzdn88ahp9dd",
+                "image_width": 300,
+                "image_height": 200,
+                "image_bytes": 6864,
+                "id": 1
+            }
+        ],
+        "ts": "1456110371.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "looks like tomorrow at 11:30 in the Mac Lab works",
+        "ts": "1456110884.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Sounds good :+1::skin-tone-2:",
+        "ts": "1456110950.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Kk",
+        "ts": "1456110957.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Good for me as well",
+        "ts": "1456111281.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Yuriy, I took a look at your code. I know what\u2019s wrong.",
+        "ts": "1456113222.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "in front end, AngularJS can provide you with these action methods, one for each CRUD operation: \n\n```{ 'get':    {method:'GET'},\n  'save':   {method:'POST'},\n  'query':  {method:'GET', isArray:true},\n  'remove': {method:'DELETE'},\n  'delete': {method:'DELETE'} };```",
+        "ts": "1456113278.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "You are calling your own method ```vote```",
+        "ts": "1456113293.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which is not going to work",
+        "ts": "1456113304.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yes i got to that point :simple_smile:",
+        "ts": "1456113318.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you\u2019ll need to store the answer data in a question object on front end",
+        "ts": "1456113343.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "then call save",
+        "ts": "1456113347.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or update",
+        "ts": "1456113354.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I believe update is better",
+        "ts": "1456113361.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "alternatively, you can define your custom methods!",
+        "ts": "1456113387.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i see...its been a long day",
+        "ts": "1456113388.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ohh really?",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456113398.000000"
+        },
+        "ts": "1456113394.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes",
+        "ts": "1456113397.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "```{\n  vote: {method:'POST', params:{vote:true}}\n });```",
+        "ts": "1456113408.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I\u2019ll put it in the code and commit for you",
+        "ts": "1456113424.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "one sec",
+        "ts": "1456113426.000050"
+    }
+]

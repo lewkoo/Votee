@@ -1,0 +1,896 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3D11K5>: which one? :upside_down_face:",
+        "ts": "1456405540.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "submitAnswer, though Levko has checked in since then. I think it is fine just thought I'd make sure haha",
+        "ts": "1456415814.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "The marker had an error running our project last iteration. Since I'm not sure how to reproduce his error, I've redone the installation instructions to hopefully be more explicit and succinct. If you have a chance please test the instructions on a fresh computer and let me know if there are missing steps.",
+        "ts": "1456420940.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I know for windows based install if you don't use powershell to install, some of the dependencies don't install properly on a regular command prompt with npm install ",
+        "ts": "1456421313.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Git bash works for me",
+        "ts": "1456421362.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'll bet that's the problem then. The screenshot the marker left shows the default Windows command prompt.",
+        "ts": "1456421530.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Sure enough, the mean docs have an understated comment about using git bash on Windows.",
+        "ts": "1456421613.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "So, who\u2019s going to do the end-to-end selenium testing? :simple_smile:",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456426051.000000"
+        },
+        "ts": "1456426049.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'll look into it.",
+        "ts": "1456426643.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "thanks",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456426861.000000"
+        },
+        "ts": "1456426859.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "<@U0J3A5RML>:  I can help you with the testing, just let me know what I can do ",
+        "ts": "1456427182.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Alright. I'm just looking through the docs on <http:\/\/seleniumhq.org|seleniumhq.org> so far.",
+        "ts": "1456427256.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I think we can get by with only using the IDE generated tests",
+        "ts": "1456427333.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and we can have a separate instruction manual on how to execute those",
+        "ts": "1456427352.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<http:\/\/docs.seleniumhq.org\/projects\/ide\/>",
+        "ts": "1456427357.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Is there a way to query for an Answer object based on id through the front end questions controller?",
+        "ts": "1456427904.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "or i suppose, can i create a way?",
+        "ts": "1456427932.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, there is. This is for the front-end controller. Example on how to find an articles object:",
+        "ts": "1456428626.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "```$scope.findOne = function() {\n      Articles.get({\n        articleId: $stateParams.articleId\n      }, function(article) {\n        $scope.article = article;\n      });\n    };```",
+        "ts": "1456428629.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0J3A5RML>: are you working on end to end testing?",
+        "ts": "1456439423.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Yeah, working on it.",
+        "ts": "1456439458.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":+1:",
+        "ts": "1456439471.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'm stuck on the end to end testing. For some reason login doesn't seem to work when running in the selenium environment, which is sort of a prerequisite to testing our pages.",
+        "ts": "1456446975.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "is it using mean-test DB?",
+        "ts": "1456447007.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you might be logging in with a user that does not exist in that DB",
+        "ts": "1456447022.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I think it should be using the same database as everything else.",
+        "ts": "1456447058.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "there is a separate DB for testing - mean-test",
+        "ts": "1456447079.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I haven't yet found confirmation for that though.",
+        "ts": "1456447080.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Does mean-test have a default user we can use?",
+        "ts": "1456447109.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "nope, it does not",
+        "ts": "1456447119.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "your test needs to create one",
+        "ts": "1456447131.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Right",
+        "ts": "1456447254.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "is someone gonna merge all the branches back before we submit?",
+        "ts": "1456448439.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Whoever is working on them should merge them when they are finished.",
+        "ts": "1456448485.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "how do i do that without breaking everything? lol I dont wanna mess it up",
+        "ts": "1456448523.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I don't think we are really ready to release tonight. ",
+        "ts": "1456448575.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok i can figure it out tomorrow",
+        "ts": "1456448588.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I suggest you guys try to figure out how to save an answer to a question. ",
+        "ts": "1456448662.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Not releasing. ",
+        "ts": "1456448666.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Releasing is a couple of commands away",
+        "ts": "1456448676.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Features are not :-)",
+        "ts": "1456448685.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok i just meant to merge voteehome to the main branch cause I made a bunch of front end changes in there, but ill take a look at voting branch again",
+        "ts": "1456448739.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "steps to merge are:\n\n*Commit all changes\ngit checkout develop\ngit pull\ngit checkout myCoolBranch\ngit merge develop\n*resolve merge conflicts",
+        "edited": {
+            "user": "U0J3A5RML",
+            "ts": "1456449046.000000"
+        },
+        "ts": "1456448993.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "git checkout develop\ngit merge myCoolBranch\ngit push",
+        "ts": "1456449029.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "perfect. thanks",
+        "ts": "1456449049.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Keep in mind that if you do have merge conflicts, you need to run\ngit add .\ngit commit\nafter fixing the conflicts",
+        "ts": "1456449129.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "develop now has some end to end tests that can be used as examples for anyone interested.\n\ntests are located under ``tests\/e2e\/``\ntests are run with ``gulp e2e.test``",
+        "ts": "1456450716.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>, thanks for that\n\nI would like to mention what I found out to be wrong with the submitting a vote - maybe one of you can take it from there and figure it out. \n\nEssentially, all the action happens in the server-side `questions.js` controller in function `vote`\n\nThis function is responsible for saving a vote cast by a user. The problem is the following: \n\n`answer.save()` where `answer` is an instance of `Answer` schema object does not save the object in the model. \n\nIn fact, there is no collection for Answers. Calling save() should, in theory, create one, but this does not happen.",
+        "ts": "1456453432.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I have been looking at it, but I'm not too familiar with everything so I haven't had any luck. Is the answer schema the only one with extend? ",
+        "ts": "1456453549.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, it is, but I found that extend has no effect on this",
+        "ts": "1456453575.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "And it doesn't need to be a package either correct?",
+        "ts": "1456453600.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that didn\u2019t help either",
+        "ts": "1456453609.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "what branch is the most up to date with all the vote submission\/answers stuff",
+        "ts": "1456453633.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Haha okay. Well I have been researching it for a while, I will let you know if I find anything helpful ",
+        "ts": "1456453635.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I want to pull an update",
+        "ts": "1456453664.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV4EBMJ>: submitAnswer. It doesn\u2019t not have my modifications, but they are irrelevant. I can push them to a new branch if you are interested\n\n<@U0J3D11K5>: this is what I am doing right now",
+        "ts": "1456453697.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, I do have a viable solution.",
+        "ts": "1456454022.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "nice",
+        "ts": "1456454031.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "There is an error when I hit `answers.save()` \n\nHere it is: \n\n```render: [Function] } { [ValidationError: Answer validation failed]\n  message: 'Answer validation failed',\n  name: 'ValidationError',\n  errors: \n   { created: \n      { [CastError: Cast to Date failed for value \"function now() { [native code] }\" at path \"created\"]\n        message: 'Cast to Date failed for value \"function now() { [native code] }\" at path \"created\"',\n        name: 'CastError',\n        kind: 'Date',\n        value: [Function: now],\n        path: 'created',\n        reason: undefined } } }```",
+        "ts": "1456454135.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "thats the code for recording when date\/time the answer is submitted",
+        "ts": "1456454231.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "there should be a line somewhere that is type casting date when it should be saving as an array I believe",
+        "ts": "1456454290.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I had used Date.now to set the created for the new answer object",
+        "ts": "1456454323.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, that is exactly what is happening - you can set it, but it won\u2019t be saved in the DB",
+        "ts": "1456454352.000069"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if you set it to Date.now",
+        "ts": "1456454358.000070"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "strange. Okay but the default is set to Date.now, so will it work that way or still cause issues?",
+        "ts": "1456454501.000071"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if you don\u2019t set it when creating a new Answer object, it fails with the same problem",
+        "ts": "1456454554.000072"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but now at least we know what\u2019s up",
+        "ts": "1456454562.000073"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "oh okay but still a good find!",
+        "ts": "1456454591.000074"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "It looks to me like Date.now isn't being called.",
+        "ts": "1456454603.000075"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "It's trying to cast to a Date object but it has a function. What happens if you replace 'Date.now' with 'Date.now()'",
+        "ts": "1456454653.000076"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "same thing",
+        "ts": "1456454664.000077"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just tried it",
+        "ts": "1456454666.000078"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "odd.",
+        "ts": "1456454672.000079"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "trying new Date().getTime()",
+        "ts": "1456454674.000080"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "solved it",
+        "ts": "1456454732.000081"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and while doing that I also figured out how to authorize REST requests",
+        "ts": "1456454780.000082"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Fantasti",
+        "ts": "1456454799.000083"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "hooray!",
+        "ts": "1456454799.000084"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "c",
+        "ts": "1456454800.000085"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>, you will not believe this. Remember we had no clue what to do with the token? It turns out that you have to authorize your requests like this: \n\nIn your request Header, you put \u2018authorization\u2019 as you key and ```Bearer eyJhbGciOiJIUzI1NiJ9.JTdCJTIyX192JTIyOjAsJTIyZW1haWwlMjI6JTIycHJvZjFAZ21haWwuY29tJTIyLCUyMnVzZXJuYW1lJTIyOiUyMnByb2YlMjIsJTIybmFtZSUyMjolMjJMZXZrbyUyMiwlMjJfaWQlMjI6JTIyNTZjZjlhNWRlMjZmOTk4OGFhNWUwOThlJTIyLCUyMnByb3ZpZGVyJTIyOiUyMmxvY2FsJTIyLCUyMnJvbGVzJTIyOiU1QiUyMnByb2Zlc3NvciUyMiwlMjJhdXRoZW50aWNhdGVkJTIyJTVEJTdE.wEmEYbpa84zF0JW_Yu6H2kjFmATi_8KPY_L6tn3z2-k``` as your value",
+        "ts": "1456454881.000086"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "where that random string is your token",
+        "ts": "1456454892.000087"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "That's unintuitive.",
+        "ts": "1456454938.000088"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we were missing two things here: 1) the \u2018authorization\u2019 being the key, 2) token being proceeded by the `Bearer ` string.",
+        "ts": "1456454941.000089"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I know",
+        "ts": "1456454945.000090"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is frankly ridiculous",
+        "ts": "1456454956.000091"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but that is how browser authenticates",
+        "ts": "1456454963.000092"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which is where I took it from - a browser request header :simple_smile:",
+        "ts": "1456454976.000093"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "reverse-engineer my ass...",
+        "ts": "1456454983.000094"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "as for answers ...",
+        "ts": "1456455219.000095"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<https:\/\/www.dropbox.com\/s\/eaczmq77ap9o33a\/Screenshot%202016-02-25%2020.53.31.png?dl=0>",
+        "ts": "1456455219.000096"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> shared a file: <https:\/\/4350team.slack.com\/files\/levko\/F0P5CFFUN\/screenshot_2016-02-25_20.53.31.png|Screenshot 2016-02-25 20.53.31.png>",
+        "file": {
+            "id": "F0P5CFFUN",
+            "created": 1456455220,
+            "timestamp": 1456455220,
+            "name": "Screenshot 2016-02-25 20.53.31.png",
+            "title": "Screenshot 2016-02-25 20.53.31.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 280219,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "dropbox",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/www.dropbox.com\/s\/eaczmq77ap9o33a\/Screenshot%202016-02-25%2020.53.31.png?dl=0",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_64.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_80.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_360.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360_w": 360,
+            "thumb_360_h": 161,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_480.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_480_w": 480,
+            "thumb_480_h": 215,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_160.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_720.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720_w": 720,
+            "thumb_720_h": 323,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_960.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_960_w": 960,
+            "thumb_960_h": 430,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P5CFFUN-c2e4089391\/screenshot_2016-02-25_20.53.31_1024.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 459,
+            "image_exif_rotation": 1,
+            "original_w": 2334,
+            "original_h": 1046,
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0P5CFFUN\/screenshot_2016-02-25_20.53.31.png",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1456455223.000097"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "record saved",
+        "ts": "1456455232.000098"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I\u2019ll clean up the code and push so that whoever is working on questions can finish it",
+        "ts": "1456455258.000099"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I have courses feature to do :simple_smile:",
+        "ts": "1456455264.000100"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "done. Answers are now saved.",
+        "ts": "1456455601.000101"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "For those who listened to today lecture about static testing: we actually do have this facility and it is called `jshint`",
+        "ts": "1456455989.000102"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you can run it by typing `gulp jshint`",
+        "ts": "1456456000.000103"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is also executed every time you change a file with a server running",
+        "ts": "1456456016.000104"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "the less errors and warning we get when running it- the better",
+        "ts": "1456456040.000105"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "usually it is something simple like single quotes should be used instead of double quotes",
+        "ts": "1456456076.000106"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Do we have tools for doing static analysis on the css and html portions as well?",
+        "ts": "1456456101.000107"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "i think that he said all the static testing was for next iteration on other people's projects",
+        "ts": "1456456129.000108"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>: yes, we do, at least for css - run `gulp csslint`",
+        "ts": "1456456164.000109"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV4EBMJ>: we are not required to do so, but it is extremely useful as outlined in the lecture today - the second biggest danger is not using them at all :simple_smile:",
+        "ts": "1456456196.000110"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "good point :simple_smile:",
+        "ts": "1456456252.000111"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or in webstorm if you can setup a gulp task which points to gulpfile to inlcude all of the tasks :simple_smile:",
+        "ts": "1456456521.000112"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "there is actually a separate menu in WebStorm which will list all available gulp tasks for you",
+        "ts": "1456456557.000113"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "did I merge it right or did I break it? lol",
+        "ts": "1456456641.000114"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "looks fine to me",
+        "ts": "1456456664.000115"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "perfect",
+        "ts": "1456456674.000116"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "make sure to remove `'feature\/voteeMainPage\u2019` branch",
+        "ts": "1456456680.000117"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "from remote",
+        "ts": "1456456685.000118"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you can do this by : ```git push origin \u2014delete feature\/voteeMainPage```",
+        "ts": "1456456726.000119"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and then remove locally \n\n```git branch -D feature\/voteeMainPage```",
+        "ts": "1456456760.000120"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "oh, and when I said fine, I meant that the merge looks fine to me. whether or not it breaks the code on `develop` is another story",
+        "ts": "1456456828.000121"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you should check out develop and test, at least a little bit",
+        "ts": "1456456840.000122"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "it had no conflicts with the code that was there because it was mostly changes to the UI but I will definitely double check",
+        "ts": "1456456863.000123"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "make sure you run ```npm test ``` before merging important things too",
+        "ts": "1456456864.000124"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is common practice to test before you push, even if you changes a few lines",
+        "ts": "1456456906.000125"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah I did check when I merged before I pushed it back out to develop",
+        "ts": "1456456950.000126"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "That's perfect.",
+        "ts": "1456456975.000127"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I was just gonna ask if deleting it through phpstorm is a solution but you got it already :stuck_out_tongue:",
+        "ts": "1456457044.000128"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "oh, they might have that option, but command line is just faster and easier :simple_smile:",
+        "ts": "1456457079.000129"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if anyone needs it, I still have it on my local machine",
+        "ts": "1456457094.000130"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just a heads up we will need to  perform validation for pretty much all forms on front end",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456458437.000000"
+        },
+        "ts": "1456458429.000131"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i believe you can validate using angularjs without submitting the form (front end validations)",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456458463.000000"
+        },
+        "ts": "1456458456.000133"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "oh, and it must be done by tomorrow night :simple_smile:",
+        "ts": "1456458460.000134"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "validation examples are on sign up form",
+        "ts": "1456458471.000136"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "lots of them",
+        "ts": "1456458474.000137"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "validation is performed on the front end",
+        "ts": "1456458486.000138"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i.e. something like disabling create button if the field is empty",
+        "ts": "1456458502.000139"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "back end validations are also needed",
+        "ts": "1456458514.000140"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "examples of that are also present",
+        "ts": "1456458526.000141"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "but front end is what the marker will actually see :simple_smile:",
+        "ts": "1456458553.000142"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "it will look nicely with bootstrap css",
+        "ts": "1456458629.000143"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "which front end page specifically are we referring to as needing validation.  The create questions page already requires you to fill out all the fields before the create button will submit a new question.  If you try click it with the fields empty, you get feedback to fill in the fields",
+        "ts": "1456469193.000002"
+    }
+]

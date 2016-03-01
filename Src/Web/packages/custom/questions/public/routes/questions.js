@@ -35,7 +35,7 @@ angular.module('mean.questions').config(['$stateProvider',
             })
             .state('vote', {
                 url: '/questions/vote/:questionId',
-                templateUrl: '/questions/views/vote.html',
+                templateUrl: '/questions/views/view.html',
                 requiredCircles: {
                     circles: ['authenticated'],
                     denyState: 'auth.login'

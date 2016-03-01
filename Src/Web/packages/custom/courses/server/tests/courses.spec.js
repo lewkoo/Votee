@@ -139,15 +139,6 @@ describe('<Unit Test>', function () {
                 });
             });
 
-            it('it should be throwing an error when you try to save a course without a professor', function (done) {
-                this.timeout(10000);
-                course.professor = null;
-
-                return course.save(function (err, data) {
-                    expect(err).to.not.be(null);
-                    done();
-                });
-            });
         }); // END of Save method tests
 
         afterEach(function (done) {

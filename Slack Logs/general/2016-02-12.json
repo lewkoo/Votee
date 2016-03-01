@@ -1,0 +1,220 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Anyone would like to do an installation guide? (see profs email)",
+        "ts": "1455301411.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "by the way, this relates to the Iteration 1 - the one we submitted last week - not the next one",
+        "ts": "1455301817.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "preferable done today...",
+        "ts": "1455302209.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1455302215.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I can just copy it from my old repo...",
+        "ts": "1455302547.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "is it similar?",
+        "ts": "1455302644.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "or the same? :simple_smile:",
+        "ts": "1455302652.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "almost identical",
+        "ts": "1455302655.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "When was this email sent? I don't have it.",
+        "ts": "1455302667.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "today at 12:20",
+        "ts": "1455302690.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "want it forwarded?",
+        "ts": "1455302696.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "this.is.the.installation.steps.js",
+        "ts": "1455303388.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "?",
+        "ts": "1455303425.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "It's a name for the guide, inspired by the test suite ",
+        "ts": "1455303594.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "sure, you can name it that, if you wish :simple_smile:",
+        "ts": "1455303640.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I can do it. What exactly do I need to say in it ",
+        "ts": "1455303665.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "essentially, we are asked to produce an installation guide for our project on a clean state computer. so that would be instructions on how to install our project and all dependencies",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1455303793.000000"
+        },
+        "ts": "1455303782.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Ok I'll work on it after my OS class ",
+        "ts": "1455303883.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "sweet, thanks",
+        "ts": "1455303899.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "It came through. Just took some time to show up in gmail.",
+        "ts": "1455304619.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "make sure you include MongoDB and NodeJS installation instructions as well",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1455308695.000000"
+        },
+        "ts": "1455308687.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "and to have mongod running as well...",
+        "ts": "1455308734.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I'll just put the entire MEAN installation then since it covers all of that",
+        "ts": "1455309886.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "this:\n$ sudo npm install -g mean-cli",
+        "ts": "1455309919.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "mean-cli is not needed to run the project",
+        "ts": "1455309941.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "just node and mongo?",
+        "ts": "1455309974.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "you need to explain how they need to install prereqs, how to checkout repo and how to run",
+        "ts": "1455310039.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ok well that should be included if I just tell them to install the MEAN environment, unless you think its better to just install NodeJS and mongoDB separately",
+        "ts": "1455310100.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "need to be more specific on how to install this MEAN environment, Installation Guide...",
+        "ts": "1455310181.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "how can they install everything together?",
+        "ts": "1455310206.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah ill go step by step then",
+        "ts": "1455310216.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "sound good :simple_smile:",
+        "ts": "1455310236.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "the more specific, the more user friendly it is",
+        "ts": "1455310264.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "alright i committed what I had, the studentvoteconfirmation branch is probably useless now, i was working on it last iteration lol but the readme should be in the documentation",
+        "ts": "1455312717.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "feel free to add or change stuff",
+        "ts": "1455312757.000040"
+    }
+]

@@ -1,0 +1,798 @@
+[
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I think I've figured out why the voting path isn't working, although I'm not yet sure how to fix it in angular. It seems that both question updating and question voting are using the same path. By placing a debug message in the server side question.update function, you can see it called when clicking the vote button.",
+        "ts": "1456241389.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Yes that's correct.  We're trying to figure out how to make it call vote function.  ",
+        "ts": "1456243144.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "And if you wanna work on that branch pls checkout a different local copy please. So we don't have to deal with merges. Thanks.  ",
+        "ts": "1456243204.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "npm install phantomjs-prebuilt",
+        "ts": "1456256614.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "does anyone had an issue when you remove a testing function from code it still runs it when I call npm test ?",
+        "ts": "1456257183.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "more like : \u201cI didn\u2019t know that I had another file with a bunch of tests there\u201d \u2026 :simple_smile:",
+        "ts": "1456257997.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "My AWS account it blocked. WTF. Contacted support to unlock it. Amazon...",
+        "ts": "1456267568.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "will deploy production DB there once they activate it",
+        "ts": "1456267597.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I might also consider a full deployment on AWS instead of heroku front end - AWS back end combo.",
+        "ts": "1456267630.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "is it an easy thing to do or should we do something to help?",
+        "ts": "1456267634.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "what are your thoughts? should we put everything on one side? or have front-end - back-end separate?",
+        "ts": "1456267667.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is super easy :simple_smile:",
+        "ts": "1456267677.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just need to get access to AWS instance",
+        "ts": "1456267691.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "ah ok,  well i'd just do whatever is easiest.  Itll probably make it easier for the team trying to make the mobile app",
+        "ts": "1456267750.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "for mobile - it won\u2019t matter, really. they still will be accessing Heroku - that is where the server is running. \n\nfor me, it is simpler to just run MongoDB on AWS and update the config on Heroku to access that DB instead of one that I am already hosting.",
+        "ts": "1456267828.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if someone want to get some experience with AWS - feel free to do this, I can provide you with pointers",
+        "ts": "1456267869.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is really simple",
+        "ts": "1456267874.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "otherwise, I will do it :simple_smile:",
+        "ts": "1456267879.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Im just doing some css stuff that I havent committed, but I could give it a try... ive never done AWS stuff before though lol",
+        "ts": "1456268006.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "AWS is basically a remote shell access to a virtual computer.",
+        "ts": "1456268033.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you type commands into it and it runs them.",
+        "ts": "1456268056.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just like on your local machine.",
+        "ts": "1456268061.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "AWS offers *a lot* of different services.",
+        "ts": "1456268086.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "the one we are interested in is a free tier EC 2 instance",
+        "ts": "1456268099.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and before you do anything, make sure that AWS does not have your Amazon credit card on file.",
+        "ts": "1456268121.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "because if your traffic reaches out of the free tier limitations, they will shamelessly start charging you :simple_smile:",
+        "ts": "1456268146.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "with too-easy-to-ignore warnings",
+        "ts": "1456268160.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "i literally just went to their site and am going through the signup and it wants me to enter a credit card and wont let me proceed...",
+        "ts": "1456268176.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "haha",
+        "ts": "1456268186.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1456268188.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "now it is different, I guess...",
+        "ts": "1456268199.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "maybe that is why my account it blocked - they do not have my credit card on file",
+        "ts": "1456268218.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "possible.  I wonder if we will still be required to use it then for the project",
+        "ts": "1456268241.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "the requirements clearly state - \u2018deploy back end on AWS'",
+        "ts": "1456268278.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which means - \u2018type in your credit card details\u2019 :simple_smile:",
+        "ts": "1456268288.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "maybe the prof gets a cut from amazon lol",
+        "ts": "1456268302.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "anyways, we still have time for my account to get unblocked",
+        "ts": "1456268303.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah let us know what happens and we can figure it out",
+        "ts": "1456268317.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "let\u2019s give them a day or two",
+        "ts": "1456268319.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "well this is fun... tried to rerun the app since i got home and now localhost:3000 is giving me a blank browser window...",
+        "ts": "1456268549.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep. is your server running?",
+        "ts": "1456268568.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yep",
+        "ts": "1456268576.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "tried refreshing?",
+        "ts": "1456268586.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah. might be caching old data or something maybe a reboot",
+        "ts": "1456268601.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which branch?",
+        "ts": "1456268610.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "main page",
+        "ts": "1456268651.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "i was looking at css stuff",
+        "ts": "1456268656.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "i mightve broke something",
+        "ts": "1456268661.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "voteeMainpage i believe",
+        "ts": "1456268672.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "that branch is REALLY obsolete",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1456268747.000000"
+        },
+        "ts": "1456268684.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if it is not pushed, I can\u2019t check it out for you",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456268698.000000"
+        },
+        "ts": "1456268690.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "*obsolete",
+        "ts": "1456268710.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "like 40 commits behind master :simple_smile:",
+        "ts": "1456268716.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "what?",
+        "ts": "1456268724.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "gonna update it",
+        "ts": "1456268727.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "it was merged to develop and released but the branch wasnt delted",
+        "ts": "1456268758.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I merged develop into it",
+        "ts": "1456268776.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I\u2019ll clean up branches after release",
+        "ts": "1456268787.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0HV4EBMJ>: do a ```git pull```",
+        "ts": "1456268800.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "kk",
+        "ts": "1456268810.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "see if the issue persists",
+        "ts": "1456268812.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "got it. nice.",
+        "ts": "1456268925.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "did that fix your problem, <@U0HV4EBMJ> ?",
+        "ts": "1456269290.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah all good",
+        "ts": "1456269312.000069"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0HV4EBMJ>: <https:\/\/getbootstrap.com\/css\/>",
+        "attachments": [
+            {
+                "text": "Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+                "fallback": "Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+                "from_url": "https:\/\/getbootstrap.com\/css\/",
+                "id": 1
+            }
+        ],
+        "ts": "1456269328.000070"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just use bootstrap class for frontend, unless you want to add something else",
+        "ts": "1456269355.000072"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah thats what ive been looking at",
+        "ts": "1456269403.000073"
+    },
+    {
+        "text": "added an integration to this channel: <https:\/\/4350team.slack.com\/services\/B0NNT64GY|heroku>",
+        "bot_id": "B0NNT64GY",
+        "type": "message",
+        "subtype": "bot_add",
+        "user": "U0HUU655Y",
+        "ts": "1456269474.000074"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "doing a test deploy on heroku.",
+        "ts": "1456269850.000077"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "should finish with a message here :simple_smile:",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456269871.000000"
+        },
+        "ts": "1456269869.000078"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "technically, the database is already hosted on AWS :simple_smile:",
+        "ts": "1456270053.000080"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but this is what Hadi would call cheating",
+        "ts": "1456270060.000081"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "anyone interested? :simple_smile:",
+        "ts": "1456270071.000082"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<https:\/\/www.dropbox.com\/s\/6oxwmqgedwk0439\/Screenshot%202016-02-23%2017.28.05.png?dl=0>",
+        "ts": "1456270089.000083"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> shared a file: <https:\/\/4350team.slack.com\/files\/levko\/F0NNR5G03\/screenshot_2016-02-23_17.28.05.png|Screenshot 2016-02-23 17.28.05.png>",
+        "file": {
+            "id": "F0NNR5G03",
+            "created": 1456270091,
+            "timestamp": 1456270091,
+            "name": "Screenshot 2016-02-23 17.28.05.png",
+            "title": "Screenshot 2016-02-23 17.28.05.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 275288,
+            "mode": "external",
+            "is_external": true,
+            "external_type": "dropbox",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/www.dropbox.com\/s\/6oxwmqgedwk0439\/Screenshot%202016-02-23%2017.28.05.png?dl=0",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_64.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_80.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_360.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360_w": 360,
+            "thumb_360_h": 116,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_480.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_480_w": 480,
+            "thumb_480_h": 155,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_160.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_720.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720_w": 720,
+            "thumb_720_h": 232,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_960.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_960_w": 960,
+            "thumb_960_h": 310,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNR5G03-d4aff50184\/screenshot_2016-02-23_17.28.05_1024.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 330,
+            "image_exif_rotation": 1,
+            "original_w": 2326,
+            "original_h": 750,
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0NNR5G03\/screenshot_2016-02-23_17.28.05.png",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": false,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1456270096.000084"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Under *Sandbox*",
+        "ts": "1456270115.000085"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": ":simple_smile:",
+        "ts": "1456270127.000086"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "did I deploy MongoDB on AWS? nope.",
+        "ts": "1456270138.000087"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "where is MongoDB deployed? on AWS",
+        "ts": "1456270147.000088"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I need to talk to him about this :simple_smile:",
+        "ts": "1456270157.000089"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "see if this is cheating or not",
+        "ts": "1456270163.000090"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "email?",
+        "ts": "1456270173.000091"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it will take me 10 paragraphs to explain this in email",
+        "ts": "1456270206.000092"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 3460cad of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456270422.000093"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "nice",
+        "ts": "1456270441.000094"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep. heroku deployment bot works.",
+        "ts": "1456270448.000095"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if you want access to our Heroku project - it is free - let me know, I will add you",
+        "ts": "1456270493.000096"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "gonna try writing API docs",
+        "ts": "1456271763.000097"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is simple - we just have to provide API docs for 2 packages :simple_smile:",
+        "ts": "1456271782.000098"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "questions and courses",
+        "ts": "1456271785.000099"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and users",
+        "ts": "1456271795.000100"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "fuck :simple_smile:",
+        "ts": "1456271798.000101"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yes, i wanna make it look nice",
+        "ts": "1456271805.000102"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<http:\/\/apidocjs.com\/>",
+        "ts": "1456271827.000103"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you can add these comments in the routes.js",
+        "ts": "1456271840.000104"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "then this tool will generate the docs for you",
+        "ts": "1456271851.000105"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and yes, they will look nice",
+        "ts": "1456271856.000106"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "was looking at raml",
+        "ts": "1456271870.000107"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "here is an example: <http:\/\/apidocjs.com\/example\/>",
+        "ts": "1456271873.000108"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "raml looks like it is far too complex for your purpouses",
+        "ts": "1456271912.000109"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeap its better for bigger projects lol",
+        "ts": "1456271939.000110"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "apidocsjs seems to do what we want",
+        "ts": "1456272013.000111"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I can then host the generated API docs website somewhere",
+        "ts": "1456272028.000112"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so that the team that will be doing the mobile app can see that stuff",
+        "ts": "1456272051.000113"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, I am done with the course controller tests",
+        "ts": "1456272767.000114"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if you need help with testing the server side controller - let me know",
+        "ts": "1456272785.000115"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HV1T7F1|yuriy> uploaded a file: <https:\/\/4350team.slack.com\/files\/yuriy\/F0NNY75JQ\/pasted_image_at_2016_02_23_06_51_pm.png|Pasted image at 2016-02-23, 6:51 PM>",
+        "file": {
+            "id": "F0NNY75JQ",
+            "created": 1456275147,
+            "timestamp": 1456275147,
+            "name": "Pasted image at 2016_02_23 06_51 PM.png",
+            "title": "Pasted image at 2016-02-23, 6:51 PM",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HV1T7F1",
+            "editable": false,
+            "size": 110437,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0NNY75JQ\/pasted_image_at_2016_02_23_06_51_pm.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0NNY75JQ\/download\/pasted_image_at_2016_02_23_06_51_pm.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_64.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_80.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_360.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_360_w": 360,
+            "thumb_360_h": 203,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_480.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_480_w": 480,
+            "thumb_480_h": 270,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_160.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_720.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_720_w": 720,
+            "thumb_720_h": 405,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_960.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_960_w": 960,
+            "thumb_960_h": 540,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0NNY75JQ-08ad33664b\/pasted_image_at_2016_02_23_06_51_pm_1024.png?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 576,
+            "image_exif_rotation": 1,
+            "original_w": 1920,
+            "original_h": 1080,
+            "permalink": "https:\/\/4350team.slack.com\/files\/yuriy\/F0NNY75JQ\/pasted_image_at_2016_02_23_06_51_pm.png",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0NNY75JQ-ef5f115fdb",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+
+            ],
+            "ims": [
+
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HV1T7F1",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HV1T7F1|yuriy>",
+        "bot_id": null,
+        "ts": "1456275150.000118"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "sneak peek of the questions API doc :simple_smile:",
+        "ts": "1456275167.000119"
+    }
+]
