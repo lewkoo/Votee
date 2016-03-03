@@ -14,7 +14,13 @@ Install the latest stable release of the following:
 - Follow the installation guide for [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
 - Download and install [Git](http://git-scm.com/downloads)  
 You'll need git bash in order to run the rest of the commands.
-IF you do not have Python installed, you must install it before proceeding. [Download Python here](https://www.python.org/downloads/release/python-2711/)
+If you do not have Python installed, you must install it before proceeding. [Download Python here](https://www.python.org/downloads/release/python-2711/)
+
+Also, sometimes certain packages fail to install on Windows if a C++ compiler is not present. This can be fixed by doing the following:
+
+ - Install [Visual Studio Community 2013](http://go.microsoft.com/fwlink/?LinkId=517284)
+ - Run *npm config set msvs_version 2013 --global*
+ - Run *npm install bcrypt*
 
 ### OS X
 - Download and install [Node.js](https://nodejs.org/en/download/stable/)
