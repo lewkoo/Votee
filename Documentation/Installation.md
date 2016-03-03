@@ -60,7 +60,7 @@ To run Votee on your local machine, run
     gulp
 
 This will start a development server on port 3000.  
-Visit ``localhost:3000`` in your favorite browser.
+Visit [localhost:3000](http://localhost:3000) in your favorite browser.
 
 To start a production server, instead run
 
