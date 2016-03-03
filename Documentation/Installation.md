@@ -19,8 +19,8 @@ If you do not have Python installed, you must install it before proceeding. [Dow
 Also, sometimes certain packages fail to install on Windows if a C++ compiler is not present. This can be fixed by doing the following:
 
  - Install [Visual Studio Community 2013](http://go.microsoft.com/fwlink/?LinkId=517284)
- - Run *npm config set msvs_version 2013 --global*
- - Run *npm install bcrypt*
+ - Run `npm config set msvs_version 2013 --global`
+ - Run `npm install bcrypt`
 
 ### OS X
 - Download and install [Node.js](https://nodejs.org/en/download/stable/)
