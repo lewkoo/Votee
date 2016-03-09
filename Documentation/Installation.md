@@ -44,6 +44,10 @@ Install nodejs, mongodb, and git.
 
 ## Prerequisite packages
 
+To install prerequisite packages on your local machine, first change directory
+
+    cd Src/Web
+
 In your terminal, navigate to the Votee code folder and run the following commands.  
 *On Windows, make sure you use Git Bash to run these commands.*
 
