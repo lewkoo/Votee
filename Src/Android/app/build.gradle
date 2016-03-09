@@ -17,6 +17,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    // Definition of build flavours. Just like we have separate
+    // configuration files and launch settings for the web server,
+    // I thought it would be a good idea to have the same for Android
+    // Author: lewkoo
+    // taken from http://blog.brainattica.com/how-to-work-with-flavours-on-android/
+    productFlavors {
+        development {
+
+        }
+
+        production {
+
+        }
+    }
 }
 
 dependencies {
