@@ -49,6 +49,10 @@ In your terminal, navigate to the Votee code folder and run the following comman
 
     npm install -g gulp bower
     npm install
+    
+*On Windows, sometimes certain front-end packages fail to install correctly. We found a few ways to remedy this, however, the easiest one is to run:*
+    bower install -g
+
 
 ## Running
 
