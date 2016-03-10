@@ -8,7 +8,7 @@
     <form name="questionForm" class="form-horizontal col-md-8" role="form" data-ng-submit="vote(questionForm)" novalidate>
 
         <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
-        <div class="col-md-12" data-ng-if="!hasVoted(question)">
+        <div class="col-md-12" data-ng-if="!hasVoted(question) || hasAuthorization(question)">
             <!--TODO: (preivous code) remove when surely not needed-->
             <!--<div ng-repeat="option in question.options" class="row-fluid">-->
                 <!--<label><input type="radio" name="meaningless" ng-value="(( $index ))" ng-model="selectedAnswer.index" />-->
@@ -51,7 +51,7 @@
                         </div>
 
                     </div>
-                    <div class="panel-footer">
+                    <div class="panel-footer" data-ng-hide="hasAuthorization(question)">
                         <button type="submit" class="btn btn-success btn-sm">
                             <span class="glyphicon glyphicon-ok"></span>Vote</button>
                         <!--TODO: implement and uncomment-->
@@ -64,7 +64,7 @@
         </div>
     </form>
 
-    <div data-ng-if="hasVoted(question)">
+    <div data-ng-if="hasVoted(question) && !hasAuthorization(question)">
         <h3>You have already voted and your answer to this question has been submitted.</h3>
     </div>
 
