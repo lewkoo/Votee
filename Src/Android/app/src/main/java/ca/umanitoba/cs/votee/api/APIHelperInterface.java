@@ -1,5 +1,14 @@
 package ca.umanitoba.cs.votee.api;
 
+import android.telecom.Call;
+
+import org.json.JSONObject;
+
+import retrofit.Callback;
+import retrofit.http.Body;
+import retrofit.http.GET;
+import retrofit.http.POST;
+
 /**
  * Created by Levko on 2016-03-10.
  *
@@ -13,8 +22,8 @@ public interface APIHelperInterface {
     String VT_API_URL_USER_LOGOUT = "/api/logout";
     String VT_API_URL_USER_REGISTER = "/api/register";
     String VT_API_URL_USER_ABOUT_ME = "/api/users/me";
-    String VT_API_URL_USER_GET_CONFIG = "/api/get-config";
 
+    //TODO: Implement method definitions and implementations for these routes
     // Circles package routes
     String VT_API_URL_CIRCLES_MINE = "/api/circles/mine";
     String VT_API_URL_CIRCLES_TEST = "/api/circles/test";
@@ -25,5 +34,22 @@ public interface APIHelperInterface {
 
     // Questions package routes
     String VT_API_URL_QUESTIONS = "/api/questions";
+
+    // Users package methods
+    // Sends a log in payload, receives a token
+    @POST(VT_API_URL_USER_LOGIN)
+    void logIn(@Body JSONObject params, Callback<APIHelper.Response> callback);
+
+    @GET(VT_API_URL_USER_LOGOUT)
+    // Send a log out command, receives a success / failure
+    void logOut(@Body JSONObject params, Callback<APIHelper.Response> callback);
+
+    @POST(VT_API_URL_USER_REGISTER)
+    // Send a register command, receives a success / failure
+    void register(@Body JSONObject params, Callback<APIHelper.Response> callback);
+
+    @GET(VT_API_URL_USER_ABOUT_ME)
+    // Send a command to get user data, receives user data JSON
+    void userInfo(@Body JSONObject params, Callback<APIHelper.Response> callback);
 
 }
