@@ -32,7 +32,9 @@
             <span>{{question.creator.name}}</span>
             <h2>
                 <div class="col-xs-12 col-sm-5">
-                <a data-ng-href="/questions/{{question._id}}" class="btn btn-block btn-danger">{{question.title}}</a>
+                    <a data-ng-href="/questions/{{question._id}}" class="btn btn-block btn-danger">{{question.title}}
+                        <span class="glyphicon glyphicon-ok" data-ng-hide="!hasVoted(question)"></span>
+                    </a>
                 </div>
             </h2>
             <hr>
