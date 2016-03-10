@@ -22,13 +22,18 @@ android {
     // I thought it would be a good idea to have the same for Android
     // Author: lewkoo
     // taken from http://blog.brainattica.com/how-to-work-with-flavours-on-android/
+
+    // You can access any of these variables by calling BuildConfig.VARIABLE_NAME
+
     productFlavors {
         development {
-
+            applicationId "ca.umanitoba.cs.votee.develop"
+            buildConfigField 'String', 'HOST', '"http://127.0.0.1:3000"'
         }
 
         production {
-
+            applicationId "ca.umanitoba.cs.votee"
+            buildConfigField 'String', 'HOST', '"http://votee-project.herokuapp.com"'
         }
     }
 }
@@ -36,6 +41,7 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
 }

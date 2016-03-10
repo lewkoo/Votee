@@ -10,4 +10,10 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
     public ApplicationTest() {
         super(Application.class);
     }
+
+    @Test
+    public void Assert_True() {
+        assertTrue(true);
+    }
+
 }
