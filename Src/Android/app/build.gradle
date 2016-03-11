@@ -15,6 +15,25 @@ dependencies {
     compile 'com.android.support:design:23.2.0'
 }
 
+def getIP() {
+    InetAddress result = null;
+    Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
+    while (interfaces.hasMoreElements()) {
+        Enumeration<InetAddress> addresses = interfaces.nextElement().getInetAddresses();
+        while (addresses.hasMoreElements()) {
+            InetAddress address = addresses.nextElement();
+            if (!address.isLoopbackAddress() && !address.toString().endsWith(".1")) {
+                if (address.isSiteLocalAddress()) {
+                    return address.getHostAddress();
+                } else if (result == null) {
+                    result = address;
+                }
+            }
+        }
+    }
+    return (result != null ? result : InetAddress.getLocalHost()).getHostAddress();
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -54,7 +73,7 @@ android {
     productFlavors {
         development {
             applicationId "ca.umanitoba.cs.votee.develop"
-            buildConfigField 'String', 'HOST', '"http://127.0.0.1:3000"'
+            buildConfigField 'String', 'HOST', '"http://'+getIP()+':3000"'
         }
 
         production {
@@ -63,4 +82,3 @@ android {
         }
     }
 }
-
