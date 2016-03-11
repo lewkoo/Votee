@@ -94,7 +94,7 @@ describe('Questions', function(){
         it('should change title', function(){
             element(by.id('editButton')).click();
             element(by.id('title')).sendKeys(protractor.Key.CONTROL, 'a', protractor.Key.NULL,'New Title');
-            element(by.buttonText('Edit')).click();
+            element(by.css('[type=submit]')).click();
 
             expect(element(by.css('.panel-title')).getText()).toBe('New Title');
         });
