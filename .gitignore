@@ -10,6 +10,14 @@ Icon
 .Trashes
 
 # --------------------
+# Windows Files
+# --------------------
+*/PhantomJS 2.1.1 (Windows 8 0.0.0)
+*TESTS-PhantomJS_2.1.1_(Windows_8_0.0.0).xml
+Src/Web/tests/results/coverage/PhantomJS 2.1.1 (Windows 8 0.0.0)/
+
+
+# --------------------
 # Eclipse or Nodeclipse "Enide Studio" Files
 # --------------------
 # recommended to add to Git SCM

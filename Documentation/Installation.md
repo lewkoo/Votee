@@ -14,6 +14,13 @@ Install the latest stable release of the following:
 - Follow the installation guide for [MongoDB](https://docs.mongodb.org/manual/tutorial/install-mongodb-on-windows/)
 - Download and install [Git](http://git-scm.com/downloads)  
 You'll need git bash in order to run the rest of the commands.
+If you do not have Python installed, you must install it before proceeding. [Download Python here](https://www.python.org/downloads/release/python-2711/)
+
+Also, sometimes certain packages fail to install on Windows if a C++ compiler is not present. This can be fixed by doing the following:
+
+ - Install [Visual Studio Community 2013](http://go.microsoft.com/fwlink/?LinkId=517284)
+ - Run `npm config set msvs_version 2013 --global`
+ - Run `npm install bcrypt`
 
 ### OS X
 - Download and install [Node.js](https://nodejs.org/en/download/stable/)
@@ -37,23 +44,38 @@ Install nodejs, mongodb, and git.
 
 ## Prerequisite packages
 
+To install prerequisite packages on your local machine, first change directory
+
+    cd Src/Web
+
 In your terminal, navigate to the Votee code folder and run the following commands.  
 *On Windows, make sure you use Git Bash to run these commands.*
 
     npm install -g gulp bower
     npm install
+    
+
+
+On Windows, sometimes certain front-end packages fail to install correctly. We found a few ways to remedy this, however, the easiest one is to run:
+
+    bower install -f
+    
 
 ## Running
 
 *Before running Votee, make sure that you have started mongod.  
 Instructions for doing so are located in the relevant installation guides in the dependencies section above.*
 
-To run Votee on your local machine, run
+To run Votee on your local machine, first change directory
+
+    cd Src/Web
+
+then run
 
     gulp
 
 This will start a development server on port 3000.  
-Visit ``localhost:3000`` in your favorite browser.
+Visit [localhost:3000](http://localhost:3000) in your favorite browser.
 
 To start a production server, instead run
 

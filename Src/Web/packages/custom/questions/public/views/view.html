@@ -1,0 +1,85 @@
+<section data-ng-controller="QuestionsController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
+    <span>{{question.created | date:'medium'}}</span> /
+    <span>{{question.creator.name}}</span>
+
+    <!--<div>{{question.content}}</div>-->
+    <!--TODO: add error chekcing to the form-->
+
+    <form name="questionForm" class="form-horizontal col-md-8" role="form" data-ng-submit="vote(questionForm)" novalidate>
+
+        <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
+        <div class="col-md-12" data-ng-if="!hasVoted(question) || hasAuthorization(question)">
+            <!--TODO: (preivous code) remove when surely not needed-->
+            <!--<div ng-repeat="option in question.options" class="row-fluid">-->
+                <!--<label><input type="radio" name="meaningless" ng-value="(( $index ))" ng-model="selectedAnswer.index" />-->
+                    <!--&nbsp;{{option}}</label>-->
+            <!--</div>-->
+            <!--<br/>-->
+                <!--<button type="submit" class="btn btn-info">Vote!</button>-->
+            <!--<br/>-->
+
+            <div class="col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <span class="glyphicon glyphicon-circle-arrow-right"></span>{{question.title}}</h3>
+                    </div>
+                    <div class="panel-body two-col">
+                        <div ng-repeat="option in question.options">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="well well-sm">
+                                        <label>
+                                            <input type="radio" name="meaningless" ng-value="(( $index ))" ng-model="selectedAnswer.index" />
+                                            &nbsp;{{option}}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div data-ng-if="hasAuthorization(question)">
+
+                            <a id="editButton" class="btn" href="/questions/{{question._id}}/edit">
+                                <i class="glyphicon glyphicon-edit"></i>
+                                <p>Edit Question</p>
+                            </a>
+                            <a class="btn" data-ng-click="remove(question);">
+                                <i class="glyphicon glyphicon-trash"></i>
+                                <p>Delete Question</p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="panel-footer" data-ng-hide="hasAuthorization(question)">
+                        <button type="submit" class="btn btn-success btn-sm">
+                            <span class="glyphicon glyphicon-ok"></span>Vote</button>
+                        <!--TODO: implement and uncomment-->
+                        <!--<button type="button" class="btn btn-primary btn-sm">-->
+                            <!--View Result</button>-->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <div data-ng-if="hasVoted(question) && !hasAuthorization(question)">
+        <h3>You have already voted and your answer to this question has been submitted.</h3>
+    </div>
+
+    <div data-ng-if="hasAuthorization(question)">
+        <!--Add button to view Answers-->
+        <div class="list-group col-md-4">
+            <div ng-repeat="answer in question.answers" class="row-fluid">
+                <div class="list-group-item">
+                    <label>Selected Answer {{answer.answer}}</label>
+                    <label>{{answer.student.name}} </label>
+                    <label>{{answer.student.email}} </label>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
