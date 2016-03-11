@@ -1,5 +1,20 @@
 apply plugin: 'com.android.application'
 
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    testCompile ('com.jayway.restassured:rest-assured:2.9.0') {
+        exclude(module: 'groovy')
+    }
+    testCompile 'com.xebialabs.restito:restito:0.8.1' // library to mock HTTP REST responses : https://github.com/mkotsur/restito
+    compile 'com.jayway.restassured:json-path:2.9.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0' // do not update the retrofit version
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+}
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -7,6 +22,7 @@ android {
     defaultConfig {
         applicationId "ca.umanitoba.cs.votee"
         minSdkVersion 15
+        multiDexEnabled true
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -17,6 +33,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/groovy-release-info.properties'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DISCLAIMER'
+    }
+
     // Definition of build flavours. Just like we have separate
     // configuration files and launch settings for the web server,
     // I thought it would be a good idea to have the same for Android
@@ -38,13 +64,3 @@ android {
     }
 }
 
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
-    testCompile 'org.mockito:mockito-core:1.10.17'
-    testCompile 'com.jayway.restassured:rest-assured:2.9.0'
-    compile 'com.squareup.retrofit:retrofit:1.9.0' // do not update the retrofit version
-    compile 'com.xebialabs.restito:restito:0.8.1' // library to mock HTTP REST responses : https://github.com/mkotsur/restito
-    compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.android.support:design:23.2.0'
-}

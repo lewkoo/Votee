@@ -2,6 +2,8 @@ package ca.umanitoba.cs.votee.api;
 
 import android.telecom.Call;
 
+import com.google.gson.JsonObject;
+
 import org.json.JSONObject;
 
 import retrofit.Callback;
@@ -38,18 +40,18 @@ public interface APIHelperInterface {
     // Users package methods
     // Sends a log in payload, receives a token
     @POST(VT_API_URL_USER_LOGIN)
-    void logIn(@Body JSONObject params, Callback<APIHelper.Response> callback);
+    retrofit.client.Response logIn(@Body JsonObject params);
 
     @GET(VT_API_URL_USER_LOGOUT)
     // Send a log out command, receives a success / failure
-    void logOut(@Body JSONObject params, Callback<APIHelper.Response> callback);
+    retrofit.client.Response logOut(@Body JsonObject params);
 
     @POST(VT_API_URL_USER_REGISTER)
     // Send a register command, receives a success / failure
-    void register(@Body JSONObject params, Callback<APIHelper.Response> callback);
+    retrofit.client.Response register(@Body JsonObject params);
 
     @GET(VT_API_URL_USER_ABOUT_ME)
     // Send a command to get user data, receives user data JSON
-    void userInfo(@Body JSONObject params, Callback<APIHelper.Response> callback);
+    retrofit.client.Response userInfo(@Body JsonObject params);
 
 }
