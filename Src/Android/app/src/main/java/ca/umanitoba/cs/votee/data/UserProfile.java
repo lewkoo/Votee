@@ -1,5 +1,7 @@
 package ca.umanitoba.cs.votee.data;
 
+import org.apache.commons.validator.EmailValidator;
+
 /**
  * Created by Levko on 2016-03-10.
  */
@@ -59,7 +61,16 @@ public class UserProfile {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+
+        boolean valid;
+
+        if (EmailValidator.getInstance().isValid(email)) valid = true;
+        else valid = false;
+
+        if (!valid) this.email = null;
+        else {
+            this.email = email;
+        }
     }
 
     public String getName() {
@@ -96,5 +107,9 @@ public class UserProfile {
 
     public void resetUser() {
         restoreUserData();
+    }
+
+    public boolean isLoggedIn() {
+        return this.token != null;
     }
 }
