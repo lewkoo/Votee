@@ -30,6 +30,22 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             return equal;
         };
 
+        $scope.isCorrect = function(question, answer) {
+          return question.answer == answer.answer;
+        };
+
+        $scope.isHidden=true;
+        $scope.showHide = function() {
+            if($scope.isHidden)
+                $scope.isHidden=false;
+            else
+                $scope.isHidden=true;
+        };
+
+        $scope.noAnswers = function(question) {
+          return question.answers.length == 0;
+        };
+
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];

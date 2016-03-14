@@ -70,14 +70,19 @@
 
     <div data-ng-if="hasAuthorization(question)">
         <!--Add button to view Answers-->
-        <div class="list-group col-md-4">
+        <input type="button" data-ng-click="showHide()" value="Show / Hide Answers" />
+        <div id="hideMe" data-ng-hide="isHidden" class="list-group col-md-4" >
             <div ng-repeat="answer in question.answers" class="row-fluid">
                 <div class="list-group-item">
-                    <label>Selected Answer {{answer.answer}}</label>
-                    <label>{{answer.student.name}} </label>
-                    <label>{{answer.student.email}} </label>
+                    <h5>Selected Answer: {{answer.answer}}</h5>
+
+                    <h5>Name: {{answer.student.name}} </h5>
+                    <h5>Email: {{answer.student.email}} </h5>
+                    <span data-ng-if="isCorrect(question,answer)" class="glyphicon glyphicon-ok"></span>
+                    <span data-ng-if="!isCorrect(question,answer)" class="glyphicon glyphicon-remove"></span>
                 </div>
             </div>
+            <h5 data-ng-if="noAnswers(question)">There are no answers yet.</h5>
         </div>
 
     </div>
