@@ -77,7 +77,7 @@ android {
     productFlavors {
         development {
             applicationId "ca.umanitoba.cs.votee.develop"
-            buildConfigField 'String', 'HOST', '"http://' + getIP() + ':3000"'
+            buildConfigField 'String', 'HOST', '"http://votee-project.herokuapp.com"'
         }
 
         production {
