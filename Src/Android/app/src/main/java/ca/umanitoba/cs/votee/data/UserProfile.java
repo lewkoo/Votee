@@ -120,14 +120,16 @@ public class UserProfile {
         restoreUserData();
     }
 
+    public boolean isAuthenticated()
+    {
+        return this.token != null && this.token.length() > 0;
+    }
+
     public boolean isLoggedIn() {
         return this.token != null;
     }
 
     public static boolean isInitialized(){
         if(instance == null)
-            return false;
-        else
-            return true;
     }
 }

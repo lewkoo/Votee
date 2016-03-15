@@ -11,8 +11,9 @@ dependencies {
     compile 'com.jayway.restassured:json-path:2.9.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
-    compile 'com.android.support:appcompat-v7:23.2.0'
-    compile 'com.android.support:design:23.2.0'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
 }
 
 def getIP() {
@@ -33,6 +34,7 @@ def getIP() {
     }
     return (result != null ? result : InetAddress.getLocalHost()).getHostAddress();
 }
+
 
 android {
     compileSdkVersion 23
@@ -73,7 +75,7 @@ android {
     productFlavors {
         development {
             applicationId "ca.umanitoba.cs.votee.develop"
-            buildConfigField 'String', 'HOST', '"http://'+getIP()+':3000"'
+            buildConfigField 'String', 'HOST', '"http://' + getIP() + ':3000"'
         }
 
         production {
