@@ -1,9 +1,15 @@
 <section data-ng-controller="QuestionsController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
-    <span>{{question.created | date:'medium'}}</span> /
-    <span>{{question.creator.name}}</span>
+
 
     <!--<div>{{question.content}}</div>-->
     <!--TODO: add error chekcing to the form-->
+    <div class="col-md-12">
+        <span>{{question.created | date:'medium'}}</span> /
+        <span>{{question.creator.name}}</span>
+        <br>
+        <a href="questions" class="btn btn-default btn-warning">Back to List</a>
+        <br><hr>
+    </div>
 
     <form name="questionForm" class="form-horizontal col-md-8" role="form" data-ng-submit="vote(questionForm)" novalidate>
 
@@ -70,14 +76,24 @@
 
     <div data-ng-if="hasAuthorization(question)">
         <!--Add button to view Answers-->
-        <div class="list-group col-md-4">
+        <input type="button" data-ng-click="showHide()" value="Show / Hide Answers" />
+        <div id="hideMe" data-ng-hide="isHidden" class="list-group col-md-4" >
             <div ng-repeat="answer in question.answers" class="row-fluid">
                 <div class="list-group-item">
-                    <label>Selected Answer {{answer.answer}}</label>
-                    <label>{{answer.student.name}} </label>
-                    <label>{{answer.student.email}} </label>
+                    <h5>Selected Answer: {{answer.answer}}</h5>
+
+                    <h5>Name: {{answer.student.name}} </h5>
+                    <h5>Email: {{answer.student.email}} </h5>
+                    <span data-ng-if="isCorrect(question,answer)" class="glyphicon glyphicon-ok"></span>
+                    <span data-ng-if="!isCorrect(question,answer)" class="glyphicon glyphicon-remove"></span>
                 </div>
             </div>
+            <div data-ng-hide="noAnswers(question)">
+                <h4>Correct Answers: {{getCorrectCount(question)}}</h4>
+                <h4>Incorrect Answers: {{question.answers.length - getCorrectCount(question)}}</h4>
+            </div>
+           <!-- <div id="test" data-ng-show="getCorrectCount(question)"></div>-->
+            <h5 data-ng-if="noAnswers(question)">There are no answers yet.</h5>
         </div>
 
     </div>

@@ -30,6 +30,35 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             return equal;
         };
 
+        $scope.isCorrect = function(question, answer) {
+          return question.answer == answer.answer;
+        };
+
+        $scope.isHidden=true;
+        $scope.showHide = function() {
+            if($scope.isHidden)
+                $scope.isHidden=false;
+            else
+                $scope.isHidden=true;
+        };
+
+        $scope.noAnswers = function(question) {
+          return question.answers.length == 0;
+        };
+
+        $scope.getCorrectCount = function(question) {
+            $scope.correctCount=0;
+
+            for(var key in question.answers) {
+                var answer = question.answers[key];
+
+                if(angular.equals(answer.answer, question.answer)){
+                    $scope.correctCount++;
+                }
+            }
+            return $scope.correctCount;
+        };
+
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];
