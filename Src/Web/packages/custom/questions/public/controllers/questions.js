@@ -46,6 +46,19 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
           return question.answers.length == 0;
         };
 
+        $scope.getCorrectCount = function(question) {
+            $scope.correctCount=0;
+
+            for(var key in question.answers) {
+                var answer = question.answers[key];
+
+                if(angular.equals(answer.answer, question.answer)){
+                    $scope.correctCount++;
+                }
+            }
+            return $scope.correctCount;
+        };
+
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];
