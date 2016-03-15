@@ -130,6 +130,10 @@ public class UserProfile {
     }
 
     public static boolean isInitialized(){
-        if(instance == null)
+        if(instance == null){
+            return false;
+        }else{
+            return true;
+        }
     }
 }
