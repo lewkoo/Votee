@@ -7,11 +7,10 @@ dependencies {
         exclude(module: 'groovy')
     }
     testCompile 'com.xebialabs.restito:restito:0.8.1' // library to mock HTTP REST responses : https://github.com/mkotsur/restito
-    compile 'com.jayway.restassured:json-path:2.9.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0' // do not update the retrofit version
+    compile 'com.jayway.restassured:json-path:2.9.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
-    compile 'commons-validator:commons-validator:1.4.1'
     compile 'com.android.support:appcompat-v7:23.2.0'
     compile 'com.android.support:design:23.2.0'
 }
@@ -74,8 +73,7 @@ android {
     productFlavors {
         development {
             applicationId "ca.umanitoba.cs.votee.develop"
-            def host = InetAddress.getLocalHost().getCanonicalHostName()
-            buildConfigField 'String', 'HOST', '"http://'+host+':3000"'
+            buildConfigField 'String', 'HOST', '"http://'+getIP()+':3000"'
         }
 
         production {

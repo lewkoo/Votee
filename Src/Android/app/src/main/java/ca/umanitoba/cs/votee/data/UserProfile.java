@@ -1,11 +1,22 @@
 package ca.umanitoba.cs.votee.data;
 
-import org.apache.commons.validator.EmailValidator;
+import java.security.InvalidParameterException;
+import java.util.regex.Pattern;
 
 /**
  * Created by Levko on 2016-03-10.
  */
 public class UserProfile {
+
+    public static final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
+            "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                    "\\@" +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" +
+                    "\\." +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                    ")+"
+    );
 
     private String token;
     private String name;
@@ -64,12 +75,12 @@ public class UserProfile {
 
         boolean valid;
 
-        if (EmailValidator.getInstance().isValid(email)) valid = true;
-        else valid = false;
+        valid = EMAIL_ADDRESS_PATTERN.matcher(email).matches();
 
-        if (!valid) this.email = null;
-        else {
+        if(valid){
             this.email = email;
+        }else{
+            throw new InvalidParameterException("Email did not validate");
         }
     }
 
