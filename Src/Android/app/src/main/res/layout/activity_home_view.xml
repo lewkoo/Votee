@@ -9,12 +9,46 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="ca.umanitoba.cs.votee.HomeView">
 
-    <TextView
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Welcome"
-        android:id="@+id/textView"
+        android:id="@+id/scrollView"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                tools:layout="@layout/fragment_quiz_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:name="ca.umanitoba.cs.votee.fragments.QuizList"
+                android:id="@+id/fragment"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <fragment
+                tools:layout="@layout/fragment_course_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:name="ca.umanitoba.cs.votee.fragments.CourseList"
+                android:id="@+id/fragment2"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </LinearLayout>
+    </ScrollView>
+
 </RelativeLayout>
