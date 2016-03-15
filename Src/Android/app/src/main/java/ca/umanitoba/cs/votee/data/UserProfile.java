@@ -112,4 +112,11 @@ public class UserProfile {
     public boolean isLoggedIn() {
         return this.token != null;
     }
+
+    public static boolean isInitialized(){
+        if(instance == null)
+            return false;
+        else
+            return true;
+    }
 }

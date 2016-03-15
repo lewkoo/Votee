@@ -74,7 +74,8 @@ android {
     productFlavors {
         development {
             applicationId "ca.umanitoba.cs.votee.develop"
-            buildConfigField 'String', 'HOST', '"http://'+getIP()+':3000"'
+            def host = InetAddress.getLocalHost().getCanonicalHostName()
+            buildConfigField 'String', 'HOST', '"http://'+host+':3000"'
         }
 
         production {
