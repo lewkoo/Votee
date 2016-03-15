@@ -97,4 +97,9 @@ public class UserProfile {
     public void resetUser() {
         restoreUserData();
     }
+
+    public boolean isAuthenticated()
+    {
+        return this.token != null && this.token.length() > 0;
+    }
 }

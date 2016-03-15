@@ -191,11 +191,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
-
-            //TODO: add some error checking
-            Intent intent = new Intent(this, HomeView.class);
-            startActivity(intent);
-
         }
     }
 
@@ -323,7 +318,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // Issue an API call
             APIHelper.logIn();
 
-            return true;
+            return UserProfile.getInstance().isAuthenticated();
         }
 
         @Override
@@ -332,6 +327,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
+                Intent intent = new Intent(LoginActivity.this, HomeView.class);
+                startActivity(intent);
                 finish();
             } else {
                 mPasswordView.setError(getString(R.string.error_incorrect_password));
