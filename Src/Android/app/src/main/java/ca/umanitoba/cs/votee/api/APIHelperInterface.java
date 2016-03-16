@@ -6,6 +6,9 @@ import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
+import ca.umanitoba.cs.votee.data.Question;
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.GET;
@@ -56,7 +59,7 @@ public interface APIHelperInterface {
     retrofit.client.Response userInfo(@Body JsonObject params);
 
     //TODO: finish
-//    @GET(VT_API_URL_USER_QUESTIONS)
-//    retrofit.client.Response questions(Callback<List<Question>> response);
+    @GET(VT_API_URL_USER_QUESTIONS)
+    List<Question> questions();
 
 }

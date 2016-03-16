@@ -8,9 +8,11 @@ import com.google.gson.JsonParser;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.security.InvalidParameterException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import ca.umanitoba.cs.votee.BuildConfig;
+import ca.umanitoba.cs.votee.data.Question;
 import ca.umanitoba.cs.votee.data.UserProfile;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
@@ -234,18 +236,21 @@ public class APIHelper {
 
 //    //get Questions call
     //TODO: implement and uncomment
-//    public static retrofit.client.Response getQuestions(){
-//        retrofit.client.Response response;
-//
-//        try{
-//            response = mRestService.questions();
-//        } catch (RetrofitError error){
-//            response = null;
-//        }
-////        Log.d("STATE", "getQuestions() response: "+response );
-//        return response;
-//
-//    }
+    public static List<Question> getQuestions(){
+        final JsonObject jsonParams = getJsonParamsWithToken();
+        if(jsonParams == null) throw new InvalidParameterException("Not logged in yet"); // user is not logged in yet
+
+        List<Question> response;
+
+        try{
+            response = mRestService.questions();
+        } catch (RetrofitError error){
+            response = null;
+        }
+//        Log.d("STATE", "getQuestions() response: "+response );
+        return response;
+
+    }
 
 
 
