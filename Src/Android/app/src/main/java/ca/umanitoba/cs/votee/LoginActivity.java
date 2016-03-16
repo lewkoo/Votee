@@ -113,9 +113,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.register_button:
-                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                Intent intent = new Intent(this, RegisterActivity.class);
                 startActivity(intent);
-                finish();
                 break;
         }
         return true;

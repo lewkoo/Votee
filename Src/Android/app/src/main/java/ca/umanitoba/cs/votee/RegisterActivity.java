@@ -1,11 +1,11 @@
 package ca.umanitoba.cs.votee;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.RadioButton;
 
 public class RegisterActivity extends AppCompatActivity {
 
@@ -13,17 +13,43 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+    }
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setTitle("Really Exit?")
+                .setMessage("Are you sure you want to stop registering an account?")
+                .setNegativeButton(android.R.string.no, null)
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        finish();
+                    }
+                }).create().show();
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button checked?
+        boolean checked = ((RadioButton)view).isChecked();
+
+        // Check which radio button was clicked
+        switch (view.getId()){
+            case R.id.radioButtonStudent:
+                if(checked)
+                // set the intended role to Student
+                break;
+            case R.id.radioButtonProf:
+                if(checked)
+                // set the intended role to Prof
+                break;
+
+            case R.id.radioButtonAdmin:
+                if(checked)
+                // set the intended role to Admin
+                break;
+        }
+
     }
 
 }
