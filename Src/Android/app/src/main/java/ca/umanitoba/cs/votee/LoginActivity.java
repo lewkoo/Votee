@@ -180,8 +180,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
 
         // Check for a valid password, if the user entered one.
-        if (TextUtils.isEmpty(password) && !isPasswordValid(password) )  {
+        if (TextUtils.isEmpty(password))  {
             mPasswordView.setError(getString(R.string.error_field_required));
+            focusView = mPasswordView;
+            cancel = true;
+        }else if(!isPasswordValid(password)){
             focusView = mPasswordView;
             cancel = true;
         }
@@ -201,7 +204,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isPasswordValid(String password) {
         // Password must be anywhere from 8 to 20 characters long
-        return password.length() >= 8 && password.length() <= 20;
+        if(password.length() < 8){
+            mPasswordView.setError(getString(R.string.error_invalid_password_short));
+            return false;
+        }else if(password.length() > 20){
+            mPasswordView.setError(getString(R.string.error_invalid_password_long));
+            return false;
+        }else{
+            return true;
+        }
     }
 
     /**
