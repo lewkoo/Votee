@@ -28,6 +28,7 @@ import ca.umanitoba.cs.votee.fragments.QuizList;
 public class QuizView extends BaseActivity implements CourseList.OnFragmentInteractionListener, QuizList.OnFragmentInteractionListener {
 
     private List<Question> questions;
+    private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,12 +61,12 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
     public void getQuestions(){
 
         ArrayAdapter<Object> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        ListView listView = (ListView) findViewById(R.id.activity_main_listView);
+        listView = (ListView) findViewById(R.id.activity_main_listView);
         listView.setAdapter(listAdapter);
 
         questions = APIHelper.getQuestions();
 
-//        showList();
+        showList();
 
 //        listAdapter.addAll(APIHelper.getQuestions());
 //        retrofit.client.Response response;
@@ -73,22 +74,22 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
     }
 
 //    TODO: finish
-//    private void showList(){
-//        //String array to store all the book names
-//        String[] items = new String[questions.size()];
-//
-//        //Traversing through the whole list to get all the names
-//        for(int i=0; i<questions.size(); i++){
-//            //Storing names to string array
-//            items[i] = questions.get(i).getTitle();
-//        }
-//
-//        //Creating an array adapter for list view
-//        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.simple_list,items);
-//
-//        //Setting adapter to listview
-//        listView.setAdapter(adapter);
-//    }
+    private void showList(){
+        //String array to store all the book names
+        String[] items = new String[questions.size()];
+
+        //Traversing through the whole list to get all the names
+        for(int i=0; i<questions.size(); i++){
+            //Storing names to string array
+            items[i] = questions.get(i).getTitle();
+        }
+
+        //Creating an array adapter for list view
+        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.questions_list,items);
+
+        //Setting adapter to listview
+        listView.setAdapter(adapter);
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
