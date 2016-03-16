@@ -59,6 +59,17 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             return $scope.correctCount;
         };
 
+        $scope.getStudentsAnswer = function(question) {
+            for(var key in question.answers){
+                var answer = question.answers[key];
+
+                if(angular.equals(answer.student._id, MeanUser.userId)){
+                    $scope.studentAnswer = answer.answer;
+                    return answer;
+                }
+            }
+        };
+
         $scope.availableCircles = [];
         //store options text in the array
         $scope.optionsText = [];

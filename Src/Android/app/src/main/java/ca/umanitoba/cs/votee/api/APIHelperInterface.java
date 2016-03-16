@@ -6,6 +6,9 @@ import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 
+import java.util.List;
+
+import ca.umanitoba.cs.votee.data.Question;
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.GET;
@@ -24,6 +27,7 @@ public interface APIHelperInterface {
     String VT_API_URL_USER_LOGOUT = "/api/logout";
     String VT_API_URL_USER_REGISTER = "/api/register";
     String VT_API_URL_USER_ABOUT_ME = "/api/users/me";
+    String VT_API_URL_USER_QUESTIONS = "/api/questions";
 
     //TODO: Implement method definitions and implementations for these routes
     // Circles package routes
@@ -44,7 +48,7 @@ public interface APIHelperInterface {
 
     @GET(VT_API_URL_USER_LOGOUT)
     // Send a log out command, receives a success / failure
-    retrofit.client.Response logOut(@Body JsonObject params);
+    retrofit.client.Response logOut();
 
     @POST(VT_API_URL_USER_REGISTER)
     // Send a register command, receives a success / failure
@@ -53,5 +57,9 @@ public interface APIHelperInterface {
     @GET(VT_API_URL_USER_ABOUT_ME)
     // Send a command to get user data, receives user data JSON
     retrofit.client.Response userInfo(@Body JsonObject params);
+
+    //TODO: finish
+    @GET(VT_API_URL_USER_QUESTIONS)
+    List<Question> questions();
 
 }
