@@ -24,6 +24,18 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <fragment
+                tools:layout="@layout/fragment_quiz_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:name="ca.umanitoba.cs.votee.fragments.QuizList"
+                android:id="@+id/quiz_fragment"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
         </LinearLayout>
     </ScrollView>
 
@@ -34,24 +46,5 @@
         android:src="@drawable/votee_logo"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Courses"
-        android:id="@+id/courseButton"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/logo"
-        android:layout_alignRight="@+id/logo" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quizzes"
-        android:id="@+id/quizButton"
-        android:layout_marginTop="36dp"
-        android:layout_below="@+id/courseButton"
-        android:layout_alignLeft="@+id/courseButton"
-        android:layout_alignRight="@+id/courseButton" />
 
 </RelativeLayout>
