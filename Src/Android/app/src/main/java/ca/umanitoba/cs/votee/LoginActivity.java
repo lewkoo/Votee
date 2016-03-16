@@ -28,7 +28,6 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -357,8 +356,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (mServErr != null) {
-                Toast toast = Toast.makeText(LoginActivity.this, mServErr, Toast.LENGTH_SHORT);
-                toast.show();
+                Snackbar snackbar = Snackbar.make(mLoginFormView, mServErr, Snackbar.LENGTH_LONG);
+                snackbar.show();
             }
             else if (success) {
                 Intent intent = new Intent(LoginActivity.this, HomeView.class);
