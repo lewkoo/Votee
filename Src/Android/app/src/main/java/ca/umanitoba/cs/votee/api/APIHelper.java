@@ -28,14 +28,15 @@ import retrofit.mime.TypedByteArray;
 public class APIHelper {
 
     final static String LOGTAG = APIHelper.class.getSimpleName();
-    public static final  String VT_API_HOST = BuildConfig.HOST;
+
+    public static String VT_API_HOST = BuildConfig.HOST;
     public static final String VT_API_TOKEN_KEY = "authorization";
     public static final String VT_API_EMAIL_KEY = "email";
     public static final String VT_API_PASSWORD_KEY = "password";
     public static final String API_AUTH_FAIL = "Authentication fail";
 
-    private static final RestAdapter mRestAdapter;
-    private static final APIHelperInterface mRestService;
+    private static RestAdapter mRestAdapter;
+    private static APIHelperInterface mRestService;
     private static final Gson mGson;
 
     static OkClient okClient;
@@ -43,7 +44,6 @@ public class APIHelper {
     // token for any further API calls that require
     // authentication
     private static String userToken = "Bearer ";
-
 
     // static methods to initialise the REST Adapter and
     // REST Service objects
@@ -58,17 +58,11 @@ public class APIHelper {
     static {
         // Create the Gson Builder class
         mGson = new GsonBuilder().create();
+        updateRESTAdapter();
+    }
 
-        // Select the desired config level based on your build config
-        RestAdapter.LogLevel desiredLogLevel = RestAdapter.LogLevel.NONE;
-        if(BuildConfig.FLAVOR.equals("development"))
-        {
-            desiredLogLevel = RestAdapter.LogLevel.FULL;
-        }else if (BuildConfig.FLAVOR.equals("production"))
-        {
-            desiredLogLevel = RestAdapter.LogLevel.BASIC;
-        }
-
+    public static void updateRESTAdapter() {
+        RestAdapter.LogLevel desiredLogLevel = getLogLevel();
         // Create the REST Adapter
         mRestAdapter = new RestAdapter.Builder()
                 .setLogLevel(desiredLogLevel)
@@ -78,6 +72,9 @@ public class APIHelper {
                     @Override
                     public void intercept(RequestFacade request) {
                         request.addHeader("Content-Type", "application/json");
+                        if(UserProfile.getInstance().isLoggedIn()){
+                            request.addHeader("authorization", "Bearer " + UserProfile.getInstance().getToken());
+                        }
                     }
                 })
                 .setEndpoint(VT_API_HOST)
@@ -86,7 +83,19 @@ public class APIHelper {
 
         // Create a REST service
         mRestService = mRestAdapter.create(APIHelperInterface.class);
+    }
 
+    private static RestAdapter.LogLevel getLogLevel() {
+        // Select the desired config level based on your build config
+        RestAdapter.LogLevel desiredLogLevel = RestAdapter.LogLevel.NONE;
+        if(BuildConfig.FLAVOR.equals("development"))
+        {
+            desiredLogLevel = RestAdapter.LogLevel.FULL;
+        }else if (BuildConfig.FLAVOR.equals("production"))
+        {
+            desiredLogLevel = RestAdapter.LogLevel.BASIC;
+        }
+        return desiredLogLevel;
     }
 
     /**
@@ -117,6 +126,14 @@ public class APIHelper {
         }
     }
 
+    public static String getVtApiHost() {
+        return VT_API_HOST;
+    }
+
+    public static void setVtApiHost(String vtApiHost) {
+        VT_API_HOST = vtApiHost;
+    }
+
     /**
      * API requests
      */
@@ -125,22 +142,22 @@ public class APIHelper {
     {
         if(UserProfile.getInstance().getEmail() == null ||
                 UserProfile.getInstance().getPassword() == null){
-            throw new InvalidParameterException("User name / password is empty");
+            return null;
+        }else{
+            final JsonObject jsonParams = new JsonObject();
+            jsonParams.addProperty(VT_API_EMAIL_KEY, UserProfile.getInstance().getEmail());
+            jsonParams.addProperty(VT_API_PASSWORD_KEY, UserProfile.getInstance().getPassword());
+            return jsonParams;
         }
-
-        final JsonObject jsonParams = new JsonObject();
-        jsonParams.addProperty(VT_API_EMAIL_KEY, UserProfile.getInstance().getEmail());
-        jsonParams.addProperty(VT_API_PASSWORD_KEY, UserProfile.getInstance().getPassword());
-        return jsonParams;
     }
 
     public static JsonObject getJsonParamsWithToken() {
 
         if(UserProfile.getInstance().getToken() == null)
-            throw new InvalidParameterException("User is not logged in");
+            return null;
 
         final JsonObject jsonParams = new JsonObject();
-        jsonParams.addProperty(VT_API_TOKEN_KEY, UserProfile.getInstance().getToken());
+        jsonParams.addProperty(VT_API_TOKEN_KEY, "Bearer "+UserProfile.getInstance().getToken());
         return jsonParams;
     }
 
@@ -157,13 +174,15 @@ public class APIHelper {
     }
 
     // logIn call
-    public static void logIn(){
+    public static void logIn() {
         final JsonObject jsonParams = getJsonParamsForLogIn();
+        if(jsonParams == null) throw new InvalidParameterException("No user email and password"); // no user email and or password
+
         retrofit.client.Response response;
         try{
             response = mRestService.logIn(jsonParams);
         } catch (RetrofitError error){
-            response = null;
+            throw error;
         }
 
         // extract the token from a JSON response
@@ -173,6 +192,29 @@ public class APIHelper {
             receivedToken = parseResponseBody(response).get("token").getAsString();
             UserProfile.getInstance().setToken(receivedToken);
         }
+
+        // Update the REST adapter with an authorization token
+        updateRESTAdapter();
+
+    }
+
+    //logOut call
+    public static void logOut(){
+        final JsonObject jsonParams = getJsonParamsWithToken();
+        if(jsonParams == null) throw new InvalidParameterException("Not logged in yet"); // user is not logged in yet
+
+        retrofit.client.Response response;
+        try {
+            response = mRestService.logOut();
+        }catch (RetrofitError error){
+            throw error;
+        }
+
+        UserProfile.getInstance().resetUser();
+        // Remove the authorization token from the REST Adapter
+        updateRESTAdapter();
+
+        //TODO: take to the home screen
 
     }
 
