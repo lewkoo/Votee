@@ -6,8 +6,6 @@ import com.google.gson.JsonObject;
 
 import org.json.JSONObject;
 
-import java.util.List;
-
 import retrofit.Callback;
 import retrofit.http.Body;
 import retrofit.http.GET;
@@ -47,7 +45,7 @@ public interface APIHelperInterface {
 
     @GET(VT_API_URL_USER_LOGOUT)
     // Send a log out command, receives a success / failure
-    retrofit.client.Response logOut(@Body JsonObject params);
+    retrofit.client.Response logOut();
 
     @POST(VT_API_URL_USER_REGISTER)
     // Send a register command, receives a success / failure

@@ -8,13 +8,21 @@
         <span>{{question.creator.name}}</span>
         <br>
         <a href="questions" class="btn btn-default btn-warning">Back to List</a>
-        <br><hr>
+        <hr>
+    </div>
+
+    <div class="col-md-12" data-ng-if="hasVoted(question) && !hasAuthorization(question)">
+        <h4>You have already voted and your answer to this question has been submitted.</h4>
+        <h4 data-ng-if="isCorrect(question,getStudentsAnswer(question))">You got it CORRECT!</h4>
+        <h4 data-ng-if="!isCorrect(question,getStudentsAnswer(question))">Sorry, your answer was INCORRECT.</h4>
     </div>
 
     <form name="questionForm" class="form-horizontal col-md-8" role="form" data-ng-submit="vote(questionForm)" novalidate>
 
         <!--TODO: sure options only when user has voted, otherwise show the answer selected-->
-        <div class="col-md-12" data-ng-if="!hasVoted(question) || hasAuthorization(question)">
+        <fieldset ng-disabled="hasVoted(question) && !hasAuthorization(question)">
+
+            <div class="col-md-12">
             <!--TODO: (preivous code) remove when surely not needed-->
             <!--<div ng-repeat="option in question.options" class="row-fluid">-->
                 <!--<label><input type="radio" name="meaningless" ng-value="(( $index ))" ng-model="selectedAnswer.index" />-->
@@ -68,11 +76,14 @@
             </div>
 
         </div>
+        </fieldset>
+        <div class="col-md-12" data-ng-if="hasVoted(question) && !hasAuthorization(question)">
+            <h3>Correct Answer: {{question.options[question.answer]}}</h3>
+            <h3>Your Answer: {{question.options[getStudentsAnswer(question).answer]}}</h3>
+        </div>
     </form>
 
-    <div data-ng-if="hasVoted(question) && !hasAuthorization(question)">
-        <h3>You have already voted and your answer to this question has been submitted.</h3>
-    </div>
+
 
     <div data-ng-if="hasAuthorization(question)">
         <!--Add button to view Answers-->

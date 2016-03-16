@@ -1,9 +1,22 @@
 package ca.umanitoba.cs.votee.data;
 
+import java.security.InvalidParameterException;
+import java.util.regex.Pattern;
+
 /**
  * Created by Levko on 2016-03-10.
  */
 public class UserProfile {
+
+    public static final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
+            "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
+                    "\\@" +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,64}" +
+                    "(" +
+                    "\\." +
+                    "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
+                    ")+"
+    );
 
     private String token;
     private String name;
@@ -59,7 +72,16 @@ public class UserProfile {
     }
 
     public void setEmail(String email) {
-        this.email = email;
+
+        boolean valid;
+
+        valid = EMAIL_ADDRESS_PATTERN.matcher(email).matches();
+
+        if(valid){
+            this.email = email;
+        }else{
+            throw new InvalidParameterException("Email did not validate");
+        }
     }
 
     public String getName() {
@@ -101,5 +123,17 @@ public class UserProfile {
     public boolean isAuthenticated()
     {
         return this.token != null && this.token.length() > 0;
+    }
+
+    public boolean isLoggedIn() {
+        return this.token != null;
+    }
+
+    public static boolean isInitialized(){
+        if(instance == null){
+            return false;
+        }else{
+            return true;
+        }
     }
 }

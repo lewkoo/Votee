@@ -3,22 +3,20 @@ package ca.umanitoba.cs.votee;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.View;
@@ -30,6 +28,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -163,21 +162,30 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         boolean cancel = false;
         View focusView = null;
 
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
+        // Check for a valid email address.
+        try {
+            if(TextUtils.isEmpty(email)){
+                mEmailView.setError(getString(R.string.error_field_required));
+                focusView = mEmailView;
+                cancel = true;
+            }else{
+                UserProfile.getInstance().setEmail(email); // throws InvalidParameterException if email is invalid
+            }
+
+
+        } catch (InvalidParameterException ipfe){
+            mEmailView.setError(getString(R.string.error_invalid_email));
+            focusView = mEmailView;
             cancel = true;
         }
 
-        // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
+        // Check for a valid password, if the user entered one.
+        if (TextUtils.isEmpty(password))  {
+            mPasswordView.setError(getString(R.string.error_field_required));
+            focusView = mPasswordView;
             cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
+        }else if(!isPasswordValid(password)){
+            focusView = mPasswordView;
             cancel = true;
         }
 
@@ -194,14 +202,17 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
-        return email.contains("@");
-    }
-
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
-        return password.length() > 4;
+        // Password must be anywhere from 8 to 20 characters long
+        if(password.length() < 8){
+            mPasswordView.setError(getString(R.string.error_invalid_password_short));
+            return false;
+        }else if(password.length() > 20){
+            mPasswordView.setError(getString(R.string.error_invalid_password_long));
+            return false;
+        }else{
+            return true;
+        }
     }
 
     /**

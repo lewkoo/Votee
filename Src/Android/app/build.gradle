@@ -1,13 +1,19 @@
 apply plugin: 'com.android.application'
 
 dependencies {
+    testCompile 'junit:junit:4.12'
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     testCompile('com.jayway.restassured:rest-assured:2.9.0') {
         exclude(module: 'groovy')
     }
     testCompile 'com.xebialabs.restito:restito:0.8.1'
+
+    androidTestCompile 'com.jayway.android.robotium:robotium-solo:5.5.4'
+
     // library to mock HTTP REST responses : https://github.com/mkotsur/restito
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
     // do not update the retrofit version
     compile 'com.jayway.restassured:json-path:2.9.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
@@ -76,8 +82,8 @@ android {
 
     productFlavors {
         development {
-            applicationId "ca.umanitoba.cs.votee.develop"
-            buildConfigField 'String', 'HOST', '"http://votee-project.herokuapp.com"'
+            applicationId "ca.umanitoba.cs.votee"
+            buildConfigField 'String', 'HOST', '"http://' + getIP() + ':3000"'
         }
 
         production {
