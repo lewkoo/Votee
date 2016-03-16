@@ -4,7 +4,6 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    testCompile 'junit:junit:4.12'
     testCompile('com.jayway.restassured:rest-assured:2.9.0') {
         exclude(module: 'groovy')
     }
@@ -16,7 +15,6 @@ dependencies {
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     // do not update the retrofit version
     compile 'com.jayway.restassured:json-path:2.9.0'
-    compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.android.support:appcompat-v7:23.2.1'
@@ -51,7 +49,6 @@ android {
     defaultConfig {
         applicationId "ca.umanitoba.cs.votee"
         minSdkVersion 15
-        multiDexEnabled true
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
