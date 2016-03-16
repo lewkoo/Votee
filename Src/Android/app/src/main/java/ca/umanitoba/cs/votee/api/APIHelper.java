@@ -206,6 +206,11 @@ public class APIHelper {
     // register call
     public static void register(String emailValue, String password, String userName, String name, String roles){
         final JsonObject jsonParams = new JsonObject();
+
+        if(emailValue == null || password == null
+                || userName == null || name == null
+                || roles == null) throw new InvalidParameterException("Invalid parameters given");
+
         jsonParams.addProperty(VT_API_EMAIL_KEY, emailValue);
         jsonParams.addProperty(VT_API_PASSWORD_KEY, password);
         jsonParams.addProperty(VT_API_CONFIRM_PASSWORD_KEY, password);

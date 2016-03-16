@@ -20,11 +20,27 @@ public class UserProfile {
 
 
     public enum UserRoles{
-        STUDENT,
-        PROFESSOR,
-        ADMINISTRATOR,
-        UNKNOWN
+        student ("student"),
+        professor ("professor"),
+        administrator ("administrator"),
+        unknown ("unknown");
+
+        private final String name;
+
+        private UserRoles(String s) {
+            name = s;
+        }
+
+        public boolean equalsName(String otherName) {
+            return (otherName != null) && name.equals(otherName);
+        }
+
+        public String toString() {
+            return this.name;
+        }
     }
+
+
 
     private String token;
     private String name;

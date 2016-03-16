@@ -40,6 +40,12 @@ public class APIHelperUnitTest {
 
     private static final String expectedToken = "eyJhbGciOiJIUzI1NiJ9.JTdCJTIyX2lkJTIyOiUyMjU2ZTIyZDY1NzM2ZjBmMjgyZjNmYTRkZiUyMiwlMjJlbWFpbCUyMjolMjJsZXdrb29AZ21haWwuY29tJTIyLCUyMnVzZXJuYW1lJTIyOiUyMmxld2tvb0BnbWFpbC5jb20lMjIsJTIybmFtZSUyMjolMjJMZXZrbyUyMEl2YW5jaHVrJTIyLCUyMl9fdiUyMjowLCUyMnByb3ZpZGVyJTIyOiUyMmxvY2FsJTIyLCUyMnJvbGVzJTIyOiU1QiUyMmFkbWluJTIyLCUyMmF1dGhlbnRpY2F0ZWQlMjIlNUQlN0Q.vAeMPcWJxal-4-nJQrnlKCSASepOd-HSjEc5QVE7wN8";
 
+    private static final String registerTestEmail = "androidApiTest@email.com";
+    private static final String registerTestPassword = "12345678";
+    private static final String registerTestUsername = "android_test";
+    private static final String registerTestName = "Android Test";
+    private static final String registerTestRoles = "professor";
+
     @Before
     public void start() {
         server = new StubServer(3000).run();
@@ -163,6 +169,58 @@ public class APIHelperUnitTest {
 
         APIHelper.logIn();
     }
+
+    /*
+     * REGISTER METHOD TEST
+     */
+    @Test
+    public void shouldRegisterAUserAndReturnToken(){
+        // Set up a mock server response
+        whenHttp(server).
+                match(post("/api/register")).
+                then(status(HttpStatus.OK_200), stringContent("{\n" +
+                        "  \"token\": " + expectedToken + ", \n" +
+                        "  \"redirect\": \"/\"\n" +
+                        "}"));
+
+        // Issue an API call
+        APIHelper.register(registerTestEmail, registerTestPassword, registerTestUsername, registerTestName, registerTestRoles);
+
+        // Check the token that we received
+        assertTrue(UserProfile.getInstance().getToken().equals(expectedToken));
+
+        // Verify that at least one API call was issued
+        verifyHttp(server).once(
+                method(Method.POST),
+                uri("/api/register")
+        );
+    }
+
+    @Test(expected = InvalidParameterException.class)
+    public void shouldFailToRegisterIfInvalidParametersAreGiven(){
+        // Issue an API call
+        APIHelper.register(null, registerTestPassword, registerTestUsername, registerTestName, registerTestRoles);
+
+        // Verify that at least one API call was issued
+        verifyHttp(server).never(
+                method(Method.POST),
+                uri("/api/register")
+        );
+    }
+
+    @Test(expected = RetrofitError.class)
+    public void shouldFailToRegisterIfServerIsDown(){
+        // Issue an API call
+        APIHelper.register(registerTestEmail, registerTestPassword, registerTestUsername, registerTestName, registerTestRoles);
+
+        // Verify that at least one API call was issued
+        verifyHttp(server).never(
+                method(Method.POST),
+                uri("/api/register")
+        );
+    }
+
+    //TODO: Test for duplicate user case
 
 
     /*

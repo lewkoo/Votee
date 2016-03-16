@@ -17,7 +17,6 @@ import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
 import android.view.Menu;
@@ -64,7 +63,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private UserLoginTask mAuthTask = null;
 
     // UI references.
-    private Toolbar registerToolbar;
     private AutoCompleteTextView mEmailView;
     private EditText mPasswordView;
     private View mProgressView;
@@ -207,7 +205,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mPasswordView.setError(getString(R.string.error_field_required));
             focusView = mPasswordView;
             cancel = true;
-        }else if(!isPasswordValid(password)){
+        }else if(!isPasswordValid(password, mPasswordView)){
             focusView = mPasswordView;
             cancel = true;
         }
@@ -225,13 +223,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    private boolean isPasswordValid(String password) {
+    public static boolean isPasswordValid(String password, EditText mPasswordView) {
         // Password must be anywhere from 8 to 20 characters long
         if(password.length() < 8){
-            mPasswordView.setError(getString(R.string.error_invalid_password_short));
+            mPasswordView.setError("This password is too short");
             return false;
         }else if(password.length() > 20){
-            mPasswordView.setError(getString(R.string.error_invalid_password_long));
+            mPasswordView.setError("This password is too long");
             return false;
         }else{
             return true;
