@@ -28,7 +28,8 @@ import retrofit.mime.TypedByteArray;
 public class APIHelper {
 
     final static String LOGTAG = APIHelper.class.getSimpleName();
-    public static final  String VT_API_HOST = BuildConfig.HOST;
+
+    public static String VT_API_HOST = BuildConfig.HOST;
     public static final String VT_API_TOKEN_KEY = "authorization";
     public static final String VT_API_EMAIL_KEY = "email";
     public static final String VT_API_PASSWORD_KEY = "password";
@@ -43,7 +44,6 @@ public class APIHelper {
     // token for any further API calls that require
     // authentication
     private static String userToken = "Bearer ";
-
 
     // static methods to initialise the REST Adapter and
     // REST Service objects
@@ -61,7 +61,7 @@ public class APIHelper {
         updateRESTAdapter();
     }
 
-    private static void updateRESTAdapter() {
+    public static void updateRESTAdapter() {
         RestAdapter.LogLevel desiredLogLevel = getLogLevel();
         // Create the REST Adapter
         mRestAdapter = new RestAdapter.Builder()
@@ -124,6 +124,14 @@ public class APIHelper {
             this.success = false;
             this.data = null;
         }
+    }
+
+    public static String getVtApiHost() {
+        return VT_API_HOST;
+    }
+
+    public static void setVtApiHost(String vtApiHost) {
+        VT_API_HOST = vtApiHost;
     }
 
     /**

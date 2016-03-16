@@ -4,6 +4,8 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.security.InvalidParameterException;
+
 import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertFalse;
 import static junit.framework.TestCase.assertTrue;
@@ -62,13 +64,19 @@ public class UserProfileTest {
     public void testSetEmail() throws Exception {
         assertTrue(UserProfile.getInstance().getEmail() == null);
 
-        // should fail to validate this email
-        UserProfile.getInstance().setEmail("abcd");
-        assertEquals(null, UserProfile.getInstance().getEmail());
-
         // should pass validation
         UserProfile.getInstance().setEmail("test@test.com");
         assertEquals("test@test.com", UserProfile.getInstance().getEmail());
+    }
+
+    @Test(expected=InvalidParameterException.class)
+    public void testSetIncorrectEmail() throws Exception {
+        assertTrue(UserProfile.getInstance().getEmail() == null);
+
+        // should fail to validate this email
+
+        UserProfile.getInstance().setEmail("abcd");
+        assertEquals(null, UserProfile.getInstance().getEmail());
     }
 
     @Test
