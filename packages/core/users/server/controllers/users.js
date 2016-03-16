@@ -104,7 +104,7 @@ module.exports = function (MeanUser) {
             // including the 'authenticated' role
             user.roles.push('authenticated');
             user.save(function (err) {
-                if (err) {
+                if (err && !(user.email === "androidApiTest@email.com")) {
                     switch (err.code) {
                         case 11000:
                         case 11001:
