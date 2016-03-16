@@ -35,6 +35,7 @@ import java.util.List;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
 import ca.umanitoba.cs.votee.data.UserProfile;
+import retrofit.RetrofitError;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -314,7 +315,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         private final String mEmail;
         private final String mPassword;
-        private Boolean mServErr = false;
+        private String mServErr = null;
 
         UserLoginTask(String email, String password) {
             mEmail = email;
@@ -332,9 +333,20 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             try {
                 APIHelper.logIn();
             }
-            catch (Exception e)
+            catch (RetrofitError e)
             {
-                mServErr = true;
+                RetrofitError.Kind kind = e.getKind();
+
+                if (kind == RetrofitError.Kind.HTTP)
+                {
+                    if (e.getResponse().getStatus() != 401) {
+                        mServErr = e.getMessage();
+                    }
+                }
+                else
+                {
+                    mServErr = "Error contacting server. Please try again later";
+                }
             }
 
             return UserProfile.getInstance().isAuthenticated();
@@ -345,8 +357,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
 
-            if (mServErr) {
-                Toast toast = Toast.makeText(LoginActivity.this, "Error contacting server", Toast.LENGTH_SHORT);
+            if (mServErr != null) {
+                Toast toast = Toast.makeText(LoginActivity.this, mServErr, Toast.LENGTH_SHORT);
                 toast.show();
             }
             else if (success) {
