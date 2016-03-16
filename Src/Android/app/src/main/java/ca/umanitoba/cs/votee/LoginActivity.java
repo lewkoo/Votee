@@ -27,6 +27,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
@@ -313,6 +314,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         private final String mEmail;
         private final String mPassword;
+        private Boolean mServErr = false;
 
         UserLoginTask(String email, String password) {
             mEmail = email;
@@ -327,7 +329,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             UserProfile.getInstance().setPassword(mPassword);
 
             // Issue an API call
-            APIHelper.logIn();
+            try {
+                APIHelper.logIn();
+            }
+            catch (Exception e)
+            {
+                mServErr = true;
+            }
 
             return UserProfile.getInstance().isAuthenticated();
         }
@@ -337,7 +345,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
 
-            if (success) {
+            if (mServErr) {
+                Toast toast = Toast.makeText(LoginActivity.this, "Error contacting server", Toast.LENGTH_SHORT);
+                toast.show();
+            }
+            else if (success) {
                 Intent intent = new Intent(LoginActivity.this, HomeView.class);
                 startActivity(intent);
                 finish();
