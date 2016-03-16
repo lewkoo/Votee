@@ -9,6 +9,8 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
@@ -22,7 +24,7 @@ import ca.umanitoba.cs.votee.fragments.CourseList;
 import ca.umanitoba.cs.votee.fragments.QuizList;
 
 
-public class HomeView extends AppCompatActivity implements CourseList.OnFragmentInteractionListener, QuizList.OnFragmentInteractionListener {
+public class HomeView extends BaseActivity implements CourseList.OnFragmentInteractionListener, QuizList.OnFragmentInteractionListener {
 
     private List<Question> questions;
     private ListView listView;
@@ -32,21 +34,13 @@ public class HomeView extends AppCompatActivity implements CourseList.OnFragment
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_view);
 
-        // my_toolbar is defined in the layout file
-        Toolbar myChildToolbar =
-                (Toolbar) findViewById(R.id.my_toolbar);
-        setSupportActionBar(myChildToolbar);
-
-        // Get a support ActionBar corresponding to this toolbar
-        ActionBar ab = getSupportActionBar();
+        super.setupTitlebar();
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
         getQuestions();
-
     }
-
 
     public void getQuestions(){
 
