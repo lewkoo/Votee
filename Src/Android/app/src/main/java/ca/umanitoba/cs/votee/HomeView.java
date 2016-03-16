@@ -36,22 +36,8 @@ public class HomeView extends BaseActivity implements CourseList.OnFragmentInter
 
         super.setupTitlebar();
 
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-
-        getQuestions();
     }
 
-    public void getQuestions(){
-
-        ArrayAdapter<Object> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        ListView listView = (ListView) findViewById(R.id.activity_main_listView);
-        listView.setAdapter(listAdapter);
-
-        listAdapter.addAll(APIHelper.getQuestions());
-//        retrofit.client.Response response;
-//        response = APIHelper.getQuestions();
-    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
