@@ -2,12 +2,17 @@ package ca.umanitoba.cs.votee;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioButton;
 
+import ca.umanitoba.cs.votee.data.UserProfile;
+
 public class RegisterActivity extends AppCompatActivity {
+
+    private UserRegisterTask mRegisterTask = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,24 @@ public class RegisterActivity extends AppCompatActivity {
                 break;
         }
 
+    }
+
+    public class UserRegisterTask extends AsyncTask<Void, Void, Boolean> {
+        private final String mFullName;
+        private final String mPassword;
+        private final String mUserName;
+        private final UserProfile.UserRoles mUserRole = UserProfile.UserRoles.UNKNOWN;
+
+        public UserRegisterTask(String mFullName, String mPassword, String mUserName) {
+            this.mFullName = mFullName;
+            this.mPassword = mPassword;
+            this.mUserName = mUserName;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+            return null;
+        }
     }
 
 }

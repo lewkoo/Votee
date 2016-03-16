@@ -18,6 +18,14 @@ public class UserProfile {
                     ")+"
     );
 
+
+    public enum UserRoles{
+        STUDENT,
+        PROFESSOR,
+        ADMINISTRATOR,
+        UNKNOWN
+    }
+
     private String token;
     private String name;
     private String password;
