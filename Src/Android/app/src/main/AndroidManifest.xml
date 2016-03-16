@@ -26,6 +26,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeView"></activity>
+        <activity android:name=".CourseView"></activity>
+        <activity android:name=".QuizView"></activity>
     </application>
 
 </manifest>

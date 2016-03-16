@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v4.app.FragmentActivity;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -52,15 +53,13 @@ public class HomeView extends FragmentActivity implements CourseList.OnFragmentI
 
     }
 
-    protected void onQuizClick(){
+    public void onQuizClick(View view){
         Intent quizIntent = new Intent(HomeView.this, QuizView.class);
         HomeView.this.startActivity(quizIntent);
-
     }
 
-    protected void onCourseClick(){
+    public void onCourseClick(View view){
         Intent courseIntent = new Intent(HomeView.this, CourseView.class);
         HomeView.this.startActivity(courseIntent);
-
     }
 }
