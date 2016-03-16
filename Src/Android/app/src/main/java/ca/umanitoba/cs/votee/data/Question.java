@@ -1,8 +1,6 @@
 package ca.umanitoba.cs.votee.data;
 
-import com.google.gson.JsonObject;
-
-import ca.umanitoba.cs.votee.data.UserProfile;
+import org.json.JSONObject;
 
 /**
  * Created by Yuriy on 3/15/2016.
@@ -14,9 +12,10 @@ public class Question {
     //anything better for date?
     private String created;
     private UserProfile creator;
-    private JsonObject options;
+    private JSONObject options;
     private String title;
     private String type;
+    private boolean selected;
 
 
     //single instance for singleton pattern
@@ -48,7 +47,7 @@ public class Question {
         return creator;
     }
 
-    public JsonObject getOptions() {
+    public JSONObject getOptions() {
         return options;
     }
 
@@ -59,4 +58,8 @@ public class Question {
     public String getType() {
         return type;
     }
+
+    public boolean getSelected(){ return selected; }
+
+    public void setSelected(){selected = true;}
 }

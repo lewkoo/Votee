@@ -4,16 +4,13 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.StrictMode;
-import android.support.v4.app.FragmentActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
+import ca.umanitoba.cs.votee.data.Question;
 import ca.umanitoba.cs.votee.fragments.CourseList;
 import ca.umanitoba.cs.votee.fragments.QuizList;
 
@@ -37,6 +34,19 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
         mActionBar.setDisplayHomeAsUpEnabled(true);
     }
 
+
+    public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
+        Question item = (Question) adapter.getItem(position);
+        item.setSelected();
+    }
+
+    public void onSelectClick(View view){
+
+        Intent questionIntent = new Intent(QuizView.this, AnswerActivity.class);
+        QuizView.this.startActivity(questionIntent);
+
+
+    }
     public void getQuestions(){
 
         ArrayAdapter<Object> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
