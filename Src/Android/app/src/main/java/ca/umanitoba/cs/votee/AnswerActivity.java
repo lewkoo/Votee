@@ -30,7 +30,7 @@ public class AnswerActivity extends BaseActivity implements CourseList.OnFragmen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer_view);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
 
         mActionBar.setDisplayHomeAsUpEnabled(true);
 

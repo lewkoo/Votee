@@ -366,6 +366,8 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 {
                     if (e.getResponse().getStatus() != 401) {
                         mServErr = e.getMessage();
+                    }else{
+                        mServErr = "Email / password combination is incorrect";
                     }
                 }
                 else

@@ -28,7 +28,7 @@ public class QuizDetailsActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_details);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
         Question selectedQuestion = (Question)getIntent().getSerializableExtra("Question");

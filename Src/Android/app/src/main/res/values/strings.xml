@@ -6,6 +6,7 @@
     <string name="prompt_password">Password (required)</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_sign_out">Sign out</string>
+    <string name="action_register">Register</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password_short">This password is too short</string>
     <string name="error_invalid_password_long">This password is too long</string>

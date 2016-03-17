@@ -21,6 +21,8 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected Toolbar mToolbar;
     protected ActionBar mActionBar;
 
+    private int mMenuId = -1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,10 +38,20 @@ public abstract class BaseActivity extends AppCompatActivity {
         mActionBar = getSupportActionBar();
     }
 
+    protected void setupTitlebar(int menuId)
+    {
+        mMenuId = menuId;
+
+        setupTitlebar();
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.toolbar, menu);
+        if (mMenuId >= 0) {
+            getMenuInflater().inflate(mMenuId, menu);
+        }
+
         return true;
     }
 
