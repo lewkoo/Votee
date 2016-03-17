@@ -15,6 +15,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -60,13 +62,13 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 //        item.setSelected();
 //    }
 //
-//    public void onSelectClick(View view){
-//
-//        Intent questionIntent = new Intent(QuizView.this, AnswerActivity.class);
-//        QuizView.this.startActivity(questionIntent);
-//
-//
-//    }
+    public void onSelectClick(View view){
+
+        Intent createQIntent = new Intent(QuizView.this, CreateQuizActivity.class);
+        QuizView.this.startActivity(createQIntent);
+
+
+    }
     public void getQuestions(){
         questions = APIHelper.getQuestions();
 

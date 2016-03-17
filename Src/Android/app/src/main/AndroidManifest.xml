@@ -9,7 +9,6 @@
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -29,15 +28,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeView"></activity>
+        <activity android:name=".HomeView" />
         <activity
             android:name=".CourseView"
-            android:parentActivityName=".HomeView"></activity>
+            android:parentActivityName=".HomeView" />
         <activity
             android:name=".QuizView"
-            android:parentActivityName=".HomeView"></activity>
-        <activity android:name=".QuizDetailsActivity"
-            android:parentActivityName=".HomeView"></activity>
+            android:parentActivityName=".HomeView" />
+        <activity
+            android:name=".QuizDetailsActivity"
+            android:parentActivityName=".HomeView" />
+        <activity android:name=".CreateQuizActivity">
+            android:parentActivityName=".HomeView"
+        </activity>
     </application>
 
 </manifest>
