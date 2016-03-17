@@ -22,6 +22,10 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
 
         $scope.isAuthorized = (MeanUser.isStudent || MeanUser.isProfessor || MeanUser.isAdmin);
 
+        $scope.canAddStudents = function() {
+            return (MeanUser.isProfessor || MeanUser.isAdmin);
+        };
+
         $scope.find = function() {
             Courses.query(function(courses) {
                 $scope.courses = courses;
