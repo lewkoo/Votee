@@ -310,4 +310,34 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         boolean errorTextFound = solo.searchText(errorMessage);
         assertTrue("Should see an error text displayed that a role is not selected", errorTextFound);
     }
+
+    public void testBackButtonYes() throws Exception {
+        // Unlock the screen
+        solo.unlockScreen();
+        //Click on the back button
+        solo.goBack();
+        getInstrumentation().waitForIdleSync();
+        // Expect to see confirmation
+        String confirmationMessage = solo.getString(R.string.registration_cancel_confirm_message);
+        boolean confirmationMessageFound = solo.searchText(confirmationMessage);
+        assertTrue("Should see a confirmation message", confirmationMessageFound);
+        // Click on 'yes'
+        solo.clickOnView(solo.getView(android.R.id.button1));
+    }
+
+    public void testBackButtonNo() throws Exception {
+        // Unlock the screen
+        solo.unlockScreen();
+        //Click on the back button
+        solo.goBack();
+        getInstrumentation().waitForIdleSync();
+        // Expect to see confirmation
+        String confirmationMessage = solo.getString(R.string.registration_cancel_confirm_message);
+        boolean confirmationMessageFound = solo.searchText(confirmationMessage);
+        assertTrue("Should see a confirmation message", confirmationMessageFound);
+        // Click on 'yes'
+        solo.clickOnView(solo.getView(android.R.id.button3));
+        //Wait for transition to the HomeView activity
+        solo.waitForActivity(RegisterActivity.class);
+    }
 }
