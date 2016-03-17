@@ -171,7 +171,14 @@ public class APIHelper {
      *
      */
 
-    private static JsonObject parseResponseBody(retrofit.client.Response response)
+    public static JsonObject parseResponseBody(retrofit.client.Response response)
+    {
+        String receivedBodyString = new String(((TypedByteArray) response.getBody()).getBytes());
+        JsonObject obj = new JsonParser().parse(receivedBodyString).getAsJsonObject();
+        return obj;
+    }
+
+    public static JsonObject parseResponseErrorBody(RetrofitError response)
     {
         String receivedBodyString = new String(((TypedByteArray) response.getBody()).getBytes());
         JsonObject obj = new JsonParser().parse(receivedBodyString).getAsJsonObject();

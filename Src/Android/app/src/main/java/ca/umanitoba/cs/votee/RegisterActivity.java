@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.security.InvalidParameterException;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
@@ -206,13 +208,22 @@ public class RegisterActivity extends AppCompatActivity {
 
     }
 
+    class RegisterRestError {
+        @SerializedName("param")
+        public String field;
+        @SerializedName("msg")
+        public String errorDetails;
+        @SerializedName("value")
+        public String value;
+    }
+
     public class UserRegisterTask extends AsyncTask<Void, Void, Boolean> {
         private final String mFullName;
         private final String mEmail;
         private final String mUserName;
         private final String mPassword;
         private final String mUserRole;
-        private String mServErr;
+        private String mServErr = null;
 
         public UserRegisterTask(String mFullName, String mEmail, String mPassword, String mUserName, String mUserRole) {
             this.mFullName = mFullName;
@@ -226,11 +237,8 @@ public class RegisterActivity extends AppCompatActivity {
         protected Boolean doInBackground(Void... params) {
 
             // Issue an API call
-
-
-            // Issue an API call
             try {
-                APIHelper.logIn();
+                APIHelper.register(mEmail, mPassword, mUserName, mFullName, mUserRole);
             }
             catch (RetrofitError e)
             {
@@ -238,8 +246,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if (kind == RetrofitError.Kind.HTTP)
                 {
-                    if (e.getResponse().getStatus() != 401) {
-                        mServErr = e.getMessage();
+                    if(e.getResponse().getStatus() == 400){
+                        mServErr = "Email / username already used. Try a different one";
                     }
                 }
                 else
@@ -247,8 +255,6 @@ public class RegisterActivity extends AppCompatActivity {
                     mServErr = "Error contacting server. Please try again later";
                 }
             }
-
-            APIHelper.register(mEmail, mPassword, mUserName, mFullName, mUserRole);
 
             return UserProfile.getInstance().isAuthenticated();
         }
@@ -262,8 +268,7 @@ public class RegisterActivity extends AppCompatActivity {
             if (mServErr != null) {
                 Snackbar snackbar = Snackbar.make(mRegisterFormView, mServErr, Snackbar.LENGTH_LONG);
                 snackbar.show();
-            }
-            if (success) {
+            } else if (success) {
                 Intent intent = new Intent(RegisterActivity.this, HomeView.class);
                 startActivity(intent);
                 finish();
