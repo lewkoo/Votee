@@ -152,7 +152,7 @@ public class RegisterActivity extends AppCompatActivity {
 
         //Check if passwords match
         if(!TextUtils.equals(password, confirmPassword)){
-            mPasswordView.setError("Passwords do not match");
+            mPasswordView.setError(getString(R.string.error_passwords_do_not_match));
             mPasswordView.setText("");
             mPasswordConfirmView.setText("");
             focusView = mPasswordView;

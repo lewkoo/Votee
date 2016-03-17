@@ -28,4 +28,5 @@
     <string name="registration_cancel_confim_detail_message">Are you sure you want to stop registering an account?</string>
     <string name="registration_cancel_confirm_message">Really Exit?</string>
     <string name="role_not_selected_error_message">Select your role</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
 </resources>

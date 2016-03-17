@@ -84,4 +84,230 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
 
     }
 
+    public void testIncorrectEmail() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // Type an full name, baby
+        solo.enterText(0, CORRECT_FULL_NAME);
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, INCORRECT_EMAIL_1);
+        //Click on the user name field
+        solo.clickOnView(solo.getView(R.id.user_name));
+        // Type an email, baby
+        solo.enterText(2, CORRECT_USER_NAME);
+        //Click on the correct role radio button
+        solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        String errorMessage = solo.getString(R.string.error_invalid_email);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that the email is incorrect", errorTextFound);
+    }
+
+    public void testIncorrectPassword1() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // Type an full name, baby
+        solo.enterText(0, CORRECT_FULL_NAME);
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, CORRECT_EMAIL);
+        //Click on the user name field
+        solo.clickOnView(solo.getView(R.id.user_name));
+        // Type an email, baby
+        solo.enterText(2, CORRECT_USER_NAME);
+        //Click on the correct role radio button
+        solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, INCORRECT_PASSWORD_1);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, INCORRECT_PASSWORD_1);
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        //Check for invalid email address string
+        String errorMessage = solo.getString(R.string.error_invalid_password_short);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that the password is too short", errorTextFound);
+    }
+
+    public void testIncorrectPassword2() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // Type an full name, baby
+        solo.enterText(0, CORRECT_FULL_NAME);
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, CORRECT_EMAIL);
+        //Click on the user name field
+        solo.clickOnView(solo.getView(R.id.user_name));
+        // Type an email, baby
+        solo.enterText(2, CORRECT_USER_NAME);
+        //Click on the correct role radio button
+        solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, INCORRECT_PASSWORD_2);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, INCORRECT_PASSWORD_2);
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        //Check for invalid email address string
+        String errorMessage = solo.getString(R.string.error_invalid_password_long);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that the password is too long", errorTextFound);
+    }
+
+    public void testNotMatchingPasswords() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // Type an full name, baby
+        solo.enterText(0, CORRECT_FULL_NAME);
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, CORRECT_EMAIL);
+        //Click on the user name field
+        solo.clickOnView(solo.getView(R.id.user_name));
+        // Type an user name, baby
+        solo.enterText(2, CORRECT_USER_NAME);
+        //Click on the correct role radio button
+        solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD + " extra stuff");
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        //Check for invalid email address string
+        String errorMessage = solo.getString(R.string.error_passwords_do_not_match);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that the passwords are not matching", errorTextFound);
+    }
+
+    public void testNoFullName() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // DO NOT Type an full name, baby
+
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, CORRECT_EMAIL);
+        //Click on the user name field
+        solo.clickOnView(solo.getView(R.id.user_name));
+        // Type an email, baby
+        solo.enterText(2, CORRECT_USER_NAME);
+        //Click on the correct role radio button
+        solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        //Check for invalid email address string
+        String errorMessage = solo.getString(R.string.error_field_required);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that a field is required", errorTextFound);
+    }
+
+    public void testNoUserName() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // Type an full name, baby
+        solo.enterText(0, CORRECT_FULL_NAME);
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, CORRECT_EMAIL);
+        //Click on the user name field
+        //Click on the correct role radio button
+        solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        //Check for invalid email address string
+        String errorMessage = solo.getString(R.string.error_field_required);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that a field is required", errorTextFound);
+    }
+
+    public void testNoRoleSelected() throws Exception {
+        // Unlock the lock screen
+        solo.unlockScreen();
+        //Click on the full name field
+        solo.clickOnView(solo.getView(R.id.full_name));
+        // Type an full name, baby
+        solo.enterText(0, CORRECT_FULL_NAME);
+        //Click on the email field
+        solo.clickOnView(solo.getView(R.id.email));
+        // Type an email, baby
+        solo.enterText(1, CORRECT_EMAIL);
+        //Click on the user name field
+        solo.clickOnView(solo.getView(R.id.user_name));
+        // Type an user name, baby
+        solo.enterText(2, CORRECT_USER_NAME);
+        //DO NOT Click on the correct role radio button
+        //solo.clickOnRadioButton(1);
+        //Click on the password field
+        solo.clickOnView(solo.getView(R.id.password));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the confirm password field
+        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //Enter the password
+        solo.enterText(3, CORRECT_PASSWORD);
+        //Click on the submit button
+        solo.clickOnView(solo.getView(R.id.register_button));
+        //Check for invalid email address string
+        String errorMessage = solo.getString(R.string.role_not_selected_error_message);
+        boolean errorTextFound = solo.searchText(errorMessage);
+        assertTrue("Should see an error text displayed that a role is not selected", errorTextFound);
+    }
 }
