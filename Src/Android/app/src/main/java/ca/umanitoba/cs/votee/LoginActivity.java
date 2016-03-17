@@ -4,6 +4,7 @@ import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.LoaderManager.LoaderCallbacks;
+import android.content.Context;
 import android.content.CursorLoader;
 import android.content.Intent;
 import android.content.Loader;
@@ -17,11 +18,16 @@ import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -34,6 +40,7 @@ import java.util.List;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
 import ca.umanitoba.cs.votee.data.UserProfile;
+import retrofit.RetrofitError;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -47,13 +54,6 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
      */
     private static final int REQUEST_READ_CONTACTS = 0;
 
-    /**
-     * A dummy authentication store containing known user names and passwords.
-     * TODO: remove after connecting to a real authentication system.
-     */
-    private static final String[] DUMMY_CREDENTIALS = new String[]{
-            "foo@example.com:hello", "bar@example.com:world"
-    };
     /**
      * Keep track of the login task to ensure we can cancel it if requested.
      */
@@ -69,6 +69,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        // Set up toolbar
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
+
         // Set up the login form.
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
@@ -95,6 +100,24 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.login_options_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.register_button:
+                Intent intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
     }
 
     private void populateAutoComplete() {
@@ -184,7 +207,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mPasswordView.setError(getString(R.string.error_field_required));
             focusView = mPasswordView;
             cancel = true;
-        }else if(!isPasswordValid(password)){
+        }else if(!isPasswordValid(password, mPasswordView)){
             focusView = mPasswordView;
             cancel = true;
         }
@@ -194,6 +217,10 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // form field with an error.
             focusView.requestFocus();
         } else {
+            // Hide keyboard
+            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(mLoginFormView.getWindowToken(), 0);
+
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
             showProgress(true);
@@ -202,13 +229,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    private boolean isPasswordValid(String password) {
+    public static boolean isPasswordValid(String password, EditText mPasswordView) {
         // Password must be anywhere from 8 to 20 characters long
         if(password.length() < 8){
-            mPasswordView.setError(getString(R.string.error_invalid_password_short));
+            mPasswordView.setError("This password is too short");
             return false;
         }else if(password.length() > 20){
-            mPasswordView.setError(getString(R.string.error_invalid_password_long));
+            mPasswordView.setError("This password is too long");
             return false;
         }else{
             return true;
@@ -313,6 +340,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         private final String mEmail;
         private final String mPassword;
+        private String mServErr = null;
 
         UserLoginTask(String email, String password) {
             mEmail = email;
@@ -327,7 +355,24 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             UserProfile.getInstance().setPassword(mPassword);
 
             // Issue an API call
-            APIHelper.logIn();
+            try {
+                APIHelper.logIn();
+            }
+            catch (RetrofitError e)
+            {
+                RetrofitError.Kind kind = e.getKind();
+
+                if (kind == RetrofitError.Kind.HTTP)
+                {
+                    if (e.getResponse().getStatus() != 401) {
+                        mServErr = e.getMessage();
+                    }
+                }
+                else
+                {
+                    mServErr = "Error contacting server. Please try again later";
+                }
+            }
 
             return UserProfile.getInstance().isAuthenticated();
         }
@@ -337,7 +382,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mAuthTask = null;
             showProgress(false);
 
-            if (success) {
+            if (mServErr != null) {
+                Snackbar snackbar = Snackbar.make(mLoginFormView, mServErr, Snackbar.LENGTH_LONG);
+                snackbar.show();
+            }
+            else if (success) {
                 Intent intent = new Intent(LoginActivity.this, HomeView.class);
                 startActivity(intent);
                 finish();

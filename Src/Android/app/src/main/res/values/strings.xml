@@ -5,7 +5,8 @@
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (required)</string>
     <string name="action_sign_in">Sign in</string>
-    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_sign_out">Sign out</string>
+    <string name="action_register">Register</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password_short">This password is too short</string>
     <string name="error_invalid_password_long">This password is too long</string>
@@ -14,4 +15,18 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
+    <string name="title_activity_register">Register an account</string>
+    <string name="menu_register">Register</string>
+    <string name="full_name_hint">Full Name</string>
+    <string name="enter_your_full_name">Enter your full name here</string>
+    <string name="user_name_hint">Username</string>
+    <string name="admin_role">I am an Administrator</string>
+    <string name="prof_role">I am a Professor</string>
+    <string name="student_role">I am a Student</string>
+    <string name="prompt_password_repeat">Repeat password</string>
+    <string name="register_button_label">Register</string>
+    <string name="registration_cancel_confim_detail_message">Are you sure you want to stop registering an account?</string>
+    <string name="registration_cancel_confirm_message">Really Exit?</string>
+    <string name="role_not_selected_error_message">Select your role</string>
+    <string name="error_passwords_do_not_match">Passwords do not match</string>
 </resources>

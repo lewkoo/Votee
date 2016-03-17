@@ -1,12 +1,13 @@
 package ca.umanitoba.cs.votee.data;
 
+import java.io.Serializable;
 import java.security.InvalidParameterException;
 import java.util.regex.Pattern;
 
 /**
  * Created by Levko on 2016-03-10.
  */
-public class UserProfile {
+public class UserProfile implements Serializable {
 
     public static final Pattern EMAIL_ADDRESS_PATTERN = Pattern.compile(
             "[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" +
@@ -17,6 +18,30 @@ public class UserProfile {
                     "[a-zA-Z0-9][a-zA-Z0-9\\-]{0,25}" +
                     ")+"
     );
+
+
+    public enum UserRoles{
+        student ("student"),
+        professor ("professor"),
+        administrator ("administrator"),
+        unknown ("unknown");
+
+        private final String name;
+
+        private UserRoles(String s) {
+            name = s;
+        }
+
+        public boolean equalsName(String otherName) {
+            return (otherName != null) && name.equals(otherName);
+        }
+
+        public String toString() {
+            return this.name;
+        }
+    }
+
+
 
     private String token;
     private String name;

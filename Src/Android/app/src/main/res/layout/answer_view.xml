@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context="ca.umanitoba.cs.votee.CourseView">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ToolBarStyle"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_gravity="left|right|top" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/logo"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Medium Text"
+                android:id="@+id/questionText" />
+
+            <Button
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:id="@+id/buttonAnswerA"
+                    android:layout_row="0"
+                    android:layout_column="23"
+                    android:layout_gravity="center|top"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:id="@+id/buttonAnswerB"
+                    android:layout_row="0"
+                    android:layout_column="23"
+                    android:layout_gravity="center|top"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:id="@+id/buttonAnswerC"
+                    android:layout_row="0"
+                    android:layout_column="23"
+                    android:layout_gravity="center|top"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <Button
+                    android:layout_width="188dp"
+                    android:layout_height="wrap_content"
+                    android:text="D"
+                    android:id="@+id/buttonAnswerD"
+                    android:layout_row="0"
+                    android:layout_column="23"
+                    android:layout_gravity="center|top"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>
