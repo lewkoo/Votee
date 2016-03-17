@@ -151,7 +151,7 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 
         @Override
         protected void onPostExecute(final Boolean success) {
-            mAuthTask = null;
+            mGetQuestionsTask = null;
             //showProgress(false);
 
             if (mServErr != null) {
@@ -166,7 +166,7 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 
         @Override
         protected void onCancelled() {
-            mAuthTask = null;
+            mGetQuestionsTask = null;
             //showProgress(false);
         }
     }
