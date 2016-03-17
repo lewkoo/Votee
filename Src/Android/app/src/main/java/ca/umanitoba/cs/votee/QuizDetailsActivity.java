@@ -11,6 +11,9 @@ import android.widget.TextView;
 import ca.umanitoba.cs.votee.data.Question;
 
 public class QuizDetailsActivity extends AppCompatActivity {
+    //Defining views
+    private TextView questionTitle;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,5 +21,12 @@ public class QuizDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_quiz_details);
 
         Question selectedQuestion = (Question)getIntent().getSerializableExtra("Question");
+
+        //initialize views
+        questionTitle = (TextView)findViewById(R.id.textViewQuestionTitle);
+
+        //display values
+        questionTitle.setText(String.valueOf(selectedQuestion.getTitle()));
+
     }
 }
