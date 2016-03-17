@@ -25,7 +25,7 @@ import retrofit.RetrofitError;
 
 import static ca.umanitoba.cs.votee.LoginActivity.isPasswordValid;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterActivity extends BaseActivity {
 
     private UserRegisterTask mRegisterTask = null;
 
@@ -46,6 +46,10 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+        super.setupTitlebar();
+        mActionBar.setDisplayHomeAsUpEnabled(true);
+
         // Set up the register form
         mFullNameView = (EditText) findViewById(R.id.full_name);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
