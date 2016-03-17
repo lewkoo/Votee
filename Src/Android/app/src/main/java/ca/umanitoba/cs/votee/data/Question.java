@@ -1,9 +1,5 @@
 package ca.umanitoba.cs.votee.data;
 
-import com.google.gson.JsonObject;
-
-import org.json.JSONObject;
-
 import java.io.Serializable;
 
 /**
@@ -23,6 +19,15 @@ public class Question  implements Serializable{
 
     public Question(){
 
+    }
+
+    // single instance
+    private static Question instance;
+
+    public static Question getInstance() {
+        if (instance == null)
+            instance = new Question();
+        return instance;
     }
 
     public String getToken() {
@@ -60,4 +65,59 @@ public class Question  implements Serializable{
     public boolean getSelected(){ return selected; }
 
     public void setSelected(){selected = true;}
+
+    public void setToken(String token){this.token = token;}
+
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
+    }
+
+    public void setCreated(String created) {
+        this.created = created;
+    }
+
+    public void setCreator(UserProfile creator) {
+        this.creator = creator;
+    }
+
+    public void setOptions(Options options) {
+        this.options = options;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public static boolean isInitialized(){
+        if (instance == null){
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    public void resetQuestion(){restoreQuestionData();}
+
+    private void restoreQuestionData(){
+        this.token = null;
+        this._id = null;
+        this.answer = null;
+        this.created = null;
+        this.creator = null;
+        this.options = null;
+        this.title = null;
+        this.type = null;
+        this.selected = false;
+
+    }
+
+
 }
