@@ -11,34 +11,28 @@ import org.json.JSONObject;
 import java.io.Serializable;
 
 public class Options  implements Serializable {
-    private String option1;
-    private String option2;
-    private String option3;
-    private String option4;
+    private String opt0;
+    private String opt1;
+    private String opt2;
+    private String opt3;
 
+    public Options(){
 
-    //single instance for singleton pattern
-    private static Options instance;
-
-    public static Options getInstance() {
-        if (instance == null)
-            instance = new Options();
-        return instance;
     }
 
     public String getOption1() {
-        return option1;
+        return opt0;
     }
 
     public String getOption2() {
-        return option2;
+        return opt1;
     }
 
     public String getOption3() {
-        return option3;
+        return opt2;
     }
 
     public String getOption4() {
-        return option4;
+        return opt3;
     }
 }

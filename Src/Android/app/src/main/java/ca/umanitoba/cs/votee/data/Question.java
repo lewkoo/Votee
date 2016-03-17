@@ -1,5 +1,7 @@
 package ca.umanitoba.cs.votee.data;
 
+import com.google.gson.JsonObject;
+
 import org.json.JSONObject;
 
 import java.io.Serializable;
@@ -19,14 +21,8 @@ public class Question  implements Serializable{
     private String type;
     private boolean selected;
 
+    public Question(){
 
-    //single instance for singleton pattern
-    private static Question instance;
-
-    public static Question getInstance() {
-        if (instance == null)
-            instance = new Question();
-        return instance;
     }
 
     public String getToken() {
