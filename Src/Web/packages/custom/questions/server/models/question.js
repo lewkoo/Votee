@@ -64,7 +64,13 @@ var QuestionSchema = new Schema({
         type:       mongoose.Schema.Types.ObjectId,
         ref:        'Answer',
         required:   'False'
-    }]
+    }],
+
+    courseNumber: {
+        type: Number,
+        required: false,
+        trim: true
+    }
 
 });
 

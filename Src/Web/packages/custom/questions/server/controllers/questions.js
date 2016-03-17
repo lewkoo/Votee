@@ -99,11 +99,13 @@ module.exports = function(Questions) {
                     });
                 }
             }
+
             //TODO: refactor
             question.title = req.body.title;
             question.type = 'MULTIPLE-CHOICE';
             question.answer = req.body.answer;
             question.options = req.body.options;
+            question.courseNumber = req.body.courseNumber;
 
             question.save(function(err) {
                 if (err) {
