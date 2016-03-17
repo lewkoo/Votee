@@ -18,7 +18,6 @@ import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.OkClient;
-import retrofit.client.Response;
 import retrofit.converter.GsonConverter;
 import retrofit.mime.TypedByteArray;
 
@@ -36,6 +35,11 @@ public class APIHelper {
     public static final String VT_API_TOKEN_KEY = "authorization";
     public static final String VT_API_EMAIL_KEY = "email";
     public static final String VT_API_PASSWORD_KEY = "password";
+    public static final String VT_API_CONFIRM_PASSWORD_KEY = "confirmPassword";
+    public static final String VT_API_USERNAME_KEY = "username";
+    public static final String VT_API_NAME_KEY = "name";
+    public static final String VT_API_ROLES_KEY = "roles";
+
     public static final String API_AUTH_FAIL = "Authentication fail";
 
     private static RestAdapter mRestAdapter;
@@ -182,7 +186,14 @@ public class APIHelper {
      *
      */
 
-    private static JsonObject parseResponseBody(retrofit.client.Response response)
+    public static JsonObject parseResponseBody(retrofit.client.Response response)
+    {
+        String receivedBodyString = new String(((TypedByteArray) response.getBody()).getBytes());
+        JsonObject obj = new JsonParser().parse(receivedBodyString).getAsJsonObject();
+        return obj;
+    }
+
+    public static JsonObject parseResponseErrorBody(RetrofitError response)
     {
         String receivedBodyString = new String(((TypedByteArray) response.getBody()).getBytes());
         JsonObject obj = new JsonParser().parse(receivedBodyString).getAsJsonObject();
@@ -207,6 +218,46 @@ public class APIHelper {
         {
             receivedToken = parseResponseBody(response).get("token").getAsString();
             UserProfile.getInstance().setToken(receivedToken);
+        }
+
+        // Update the REST adapter with an authorization token
+        updateRESTAdapter();
+
+    }
+
+    // register call
+    public static void register(String emailValue, String password, String userName, String name, String roles){
+        final JsonObject jsonParams = new JsonObject();
+
+        if(emailValue == null || password == null
+                || userName == null || name == null
+                || roles == null) throw new InvalidParameterException("Invalid parameters given");
+
+        jsonParams.addProperty(VT_API_EMAIL_KEY, emailValue);
+        jsonParams.addProperty(VT_API_PASSWORD_KEY, password);
+        jsonParams.addProperty(VT_API_CONFIRM_PASSWORD_KEY, password);
+        jsonParams.addProperty(VT_API_USERNAME_KEY, userName);
+        jsonParams.addProperty(VT_API_NAME_KEY, name);
+        jsonParams.addProperty(VT_API_ROLES_KEY, roles);
+
+        retrofit.client.Response response;
+        try{
+            response = mRestService.register(jsonParams);
+        } catch (RetrofitError error){
+            throw error;
+        }
+
+        // extract the token from a JSON response
+        String receivedToken = "";
+        if(response != null)
+        {
+            receivedToken = parseResponseBody(response).get("token").getAsString();
+            UserProfile.getInstance().setToken(receivedToken);
+
+            // set other user data
+            UserProfile.getInstance().setEmail(emailValue);
+            UserProfile.getInstance().setName(name);
+            UserProfile.getInstance().setPassword(password);
         }
 
         // Update the REST adapter with an authorization token

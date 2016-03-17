@@ -23,7 +23,6 @@ public class LoginActivityTest extends ActivityInstrumentationTestCase2<LoginAct
     private static String INCORRECT_PASSWORD_1 = "1234";
     private static String INCORRECT_PASSWORD_2 = "123456789101112131415161718192021";
 
-    private static final String expectedToken = "eyJhbGciOiJIUzI1NiJ9.JTdCJTIyX2lkJTIyOiUyMjU2ZTIyZDY1NzM2ZjBmMjgyZjNmYTRkZiUyMiwlMjJlbWFpbCUyMjolMjJsZXdrb29AZ21haWwuY29tJTIyLCUyMnVzZXJuYW1lJTIyOiUyMmxld2tvb0BnbWFpbC5jb20lMjIsJTIybmFtZSUyMjolMjJMZXZrbyUyMEl2YW5jaHVrJTIyLCUyMl9fdiUyMjowLCUyMnByb3ZpZGVyJTIyOiUyMmxvY2FsJTIyLCUyMnJvbGVzJTIyOiU1QiUyMmFkbWluJTIyLCUyMmF1dGhlbnRpY2F0ZWQlMjIlNUQlN0Q.vAeMPcWJxal-4-nJQrnlKCSASepOd-HSjEc5QVE7wN8";
     private Solo solo;
 
 
@@ -39,9 +38,6 @@ public class LoginActivityTest extends ActivityInstrumentationTestCase2<LoginAct
         APIHelper.updateRESTAdapter();
 
     }
-
-
-
 
     @Override
     public void tearDown() throws Exception {

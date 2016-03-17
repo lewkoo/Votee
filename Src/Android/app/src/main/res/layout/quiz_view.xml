@@ -9,7 +9,8 @@
     android:paddingLeft="0px"
     android:paddingRight="0px"
     android:paddingTop="0px"
-    tools:context="ca.umanitoba.cs.votee.QuizView">
+    tools:context="ca.umanitoba.cs.votee.QuizView"
+    android:id="@+id/quiz_view">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"

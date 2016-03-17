@@ -19,6 +19,30 @@ public class UserProfile implements Serializable {
                     ")+"
     );
 
+
+    public enum UserRoles{
+        student ("student"),
+        professor ("professor"),
+        administrator ("administrator"),
+        unknown ("unknown");
+
+        private final String name;
+
+        private UserRoles(String s) {
+            name = s;
+        }
+
+        public boolean equalsName(String otherName) {
+            return (otherName != null) && name.equals(otherName);
+        }
+
+        public String toString() {
+            return this.name;
+        }
+    }
+
+
+
     private String token;
     private String name;
     private String password;

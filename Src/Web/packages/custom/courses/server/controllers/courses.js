@@ -9,6 +9,7 @@
  */
 var mongoose = require('mongoose'),
     Course = mongoose.model('Course'),
+    User = mongoose.model('User'),
     config = require('meanio').loadConfig(),
     _ = require('lodash');
 
@@ -343,6 +344,28 @@ module.exports = function(Courses) {
             });
 
         }
+        /*,user: function(req, res, next, id) {
+         User.findOne({
+         _id: id
+         }).exec(function(err, user) {
+         if (err) return next(err);
+         if (!user) return next(new Error('Failed to load User ' + id));
+         req.profile = user;
+         next();
+         });
+         },
+
+         userEmail: function(req, res, next, email) {
+         User.findOne({
+         email: email
+         }).exec(function(err, user) {
+         if (err) return next(err);
+         if (!user) return next(new Error('Failed to find User ' + email));
+         req.profile = user;
+         next();
+         });
+         },
+         */
 
     }; // END of return
 

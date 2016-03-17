@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import ca.umanitoba.cs.votee.data.Question;
 
-public class QuizDetailsActivity extends AppCompatActivity {
+public class QuizDetailsActivity extends BaseActivity {
     //Defining views
     private TextView questionTitle;
 
@@ -19,6 +19,9 @@ public class QuizDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_details);
+
+        super.setupTitlebar();
+        mActionBar.setDisplayHomeAsUpEnabled(true);
 
         Question selectedQuestion = (Question)getIntent().getSerializableExtra("Question");
 

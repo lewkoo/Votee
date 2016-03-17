@@ -21,6 +21,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.inputmethod.EditorInfo;
@@ -97,6 +100,24 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.login_options_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.register_button:
+                Intent intent = new Intent(this, RegisterActivity.class);
+                startActivity(intent);
+                break;
+        }
+        return true;
     }
 
     private void populateAutoComplete() {
@@ -186,7 +207,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mPasswordView.setError(getString(R.string.error_field_required));
             focusView = mPasswordView;
             cancel = true;
-        }else if(!isPasswordValid(password)){
+        }else if(!isPasswordValid(password, mPasswordView)){
             focusView = mPasswordView;
             cancel = true;
         }
@@ -208,13 +229,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         }
     }
 
-    private boolean isPasswordValid(String password) {
+    public static boolean isPasswordValid(String password, EditText mPasswordView) {
         // Password must be anywhere from 8 to 20 characters long
         if(password.length() < 8){
-            mPasswordView.setError(getString(R.string.error_invalid_password_short));
+            mPasswordView.setError("This password is too short");
             return false;
         }else if(password.length() > 20){
-            mPasswordView.setError(getString(R.string.error_invalid_password_long));
+            mPasswordView.setError("This password is too long");
             return false;
         }else{
             return true;

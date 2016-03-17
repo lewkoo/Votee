@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     package="ca.umanitoba.cs.votee">
 
     <uses-sdk android:minSdkVersion="11" />
@@ -29,6 +30,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".HomeView" />
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:theme="@style/AppTheme"
+            android:noHistory = "true"
+            android:screenOrientation="portrait"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".LoginActivity">
+        </activity>
         <activity
             android:name=".CourseView"
             android:parentActivityName=".HomeView" />

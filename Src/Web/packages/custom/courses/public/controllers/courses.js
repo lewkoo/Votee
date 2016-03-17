@@ -1,8 +1,8 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.courses').controller('CoursesController', ['$scope', '$stateParams', 'Global', 'Courses', '$location', 'MeanUser',
-    function($scope, $stateParams, Global, Courses, $location, MeanUser) {
+angular.module('mean.courses').controller('CoursesController', ['$scope', '$stateParams', 'Global', 'Courses', '$location', 'MeanUser','Users',
+    function($scope, $stateParams, Global, Courses, $location, MeanUser, Users) {
         $scope.global = Global;
         $scope.package = {
             name: 'courses'
@@ -102,7 +102,29 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             });
         };
 
+        $scope.getQuestions = function()
+        {
+            var questions = courses.questions;
+            return questions;
+        };
 
+        $scope.addStudents = function(isValid)
+        {
+            if(isValid){
+                //console.log("HI");
+                //console.log("EMAIL = "+ $scope.users.email);
+
+                /*Users.get({
+                    email: $scope.users.email
+                }, function(users) {
+                    $scope.user = users;
+                    console.log($scope.users.email);
+                    console.log($scope.user.email);
+                });*/
+            }
+
+
+        };
 
     }
 ]);

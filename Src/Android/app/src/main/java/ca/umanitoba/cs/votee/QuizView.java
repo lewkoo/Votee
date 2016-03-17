@@ -2,8 +2,10 @@ package ca.umanitoba.cs.votee;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
@@ -22,8 +24,10 @@ import java.util.List;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
 import ca.umanitoba.cs.votee.data.Question;
+import ca.umanitoba.cs.votee.data.UserProfile;
 import ca.umanitoba.cs.votee.fragments.CourseList;
 import ca.umanitoba.cs.votee.fragments.QuizList;
+import retrofit.RetrofitError;
 
 /**
  * Created by bozgo_000 on 2016-03-15.
@@ -33,12 +37,17 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
     private List<Question> questions;
     private ListView listView;
 
+    private View mQuizView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_view);
 
         super.setupTitlebar();
+        mActionBar.setDisplayHomeAsUpEnabled(true);
+
+        mQuizView = findViewById(R.id.quiz_view);
 
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
@@ -62,17 +71,16 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 //        item.setSelected();
 //    }
 //
-    public void onSelectClick(View view){
-
-        Intent createQIntent = new Intent(QuizView.this, CreateQuizActivity.class);
-        QuizView.this.startActivity(createQIntent);
-
-
-    }
+//    public void onSelectClick(View view){
+//
+//        Intent questionIntent = new Intent(QuizView.this, AnswerActivity.class);
+//        QuizView.this.startActivity(questionIntent);
+//
+//
+//    }
     public void getQuestions(){
-        questions = APIHelper.getQuestions();
-
-        showList();
+        mGetQuestionsTask = new GetQuestionsTask();
+        mGetQuestionsTask.execute();
 
 //        listAdapter.addAll(APIHelper.getQuestions());
 //        retrofit.client.Response response;
@@ -116,4 +124,53 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 
     }
 
+    public class GetQuestionsTask extends AsyncTask<Void, Void, Boolean> {
+
+        private String mServErr = null;
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+
+            // Issue an API call
+            try {
+                questions = APIHelper.getQuestions();
+            }
+            catch (RetrofitError e)
+            {
+                RetrofitError.Kind kind = e.getKind();
+
+                if (kind == RetrofitError.Kind.HTTP)
+                {
+                    mServErr = e.getMessage();
+                }
+                else
+                {
+                    mServErr = "Error contacting server. Please try again later";
+                }
+            }
+
+            return UserProfile.getInstance().isAuthenticated();
+        }
+
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            mGetQuestionsTask = null;
+            //showProgress(false);
+
+            if (mServErr != null) {
+                Snackbar snackbar = Snackbar.make(mQuizView, mServErr, Snackbar.LENGTH_LONG);
+                snackbar.show();
+            }
+            else if (success) {
+                showList();
+            } else {
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+            mGetQuestionsTask = null;
+            //showProgress(false);
+        }
+    }
 }
