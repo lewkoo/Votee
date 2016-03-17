@@ -108,6 +108,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
 
                 var question = new Questions({
                     'title': $scope.question.title,
+                    'courseNumber': $scope.question.courseNumber,
                     'options': $scope.options,
                     'answer': $scope.question.answer,
                     'answers': $scope.question.answers,
