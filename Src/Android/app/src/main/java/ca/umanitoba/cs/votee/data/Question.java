@@ -2,17 +2,19 @@ package ca.umanitoba.cs.votee.data;
 
 import org.json.JSONObject;
 
+import java.io.Serializable;
+
 /**
  * Created by Yuriy on 3/15/2016.
  */
-public class Question {
+public class Question  implements Serializable{
     private String token;
     private String _id;
     private String answer;
     //anything better for date?
     private String created;
     private UserProfile creator;
-    private JSONObject options;
+    private Options options;
     private String title;
     private String type;
     private boolean selected;
@@ -47,7 +49,7 @@ public class Question {
         return creator;
     }
 
-    public JSONObject getOptions() {
+    public Options getOptions() {
         return options;
     }
 

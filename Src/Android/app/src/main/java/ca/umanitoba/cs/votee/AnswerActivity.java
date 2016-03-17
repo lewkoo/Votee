@@ -35,32 +35,32 @@ public class AnswerActivity extends BaseActivity implements CourseList.OnFragmen
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
         Question q = getQ();
-        String answerA = "A";
-        String answerB = "B";
-        String answerC = "C";
-        String answerD = "D";
-        JSONObject jobj = q.getOptions();
+//        String answerA = "A";
+//        String answerB = "B";
+//        String answerC = "C";
+//        String answerD = "D";
+//        String jobj = q.getOptions();
 
-        try {
-            answerA = jobj.getString("answerA");
-            answerB = jobj.getString("answerB");
-            answerC = jobj.getString("answerC");
-            answerD = jobj.getString("answerD");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+//        try {
+////            answerA = jobj.getString("answerA");
+////            answerB = jobj.getString("answerB");
+////            answerC = jobj.getString("answerC");
+////            answerD = jobj.getString("answerD");
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
 
-        TextView questionText = (TextView)findViewById(R.id.questionText);
-        Button answerAButton = (Button)findViewById(R.id.buttonAnswerA);
-        Button answerBButton = (Button)findViewById(R.id.buttonAnswerB);
-        Button answerCButton = (Button)findViewById(R.id.buttonAnswerC);
-        Button answerDButton = (Button)findViewById(R.id.buttonAnswerD);
-
-        questionText.setText(q.getTitle());
-        answerAButton.setText(answerA);
-        answerBButton.setText(answerB);
-        answerCButton.setText(answerC);
-        answerDButton.setText(answerD);
+//        TextView questionText = (TextView)findViewById(R.id.questionText);
+//        Button answerAButton = (Button)findViewById(R.id.buttonAnswerA);
+//        Button answerBButton = (Button)findViewById(R.id.buttonAnswerB);
+//        Button answerCButton = (Button)findViewById(R.id.buttonAnswerC);
+//        Button answerDButton = (Button)findViewById(R.id.buttonAnswerD);
+//
+//        questionText.setText(q.getTitle());
+//        answerAButton.setText(answerA);
+//        answerBButton.setText(answerB);
+//        answerCButton.setText(answerC);
+//        answerDButton.setText(answerD);
 
 
     }
