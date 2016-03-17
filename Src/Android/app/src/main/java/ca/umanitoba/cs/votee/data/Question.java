@@ -21,15 +21,6 @@ public class Question  implements Serializable{
 
     }
 
-    // single instance
-    private static Question instance;
-
-    public static Question getInstance() {
-        if (instance == null)
-            instance = new Question();
-        return instance;
-    }
-
     public String getToken() {
         return token;
     }
@@ -94,14 +85,6 @@ public class Question  implements Serializable{
 
     public void setType(String type) {
         this.type = type;
-    }
-
-    public static boolean isInitialized(){
-        if (instance == null){
-            return false;
-        }else {
-            return true;
-        }
     }
 
     public void resetQuestion(){restoreQuestionData();}
