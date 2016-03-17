@@ -44,7 +44,7 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_view);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
         mQuizView = findViewById(R.id.quiz_view);

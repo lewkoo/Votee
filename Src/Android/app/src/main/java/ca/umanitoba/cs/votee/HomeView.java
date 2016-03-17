@@ -34,7 +34,7 @@ public class HomeView extends BaseActivity implements CourseList.OnFragmentInter
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_view);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
 
     }
 
