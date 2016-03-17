@@ -8,14 +8,17 @@ import com.google.gson.JsonParser;
 import com.squareup.okhttp.OkHttpClient;
 
 import java.security.InvalidParameterException;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import ca.umanitoba.cs.votee.BuildConfig;
+import ca.umanitoba.cs.votee.data.Question;
 import ca.umanitoba.cs.votee.data.UserProfile;
 import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.OkClient;
+import retrofit.client.Response;
 import retrofit.converter.GsonConverter;
 import retrofit.mime.TypedByteArray;
 
@@ -156,6 +159,19 @@ public class APIHelper {
         }
     }
 
+    public static JsonObject getJsonParamsForQuestions()
+    {
+        if(UserProfile.getInstance().getEmail() == null ||
+                UserProfile.getInstance().getPassword() == null){
+            throw new InvalidParameterException("User name / password is empty");
+        }
+
+        final JsonObject jsonParams = new JsonObject();
+        jsonParams.addProperty(VT_API_EMAIL_KEY, UserProfile.getInstance().getEmail());
+        jsonParams.addProperty(VT_API_PASSWORD_KEY, UserProfile.getInstance().getPassword());
+        return jsonParams;
+    }
+
     public static JsonObject getJsonParamsWithToken() {
 
         if(UserProfile.getInstance().getToken() == null)
@@ -270,6 +286,23 @@ public class APIHelper {
 
     }
 
+//    //get Questions call
+    //TODO: implement and uncomment
+    public static List<Question> getQuestions(){
+        final JsonObject jsonParams = getJsonParamsWithToken();
+        if(jsonParams == null) throw new InvalidParameterException("Not logged in yet"); // user is not logged in yet
+
+        List<Question> response;
+
+        try{
+            response = mRestService.questions();
+        } catch (RetrofitError error){
+            response = null;
+        }
+//        Log.d("STATE", "getQuestions() response: "+response );
+        return response;
+
+    }
 
 
 
