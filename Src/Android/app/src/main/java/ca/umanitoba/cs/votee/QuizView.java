@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.io.Serializable;
 import java.util.List;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
@@ -25,7 +26,7 @@ import ca.umanitoba.cs.votee.fragments.QuizList;
 /**
  * Created by bozgo_000 on 2016-03-15.
  */
-public class QuizView extends BaseActivity implements CourseList.OnFragmentInteractionListener, QuizList.OnFragmentInteractionListener {
+public class QuizView extends BaseActivity implements CourseList.OnFragmentInteractionListener, QuizList.OnFragmentInteractionListener, ListView.OnItemClickListener {
 
     private List<Question> questions;
     private ListView listView;
@@ -40,9 +41,17 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
 
-        getQuestions();
 
         mActionBar.setDisplayHomeAsUpEnabled(true);
+
+        ArrayAdapter<Object> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        listView = (ListView) findViewById(R.id.activity_main_listView);
+        listView.setAdapter(listAdapter);
+
+        getQuestions();
+
+        //set onClick listener to listView
+        listView.setOnItemClickListener(this);
     }
 
 
@@ -59,11 +68,6 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 //
 //    }
     public void getQuestions(){
-
-        ArrayAdapter<Object> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
-        listView = (ListView) findViewById(R.id.activity_main_listView);
-        listView.setAdapter(listAdapter);
-
         questions = APIHelper.getQuestions();
 
         showList();
@@ -89,6 +93,20 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 
         //Setting adapter to listview
         listView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        //Creating an intent
+        Intent intent = new Intent(this, QuizDetailsActivity.class);
+//
+//        //Getting the requested question from the list
+        Question question = questions.get(position);
+//
+//        //Adding question details to intent
+        intent.putExtra("Question", question);
+
+        startActivity(intent);
     }
 
     @Override
