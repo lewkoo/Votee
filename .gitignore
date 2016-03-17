@@ -10,6 +10,11 @@ Icon
 .Trashes
 
 # --------------------
+# Windows Files
+# --------------------
+
+
+# --------------------
 # Eclipse or Nodeclipse "Enide Studio" Files
 # --------------------
 # recommended to add to Git SCM
@@ -59,8 +64,8 @@ bower_components
 # --------------------
 # App Files
 # --------------------
-data/
-tests/results/**
+/data/
+/Src/Web/tests/results/
 modules/public/
 modules/views/
 /public/build/
@@ -90,8 +95,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-node_modules/
-.sass-cache/
 public/stylesheets/*.css
 public/min/
 public/index.html

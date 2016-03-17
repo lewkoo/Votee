@@ -1,0 +1,65 @@
+<section data-ng-controller="CoursesController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
+    <span>{{course.created | date:'medium'}}</span> /
+    <span> Taught by: {{course.professor.name}}</span>
+    <br>
+    <a href="courses" class="btn btn-default btn-warning">Back to List</a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-10">
+                <div class="well panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <!--/col-->
+                            <div class="col-xs-12 col-sm-8">
+                                <h2>{{course.title}} - {{course.courseNumber}}</h2>
+
+                                <div data-ng-if="canEditCourses(course)">
+                                    <a class="btn" href="/courses/{{course._id}}/edit">
+                                        <i class="glyphicon glyphicon-edit"></i>
+                                    </a>
+                                    <a class="btn" data-ng-click="remove(course);">
+                                        <i class="glyphicon glyphicon-trash"></i>
+                                    </a>
+                                </div>
+                                <h5>Description: {{course.description}}</h5>
+
+                                <h5>You have {{course.students.length}} students enrolled</h5>
+
+                                <br>
+                                <div class="container">
+                                    <button class="btn btn-info">View Student List</button>
+                                    <button class="btn btn-info">View Questions</button>
+                                    <button class="btn btn-info">View Grades</button>
+                                </div>
+
+                                <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <form name="addStudentForm" class="form-horizontal col-md-6" role="form" data-ng-submit="addStudents(addStudentForm.$valid)" novalidate>
+        <div class="col-md-12">
+            <div class="form-group" ng-class="{ 'has-error' : submitted && addStudentForm.email.$invalid }">
+                <label class="col-md-3 control-label">Add Students Here</label>
+                <div class="col-md-9">
+                    <input name="email" type="text" class="form-control" data-ng-model="users.email" id="email" placeholder="Enter student email here" required>
+                    <div ng-show="submitted && addStudentForm.email.$invalid" class="help-block">
+                        <p ng-show="addStudentForm.email.$error.required">Student email is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" class="btn btn-danger">Add Student</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>
