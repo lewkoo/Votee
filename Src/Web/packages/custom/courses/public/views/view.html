@@ -25,7 +25,7 @@
                                 </div>
                                 <h5>Description: {{course.description}}</h5>
 
-                                <h5>You have {{course.students.length}} students enrolled</h5>
+                                <h5>There are {{course.students.length}} students enrolled</h5>
 
                                 <br>
                                 <div class="container">
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-    <form name="addStudentForm" class="form-horizontal col-md-6" role="form" data-ng-submit="addStudents(addStudentForm.$valid)" novalidate>
+    <form name="addStudentForm" class="form-horizontal col-md-6" data-ng-if="canAddStudents()" role="form" data-ng-submit="addStudents(addStudentForm.$valid)" novalidate>
         <div class="col-md-12">
             <div class="form-group" ng-class="{ 'has-error' : submitted && addStudentForm.email.$invalid }">
                 <label class="col-md-3 control-label">Add Students Here</label>

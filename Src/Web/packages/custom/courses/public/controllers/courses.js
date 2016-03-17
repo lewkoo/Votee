@@ -20,6 +20,10 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             return MeanUser.isAdmin || course.user._id === MeanUser.user._id;
         };
 
+        $scope.canAddStudents = function() {
+            return (MeanUser.isProfessor || MeanUser.isAdmin);
+        };
+
         $scope.isAuthorized = (MeanUser.isStudent || MeanUser.isProfessor || MeanUser.isAdmin);
 
         $scope.find = function() {
