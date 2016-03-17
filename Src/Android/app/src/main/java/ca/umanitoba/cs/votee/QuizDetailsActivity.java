@@ -31,9 +31,9 @@ public class QuizDetailsActivity extends BaseActivity {
         super.setupTitlebar(R.menu.toolbar);
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
+        //get question object
         Question selectedQuestion = (Question)getIntent().getSerializableExtra("Question");
 
-//        JsonObject options = new JsonObject(getIntent().getStringExtra("options"));
         //initialize views
         questionTitle = (TextView)findViewById(R.id.textViewQuestionTitle);
         option1 = (RadioButton)findViewById(R.id.radioButton1);
@@ -43,11 +43,11 @@ public class QuizDetailsActivity extends BaseActivity {
 
 
         //display values
-//        questionTitle.setText(String.valueOf(selectedQuestion.getTitle()));
-//        option1.setText(String.valueOf(selectedQuestion.getOptions().getOption1()));
-//        option2.setText(String.valueOf(selectedQuestion.getOptions().getOption2()));
-//        option3.setText(String.valueOf(selectedQuestion.getOptions().getOption3()));
-//        option4.setText(String.valueOf(selectedQuestion.getOptions().getOption4()));
+        questionTitle.setText(String.valueOf(selectedQuestion.getTitle()));
+        option1.setText(String.valueOf(selectedQuestion.getOptions().getOption1()));
+        option2.setText(String.valueOf(selectedQuestion.getOptions().getOption2()));
+        option3.setText(String.valueOf(selectedQuestion.getOptions().getOption3()));
+        option4.setText(String.valueOf(selectedQuestion.getOptions().getOption4()));
 
 
     }

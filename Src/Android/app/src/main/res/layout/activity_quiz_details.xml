@@ -45,7 +45,11 @@
             android:id="@+id/radioGroup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_below="@+id/textViewQuestionTitle"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="60dp">
 
             <RadioButton
                 android:id="@+id/radioButton1"
@@ -68,31 +72,16 @@
                 android:layout_height="wrap_content" />
         </RadioGroup>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_below="@+id/radioGroup"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginTop="153dp">
-
-            <Button
-                android:id="@+id/clearBtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="onClear"
-                android:text="Clear " />
 
             <Button
                 android:id="@+id/submitBtn"
-                android:layout_width="match_parent"
+                android:layout_width="376dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:onClick="onSubmit"
-                android:text="Submit" />
-        </LinearLayout>
+                android:text="Vote"
+                android:layout_below="@+id/radioGroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp" />
 
     </RelativeLayout>
 </LinearLayout>
