@@ -88,3 +88,54 @@ To start a production server, instead run
 ## Running end to end Selenium tests
 
     gulp e2e.test
+
+
+# Setting up Android application
+
+## Dependencies
+
+There are two ways of running our Android Application: through an IDE and command line. We describe both ways. 
+
+## Option 1: Running with an IDE
+### Install the latest release of Android Studio
+
+You can download the IDE here: [Android Studio download link](http://developer.android.com/sdk/index.html#win-bundle)
+You have to, of course, select the correct version for your operating system.
+
+### Open the project with Android Studio
+
+Next, you will need to open the project through the Android Studio. Instructions on how to do that are available here: 
+
+[Opening a project with Android Studio](https://github.com/dogriffiths/HeadFirstAndroid/wiki/How-to-open-a-project-in-Android-Studio)
+
+However, you need to point the application into `Votee/Src/Android`
+
+### Running the application
+
+Simply select `Run > Run app`
+
+You will be presented with a Device Chooser menu. If you have an Android device connected into your computer with Developer Mode enabled, you can run Votee on that device. Alternatively, you can select to run Votee on an emulator. When you are done, hit "OK"
+
+### Running unit tests
+
+Click on `Build Variants` in the bottom left part of the IDE
+
+In the `Test Artifact` drop-down, select `Unit Tests`
+
+In Project window, find `java/ca.umanitoba.cs.votee (test)`. Right click on the folder, and select `Run Run Unit Test'
+
+A Unit Test runner will appear in the bottom part of the screen, indicating which tests passed and which failed.
+
+### Running end-to-end tests
+
+Click on `Build Variants` in the bottom left part of the IDE
+
+In the `Test Artifact` drop-down, select `Android Instrumentation Tests`
+
+In Project window, find `java/ca.umanitoba.cs.votee (androidTest)`. Right click on the folder, and select `Run Run E2E Test'
+
+Depending on which device you run the tests, the device should be showing the tasks executing. The test results will also appear in the IDE.
+
+## Option 2: Running with a Command line
+
+TODO: finish later
