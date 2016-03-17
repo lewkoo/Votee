@@ -66,7 +66,7 @@
                 //'_id': '56cf5578b387fd7c940cb9be',
                 //'creator': '56b2a9b3897e13640eeba6e9',
                 'title': 'New q',
-                'options': {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'},
+                'options': {'opt0': 'sdsdj', 'opt1': 'kkk', 'opt2': 'nnn', 'opt3': 'dfd'},
                 'answer': '2',
                 'answers': [
                     '56cf557fb387fd7c940cb9bf'
@@ -100,7 +100,7 @@
                 '_id': '56cf5578b387fd7c940cb9be',
                 //'creator': '56b2a9b3897e13640eeba6e9',
                 'title': 'New q',
-                'options': {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'},
+                'options': {'opt0': 'sdsdj', 'opt1': 'kkk', 'opt2': 'nnn', 'opt3': 'dfd'},
                 'answer': '2',
                 'answers': [
                     '56cf557fb387fd7c940cb9bf'
@@ -168,7 +168,7 @@
             // fixture mock form input values
             scope.question = {};
             scope.question.title = 'New q';
-            scope.question.options =  {'0': 'sdsdj', '1': 'kkk', '2': 'nnn', '3': 'dfd'};
+            scope.question.options =  {'opt0': 'sdsdj', 'opt1': 'kkk', 'opt2': 'nnn', 'opt3': 'dfd'};
             scope.question.answer = '2';
             //scope.professor = '56c8bdfaf82d7bd71d40de02';
             scope.question.type = 'MULTIPLE-CHOICE';

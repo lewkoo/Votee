@@ -91,9 +91,24 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             if (isValid) {
                 //var question = new Questions($scope.question);
 
+               /* $scope.options = {
+                    "opt0": $scope.question.options[0],
+                    "opt1": $scope.question.options[1],
+                    "opt2": $scope.question.options[2],
+                    "opt3": $scope.question.options[3]
+                };*/
+                $scope.options = {
+                    "opt3": $scope.question.options.opt3,
+                    "opt2": $scope.question.options.opt2,
+                    "opt1": $scope.question.options.opt1,
+                    "opt0": $scope.question.options.opt0
+
+                };
+
+
                 var question = new Questions({
                     'title': $scope.question.title,
-                    'options': $scope.question.options,
+                    'options': $scope.options,
                     'answer': $scope.question.answer,
                     'answers': $scope.question.answers,
                     'type': $scope.question.type,
