@@ -18,7 +18,6 @@ import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.OkClient;
-import retrofit.client.Response;
 import retrofit.converter.GsonConverter;
 import retrofit.mime.TypedByteArray;
 
