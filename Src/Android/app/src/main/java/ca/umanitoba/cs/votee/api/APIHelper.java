@@ -40,6 +40,13 @@ public class APIHelper {
     public static final String VT_API_NAME_KEY = "name";
     public static final String VT_API_ROLES_KEY = "roles";
 
+    //question params
+    public static final String VT_API_TITLE = "title";
+    public static final String VT_API_OPTIONS = "options";
+    public static final String VT_API_ANSWER = "answer";
+    public static final String VT_API_CREATOR = "creator";
+
+
     public static final String API_AUTH_FAIL = "Authentication fail";
 
     private static RestAdapter mRestAdapter;
@@ -303,6 +310,47 @@ public class APIHelper {
 
     }
 
+    // register call
+    public static void createQuestion(String title, String option1, String option2, String option3, String option4, String correctAnswer) {
+        final JsonObject jsonParams = new JsonObject();
+
+        if (title == null || option1 == null
+                || option2 == null || option3 == null || option4 == null
+                || correctAnswer == null)
+            throw new InvalidParameterException("Invalid parameters given");
+
+        jsonParams.addProperty(VT_API_TITLE, title);
+        //TODO: create options JSON object or pass it to this function
+//        jsonParams.addProperty(VT_API_OPTIONS, options);
+        jsonParams.addProperty(VT_API_ANSWER, correctAnswer);
+        jsonParams.addProperty(VT_API_CREATOR, UserProfile.getInstance().get_id());
+;
+
+
+//        retrofit.client.Response response;
+//        try {
+//            response = mRestService.register(jsonParams);
+//        } catch (RetrofitError error) {
+//            throw error;
+//        }
+//
+//        // extract the token from a JSON response
+//        String receivedToken = "";
+//        if (response != null) {
+//            receivedToken = parseResponseBody(response).get("token").getAsString();
+//            UserProfile.getInstance().setToken(receivedToken);
+//
+////            // set other user data
+////            UserProfile.getInstance().setEmail(emailValue);
+////            UserProfile.getInstance().setName(name);
+////            UserProfile.getInstance().setPassword(password);
+////        }
+//
+//            // Update the REST adapter with an authorization token
+//            updateRESTAdapter();
+
+//        }
+    }
 
 
 
