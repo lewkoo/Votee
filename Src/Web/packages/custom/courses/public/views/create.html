@@ -3,7 +3,7 @@
         <div class="form-group" ng-class="{ 'has-error' : submitted && courseForm.title.$invalid }">
             <label class="col-md-3 control-label">Course title</label>
             <div class="col-md-9">
-                <input name="title" type="text" class="form-control" data-ng-model="course.title" id="title" placeholder="Entre course title here" required>
+                <input name="title" type="text" class="form-control" data-ng-model="course.title" id="title" placeholder="Enter course title here" required>
                 <div ng-show="submitted && courseForm.title.$invalid" class="help-block">
                     <p ng-show="courseForm.title.$error.required">Course title is required</p>
                 </div>
@@ -13,7 +13,7 @@
         <div class="form-group" ng-class="{ 'has-error' : submitted && courseForm.title.$invalid }">
             <label class="col-md-3 control-label">Course number</label>
             <div class="col-md-9">
-                <input name="courseNumber" type="number" class="form-control" data-ng-model="course.courseNumber" id="courseNumber" placeholder="Entre course number here" required>
+                <input name="courseNumber" type="number" class="form-control" data-ng-model="course.courseNumber" id="courseNumber" placeholder="Enter course number here" required>
                 <div ng-show="submitted && courseForm.courseNumber.$invalid" class="help-block">
                     <p ng-show="courseForm.courseNumber.$error.required">Course number is required</p>
                 </div>

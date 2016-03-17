@@ -6,7 +6,18 @@
 
         </label>
 
+        <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.courseNumber.$invalid }">
+            <label class="col-md-3 control-label">Course Number</label>
+            <div class="col-md-9">
+                <input name="courseNumber" type="text" class="form-control" data-ng-model="question.courseNumber" id="courseNumber" placeholder="Course Number" required>
+                <div ng-show="submitted && questionForm.courseNumber.$invalid" class="help-block">
+                    <p ng-show="questionForm.courseNumber.$error.required">Course Number is required</p>
+                </div>
+            </div>
+        </div>
+
         <div ng-show="question.type == 'OPEN-ENDED'">
+
             <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.title.$invalid }">
                 <label class="col-md-3 control-label">Question Title</label>
                 <div class="col-md-9">
@@ -25,6 +36,7 @@
         </div>
 
         <div ng-show="question.type == 'MULTIPLE-CHOICE'">
+
             <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.title.$invalid }">
                 <label class="col-md-3 control-label">Question Title</label>
                 <div class="col-md-9">
