@@ -92,11 +92,7 @@ To start a production server, instead run
 
 # Setting up Android application
 
-## Dependencies
-
-There are two ways of running our Android Application: through an IDE and command line. We describe both ways. 
-
-## Option 1: Running with an IDE
+## Running with an IDE
 ### Install the latest release of Android Studio
 
 You can download the IDE here: [Android Studio download link](http://developer.android.com/sdk/index.html#win-bundle)
@@ -135,7 +131,3 @@ In the `Test Artifact` drop-down, select `Android Instrumentation Tests`
 In Project window, find `java/ca.umanitoba.cs.votee (androidTest)`. Right click on the folder, and select `Run Run E2E Test'
 
 Depending on which device you run the tests, the device should be showing the tasks executing. The test results will also appear in the IDE.
-
-## Option 2: Running with a Command line
-
-TODO: finish later
