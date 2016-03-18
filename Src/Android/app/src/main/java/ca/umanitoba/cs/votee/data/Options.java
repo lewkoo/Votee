@@ -12,9 +12,7 @@ public class Options  implements Serializable {
     private String opt2;
     private String opt3;
 
-    public Options(){
-
-    }
+    public Options(){ }
 
     //constructor when creating Quiz
     public Options(String opt0, String opt1, String opt2, String opt3){
@@ -62,6 +60,4 @@ public class Options  implements Serializable {
         this.opt2 = null;
         this.opt3 = null;
     }
-
-
 }

@@ -41,8 +41,6 @@ public class UserProfile implements Serializable {
         }
     }
 
-
-
     private String token;
     private String name;
     private String password;
@@ -74,7 +72,6 @@ public class UserProfile implements Serializable {
         this.roles = null;
         this._id = null;
     }
-
 
     public String getToken() {
         return token;

@@ -108,7 +108,6 @@ public class CreateQuizActivity extends BaseActivity {
         opt3View.setError(null);
         opt4View.setError(null);
 
-
         // Store values at the time of the create quiz attempt.
         String courseNum = courseNumView.getText().toString();
         String quizQuestion = quizQuestionView.getText().toString();
@@ -175,7 +174,6 @@ public class CreateQuizActivity extends BaseActivity {
         }
     }//attemptCreate
 
-
     public class CreateQuizTask extends AsyncTask<Void, Void, Boolean> {
         private final String courseNum;
         private final String quizQuestion;
@@ -212,11 +210,8 @@ public class CreateQuizActivity extends BaseActivity {
                     mServErr = "Error contacting server. Please try again later";
                 }
             }
-
             return UserProfile.getInstance().isAuthenticated();
         }
-
-
 
         @Override
         protected void onPostExecute(final Boolean success) {

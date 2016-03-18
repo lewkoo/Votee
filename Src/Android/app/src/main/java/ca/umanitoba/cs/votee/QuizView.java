@@ -76,8 +76,6 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
         listView.setOnItemClickListener(this);
     }
 
-
-
     public void onSelectClick(View view){
 
         Intent createQIntent = new Intent(QuizView.this, CreateQuizActivity.class);
@@ -88,10 +86,6 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
     public void getQuestions(){
         mGetQuestionsTask = new GetQuestionsTask();
         mGetQuestionsTask.execute();
-
-//        listAdapter.addAll(APIHelper.getQuestions());
-//        retrofit.client.Response response;
-//        response = APIHelper.getQuestions();
     }
 
     private void showList(){
@@ -111,7 +105,7 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
             //Setting adapter to listview
             listView.setAdapter(adapter);
         }catch (Exception e){
-
+            throw e;
         }
     }
 
@@ -119,11 +113,10 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //Creating an intent
         Intent intent = new Intent(this, QuizDetailsActivity.class);
-//
-//        //Getting the requested question from the list
+
+       //Getting the requested question from the list
         Question question = questions.get(position);
-//
-//        //Adding question details to intent
+
         intent.putExtra("Question", question);
 
         startActivity(intent);

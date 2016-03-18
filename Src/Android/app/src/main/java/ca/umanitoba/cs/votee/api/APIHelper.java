@@ -322,10 +322,7 @@ public class APIHelper {
                 || options == null || correctAns == null)
             throw new InvalidParameterException("Invalid parameters given");
 
-        //pass token in request
-//        jsonParams.addProperty(userToken, UserProfile.getInstance().getToken());
         jsonParams.addProperty(VT_API_TITLE, quizQuestion);
-        //TODO: create options JSON object or pass it to this function
         jsonParams.addProperty(VT_API_OPT0, options.getOption1());
         jsonParams.addProperty(VT_API_OPT1, options.getOption2());
         jsonParams.addProperty(VT_API_OPT2, options.getOption3());
@@ -339,16 +336,15 @@ public class APIHelper {
 
         jsonParams.add(VT_API_OPTIONS, jsonObj);
         jsonParams.addProperty(VT_API_ANSWER, correctAns);
+        //TODO: umcomment when implemented
 //        jsonParams.addProperty(VT_API_CREATOR, UserProfile.getInstance().get_id());
 
-//        retrofit.client.Response response;
         Question response;
         try {
             response = mRestService.createQuestion(jsonParams);
         } catch (RetrofitError error) {
             throw error;
         }
-
         // extract the token from a JSON response
 //        String receivedToken = "";
 //        if (response != null) {
@@ -363,7 +359,6 @@ public class APIHelper {
 //
 //            // Update the REST adapter with an authorization token
 ////            updateRESTAdapter();
-//
 //        }
     }
 

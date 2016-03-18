@@ -28,8 +28,6 @@ public class QuizDetailsActivity extends BaseActivity {
     private RadioButton option4;
     private Button voteButton;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +61,5 @@ public class QuizDetailsActivity extends BaseActivity {
         option2.setText(String.valueOf(selectedQuestion.getOptions().getOption2()));
         option3.setText(String.valueOf(selectedQuestion.getOptions().getOption3()));
         option4.setText(String.valueOf(selectedQuestion.getOptions().getOption4()));
-
-
     }
 }
