@@ -5,6 +5,7 @@ import android.os.AsyncTask;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -24,12 +25,13 @@ public class CreateQuizActivity extends BaseActivity {
 
 //    private CreateQuizTask mCreateTask = null;
 
-    private EditText courseNum = null;
-    private EditText courseTitle = null;
-    private EditText opt1 = null;
-    private EditText opt2 = null;
-    private EditText opt3 = null;
-    private EditText opt4 = null;
+    private EditText courseNumView = null;
+    private EditText quizQuestionView = null;
+    private EditText opt1View = null;
+    private EditText opt2View = null;
+    private EditText opt3View = null;
+    private EditText opt4View = null;
+    private Spinner correctAnswerView = null;
 
     private View  mCreateQuizView;
 
@@ -49,6 +51,15 @@ public class CreateQuizActivity extends BaseActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        //set up the form
+        courseNumView = (EditText)findViewById(R.id.course_number);
+        quizQuestionView = (EditText)findViewById(R.id.course_title);
+        opt1View = (EditText)findViewById(R.id.option1);
+        opt2View = (EditText)findViewById(R.id.option2);
+        opt3View = (EditText)findViewById(R.id.option3);
+        opt4View = (EditText)findViewById(R.id.option4);
+        correctAnswerView = (Spinner)findViewById(R.id.correct_answer);
 
         spinner.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -77,6 +88,83 @@ public class CreateQuizActivity extends BaseActivity {
 
     private void attemptCreate() {
         Log.v("item", "in attemptCreate()!");
+//        if(mCreateTask != null){
+//            return;
+//        }
+
+        //reset errors
+        courseNumView.setError(null);
+        quizQuestionView.setError(null);
+        opt1View.setError(null);
+        opt2View.setError(null);
+        opt3View.setError(null);
+        opt4View.setError(null);
+
+
+        // Store values at the time of the create quiz attempt.
+        String courseNum = courseNumView.getText().toString();
+        String quizQuestion = quizQuestionView.getText().toString();
+        String quizOpt1 = opt1View.getText().toString();
+        String quizOpt2 = opt2View.getText().toString();
+        String quizOpt3 = opt3View.getText().toString();
+        String quizOpt4 = opt4View.getText().toString();
+        String correctAns = correctAnswerView.getSelectedItem().toString();
+
+        View focusView = null;
+        boolean cancel = false;
+
+        //check for validity
+        if(TextUtils.isEmpty(courseNum)){
+            courseNumView.setError(getString(R.string.error_field_required));
+            focusView = courseNumView;
+            cancel = true;
+        }
+
+        if(TextUtils.isEmpty(quizQuestion)){
+            quizQuestionView.setError(getString(R.string.error_field_required));
+            focusView = quizQuestionView;
+            cancel = true;
+        }
+
+        if(TextUtils.isEmpty(quizOpt1)){
+            opt1View.setError(getString(R.string.error_field_required));
+            focusView = opt1View;
+            cancel = true;
+        }
+
+        if(TextUtils.isEmpty(quizOpt2)){
+            opt2View.setError(getString(R.string.error_field_required));
+            focusView = opt2View;
+            cancel = true;
+        }
+
+        if(TextUtils.isEmpty(quizOpt3)){
+            opt3View.setError(getString(R.string.error_field_required));
+            focusView = opt3View;
+            cancel = true;
+        }
+
+        if(TextUtils.isEmpty(quizOpt4)){
+            opt4View.setError(getString(R.string.error_field_required));
+            focusView = opt4View;
+            cancel = true;
+        }
+
+        if(TextUtils.isEmpty(correctAns)){
+            focusView = correctAnswerView;
+            cancel = true;
+        }
+
+        if(cancel){
+            //error in validation
+            focusView.requestFocus();
+        } else {
+            //create question
+//            mCreateTask = new CreateQuizTask();
+        }
+
+
+
 
 
     }//attemptCreate
