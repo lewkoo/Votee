@@ -1,0 +1,160 @@
+[
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Hey guys sorry for all the Q's but when I am running gulp it says:\n \"angular-jwt.min.js\" is not found. \nAlso zeroclipboard.js not found.\nAny insights?",
+        "ts": "1457563704.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'd try rerunning npm install",
+        "ts": "1457563754.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Are you running on Windows?",
+        "ts": "1457563758.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "no on my mac. I just ran npm install and npm install angular-jwt but nothing changes",
+        "ts": "1457563790.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "npm install did not do the job for me",
+        "ts": "1457563798.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I had to run",
+        "ts": "1457563803.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "bower install -f",
+        "ts": "1457563813.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "okay I saw that in the docs but thought it was just for windows?",
+        "ts": "1457563829.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "i will give it a try",
+        "ts": "1457563834.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I thought so too",
+        "ts": "1457563864.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "But I guess it also happens on OS X now...",
+        "ts": "1457563879.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "hrm I am still getting the same issues",
+        "ts": "1457564286.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Can you post the full log?",
+        "ts": "1457564545.000014"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0J3D11K5|sandersjess> uploaded a file: <https:\/\/4350team.slack.com\/files\/sandersjess\/F0RMLCH6J\/-.txt|Untitled>",
+        "file": {
+            "id": "F0RMLCH6J",
+            "created": 1457564771,
+            "timestamp": 1457564771,
+            "name": "-.txt",
+            "title": "Untitled",
+            "mimetype": "text\/plain",
+            "filetype": "text",
+            "pretty_type": "Plain Text",
+            "user": "U0J3D11K5",
+            "editable": true,
+            "size": 667,
+            "mode": "snippet",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RMLCH6J\/-.txt?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RMLCH6J\/download\/-.txt?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "permalink": "https:\/\/4350team.slack.com\/files\/sandersjess\/F0RMLCH6J\/-.txt",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0RMLCH6J-d39ffe22e3",
+            "edit_link": "https:\/\/4350team.slack.com\/files\/sandersjess\/F0RMLCH6J\/-.txt\/edit",
+            "preview": "[16:56:42] Finished 'csslint' after 2.5 min\r\n[16:56:42] Starting 'development'...\r\n[16:56:42] Finished 'development' after 12 \u03bcs\r\n\/Users\/sandersjessica\/Desktop\/comp\/Comp 4350 - Soft Eng II\/Votee\/Src\/Web\/packages\/core\/users\/public\/assets\/lib\/angular-jwt\/dist\/angular-jwt.min.js not found\r\n\/Users\/sandersjessica\/Desktop\/comp\/Comp 4350 - Soft Eng II\/Votee\/Src\/Web\/packages\/core\/admin\/public\/assets\/lib\/zeroclipboard\/dist\/ZeroClipboard.js not found\r",
+            "preview_highlight": "<div class=\"CodeMirror cm-s-default CodeMirrorServer\">\n<div class=\"CodeMirror-code\">\n<div><pre>[16:56:42] Finished 'csslint' after 2.5 min<\/pre><\/div>\n<div><pre>[16:56:42] Starting 'development'...<\/pre><\/div>\n<div><pre>[16:56:42] Finished 'development' after 12 \u03bcs<\/pre><\/div>\n<div><pre>\/Users\/sandersjessica\/Desktop\/comp\/Comp 4350 - Soft Eng II\/Votee\/Src\/Web\/packages\/core\/users\/public\/assets\/lib\/angular-jwt\/dist\/angular-jwt.min.js not found<\/pre><\/div>\n<div><pre>\/Users\/sandersjessica\/Desktop\/comp\/Comp 4350 - Soft Eng II\/Votee\/Src\/Web\/packages\/core\/admin\/public\/assets\/lib\/zeroclipboard\/dist\/ZeroClipboard.js not found<\/pre><\/div>\n<div><pre><\/pre><\/div>\n<\/div>\n<\/div>\n",
+            "lines": 9,
+            "lines_more": 4,
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 0
+        },
+        "user": "U0J3D11K5",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0J3D11K5|sandersjess>",
+        "bot_id": null,
+        "ts": "1457564772.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Maybe if you cd to the users package and run npm install and bower install?",
+        "ts": "1457566458.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Yes, that one I did too. But I always added the force flag",
+        "ts": "1457568549.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "yayy! all working now, I had to do it in both users package and admin. Thanks guys.",
+        "ts": "1457570742.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Oh good.",
+        "ts": "1457570760.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": ":simple_smile:",
+        "ts": "1457571202.000020"
+    }
+]

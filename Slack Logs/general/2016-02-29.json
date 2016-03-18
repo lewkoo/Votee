@@ -1,0 +1,216 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hi guys, If you don\u2019t know this already, we have a change of plans for our next iteration. \n\nWe will be building the Android app for our own project, not someone else\u2019s. Tomorrow we will be handed an Android device - one per group. \n\nWhat I wanted to ask each one of you is who will be responsible for that device. I suggest it to be a person who does not have an Android device already. \n\nQuestion: Who hasn\u2019t got an Android phone\/tablet already? \n\nI can probably get one, so I will take it only if everyone else has one",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456771146.000000"
+        },
+        "ts": "1456770842.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Does anyone here have android dev experience?",
+        "ts": "1456777708.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'm familiar with a bit of the tooling, but I haven't actually written any Android code.",
+        "ts": "1456777838.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "We have an intern at Honda who is a pro. I can't ask him to write code for us - that would be cheating - but I can ask him questions if we are really stuck",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456779362.000000"
+        },
+        "ts": "1456778424.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Personally, I have only written C++ code on Android for some highly specific shader code as part of my research. ",
+        "ts": "1456778485.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I do. I wrote my software engineering 1 android app a year ago in Java ",
+        "ts": "1456778965.000008",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0HUU655Y",
+                    "U0HV1T7F1"
+                ],
+                "count": 2
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'm slightly familiar I touched it about three years ago so it's been a while haha",
+        "ts": "1456779294.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Also, I just want to let you guys know that I am going to be away from the 3rd to 7th without a comp. I will try my best to keep updated on slack and make up for the lost time when I get back!",
+        "ts": "1456779394.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Why do we have a duplicate project in the `Src` folder on `develop` branch?",
+        "ts": "1456795116.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "essentially, we have web part of our project in the root directory + another copy in a `Src` directory",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1456795173.000000"
+        },
+        "ts": "1456795169.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "any idea, <@U0J3A5RML> ?",
+        "ts": "1456795178.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": " You're the author of that commit :-)",
+        "ts": "1456795344.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "BTW is that eclipse project?",
+        "ts": "1456795797.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "my android studio has different folder structure",
+        "ts": "1456795852.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "That's Android studio.",
+        "ts": "1456798609.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "<@U0HUU655Y> I definitely moved the files. I don't have duplicates locally.",
+        "ts": "1456798724.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "sure, but when I pull from remote, I get both",
+        "ts": "1456798751.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "alright, I\u2019ll just make a fresh clone if that is the case",
+        "ts": "1456798771.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Really? I just did a hard reset and they didn't come back.",
+        "ts": "1456798881.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep, a fresh clone fixed this",
+        "ts": "1456798882.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "sorry",
+        "ts": "1456798886.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "had to checkout develop",
+        "ts": "1456798891.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Sorry,misread.",
+        "ts": "1456798905.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Everyone else should be able to run\ngit clean -df\nAs long as you don't have uncommitted changes you want to keep.",
+        "ts": "1456798995.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "oh, I think I know why I had this problem",
+        "ts": "1456798998.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I merged master into develop",
+        "ts": "1456799004.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which we have to do",
+        "ts": "1456799007.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and I got all the copies",
+        "ts": "1456799017.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "wow, that is weird. did the merge through GUI tool - all is good there",
+        "ts": "1456799103.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "nevermind",
+        "ts": "1456799113.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "merged master into develop. we are ready to code",
+        "ts": "1456799135.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Weird.",
+        "ts": "1456799215.000038"
+    }
+]

@@ -1,0 +1,523 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "testing this later today, thanks",
+        "ts": "1458053855.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Had a meeting with the marker, if anyone cares. Marks will be updated soon.",
+        "ts": "1458057026.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "How did it go?",
+        "ts": "1458057044.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Thank you Levko!",
+        "ts": "1458057073.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and Yuriy :simple_smile: \n\nhe is a great guy. Went well. He counted our e2e tests.",
+        "ts": "1458057103.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Good!",
+        "ts": "1458057198.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Nice ",
+        "ts": "1458057214.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but he had lots of comments on our current progress",
+        "ts": "1458057241.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "not too good comments, I must say",
+        "ts": "1458057250.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "23\/25 is the final mark.",
+        "ts": "1458057274.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we need to have something to show\/present",
+        "ts": "1458057311.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "like actual working, usable features",
+        "ts": "1458057325.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "enough for 20 minutes worth of presentation",
+        "ts": "1458057335.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i.e. log in as prof, create a course, add students to course, log in as a student, go to the course, vote, etc.",
+        "ts": "1458057407.000014"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 1040137 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1458057562.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "but the focus of this next iteration is Android and making sure things actually work and are doing something usefull",
+        "ts": "1458057670.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Once the marks are saved and displayed I think a 20 min presentation wouldn't be too bad?",
+        "ts": "1458058105.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Hard to say. That seems long haha",
+        "ts": "1458058122.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "It is long.",
+        "ts": "1458058450.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "agreed. so we better have something to show, I guess",
+        "ts": "1458058518.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Part of it is to explain implementation im sure though right? So that can help cut it down a bit ",
+        "ts": "1458059254.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Short demo lots of implementation talk",
+        "ts": "1458059287.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Marker did not talk about that. Most of what he said was about features. But valid point.",
+        "ts": "1458059304.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I have done some marking stuff, I was about to make the profs view of the submissions and submit marks for the students ",
+        "ts": "1458059426.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Trying to write some E2E tests for Log In",
+        "ts": "1458072800.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Will merge into develop once done",
+        "ts": "1458072808.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "On Android?",
+        "ts": "1458072828.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, Android",
+        "ts": "1458072837.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "are you doing that?",
+        "ts": "1458072847.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just so we don't do duplicate work",
+        "ts": "1458072857.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Sounds good",
+        "ts": "1458072859.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "No, I'm not.",
+        "ts": "1458072864.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, I'll update on the progress",
+        "ts": "1458072875.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep, now I have to figure out how to mock the server responses on the Android E2E tests ...",
+        "ts": "1458074543.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "surely enough, that is not going to be as easy",
+        "ts": "1458074555.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Shouldn't e2e tests use a real server?",
+        "ts": "1458075616.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "production server, that is?",
+        "ts": "1458075629.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or a local one?",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458075641.000000"
+        },
+        "ts": "1458075635.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Dev server",
+        "ts": "1458075638.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Local",
+        "ts": "1458075640.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "same argument can be made for the Unit tests",
+        "ts": "1458075652.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but Unit tests and I presume E2E tests are independent",
+        "ts": "1458075667.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Unit tests are different.",
+        "ts": "1458075675.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "they do not need to rely on a development server running",
+        "ts": "1458075682.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "E2E by definition tests the whole stack",
+        "ts": "1458075694.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that is true",
+        "ts": "1458075723.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "hm...",
+        "ts": "1458075725.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "let me keep that in mind.",
+        "ts": "1458075757.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if I find it too difficult to mock a server response, I will default to your proposition",
+        "ts": "1458075781.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you point is very, very valid - they should be testing the whole stack",
+        "ts": "1458075802.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but",
+        "ts": "1458075804.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "having to run the dev server before running E2E tests on Android smells a bit",
+        "ts": "1458075827.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Start it in the test setup",
+        "ts": "1458075842.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but then I might as well mock it",
+        "ts": "1458075853.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "either way, some setup stuff is required",
+        "ts": "1458075870.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Not really, just need to make a call to gulp",
+        "ts": "1458075910.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it just turns into \"launching a rocket into space\" situation, where, in order to launch a process A, you need to first launch and wait for B,C,D and so on ...",
+        "ts": "1458075913.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I'll need to put a time out to wait for gulp to start up. timeout will be fixed in the test, but actual server start up time will vary from machine to machine.",
+        "ts": "1458075987.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "therefore, tests will not be running consistently on every set up",
+        "ts": "1458076003.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "on some they will pass, on some they will fail",
+        "ts": "1458076018.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and there is no point in such tests",
+        "ts": "1458076025.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Hey guys deadline is coming up and Android project isn\u2019t looking too close to completion. If we can get some help in that area, as well as someone doing front end  and testing NOW would be the time.",
+        "ts": "1458079312.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I'm in a lab but I'm going to be working on it next 3 days ",
+        "ts": "1458079591.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I'll take a look at the android when I get home ",
+        "ts": "1458079619.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Got instrumentation tests running",
+        "ts": "1458092519.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "i.e. end-to-end testing",
+        "ts": "1458092531.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "super simple to do",
+        "ts": "1458092539.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "runs on an actual phone, too",
+        "ts": "1458093736.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I'll post a video later on",
+        "ts": "1458093741.000047"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> uploaded a file: <https:\/\/4350team.slack.com\/files\/levko\/F0T0QDS0L\/slack_for_ios_upload.mp4|Slack for iOS Upload>",
+        "file": {
+            "id": "F0T0QDS0L",
+            "created": 1458094042,
+            "timestamp": 1458094042,
+            "name": "Slack for iOS Upload.mp4",
+            "title": "Slack for iOS Upload",
+            "mimetype": "video\/mp4",
+            "filetype": "mp4",
+            "pretty_type": "MPEG 4 Video",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 6774398,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0T0QDS0L\/slack_for_ios_upload.mp4?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0T0QDS0L\/download\/slack_for_ios_upload.mp4?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0T0QDS0L\/slack_for_ios_upload.mp4",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0T0QDS0L-084b0b4eee",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 0,
+            "reactions": [
+                {
+                    "name": "+1",
+                    "users": [
+                        "U0HV4EBMJ",
+                        "U0J3A5RML"
+                    ],
+                    "count": 2
+                }
+            ]
+        },
+        "user": "U0HUU655Y",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1458094043.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "nice :simple_smile:",
+        "ts": "1458094089.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Configured E2E tests on Android to point to the Production server. Importing the existing mock library didn't work, so I just created an account on the production server.",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458100394.000000"
+        },
+        "ts": "1458100231.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I guess also we should have a create account feature on Android.",
+        "ts": "1458100247.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I will attempt it tomorrow, I think I know how to do everything from implementing the actual feature, to unit testing the code and to e2e testing it as well.",
+        "ts": "1458100286.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "since these are core features that all the rest are relying on, I merged Log In branch into develop",
+        "ts": "1458100318.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so, merge develop into your current branch and let me know of any crashes",
+        "ts": "1458100342.000056"
+    }
+]

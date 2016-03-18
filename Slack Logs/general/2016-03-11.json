@@ -1,0 +1,425 @@
+[
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "<@U0HUU655Y>: The android project isn't building. It looks like there is a UserProfile class that didn't get committed?",
+        "ts": "1457715721.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I'll check after the lecture, okay?",
+        "ts": "1457715776.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "No worries",
+        "ts": "1457715849.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "my git status is clean",
+        "ts": "1457716271.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "i will force add it later",
+        "ts": "1457716277.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I created the file in a package named \"data\". Git ignore then matched that with a string in gitignore file and did not stage it. ",
+        "ts": "1457717269.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Sorry. It is committed now. ",
+        "ts": "1457717283.000008",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0J3A5RML"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 7cadfa1 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1457721524.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "We lost 3 marks for not having end-to-end tests, which we do have",
+        "ts": "1457721711.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I am taking this to Hadi",
+        "ts": "1457721719.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Just looking at that.",
+        "ts": "1457721726.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "are they working through Selenium?",
+        "ts": "1457721744.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "They are.",
+        "ts": "1457721749.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1457721757.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "are you in the lab, Nathan? :simple_smile: he is closer to you",
+        "ts": "1457721772.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I am in the Engineering Library.",
+        "ts": "1457721782.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Nope. I'm an hour and a half away by bus.",
+        "ts": "1457721788.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, I'll go there now then",
+        "ts": "1457721798.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "You're closer",
+        "ts": "1457721798.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep, I am",
+        "ts": "1457721802.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "We have 10 e2e tests, although they don't cover all user stories.",
+        "ts": "1457721855.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it asks for at least one :simple_smile:",
+        "ts": "1457721873.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if we get those 3 marks back, then we will have 90%",
+        "ts": "1457721882.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, I'll chat with Hadi and the TA",
+        "ts": "1457721902.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "It asks for one per user story",
+        "ts": "1457721941.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "In the marking document at least, I haven't checked the original instructions.",
+        "ts": "1457721969.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "yeah, one per user story",
+        "ts": "1457722010.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Alright, I got a chance to talk to the prof and TA",
+        "ts": "1457722374.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "basically, the TA is fine with going over the assignment and changing the mark",
+        "ts": "1457722401.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but he can do it on Tuesday at 10",
+        "ts": "1457722415.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so not today",
+        "ts": "1457722423.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Well that's fine. As long as it gets done.",
+        "ts": "1457722436.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1457722444.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we need to pin point the exact commit that we had on the submission date",
+        "ts": "1457722471.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "then we go to his computer, check out that commit and take it from there",
+        "ts": "1457722493.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I presume I can just check out that tag you just created and it'll be the one ?",
+        "ts": "1457722622.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Yup",
+        "ts": "1457722659.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "thanks",
+        "ts": "1457722664.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "While we're on the topic, has anyone else tried running the end to end tests to make sure they work on more than just my computer?",
+        "ts": "1457722791.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I tried, they did work",
+        "ts": "1457722803.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Good",
+        "ts": "1457722818.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just tried on windows. 10 specs, 0 failures",
+        "ts": "1457722906.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "browser was going crazy",
+        "ts": "1457722912.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "they work",
+        "ts": "1457722914.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yeap, e2e works. Also the issue TA is having for implementatio is due to permissions which we specified  in issues and he seems to be missing some tets for courses...",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1457722972.000000"
+        },
+        "ts": "1457722961.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and we do have an entry in the Installation.md doc on how to run them.",
+        "ts": "1457722969.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "\"Adding a new course is not working\" , which is an issue with his permissions...because it works...",
+        "ts": "1457723045.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "oh, right!",
+        "ts": "1457723058.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I will also talk about that",
+        "ts": "1457723065.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "because we have tests for those as well...",
+        "ts": "1457723093.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I need someone to go there and argue with me",
+        "ts": "1457723122.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ill go",
+        "ts": "1457723135.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, cool, thanks",
+        "ts": "1457723140.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "what time is our meeting for HCI?",
+        "ts": "1457723146.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "10.20",
+        "ts": "1457723152.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "its on tuesday too i believe",
+        "ts": "1457723155.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, it is",
+        "ts": "1457723161.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "10.20",
+        "ts": "1457723194.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "so we will have 20 minutes to argue with him",
+        "ts": "1457723201.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Might be a little tight if you've got to checkout and set things up first.",
+        "ts": "1457723219.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "and then we will go and argue about another project with another set of teachers .... great",
+        "ts": "1457723220.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we can always show on our laptops",
+        "ts": "1457723236.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "True",
+        "ts": "1457723241.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "that would probably be easiest i think",
+        "ts": "1457723264.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if the TA is fine with it - I am too",
+        "ts": "1457723279.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we'll see",
+        "ts": "1457723282.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "he seemed like a good guy",
+        "ts": "1457723293.000069"
+    }
+]

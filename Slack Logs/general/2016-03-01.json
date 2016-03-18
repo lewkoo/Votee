@@ -1,0 +1,54 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Managed to borrow an Android phone\u2026 someone else would need to accept the tablet :simple_smile:",
+        "ts": "1456850541.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Apparently I'm the rep.",
+        "ts": "1456853457.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I don't need the tablet though.",
+        "ts": "1456853463.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Somebody else let me know if they want it.",
+        "ts": "1456853471.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I don't have an android device so I may want it if I can figure out how to set t all up! I'm on my way to class now ",
+        "ts": "1456853767.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Okay, it's yours.",
+        "ts": "1456853799.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "For anyone who isn't sure how to set up their android device for development, take a look at these articles.\n<https:\/\/developer.android.com\/tools\/device.html>\n<https:\/\/developer.android.com\/tools\/help\/adb.html>",
+        "attachments": [
+            {
+                "title": "Using Hardware Devices | Android Developers",
+                "title_link": "https:\/\/developer.android.com\/tools\/device.html",
+                "text": "When building a mobile application, it's important that you always test your application on a real device before releasing it to users. This page describes how to set up your development environment and Android-powered device for testing and debugging\u2026",
+                "fallback": "Using Hardware Devices | Android Developers",
+                "from_url": "https:\/\/developer.android.com\/tools\/device.html",
+                "id": 1
+            }
+        ],
+        "ts": "1456856365.000008"
+    }
+]

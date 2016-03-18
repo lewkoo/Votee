@@ -1,0 +1,54 @@
+[
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 5b67366 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456962371.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Got a Windows machine now, so I am trying to install Votee on it, and I keep getting errors. As I keep getting them, I am fixing them, and adding those steps into the Installation document.",
+        "ts": "1456974449.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": ":+1:",
+        "ts": "1456974496.000004"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version d1b3a83 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456974655.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "When I first did my install on Windows I was missing some packages so I had to npm install individually manually afterwards ",
+        "ts": "1456975956.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "i had to do a few things for some packages to compile  - basically, I had to install compilers. but I did not have to install packages manually",
+        "ts": "1456976777.000007"
+    }
+]
