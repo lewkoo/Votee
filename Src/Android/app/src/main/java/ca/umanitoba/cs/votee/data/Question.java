@@ -21,6 +21,18 @@ public class Question  implements Serializable{
 
     }
 
+    public Question(String token){
+        this.token = token;
+        _id = null;
+        answer = null;
+        created = null;
+        creator = null;
+        options = null;
+        title = null;
+        type = null;
+        selected = false;
+    }
+
     public String getToken() {
         return token;
     }

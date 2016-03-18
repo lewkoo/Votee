@@ -22,94 +22,100 @@ import static org.junit.Assert.*;
  */
 public class QuestionTest {
 
+    private Question testQuestion;
+
 
     @Before
     public void setUp() throws Exception {
-
+        testQuestion = new Question("testtoken");
     }
 
     @After
     public void tearDown() throws Exception {
-        Question.getInstance().resetQuestion();
-    }
-
-    @Test
-    public void testGetInstance() throws Exception {
-        Question.getInstance();
-        assertTrue(Question.isInitialized());
+        testQuestion.resetQuestion();
     }
 
 
     @Test
     public void testGetToken() throws Exception {
-        assertTrue(Question.getInstance().getToken() == null);
+        assertEquals(testQuestion.getToken(), "testtoken");
     }
 
     @Test
     public void testSetToken() throws Exception {
-        assertTrue(Question.getInstance().getToken() == null);
-        Question.getInstance().setToken("token111");
-        assertEquals("token111", Question.getInstance().getToken());
+        assertTrue(testQuestion.getToken() == null);
+        testQuestion.setToken("token111");
+        assertEquals("token111", testQuestion.getToken());
     }
 
     @Test
     public void testGet_id() throws Exception {
-        assertTrue(Question.getInstance().get_id() == null);
+        assertTrue(testQuestion.get_id() == null);
     }
 
     @Test
     public void testSet_id() throws Exception {
-        assertTrue(Question.getInstance().get_id() == null);
-        Question.getInstance().set_id("id111");
-        assertEquals("id111", Question.getInstance().get_id());
+        assertTrue(testQuestion.get_id() == null);
+        testQuestion.set_id("id111");
+        assertEquals("id111", testQuestion.get_id());
     }
 
     @Test
     public void testGetAnswer() throws Exception {
-        assertTrue(Question.getInstance().getAnswer() == null);
+        assertTrue(testQuestion.getAnswer() == null);
     }
 
     @Test
     public void testSetAnswer() throws Exception {
-        assertTrue(Question.getInstance().getAnswer() == null);
-        Question.getInstance().setAnswer("answer1");
-        assertEquals("answer1", Question.getInstance().getAnswer());
+        assertTrue(testQuestion.getAnswer() == null);
+        testQuestion.setAnswer("answer1");
+        assertEquals("answer1", testQuestion.getAnswer());
     }
 
     @Test
     public void testGetCreated() throws Exception {
-        assertTrue(Question.getInstance().getCreated() == null);
+        assertTrue(testQuestion.getCreated() == null);
     }
 
     @Test
     public void testSetCreated() throws Exception {
-        assertTrue(Question.getInstance().getCreated() == null);
-        Question.getInstance().setCreated("01-01-1111");
-        assertEquals("01-01-1111", Question.getInstance().getCreated());
+        assertTrue(testQuestion.getCreated() == null);
+        testQuestion.setCreated("01-01-1111");
+        assertEquals("01-01-1111", testQuestion.getCreated());
     }
 
     @Test
     public void testGetTitle() throws Exception {
-        assertTrue(Question.getInstance().getTitle() == null);
+        assertTrue(testQuestion.getTitle() == null);
     }
 
     @Test
     public void testSetTitle() throws Exception {
-        assertTrue(Question.getInstance().getTitle() == null);
-        Question.getInstance().setTitle("titletest");
-        assertEquals("titletest", Question.getInstance().getTitle());
+        assertTrue(testQuestion.getTitle() == null);
+        testQuestion.setTitle("titletest");
+        assertEquals("titletest", testQuestion.getTitle());
     }
 
     @Test
     public void testGetType() throws Exception {
-        assertTrue(Question.getInstance().getType() == null);
+        assertTrue(testQuestion.getType() == null);
     }
 
     @Test
     public void testSetType() throws Exception {
-        assertTrue(Question.getInstance().getType() == null);
-        Question.getInstance().setType("questiontype");
-        assertEquals("questiontype", Question.getInstance().getType());
+        assertTrue(testQuestion.getType() == null);
+        testQuestion.setType("questiontype");
+        assertEquals("questiontype", testQuestion.getType());
+    }
+
+    @Test
+    public void testResetQuestion() throws Exception {
+        testQuestion.resetQuestion();
+
+        assertTrue(testQuestion.getToken() == null);
+        assertTrue(testQuestion.get_id() == null);
+        assertTrue(testQuestion.getAnswer() == null);
+        assertTrue(testQuestion.getCreated() == null);
     }
 
 }
