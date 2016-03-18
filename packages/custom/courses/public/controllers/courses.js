@@ -35,6 +35,29 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             });
         };
 
+        $scope.noEnrollment = function(courses) {
+            for(var key in courses) {
+                var course = courses[key];
+
+                if($scope.isEnrolled(course)) {
+                        return false;
+                }
+            }
+            return true;
+        };
+
+        $scope.isEnrolled = function(course) {
+            for(var key in course.students){
+                var student = course.students[key];
+
+                if(angular.equals(student._id, MeanUser.userId)){
+
+                    return true;
+                }
+            }
+            return false;
+        };
+
         $scope.create = function(isValid) {
             if(isValid) {
 

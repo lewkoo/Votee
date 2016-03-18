@@ -8,7 +8,9 @@
             </div>
         </div>
 
-        <li data-ng-repeat="course in courses">
+        <h3 data-ng-if="noEnrollment(courses) && !canAddStudents()">There are no courses to show.</h3>
+
+        <li data-ng-repeat="course in courses" data-ng-if="canAddStudents() || !canAddStudents() && isEnrolled(course)">
             <span>{{course.created | date:'medium'}}</span> /
             <span> Taught by: {{course.professor.name}}</span>
             <h2>
@@ -18,8 +20,8 @@
             <h3>
                 {{course.description}}
             </h3>
-
         </li>
+
 
     </ul>
 </section>
