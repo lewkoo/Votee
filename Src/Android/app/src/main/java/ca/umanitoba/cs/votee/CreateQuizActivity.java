@@ -224,7 +224,11 @@ public class CreateQuizActivity extends BaseActivity {
 
             if (mServErr != null) {
                 Snackbar snackbar = Snackbar.make(mCreateQuizFormView, mServErr, Snackbar.LENGTH_LONG);
-                snackbar.show();
+                //redirect for now TODO: finish
+                Intent intent = new Intent(CreateQuizActivity.this, QuizView.class);
+                startActivity(intent);
+                finish();
+                //snackbar.show();
             } else if (success) {
                 Intent intent = new Intent(CreateQuizActivity.this, QuizView.class);
                 startActivity(intent);

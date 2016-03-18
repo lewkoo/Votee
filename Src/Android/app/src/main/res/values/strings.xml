@@ -30,9 +30,9 @@
     <string name="role_not_selected_error_message">Select your role</string>
     <string name="error_passwords_do_not_match">Passwords do not match</string>
     <string-array name="options_array">
-        <item>Option 1</item>
-        <item>Option 2</item>
-        <item>Option 3</item>
-        <item>Option 4</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
     </string-array>
 </resources>

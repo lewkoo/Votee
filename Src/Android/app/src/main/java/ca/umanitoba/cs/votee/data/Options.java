@@ -4,10 +4,6 @@ package ca.umanitoba.cs.votee.data;
  * Created by Yuriy on 3/16/2016.
  */
 
-import org.json.JSONObject;
-
-import java.io.Serializable;
-import org.json.JSONObject;
 import java.io.Serializable;
 
 public class Options  implements Serializable {

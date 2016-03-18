@@ -47,6 +47,11 @@ public class APIHelper {
     public static final String VT_API_OPTIONS = "options";
     public static final String VT_API_ANSWER = "answer";
     public static final String VT_API_CREATOR = "creator";
+    public static final String VT_API_OPT0 = "opt0";
+    public static final String VT_API_OPT1 = "opt1";
+    public static final String VT_API_OPT2 = "opt2";
+    public static final String VT_API_OPT3 = "opt3";
+
 
 
     public static final String API_AUTH_FAIL = "Authentication fail";
@@ -321,9 +326,20 @@ public class APIHelper {
 //        jsonParams.addProperty(userToken, UserProfile.getInstance().getToken());
         jsonParams.addProperty(VT_API_TITLE, quizQuestion);
         //TODO: create options JSON object or pass it to this function
-        jsonParams.addProperty(VT_API_OPTIONS, mGson.toJson(options));
+        jsonParams.addProperty(VT_API_OPT0, options.getOption1());
+        jsonParams.addProperty(VT_API_OPT1, options.getOption2());
+        jsonParams.addProperty(VT_API_OPT2, options.getOption3());
+        jsonParams.addProperty(VT_API_OPT3, options.getOption4());
+
+        JsonObject jsonObj = new JsonObject();
+        jsonObj.addProperty(VT_API_OPT0, options.getOption1());
+        jsonObj.addProperty(VT_API_OPT1, options.getOption2());
+        jsonObj.addProperty(VT_API_OPT2, options.getOption3());
+        jsonObj.addProperty(VT_API_OPT3, options.getOption4());
+
+        jsonParams.add(VT_API_OPTIONS, jsonObj);
         jsonParams.addProperty(VT_API_ANSWER, correctAns);
-        jsonParams.addProperty(VT_API_CREATOR, UserProfile.getInstance().get_id());
+//        jsonParams.addProperty(VT_API_CREATOR, UserProfile.getInstance().get_id());
 
 //        retrofit.client.Response response;
         Question response;
