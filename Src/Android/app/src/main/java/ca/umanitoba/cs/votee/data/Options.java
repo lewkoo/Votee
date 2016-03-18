@@ -43,4 +43,29 @@ public class Options  implements Serializable {
     public String getOption4() {
         return opt3;
     }
+
+    public void setOpt1(String opt0) {
+        this.opt0 = opt0;
+    }
+
+    public void setOpt2(String opt1) {
+        this.opt1 = opt1;
+    }
+
+    public void setOpt3(String opt2) {
+        this.opt2 = opt2;
+    }
+
+    public void setOpt4(String opt3) {
+        this.opt3 = opt3;
+    }
+
+    public void resetOptions(){
+        this.opt0 = null;
+        this.opt1 = null;
+        this.opt2 = null;
+        this.opt3 = null;
+    }
+
+
 }
