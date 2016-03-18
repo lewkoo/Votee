@@ -1,4 +1,6 @@
-package ca.umanitoba.cs.votee;
+package ca.umanitoba.cs.votee.data;
+
+import junit.framework.Assert;
 
 import org.junit.Test;
 import org.junit.After;
@@ -37,18 +39,6 @@ public class QuestionTest {
 
 
     @Test
-    public void testGetToken() throws Exception {
-        assertEquals(testQuestion.getToken(), "testtoken");
-    }
-
-    @Test
-    public void testSetToken() throws Exception {
-        assertEquals(testQuestion.getToken(), "testtoken");
-        testQuestion.setToken("token111");
-        assertEquals("token111", testQuestion.getToken());
-    }
-
-    @Test
     public void testGet_id() throws Exception {
         assertTrue(testQuestion.get_id() == null);
     }
@@ -57,7 +47,7 @@ public class QuestionTest {
     public void testSet_id() throws Exception {
         assertTrue(testQuestion.get_id() == null);
         testQuestion.set_id("id111");
-        assertEquals("id111", testQuestion.get_id());
+        Assert.assertEquals("id111", testQuestion.get_id());
     }
 
     @Test
@@ -69,7 +59,7 @@ public class QuestionTest {
     public void testSetAnswer() throws Exception {
         assertTrue(testQuestion.getAnswer() == null);
         testQuestion.setAnswer("answer1");
-        assertEquals("answer1", testQuestion.getAnswer());
+        Assert.assertEquals("answer1", testQuestion.getAnswer());
     }
 
     @Test
@@ -81,7 +71,7 @@ public class QuestionTest {
     public void testSetCreated() throws Exception {
         assertTrue(testQuestion.getCreated() == null);
         testQuestion.setCreated("01-01-1111");
-        assertEquals("01-01-1111", testQuestion.getCreated());
+        Assert.assertEquals("01-01-1111", testQuestion.getCreated());
     }
 
     @Test
@@ -93,7 +83,7 @@ public class QuestionTest {
     public void testSetTitle() throws Exception {
         assertTrue(testQuestion.getTitle() == null);
         testQuestion.setTitle("titletest");
-        assertEquals("titletest", testQuestion.getTitle());
+        Assert.assertEquals("titletest", testQuestion.getTitle());
     }
 
     @Test
@@ -105,17 +95,18 @@ public class QuestionTest {
     public void testSetType() throws Exception {
         assertTrue(testQuestion.getType() == null);
         testQuestion.setType("questiontype");
-        assertEquals("questiontype", testQuestion.getType());
+        Assert.assertEquals("questiontype", testQuestion.getType());
     }
 
     @Test
     public void testResetQuestion() throws Exception {
         testQuestion.resetQuestion();
 
-        assertTrue(testQuestion.getToken() == null);
         assertTrue(testQuestion.get_id() == null);
         assertTrue(testQuestion.getAnswer() == null);
         assertTrue(testQuestion.getCreated() == null);
+        assertTrue(testQuestion.getTitle() == null);
+        assertTrue(testQuestion.getType() == null);
     }
 
 }

@@ -94,6 +94,17 @@ public class Question  implements Serializable{
         this.selected = false;
 
     }
+    ///test constructor - need this for tests
+    public Question(String _id){
+        this._id = _id;
+        this.answer = null;
+        this.created = null;
+        this.creator = null;
+        this.options = null;
+        this.title = null;
+        this.type = null;
+        this.selected = false;
+    }
 
 
 }
