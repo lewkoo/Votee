@@ -6,7 +6,6 @@ import java.io.Serializable;
  * Created by Yuriy on 3/15/2016.
  */
 public class Question  implements Serializable{
-    private String token;
     private String _id;
     private String answer;
     //anything better for date?
@@ -21,21 +20,6 @@ public class Question  implements Serializable{
 
     }
 
-    public Question(String token){
-        this.token = token;
-        _id = null;
-        answer = null;
-        created = null;
-        creator = null;
-        options = null;
-        title = null;
-        type = null;
-        selected = false;
-    }
-
-    public String getToken() {
-        return token;
-    }
 
     public String get_id() {
         return _id;
@@ -69,8 +53,6 @@ public class Question  implements Serializable{
 
     public void setSelected(){selected = true;}
 
-    public void setToken(String token){this.token = token;}
-
     public void setAnswer(String answer) {
         this.answer = answer;
     }
@@ -102,7 +84,6 @@ public class Question  implements Serializable{
     public void resetQuestion(){restoreQuestionData();}
 
     private void restoreQuestionData(){
-        this.token = null;
         this._id = null;
         this.answer = null;
         this.created = null;

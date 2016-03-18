@@ -14,7 +14,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.security.InvalidParameterException;
+
 import ca.umanitoba.cs.votee.api.APIHelper;
+import ca.umanitoba.cs.votee.data.Options;
 import ca.umanitoba.cs.votee.data.UserProfile;
 import retrofit.RetrofitError;
 
@@ -23,7 +28,7 @@ import android.widget.AdapterView.OnItemSelectedListener;
 
 public class CreateQuizActivity extends BaseActivity {
 
-//    private CreateQuizTask mCreateTask = null;
+    private CreateQuizTask mCreateTask = null;
 
     private EditText courseNumView = null;
     private EditText quizQuestionView = null;
@@ -32,8 +37,9 @@ public class CreateQuizActivity extends BaseActivity {
     private EditText opt3View = null;
     private EditText opt4View = null;
     private Spinner correctAnswerView = null;
+    private String mServErr = null;
 
-    private View  mCreateQuizView;
+    private View  mCreateQuizFormView;
 
 
     @Override
@@ -43,7 +49,7 @@ public class CreateQuizActivity extends BaseActivity {
 
         super.setupTitlebar(R.menu.toolbar);
 
-        Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        Spinner spinner = (Spinner) findViewById(R.id.correct_answer);
         // Create an ArrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.options_array, android.R.layout.simple_spinner_item);
@@ -74,6 +80,8 @@ public class CreateQuizActivity extends BaseActivity {
             }
         });
 
+        mCreateQuizFormView = findViewById(R.id.create_form);
+
         Button mCreateButton = (Button)findViewById(R.id.create_quiz);
         if (mCreateButton != null) {
             mCreateButton.setOnClickListener(new View.OnClickListener() {
@@ -88,9 +96,9 @@ public class CreateQuizActivity extends BaseActivity {
 
     private void attemptCreate() {
         Log.v("item", "in attemptCreate()!");
-//        if(mCreateTask != null){
-//            return;
-//        }
+        if(mCreateTask != null){
+            return;
+        }
 
         //reset errors
         courseNumView.setError(null);
@@ -159,81 +167,77 @@ public class CreateQuizActivity extends BaseActivity {
             //error in validation
             focusView.requestFocus();
         } else {
+            //setup QOptions
+            Options options = new Options(quizOpt1, quizOpt2, quizOpt3, quizOpt4);
             //create question
-//            mCreateTask = new CreateQuizTask();
+            mCreateTask = new CreateQuizTask(courseNum, quizQuestion, options, correctAns);
+            mCreateTask.execute((Void)null);
+        }
+    }//attemptCreate
+
+
+    public class CreateQuizTask extends AsyncTask<Void, Void, Boolean> {
+        private final String courseNum;
+        private final String quizQuestion;
+        private final Options options;
+        private final String correctAns;
+
+
+        public CreateQuizTask(String courseNum, String quizQuestion, Options options, String correctAns) {
+            this.courseNum = courseNum;
+            this.quizQuestion = quizQuestion;
+            this.options = options;
+            this.correctAns = correctAns;
+        }
+
+        @Override
+        protected Boolean doInBackground(Void... params) {
+
+            // Issue an API call
+            try {
+                APIHelper.createQuestion(courseNum, quizQuestion, options, correctAns);
+            }
+            catch (RetrofitError e)
+            {
+                RetrofitError.Kind kind = e.getKind();
+
+                if (kind == RetrofitError.Kind.HTTP)
+                {
+//                    if(e.getResponse().getStatus() == 400){
+//                        mServErr = "Email / username already used. Try a different one";
+//                    }
+                }
+                else
+                {
+                    mServErr = "Error contacting server. Please try again later";
+                }
+            }
+
+            return UserProfile.getInstance().isAuthenticated();
         }
 
 
 
+        @Override
+        protected void onPostExecute(final Boolean success) {
+            mCreateTask = null;
 
-
-    }//attemptCreate
-
-
-//    public class CreateQuizTask extends AsyncTask<Void, Void, Boolean> {
-//        private final String mFullName;
-//        private final String mEmail;
-//        private final String mUserName;
-//        private final String mPassword;
-//        private final String mUserRole;
-//        private String mServErr = null;
-//
-//        public CreateQuizTask(String mFullName, String mEmail, String mPassword, String mUserName, String mUserRole) {
-//            this.mFullName = mFullName;
-//            this.mEmail = mEmail;
-//            this.mPassword = mPassword;
-//            this.mUserName = mUserName;
-//            this.mUserRole = mUserRole;
-//        }
-//
-//        @Override
-//        protected Boolean doInBackground(Void... params) {
-//
-//            // Issue an API call
-//            try {
-//                APIHelper.register(mEmail, mPassword, mUserName, mFullName, mUserRole);
-//            }
-//            catch (RetrofitError e)
-//            {
-//                RetrofitError.Kind kind = e.getKind();
-//
-//                if (kind == RetrofitError.Kind.HTTP)
-//                {
-//                    if(e.getResponse().getStatus() == 400){
-//                        mServErr = "Email / username already used. Try a different one";
-//                    }
-//                }
-//                else
-//                {
-//                    mServErr = "Error contacting server. Please try again later";
-//                }
-//            }
-//
-//            return UserProfile.getInstance().isAuthenticated();
-//        }
-//
-//
-//
-//        @Override
-//        protected void onPostExecute(final Boolean success) {
-//            mCreateTask = null;
-//
-//            if (mServErr != null) {
-//                Snackbar snackbar = Snackbar.make(mRegisterFormView, mServErr, Snackbar.LENGTH_LONG);
-//                snackbar.show();
-//            } else if (success) {
-//                Intent intent = new Intent(RegisterActivity.this, HomeView.class);
-//                startActivity(intent);
-//                finish();
-//            } else {
+            if (mServErr != null) {
+                Snackbar snackbar = Snackbar.make(mCreateQuizFormView, mServErr, Snackbar.LENGTH_LONG);
+                snackbar.show();
+            } else if (success) {
+                Intent intent = new Intent(CreateQuizActivity.this, QuizView.class);
+                startActivity(intent);
+                finish();
+            } else {
 //                mPasswordView.setError(getString(R.string.error_incorrect_password));
 //                mPasswordView.requestFocus();
-//            }
-//        }
-//
-//        @Override
-//        protected void onCancelled() {
-//            mRegisterTask = null;
-//        }
-//    }
+            }
+        }
+
+        @Override
+        protected void onCancelled() {
+            mCreateTask = null;
+        }
+    }
 }

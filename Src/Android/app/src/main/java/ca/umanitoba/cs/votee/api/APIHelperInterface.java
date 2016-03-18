@@ -62,6 +62,6 @@ public interface APIHelperInterface {
     List<Question> questions();
 
     @POST(VT_API_URL_USER_QUESTIONS)
-    retrofit.client.Response createQuestion(@Body JsonObject params);
+    Question createQuestion(@Body JsonObject params);
 
 }
