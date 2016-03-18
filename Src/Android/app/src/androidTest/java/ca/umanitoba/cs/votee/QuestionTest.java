@@ -43,7 +43,7 @@ public class QuestionTest {
 
     @Test
     public void testSetToken() throws Exception {
-        assertTrue(testQuestion.getToken() == null);
+        assertEquals(testQuestion.getToken(), "testtoken");
         testQuestion.setToken("token111");
         assertEquals("token111", testQuestion.getToken());
     }
