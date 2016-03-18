@@ -100,3 +100,5 @@ public/min/
 public/index.html
 vendor/*
 public/fonts
+
+tests/results/

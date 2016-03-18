@@ -1,0 +1,115 @@
+<section data-ng-controller="QuestionsController" data-ng-hide=!isAuthorized>
+    <form name="questionForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(questionForm.$valid)" novalidate>
+        <label>
+            <input type="radio" id="multiChoiceRadio" ng-model="question.type" value="MULTIPLE-CHOICE"> Multiple Choice
+            <input type="radio" id="openEndedRadio" ng-model="question.type" value="OPEN-ENDED"> Open Ended
+
+        </label>
+
+        <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.courseNumber.$invalid }">
+            <label class="col-md-3 control-label">Course Number</label>
+            <div class="col-md-9">
+                <input name="courseNumber" type="number" class="form-control" data-ng-model="question.courseNumber" id="courseNumber" placeholder="Course Number" required>
+                <div ng-show="submitted && questionForm.courseNumber.$invalid" class="help-block">
+                    <p ng-show="questionForm.courseNumber.$error.required">Course Number is required</p>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="question.type == 'OPEN-ENDED'">
+
+            <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.title.$invalid }">
+                <label class="col-md-3 control-label">Question Title</label>
+                <div class="col-md-9">
+                    <input name="title" type="text" class="form-control" data-ng-model="question.title" id="title" placeholder="Title" required>
+                    <div ng-show="submitted && questionForm.title.$invalid" class="help-block">
+                        <p ng-show="questionForm.title.$error.required">Title is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" id="submitOpenEnded" class="btn btn-info">Create</button>
+                </div>
+            </div>
+        </div>
+
+        <div ng-show="question.type == 'MULTIPLE-CHOICE'">
+
+            <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.title.$invalid }">
+                <label class="col-md-3 control-label">Question Title</label>
+                <div class="col-md-9">
+                    <input name="title" type="text" class="form-control" data-ng-model="question.title" id="multiChoiceTitle" placeholder="Title" required>
+                    <div ng-show="submitted && questionForm.title.$invalid" class="help-block">
+                        <p ng-show="questionForm.title.$error.required">Title is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option1.$invalid }">
+                <label class="col-md-3 control-label">Option 1</label>
+                <div class="col-md-9">
+                    <input name="option1" type="text" class="form-control" data-ng-model="question.options.opt0" id="option1" placeholder="Write question here" required>
+                    <div ng-show="submitted && questionForm.option1.$invalid" class="help-block">
+                        <p ng-show="questionForm.option1.$error.required">Question is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option2.$invalid }">
+                <label class="col-md-3 control-label">Option 2</label>
+                <div class="col-md-9">
+                    <input name="option2" type="text" class="form-control" data-ng-model="question.options.opt1" id="option2" placeholder="Write question here" required>
+                    <div ng-show="submitted && questionForm.option2.$invalid" class="help-block">
+                        <p ng-show="questionForm.option2.$error.required">Question is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option3.$invalid }">
+                <label class="col-md-3 control-label">Option 3</label>
+                <div class="col-md-9">
+                    <input name="option3" type="text" class="form-control" data-ng-model="question.options.opt2" id="option3" placeholder="Write question here" required>
+                    <div ng-show="submitted && questionForm.option3.$invalid" class="help-block">
+                        <p ng-show="questionForm.option3.$error.required">Question is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error' : submitted && questionForm.option4.$invalid }">
+                <label class="col-md-3 control-label">Option 4</label>
+                <div class="col-md-9">
+                    <input name="option4" type="text" class="form-control" data-ng-model="question.options.opt3" id="option4" placeholder="Write question here" required>
+                    <div ng-show="submitted && questionForm.option4.$invalid" class="help-block">
+                        <p ng-show="questionForm.option4.$error.required">Question is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{'has-error' : submitted && questionForm.answerSelect.$invalid }">
+                <div class="col-md-offset-3 col-md-9">
+                    <label for="answerSelect"> Select the correct answer: </label><br>
+                    <select id="answerDropdown" name="answerSelect" ng-model="question.answer" required>
+                        <!--Maybe we should store value as a number? i.e. 1, 2 ...-->
+                        <option value="opt0">Option 1</option>
+                        <option value="opt1">Option 2</option>
+                        <option value="opt2">Option 3</option>
+                        <option value="opt3">Option 4</option>
+                    </select>
+                    <div ng-show="submitted && questionForm.answerSelect.$invalid" class="help-block">
+                        <p ng-show="questionForm.answerSelect.$error.required">Answer is required</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-3 col-md-9">
+                    <button type="submit" id="submitMultiChoice" class="btn btn-info">Create</button>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</section>
