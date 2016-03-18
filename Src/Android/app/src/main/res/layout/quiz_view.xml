@@ -70,8 +70,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select"
-        android:id="@+id/selectButton"
+        android:text="Create New Quiz"
+        android:id="@+id/create_quiz"
         android:onClick="onSelectClick"/>
 
     <ImageView

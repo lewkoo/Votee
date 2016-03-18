@@ -54,6 +54,10 @@ public class APIHelperUnitTest {
         // Set the user email and password
         UserProfile.getInstance().setEmail("test@test.com");
         UserProfile.getInstance().setPassword("testPassword");
+
+        // Make sure we access the mocked server on all build types
+        APIHelper.setVtApiHost("http://127.0.0.1:3000");
+        APIHelper.updateRESTAdapter();
     }
 
     @After

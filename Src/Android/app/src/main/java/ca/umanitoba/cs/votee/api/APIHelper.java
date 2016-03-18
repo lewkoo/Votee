@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import ca.umanitoba.cs.votee.BuildConfig;
+import ca.umanitoba.cs.votee.data.Options;
 import ca.umanitoba.cs.votee.data.Question;
 import ca.umanitoba.cs.votee.data.UserProfile;
 import retrofit.RequestInterceptor;
@@ -39,6 +40,19 @@ public class APIHelper {
     public static final String VT_API_USERNAME_KEY = "username";
     public static final String VT_API_NAME_KEY = "name";
     public static final String VT_API_ROLES_KEY = "roles";
+
+    //question params
+    public static final String VT_API_COURSE_NUM = "Number";
+    public static final String VT_API_TITLE = "title";
+    public static final String VT_API_OPTIONS = "options";
+    public static final String VT_API_ANSWER = "answer";
+    public static final String VT_API_CREATOR = "creator";
+    public static final String VT_API_OPT0 = "opt0";
+    public static final String VT_API_OPT1 = "opt1";
+    public static final String VT_API_OPT2 = "opt2";
+    public static final String VT_API_OPT3 = "opt3";
+
+
 
     public static final String API_AUTH_FAIL = "Authentication fail";
 
@@ -286,7 +300,6 @@ public class APIHelper {
     }
 
 //    //get Questions call
-    //TODO: implement and uncomment
     public static List<Question> getQuestions(){
         final JsonObject jsonParams = getJsonParamsWithToken();
         if(jsonParams == null) throw new InvalidParameterException("Not logged in yet"); // user is not logged in yet
@@ -296,13 +309,58 @@ public class APIHelper {
         try{
             response = mRestService.questions();
         } catch (RetrofitError error){
-            response = null;
+            throw error;
         }
-//        Log.d("STATE", "getQuestions() response: "+response );
         return response;
-
     }
 
+    // register call
+    public static void createQuestion(String courseNum, String quizQuestion, Options options, String correctAns) {
+        final JsonObject jsonParams = new JsonObject();
+
+        if (courseNum == null || quizQuestion == null
+                || options == null || correctAns == null)
+            throw new InvalidParameterException("Invalid parameters given");
+
+        jsonParams.addProperty(VT_API_TITLE, quizQuestion);
+        jsonParams.addProperty(VT_API_OPT0, options.getOption1());
+        jsonParams.addProperty(VT_API_OPT1, options.getOption2());
+        jsonParams.addProperty(VT_API_OPT2, options.getOption3());
+        jsonParams.addProperty(VT_API_OPT3, options.getOption4());
+
+        JsonObject jsonObj = new JsonObject();
+        jsonObj.addProperty(VT_API_OPT0, options.getOption1());
+        jsonObj.addProperty(VT_API_OPT1, options.getOption2());
+        jsonObj.addProperty(VT_API_OPT2, options.getOption3());
+        jsonObj.addProperty(VT_API_OPT3, options.getOption4());
+
+        jsonParams.add(VT_API_OPTIONS, jsonObj);
+        jsonParams.addProperty(VT_API_ANSWER, correctAns);
+        //TODO: umcomment when implemented
+//        jsonParams.addProperty(VT_API_CREATOR, UserProfile.getInstance().get_id());
+
+        Question response;
+        try {
+            response = mRestService.createQuestion(jsonParams);
+        } catch (RetrofitError error) {
+            throw error;
+        }
+        // extract the token from a JSON response
+//        String receivedToken = "";
+//        if (response != null) {
+////            receivedToken = parseResponseBody(response).get("token").getAsString();
+////            UserProfile.getInstance().setToken(receivedToken);
+//
+////            // set other user data
+////            UserProfile.getInstance().setEmail(emailValue);
+////            UserProfile.getInstance().setName(name);
+////            UserProfile.getInstance().setPassword(password);
+////        }
+//
+//            // Update the REST adapter with an authorization token
+////            updateRESTAdapter();
+//        }
+    }
 
 
 

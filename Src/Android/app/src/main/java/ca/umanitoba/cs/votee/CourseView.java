@@ -33,7 +33,7 @@ public class CourseView extends BaseActivity implements CourseList.OnFragmentInt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.course_view);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
 
         mActionBar.setDisplayHomeAsUpEnabled(true);
     }

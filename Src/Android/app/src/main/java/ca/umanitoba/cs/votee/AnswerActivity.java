@@ -30,11 +30,11 @@ public class AnswerActivity extends BaseActivity implements CourseList.OnFragmen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.answer_view);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
 
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
-        Question q = getQ();
+//        Question q = getQ();
 //        String answerA = "A";
 //        String answerB = "B";
 //        String answerC = "C";
@@ -65,15 +65,15 @@ public class AnswerActivity extends BaseActivity implements CourseList.OnFragmen
 
     }
 
-    public Question getQ(){
-        List<Question>  QuestionList = APIHelper.getQuestions();
-        int i = 0;
-
-        while (!QuestionList.get(i).getSelected()){
-            i++;
-        }
-        return QuestionList.get(i);
-    }
+//    public Question getQ(){
+//        List<Question>  QuestionList = APIHelper.getQuestions();
+//        int i = 0;
+//
+//        while (!QuestionList.get(i).getSelected()){
+//            i++;
+//        }
+//        return QuestionList.get(i);
+//    }
     @Override
     public void onFragmentInteraction(Uri uri) {
 
