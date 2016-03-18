@@ -304,7 +304,7 @@ public class APIHelper {
         try{
             response = mRestService.questions();
         } catch (RetrofitError error){
-            response = null;
+            throw error;
         }
         return response;
     }
