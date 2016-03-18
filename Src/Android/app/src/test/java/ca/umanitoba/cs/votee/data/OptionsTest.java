@@ -1,4 +1,6 @@
-package ca.umanitoba.cs.votee;
+package ca.umanitoba.cs.votee.data;
+
+import junit.framework.Assert;
 
 import ca.umanitoba.cs.votee.data.Options;
 import ca.umanitoba.cs.votee.data.Question;
@@ -16,7 +18,8 @@ public class OptionsTest {
 
     @Before
     public void setUp() throws Exception {
-        testOption = new Options("Answer1");
+        testOption = new Options("Answer1", "Answer2", "Answer3", "Answer4");
+        testOption.resetOptions();
     }
 
     @After
@@ -27,14 +30,14 @@ public class OptionsTest {
 
     @Test
     public void testGetOption1() throws Exception {
-        assertEquals(testOption.getOption1(), "Answer1");
+        Assert.assertEquals(testOption.getOption1(), null);
     }
 
     @Test
     public void testSetOption1() throws Exception {
-        assertEquals(testOption.getOption1(), "Answer1");
+        Assert.assertEquals(testOption.getOption1(), null);
         testOption.setOpt1("Ans1");
-        assertEquals("Ans1", testOption.getOption1());
+        Assert.assertEquals("Ans1", testOption.getOption1());
     }
 
     @Test
@@ -46,7 +49,7 @@ public class OptionsTest {
     public void testSetOption2() throws Exception {
         assertTrue(testOption.getOption2() == null);
         testOption.setOpt2("Ans2");
-        assertEquals("Ans2", testOption.getOption2());
+        Assert.assertEquals("Ans2", testOption.getOption2());
     }
 
     @Test
@@ -58,7 +61,7 @@ public class OptionsTest {
     public void testSetOption3() throws Exception {
         assertTrue(testOption.getOption3() == null);
         testOption.setOpt3("Ans3");
-        assertEquals("Ans3", testOption.getOption3());
+        Assert.assertEquals("Ans3", testOption.getOption3());
     }
 
     @Test
@@ -70,7 +73,7 @@ public class OptionsTest {
     public void testSetOption4() throws Exception {
         assertTrue(testOption.getOption4() == null);
         testOption.setOpt2("Ans4");
-        assertEquals("Ans4", testOption.getOption4());
+        Assert.assertEquals("Ans4", testOption.getOption4());
     }
 
     @Test
