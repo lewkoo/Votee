@@ -39,8 +39,8 @@
             "display_as_bot": false,
             "username": "",
             "url_private": "https:\/\/docs.google.com\/document\/d\/1CvnXLNxiKNNfu2M9UAxi4Pqej2G6_-8UjwUmqZ_DwPw\/edit?usp=drivesdk",
-            "thumb_64": "https:\/\/slack.global.ssl.fastly.net\/66f9\/img\/files\/gdraw_64.png",
-            "thumb_360": "https:\/\/slack.global.ssl.fastly.net\/272a\/img\/files\/gdoc_360.png",
+            "thumb_64": "https:\/\/a.slack-edge.com\/66f9\/img\/files\/gdraw_64.png",
+            "thumb_360": "https:\/\/a.slack-edge.com\/272a\/img\/files\/gdoc_360.png",
             "thumb_360_w": 360,
             "thumb_360_h": 167,
             "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0JFEJ4QL\/voteevisionstatement",
@@ -48,10 +48,10 @@
                 "C0HUU8EB1"
             ],
             "groups": [
-
+    
             ],
             "ims": [
-
+    
             ],
             "comments_count": 0
         },

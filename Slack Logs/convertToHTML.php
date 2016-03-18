@@ -1,4 +1,4 @@
-<?
+<?php
 /////////////////////
 // slack2html
 // by @levelsio
