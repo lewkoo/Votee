@@ -1,13 +1,15 @@
 'use strict';
 
 /* jshint -W098 */
-angular.module('mean.courses').controller('CoursesController', ['$scope', '$stateParams', 'Global', 'Courses', '$location', 'MeanUser','Users',
-    function($scope, $stateParams, Global, Courses, $location, MeanUser, Users) {
+angular.module('mean.courses').controller('CoursesController', ['$scope', '$stateParams', 'Global', 'Courses', '$location', '$http','MeanUser','Users',
+    function($scope, $stateParams, Global, Courses, $location, $http, MeanUser, Users) {
         $scope.global = Global;
-        $scope.studentEmail = null;
         $scope.package = {
             name: 'courses'
         };
+
+        $scope.addStudentMessageSuccess = null;
+        $scope.addStudentMessageFailure = null;
 
         $scope.canCreateCourses = function()
         {
@@ -117,12 +119,26 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
         {
             if(isValid){
 
-                Users.query({
+                var course = $scope.course;
+
+                var data = {
                     email: emailToQuery
-                }, function(users) {
-                    $scope.user = users;
-                    console.log($scope.user.email);
-                });
+                };
+
+                $http.post('/api/courses/' + course._id + '/addStudent', data)
+                    .then(function successCallback(response){
+                        $scope.addStudentMessageSuccess = response.data.result;
+                        $scope.addStudentMessageFailure = null;
+                    }, function errorCallback(response){
+                        $scope.addStudentMessageSuccess = null;
+                        $scope.addStudentMessageFailure = response.data.error;
+                    });
+
+                // refresh the course object
+                $scope.course = $scope.findOne();
+
+            } else {
+                $scope.submitted = true;
             }
 
 
