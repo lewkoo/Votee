@@ -250,6 +250,68 @@ module.exports = function(Courses) {
 
         },
 
+        /*
+         * Add a student to a course
+         *
+         * @api {get} api/courses/:courseId/addStudent Add a student to a course
+         * @apiName Add Student
+         * @apiGroup Courses
+         * @apiVersion 0.1.0
+         *
+         * @apiSuccess returns 200 code
+         *
+         *
+         */
+        addStudent: function(req, res){
+            // get the course we want to operate on
+            var course = req.course;
+
+            // check to see if the email is supplied in the body
+            if(!req.body.email) return res.status(500).json({
+                error: 'No email supplied'
+            });
+
+            User.findOne({
+                email: req.body.email
+            }).exec(function (err, user){
+
+                if(err || !user) return res.status(500).json({
+                    error: 'No such student found'
+                });
+
+                // check if the student is already in the course
+                var isInArray = course.students.some(function (student) {
+                    return student.id === user.id;
+                });
+
+                if(!isInArray){
+                    // add the student to the list of students in a course
+                    course.students.push(user._id);
+
+                    // save the course to the DB
+                    course.save();
+                }else{
+                    return res.status(500).json({
+                        error: 'Student is already in the course'
+                    });
+                }
+
+                Courses.events.publish({
+                    action: 'updated',
+                    user: {
+                        name: req.user.name
+                    },
+                    name: course.title,
+                    url: config.hostname + '/courses/' + course._id
+                });
+
+                return res.json({
+                    result: "Student added!"
+                });
+
+            });
+        },
+
         /**
          * Show a Course
          *
@@ -344,28 +406,6 @@ module.exports = function(Courses) {
             });
 
         }
-        /*,user: function(req, res, next, id) {
-         User.findOne({
-         _id: id
-         }).exec(function(err, user) {
-         if (err) return next(err);
-         if (!user) return next(new Error('Failed to load User ' + id));
-         req.profile = user;
-         next();
-         });
-         },
-
-         userEmail: function(req, res, next, email) {
-         User.findOne({
-         email: email
-         }).exec(function(err, user) {
-         if (err) return next(err);
-         if (!user) return next(new Error('Failed to find User ' + email));
-         req.profile = user;
-         next();
-         });
-         },
-         */
 
     }; // END of return
 

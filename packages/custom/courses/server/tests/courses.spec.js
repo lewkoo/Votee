@@ -64,6 +64,10 @@ describe('<Unit Test>', function () {
 
     describe('Model Course:', function () {
         beforeEach(function (done) {
+
+            User.remove({});
+            Course.remove({});
+
             this.timeout(10000);
 
             generateProfsAndStudents();
