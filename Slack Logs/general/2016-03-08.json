@@ -1,0 +1,618 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hi guys, I've added some build configurations to our Android project. This will simplify the development process. I made a doc explaining how to switch between them. It is very simple.",
+        "ts": "1457487732.000002"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> uploaded a file: <https:\/\/4350team.slack.com\/files\/levko\/F0RD1KC56\/how_to_select_correct_build_mode.pdf|How to select correct build mode.pdf>",
+        "file": {
+            "id": "F0RD1KC56",
+            "created": 1457487742,
+            "timestamp": 1457487742,
+            "name": "How to select correct build mode.pdf",
+            "title": "How to select correct build mode.pdf",
+            "mimetype": "application\/pdf",
+            "filetype": "pdf",
+            "pretty_type": "PDF",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 317766,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RD1KC56\/how_to_select_correct_build_mode.pdf?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RD1KC56\/download\/how_to_select_correct_build_mode.pdf?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0RD1KC56\/how_to_select_correct_build_mode.pdf",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0RD1KC56-9f64d5cf61",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1457487743.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I am using this project to get examples on how to test on Android: <https:\/\/github.com\/googlesamples\/android-testing>",
+        "attachments": [
+            {
+                "service_name": "GitHub",
+                "title": "googlesamples\/android-testing",
+                "title_link": "https:\/\/github.com\/googlesamples\/android-testing",
+                "text": "android-testing - A collection of samples demonstrating different frameworks and techniques for automated testing",
+                "fallback": "GitHub: googlesamples\/android-testing",
+                "thumb_url": "https:\/\/avatars1.githubusercontent.com\/u\/7378196?v=3&s=400",
+                "from_url": "https:\/\/github.com\/googlesamples\/android-testing",
+                "thumb_width": 200,
+                "thumb_height": 200,
+                "id": 1
+            }
+        ],
+        "ts": "1457489764.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Guys, it seems like the tests in Android are running on the phone and I am not getting any output in the IDE.",
+        "ts": "1457491211.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I read around and it seems like this is an expected behaviour with JUnit",
+        "ts": "1457491225.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "should we stick to JUnit?",
+        "ts": "1457491236.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I would expect that you should be able to get output via 'adb logcat', but that doesn't seam ideal.",
+        "ts": "1457491260.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "because to me this sounds counter intuitive to run your tests on a phone",
+        "ts": "1457491271.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "We used to use a nexus 7 emulator and read our logcat when I did it for android last year. But we were developing in Java on eclipse so that might not be optimal for our setup ",
+        "ts": "1457491450.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "looks like it is exactly the same in Android Studio, because that is just how Android runs its tests",
+        "ts": "1457491502.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "well, if that is how Android works - then that is how Android works",
+        "ts": "1457491631.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "\u00af\\_(\u30c4)_\/\u00af",
+        "ts": "1457491641.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "anyone is willing to switch to a different testing framework? or we should not bother? :simple_smile:",
+        "ts": "1457491715.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'm getting test results in android studio...",
+        "ts": "1457491816.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "can you explain how you do that?",
+        "ts": "1457491832.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Followed the instructions here\n<https:\/\/developer.android.com\/training\/testing\/start\/index.html>",
+        "attachments": [
+            {
+                "title": "Getting Started with Testing | Android Developers",
+                "title_link": "https:\/\/developer.android.com\/training\/testing\/start\/index.html",
+                "text": "You should be writing and running tests as part of your Android app development cycle. Well-written tests can help you catch bugs early in development and give you confidence in your code. To verify specific behavior in your app, and to check for consistency\u2026",
+                "fallback": "Getting Started with Testing | Android Developers",
+                "from_url": "https:\/\/developer.android.com\/training\/testing\/start\/index.html",
+                "id": 1
+            }
+        ],
+        "ts": "1457491849.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Go down to the \"Build and Run Your Tests\" section",
+        "ts": "1457491890.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, I see it",
+        "ts": "1457491899.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you are getting output like this: \n```No apk changes detected since last installation, skipping installation of C:\\Users\\Levko\\Votee\\Src\\Android\\app\\build\\outputs\\apk\\app-development-debug.apk\nForce stopping package: ca.umanitoba.cs.votee.develop\nDEVICE SHELL COMMAND: am force-stop ca.umanitoba.cs.votee.develop\nRunning tests\nTest running startedFinish\n```",
+        "ts": "1457492133.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "?",
+        "ts": "1457492136.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "sample unit test working for me on windows",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1457492372.000000"
+        },
+        "ts": "1457492362.000024"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> uploaded a file: <https:\/\/4350team.slack.com\/files\/levko\/F0RDAKAUV\/test_output.png|Test output.png> and commented: Are you getting this or something else?",
+        "file": {
+            "id": "F0RDAKAUV",
+            "created": 1457492410,
+            "timestamp": 1457492410,
+            "name": "Test output.png",
+            "title": "Test output.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 56830,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RDAKAUV\/test_output.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RDAKAUV\/download\/test_output.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_64.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_80.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_360.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360_w": 360,
+            "thumb_360_h": 158,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_480.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_480_w": 480,
+            "thumb_480_h": 210,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_160.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_720.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_720_w": 720,
+            "thumb_720_h": 315,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_960.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_960_w": 960,
+            "thumb_960_h": 420,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDAKAUV-e532d5620c\/test_output_1024.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 448,
+            "image_exif_rotation": 1,
+            "original_w": 1456,
+            "original_h": 637,
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0RDAKAUV\/test_output.png",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0RDAKAUV-6117d9cbb6",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 1,
+            "initial_comment": {
+                "id": "Fc0RDAKVS9",
+                "created": 1457492410,
+                "timestamp": 1457492410,
+                "user": "U0HUU655Y",
+                "comment": "Are you getting this or something else?"
+            }
+        },
+        "user": "U0HUU655Y",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1457492412.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "```\nWORTHELSS TEST\n\nProcess finished with exit code 0```",
+        "ts": "1457492458.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i added the print",
+        "ts": "1457492467.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "can I see you screenshot? where does this string come from?",
+        "ts": "1457492486.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "logcat?",
+        "ts": "1457492490.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "i added the string",
+        "ts": "1457492492.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "\"WORTHLESS TEST\"",
+        "ts": "1457492501.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I know you did",
+        "ts": "1457492515.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I want to know if we are looking at the same thing here",
+        "ts": "1457492524.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "in ExampleUnitTest",
+        "ts": "1457492533.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Looks like your tests passed levko",
+        "ts": "1457492546.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I know they did",
+        "ts": "1457492556.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "are you getting \"All tests passed\"?",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1457492575.000000"
+        },
+        "ts": "1457492572.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'm not sure what the problem is then",
+        "ts": "1457492596.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, they are passing.",
+        "ts": "1457492601.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "what I am looking for it this",
+        "ts": "1457492606.000042"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HUU655Y|levko> uploaded a file: <https:\/\/4350team.slack.com\/files\/levko\/F0RD203JQ\/abz80.png|ABZ80.png>",
+        "file": {
+            "id": "F0RD203JQ",
+            "created": 1457492609,
+            "timestamp": 1457492609,
+            "name": "ABZ80.png",
+            "title": "ABZ80.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HUU655Y",
+            "editable": false,
+            "size": 7878,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RD203JQ\/abz80.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RD203JQ\/download\/abz80.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RD203JQ-47eb484527\/abz80_64.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RD203JQ-47eb484527\/abz80_80.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RD203JQ-47eb484527\/abz80_360.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360_w": 360,
+            "thumb_360_h": 144,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RD203JQ-47eb484527\/abz80_480.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_480_w": 480,
+            "thumb_480_h": 192,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RD203JQ-47eb484527\/abz80_160.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "image_exif_rotation": 1,
+            "original_w": 503,
+            "original_h": 201,
+            "permalink": "https:\/\/4350team.slack.com\/files\/levko\/F0RD203JQ\/abz80.png",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0RD203JQ-4b78f7746f",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HUU655Y",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HUU655Y|levko>",
+        "bot_id": null,
+        "ts": "1457492610.000043"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0HV1T7F1|yuriy> uploaded a file: <https:\/\/4350team.slack.com\/files\/yuriy\/F0RDB59PX\/pasted_image_at_2016_03_08_09_03_pm.png|Pasted image at 2016-03-08, 9:03 PM>",
+        "file": {
+            "id": "F0RDB59PX",
+            "created": 1457492618,
+            "timestamp": 1457492618,
+            "name": "Pasted image at 2016_03_08 09_03 PM.png",
+            "title": "Pasted image at 2016-03-08, 9:03 PM",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0HV1T7F1",
+            "editable": false,
+            "size": 41842,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RDB59PX\/pasted_image_at_2016_03_08_09_03_pm.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0RDB59PX\/download\/pasted_image_at_2016_03_08_09_03_pm.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_64.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_80.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_360.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360_w": 360,
+            "thumb_360_h": 61,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_480.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_480_w": 480,
+            "thumb_480_h": 81,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_160.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_720.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_720_w": 720,
+            "thumb_720_h": 122,
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_960.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_960_w": 960,
+            "thumb_960_h": 162,
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0RDB59PX-4dabe14b5a\/pasted_image_at_2016_03_08_09_03_pm_1024.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_1024_w": 1024,
+            "thumb_1024_h": 173,
+            "image_exif_rotation": 1,
+            "original_w": 1905,
+            "original_h": 322,
+            "permalink": "https:\/\/4350team.slack.com\/files\/yuriy\/F0RDB59PX\/pasted_image_at_2016_03_08_09_03_pm.png",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0RDB59PX-0de63e35d6",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 0
+        },
+        "user": "U0HV1T7F1",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0HV1T7F1|yuriy>",
+        "bot_id": null,
+        "ts": "1457492621.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "a test by test breakdown",
+        "ts": "1457492624.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "The button to the right of the green play arrow.",
+        "ts": "1457492644.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "coloured dots with some lines",
+        "ts": "1457492655.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I am having issues with my develop branch... Is is possible to just completely disregard all commits and changes and reset it to be the most recent develop branch? ",
+        "ts": "1457493623.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes. do this in the terminal: \n\n`git reset --hard`\n`git pull`",
+        "ts": "1457493649.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Okay awesome, thank you!!",
+        "ts": "1457493674.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "np",
+        "ts": "1457493678.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Is it normal to have to do a commit after a git pull? ",
+        "ts": "1457494105.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I keep getting those vim issues and it messes it up a lot of the time ",
+        "ts": "1457494125.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if you have conflicts, it is sometimes required",
+        "ts": "1457494125.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you can change your default editor from vim to nano",
+        "ts": "1457494143.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I'll give you a link one sec",
+        "ts": "1457494152.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I don't see conflicts, but I always have to quit the vim editor and then git commit to complete the merge ",
+        "ts": "1457494228.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>: yea, they hidden that feature really well. thanks",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1457494519.000000"
+        },
+        "ts": "1457494516.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "<@U0J3D11K5>: I think that's default behaviour so that you can edit the message. You can use the \"--no-edit\" option to accept the default message.",
+        "ts": "1457494600.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "If you're finding git command line frustrating, I've found GitKraken to be really nice to use.\n<http:\/\/www.gitkraken.com\/>",
+        "attachments": [
+            {
+                "service_name": "GitKraken",
+                "title": "Git GUI Client for Windows Mac and Linux | Axosoft GitKraken",
+                "title_link": "http:\/\/www.gitkraken.com\/",
+                "text": "Axosoft GitKraken is the intuitive, elegant, free Git GUI client for Windows, Mac and Linux. Visually manage branches, forks and merges in your Git repositories.",
+                "fallback": "GitKraken: Git GUI Client for Windows Mac and Linux | Axosoft GitKraken",
+                "image_url": "http:\/\/www.gitkraken.com\/images\/og-image.jpg",
+                "from_url": "http:\/\/www.gitkraken.com\/",
+                "image_width": 444,
+                "image_height": 250,
+                "image_bytes": 136744,
+                "id": 1
+            }
+        ],
+        "ts": "1457494640.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "thanks for that link too...",
+        "ts": "1457494840.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Hmm okay I think I will try that out thank you! I have been having issues with my merges even without conflicts so maybe this will make things simpler :)",
+        "ts": "1457495312.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Doesn't get much simpler than using drag and drop to merge :P",
+        "ts": "1457495412.000065"
+    }
+]

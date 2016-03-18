@@ -58,8 +58,10 @@ public interface APIHelperInterface {
     // Send a command to get user data, receives user data JSON
     retrofit.client.Response userInfo(@Body JsonObject params);
 
-    //TODO: finish
     @GET(VT_API_URL_USER_QUESTIONS)
     List<Question> questions();
+
+    @POST(VT_API_URL_USER_QUESTIONS)
+    Question createQuestion(@Body JsonObject params);
 
 }

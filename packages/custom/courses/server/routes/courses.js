@@ -11,6 +11,8 @@ module.exports = function(Courses, app, auth, database) {
       .get(courses.show)
       .put(courses.update)
       .delete(courses.destroy);
+  app.route('/api/courses/:courseId/addStudent')
+      .post(courses.addStudent);
 
   // Finish with setting up the courseId param
   app.param('courseId', courses.course);

@@ -82,24 +82,24 @@
             "public_url_shared": false,
             "display_as_bot": false,
             "username": "",
-            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P81EL5C\/slack_for_ios_upload.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
-            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P81EL5C\/download\/slack_for_ios_upload.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
-            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_64.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
-            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_80.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
-            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_360.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P81EL5C\/slack_for_ios_upload.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0P81EL5C\/download\/slack_for_ios_upload.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_64.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_80.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_360.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
             "thumb_360_w": 360,
             "thumb_360_h": 270,
-            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_480.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_480.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
             "thumb_480_w": 480,
             "thumb_480_h": 360,
-            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_160.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
-            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_720.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_160.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_720": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_720.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
             "thumb_720_w": 720,
             "thumb_720_h": 540,
-            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_960.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_960": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_960.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
             "thumb_960_w": 960,
             "thumb_960_h": 720,
-            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_1024.jpg?t=xoxe-17979658209-23350758914-23347773557-4ddedcd77a",
+            "thumb_1024": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0P81EL5C-a79226dc74\/slack_for_ios_upload_1024.jpg?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
             "thumb_1024_w": 1024,
             "thumb_1024_h": 768,
             "image_exif_rotation": 1,
@@ -111,10 +111,10 @@
                 "C0HUU8EB1"
             ],
             "groups": [
-
+    
             ],
             "ims": [
-
+    
             ],
             "comments_count": 0
         },
@@ -974,5 +974,151 @@
         "user": "U0HUU655Y",
         "text": "added it to the README.md",
         "ts": "1456536622.000151"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Oh, haha!",
+        "ts": "1456536694.000152"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version f962d08 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456536772.000153"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "updated Slack logs",
+        "ts": "1456536875.000154"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<http:\/\/rawgit.com\/>",
+        "attachments": [
+            {
+                "title": "RawGit",
+                "title_link": "http:\/\/rawgit.com\/",
+                "text": "RawGit serves raw files directly from GitHub with proper Content-Type headers.",
+                "fallback": "RawGit",
+                "from_url": "http:\/\/rawgit.com\/",
+                "id": 1
+            }
+        ],
+        "ts": "1456536960.000155"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 5bf419c of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456537089.000157"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "API docs are here: <https:\/\/rawgit.com\/lewkoo\/Votee\/master\/Documentation\/apiDocs\/index.html>",
+        "ts": "1456537171.000158"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "\/giphy celebrate",
+        "attachments": [
+            {
+                "fallback": "giphy: <http:\/\/giphy.com\/gifs\/day-subreddit-msKNSs8rmJ5m>",
+                "image_url": "http:\/\/media2.giphy.com\/media\/msKNSs8rmJ5m\/giphy.gif",
+                "image_width": 366,
+                "image_height": 272,
+                "image_bytes": 1400571,
+                "title": "celebrate",
+                "id": 1,
+                "title_link": "http:\/\/giphy.com\/gifs\/day-subreddit-msKNSs8rmJ5m"
+            }
+        ],
+        "ts": "1456537177.000159"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 9215c39 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456537308.000160"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 4c6594c of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456537366.000161"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": ":tada::tada:",
+        "ts": "1456537539.000162"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "<@U0J3D11K5>: we're expecting a hatty from you tonight ",
+        "ts": "1456537695.000163"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version a433b76 of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1456537935.000164"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Congrats guys. We made it on time and with decent quality, I think. 40-45% of our mark is already decided :-)",
+        "ts": "1456538901.000165"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I'd bet ours is better than most. We're gonna get at least 80% for sure ",
+        "ts": "1456539472.000166"
     }
 ]

@@ -1,0 +1,560 @@
+[
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im guessing the Quiz activity is the same as Question activity?",
+        "ts": "1458151259.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I have no idea",
+        "ts": "1458151270.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I can't be proficient in everything",
+        "ts": "1458151286.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "The Java class?",
+        "ts": "1458151357.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Quizzes and courses each have their own view (Xml) and then a class to control their functionality (quiz view and course view Java classes) ",
+        "ts": "1458151491.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we dont have functionality to set up Quiz, unless you did so?",
+        "ts": "1458151542.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "Not yet but right now we just display the active quizzes on that page ",
+        "ts": "1458151627.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "is it possible for you to do that by friday 4:00 PM? :simple_smile:",
+        "ts": "1458151661.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I have been working on front end stuff for calculating the grades. I can work on courses stuff today",
+        "ts": "1458151760.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "We only have questions and courses functionality (on the web). For consistency sake it should be named the same",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1458151789.000000"
+        },
+        "ts": "1458151783.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Go ahead and change it.",
+        "ts": "1458151810.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "after my classes i will",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1458151975.000000"
+        },
+        "ts": "1458151950.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "I'll look at it again after class ",
+        "ts": "1458152453.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Please don't commit changes to build.gradle. If you want to change which server the app uses, change your build variant to 'productionDebug'\n<https:\/\/developer.android.com\/tools\/building\/configuring-gradle.html#workBuildVariants>",
+        "attachments": [
+            {
+                "title": "Configuring Gradle Builds | Android Developers",
+                "title_link": "https:\/\/developer.android.com\/tools\/building\/configuring-gradle.html#workBuildVariants",
+                "text": "This section builds on the Build System Overview and Build and Running from Android Studio to show you how to use build variants based on product flavors and build types. Android Studio projects contain a top-level build file and a build file for each\u2026",
+                "fallback": "Configuring Gradle Builds | Android Developers",
+                "from_url": "https:\/\/developer.android.com\/tools\/building\/configuring-gradle.html#workBuildVariants",
+                "id": 1
+            }
+        ],
+        "ts": "1458162127.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just want to point out that changing Gradle is fine if you need to include a package that you require. But don't change the host in the debug flavour.",
+        "ts": "1458162236.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I'm having trouble querying for a specific student in the courses controller. It says my GET request is unauthorized...any idea what I am missing? ",
+        "ts": "1458162394.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, you are missing authorization information in your header",
+        "ts": "1458162417.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you are trying to issue an API call, is that right?",
+        "ts": "1458162427.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Basically I was trying to use the users controller function to find a user by email or ID. But I have to access it from courses controller ",
+        "ts": "1458162647.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "server side code, right?",
+        "ts": "1458162687.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or you are accessing from the front end?",
+        "ts": "1458162694.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Well I have the ID\/email in the front end of courses but the method to find a student is server side ",
+        "ts": "1458162835.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "your front end controller needs to import back end server controller for users package",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458162889.000000"
+        },
+        "ts": "1458162873.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that way, it can access back end methods",
+        "ts": "1458162900.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Rightttt I thought I was doing that but I think my format was not correct now that I check it. That's probably why, thanks!",
+        "ts": "1458163055.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Is that up at the top header? Cuz in that case I had added Users package to it ",
+        "ts": "1458163363.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, it is one of the first lines",
+        "ts": "1458163798.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "APIHelper.java is our layer interacting with the db?",
+        "ts": "1458163805.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that is what sends out the REST requests \/ receives responses",
+        "ts": "1458163831.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, it is. but it is not interacting with the DB.",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458163845.000000"
+        },
+        "ts": "1458163834.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "right, i need to make a call to populate the question and answer choices so it should be done through there though i assume",
+        "ts": "1458163894.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, that's right. there are plenty of examples with the log in requests \/ responses",
+        "ts": "1458163923.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "just follow the same pattern, adapting your requests accordingly.",
+        "ts": "1458163940.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "yeah thats the plan",
+        "ts": "1458163947.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "authentication is handled already if your user is logged in",
+        "ts": "1458163953.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "perfect",
+        "ts": "1458163965.000044"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version d90c9da of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1458165404.000045"
+    },
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version 92b7cbc of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1458166293.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "<@U0HV4EBMJ>: your latest commit fails my  built (after merging).",
+        "ts": "1458169937.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "might be just on my end, are you getting any errors?",
+        "ts": "1458169965.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "the implementation isnt totally finished so it might be pulling an error, can probably just comment it out for now",
+        "ts": "1458170017.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "probably not great, but i wanted to commit what i had so that others that are working on similar areas can use\/update the front end that i implemented for it",
+        "ts": "1458170073.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "if you are getting errors in your built, please dont commit it",
+        "ts": "1458170101.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Alternatively, commit it anyway, but put a note in the commit message so we know it's not working.",
+        "ts": "1458170429.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": ":+1:",
+        "ts": "1458170478.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Got register feature working + tested",
+        "ts": "1458170663.000054",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0J3A5RML"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "will merge with everything and then merge back to develop",
+        "ts": "1458170682.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "give me half an hour",
+        "ts": "1458170708.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we have 16 e2e tests",
+        "ts": "1458176452.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "24 unit tests",
+        "ts": "1458176494.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that is on Android. I suggest we focus on unit and integration testing simply because the count there should be higher. about 50-60",
+        "ts": "1458176541.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Guy, I just merged AndroidGUI into my branch and it still has production host address in develop flavour. Whoever is working on that branch clearly is still pushing that hack. \n\nCome on, people. You're in 4th year, you should be better at version control. :simple_smile:",
+        "ts": "1458177324.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "also, changes to Log In layout xml break e2e tests. come on, you don't run tests when you commit code?",
+        "ts": "1458177583.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Tests are working here. You're talking about the androidGUI branch?",
+        "ts": "1458178468.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep, I am. they are working there? I am in merged state so can't reliably tell",
+        "ts": "1458178498.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Yes",
+        "ts": "1458178594.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, then it was something on my end. my apologies",
+        "ts": "1458178613.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "running fine now",
+        "ts": "1458178624.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Merged Registration into develop &amp; AndroidGUI",
+        "ts": "1458178859.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "holy alerts batman",
+        "ts": "1458179182.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "?",
+        "ts": "1458179216.000069"
+    },
+    {
+        "type": "message",
+        "user": "U0HV4EBMJ",
+        "text": "i just got about 20 notifications from that trello update hah",
+        "ts": "1458179230.000070"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "too many alerts from Trello? :simple_smile: yeah, I'l change that",
+        "ts": "1458179236.000071"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "alright, won't be as annoying now",
+        "ts": "1458179284.000072"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "<@U0HUU655Y>: Watch your merges. You gave the login page extra margins :stuck_out_tongue:",
+        "ts": "1458179555.000073"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "looks fine to me",
+        "ts": "1458179594.000074"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or at least on my device",
+        "ts": "1458179624.000075"
+    },
+    {
+        "type": "message",
+        "subtype": "file_share",
+        "text": "<@U0J3A5RML|nloewen> uploaded a file: <https:\/\/4350team.slack.com\/files\/nloewen\/F0T90L0H5\/screenshot_from_2016-03-16_20-54-04.png|Screenshot from 2016-03-16 20-54-04.png>",
+        "file": {
+            "id": "F0T90L0H5",
+            "created": 1458179672,
+            "timestamp": 1458179672,
+            "name": "Screenshot from 2016-03-16 20-54-04.png",
+            "title": "Screenshot from 2016-03-16 20-54-04.png",
+            "mimetype": "image\/png",
+            "filetype": "png",
+            "pretty_type": "PNG",
+            "user": "U0J3A5RML",
+            "editable": false,
+            "size": 52809,
+            "mode": "hosted",
+            "is_external": false,
+            "external_type": "",
+            "is_public": true,
+            "public_url_shared": false,
+            "display_as_bot": false,
+            "username": "",
+            "url_private": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0T90L0H5\/screenshot_from_2016-03-16_20-54-04.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "url_private_download": "https:\/\/files.slack.com\/files-pri\/T0HUTKC65-F0T90L0H5\/download\/screenshot_from_2016-03-16_20-54-04.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_64": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0T90L0H5-8d47fcf687\/screenshot_from_2016-03-16_20-54-04_64.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_80": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0T90L0H5-8d47fcf687\/screenshot_from_2016-03-16_20-54-04_80.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0T90L0H5-8d47fcf687\/screenshot_from_2016-03-16_20-54-04_360.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_360_w": 193,
+            "thumb_360_h": 360,
+            "thumb_480": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0T90L0H5-8d47fcf687\/screenshot_from_2016-03-16_20-54-04_480.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "thumb_480_w": 257,
+            "thumb_480_h": 480,
+            "thumb_160": "https:\/\/files.slack.com\/files-tmb\/T0HUTKC65-F0T90L0H5-8d47fcf687\/screenshot_from_2016-03-16_20-54-04_160.png?t=xoxe-17979658209-27809329812-27818530293-ad94e3ed02",
+            "image_exif_rotation": 1,
+            "original_w": 288,
+            "original_h": 537,
+            "permalink": "https:\/\/4350team.slack.com\/files\/nloewen\/F0T90L0H5\/screenshot_from_2016-03-16_20-54-04.png",
+            "permalink_public": "https:\/\/slack-files.com\/T0HUTKC65-F0T90L0H5-b32c5c1424",
+            "channels": [
+                "C0HUU8EB1"
+            ],
+            "groups": [
+    
+            ],
+            "ims": [
+    
+            ],
+            "comments_count": 0
+        },
+        "user": "U0J3A5RML",
+        "upload": true,
+        "display_as_bot": false,
+        "username": "<@U0J3A5RML|nloewen>",
+        "bot_id": null,
+        "ts": "1458179673.000076"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "See the space around the toolbar?",
+        "ts": "1458179692.000077"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep",
+        "ts": "1458179698.000078"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I assumed that is how this new toolbar behaves",
+        "ts": "1458179714.000079"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I was still using the old one",
+        "ts": "1458179726.000080"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "which is an ActionBar",
+        "ts": "1458179732.000081"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "you guys switched to Toolbar - fair enough, I switched my code too. but I had no idea how it should look :simple_smile:",
+        "ts": "1458179759.000082"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Right Toolbar supersedes it, but it needs to be placed in the layout.",
+        "ts": "1458179760.000083"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Set 0px margins on the root layout object, with a second layout child that has margins",
+        "ts": "1458179817.000084"
+    }
+]

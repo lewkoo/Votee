@@ -1,0 +1,528 @@
+[
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version daa7b6b of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1458226138.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Okay, so we had a few issues with Heroku",
+        "ts": "1458248286.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "as a result, we are no longer using it",
+        "ts": "1458248295.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "new production server link is here: <http:\/\/ec2-52-37-76-156.us-west-2.compute.amazonaws.com|ec2-52-37-76-156.us-west-2.compute.amazonaws.com>",
+        "ts": "1458248321.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "It will be hosting soon",
+        "ts": "1458248334.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "short link: <http:\/\/goo.gl\/vbq2fe>",
+        "ts": "1458248560.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Thank you for figuring it out! ",
+        "ts": "1458249205.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it is not figured out yet",
+        "ts": "1458249215.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Oh okay. Are you guys in the lab?",
+        "ts": "1458249400.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Nope",
+        "ts": "1458249891.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Okay, so here is an update on what happened. \n\nHeroku fails to deploy out app because it is not in the root directory.",
+        "ts": "1458251002.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "we have searched for ways to specify custom path but it seems that for such thing we would need to re-define a default buildpack, and I don't have time to do that",
+        "ts": "1458251058.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "therefore, we have two choices",
+        "ts": "1458251071.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "1) move the web server app out of `Src\/Web`back into root",
+        "ts": "1458251089.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "2) deploy on AWS (or any other box with DNS)",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458251103.000000"
+        },
+        "ts": "1458251094.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "personally, I prefer the first option, since it will allow us to keep using Heroku",
+        "ts": "1458251119.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "for now, this is what I am going to do",
+        "ts": "1458251144.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "if someone is unhappy with it and maintains that the web server remains in `Src\/Web` - feel free to move it back and deploy elsewhere. I don't care where.",
+        "ts": "1458251183.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Sounds good to me. The marker said we have a messy project structure anyways...I would do what is easiest ",
+        "ts": "1458251410.000020"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "well, moving the server code back into root is exactly what makes the project structure messy",
+        "ts": "1458251469.000021"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "that is the drawback with heroku",
+        "ts": "1458251477.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "our project structure will be messy",
+        "ts": "1458251493.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, we are back and running on `<http:\/\/votee-project.herokuapp.com|votee-project.herokuapp.com>`",
+        "ts": "1458252059.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Does it work to put a script in the root directory that starts the server?",
+        "ts": "1458252567.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "procfile?",
+        "ts": "1458252578.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "tried it",
+        "ts": "1458252582.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "Nope.",
+        "ts": "1458252588.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "No, we tried that",
+        "ts": "1458252595.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "build pack is wired to look for package.json in the root dir",
+        "ts": "1458252619.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Shoot. We're going to get docked marks for that again.",
+        "ts": "1458252717.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Feel free to find other solution. ",
+        "ts": "1458252796.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "mergin Master into Develop, please hold on with pushing to Develop\/Master for next little while",
+        "edited": {
+            "user": "U0HV1T7F1",
+            "ts": "1458253543.000000"
+        },
+        "ts": "1458253488.000035"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "just running npm install and making sure everything works now",
+        "ts": "1458254042.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "some tests are failing on Web side, <@U0J3D11K5>  maybe you can take a look at it since you been making changes there a lot?",
+        "ts": "1458254280.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "All done...move along sir\/madam...",
+        "ts": "1458254412.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "it is failing at :\n\nres.body.professor._id.should.be.equal(course.professor.id.toString())",
+        "ts": "1458255905.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "pretty sure",
+        "ts": "1458255911.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "is your scope.create() also failing?",
+        "ts": "1458255918.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im off that branch for now...working on something else..",
+        "ts": "1458255955.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I am looking into tests now, i apologize",
+        "ts": "1458258302.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I also think there may be an issue with the 'Create Course' button. I have looked at its setup and don't see what is wrong but it redirects to home page",
+        "ts": "1458258335.000045"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "permission issue perhaps?",
+        "ts": "1458258351.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "no because the button is hidden for students...should be normal for profs\/admins",
+        "ts": "1458259268.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I will be taking a look at courses anyways, Jess. You can leave it and concentrate on something else if you wish",
+        "ts": "1458259555.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Okay, I am working on trying to fix the tests but i am stuck.\nThere is an assertion to check the professor id in courses tests, but the prof is null in some cases",
+        "ts": "1458259768.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "so for creating a new Q (on web) course number is required?",
+        "ts": "1458262298.000050"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "i just added it yes. I was thinking that way we can organize the questions better",
+        "ts": "1458262329.000051"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "im just looking at API we have and it is outdated...",
+        "ts": "1458262338.000052"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "when a question is created, i wanted to add the question to the course list but i cannot figure out how to query for course",
+        "ts": "1458262365.000053"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "query for course within questions controller that is",
+        "ts": "1458262380.000054"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "what Field does it need for course number?",
+        "ts": "1458262403.000055"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Number",
+        "ts": "1458262413.000056"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "great, thank you :simple_smile:",
+        "ts": "1458262429.000057"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "i think i forgot to make it required in db but it is required when creating question",
+        "ts": "1458262434.000058"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "i should proablby change that",
+        "ts": "1458262438.000059"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "also, make sure you document API",
+        "ts": "1458262448.000060"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "we can generate it later, but good Docs can become helpfull",
+        "ts": "1458262479.000061"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "do you mean in the documentation\/apiDocs",
+        "ts": "1458262548.000062"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "or where would i update it?",
+        "ts": "1458262583.000063"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "hmm, i created a  Question on Heroku, course number is not passed as a parameter",
+        "ts": "1458262586.000064"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "unless you just added it?",
+        "ts": "1458262597.000065"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Heroku is running from master",
+        "ts": "1458262604.000066"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "the changed is on develop",
+        "ts": "1458262612.000067"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "yes, but we merged develop earlier",
+        "ts": "1458262615.000068"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "ahh ok",
+        "ts": "1458262620.000069"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "no I just committed to develop not too long ago",
+        "ts": "1458262637.000070"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "so it is not in master",
+        "ts": "1458262643.000071"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "cool",
+        "ts": "1458262658.000072"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "then Heroku won't be a place to go",
+        "ts": "1458262661.000073"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": ":simple_smile:",
+        "ts": "1458262663.000074"
+    },
+    {
+        "type": "message",
+        "user": "U0HV1T7F1",
+        "text": "regarding API Docs, just look at comments that are in server controller above any function",
+        "ts": "1458262691.000075"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "git reset --hard  in develop branch is the command to get newest version and discard my changes right? Or is it git reset --hard origin\/develop ?",
+        "ts": "1458264088.000076"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "first one",
+        "ts": "1458264101.000077"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "then you do a git pull to get the newest changes",
+        "ts": "1458264119.000078"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "okay awesome thx",
+        "ts": "1458264131.000079"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "or if you want just the newest changes - simply pull",
+        "ts": "1458264133.000080"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "okay, so courseView has a add student button, but I assume correctly that is doesn't do anything?",
+        "ts": "1458264206.000081"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "not yet no so not sure if we even want it there",
+        "ts": "1458264242.000082"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I was having difficulty trying to query for a student in courses controller",
+        "ts": "1458264260.000083"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "same thing with courses....i wanted to query for a course in question controller when creating a new question which would be similar format.\nThat way it would be added to course question list once created",
+        "ts": "1458264356.000084"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "let me look into it",
+        "ts": "1458264371.000085"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yep, I figured it out",
+        "ts": "1458269082.000086"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "takes surprisingly long, but it is doable",
+        "ts": "1458269094.000087"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "Surprisingly long to query?",
+        "ts": "1458272163.000088"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "a lot of time to figure it out :simple_smile:",
+        "ts": "1458272805.000089"
+    }
+]

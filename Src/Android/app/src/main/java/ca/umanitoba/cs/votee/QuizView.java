@@ -15,9 +15,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
+import com.google.gson.Gson;
+
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.List;
 
 import ca.umanitoba.cs.votee.api.APIHelper;
@@ -37,18 +41,30 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
 
     private View mQuizView;
 
+    private Button createQuizButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.quiz_view);
 
-        super.setupTitlebar();
+        super.setupTitlebar(R.menu.toolbar);
         mActionBar.setDisplayHomeAsUpEnabled(true);
 
         mQuizView = findViewById(R.id.quiz_view);
 
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
+        createQuizButton = (Button)findViewById(R.id.create_quiz);
+
+        //TODO: roles is null, look for the bug
+//        String[] roles = UserProfile.getInstance().getRoles();
+//        List rolesList = Arrays.asList(roles);
+//
+//        if(!rolesList.contains("professor") || !rolesList.contains("admin")){
+//            //hide vote from prof
+//            createQuizButton.setVisibility(View.INVISIBLE);
+//        }
+
+        mActionBar.setDisplayHomeAsUpEnabled(true);
 
         ArrayAdapter<Object> listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
         listView = (ListView) findViewById(R.id.activity_main_listView);
@@ -60,57 +76,47 @@ public class QuizView extends BaseActivity implements CourseList.OnFragmentInter
         listView.setOnItemClickListener(this);
     }
 
+    public void onSelectClick(View view){
 
-//    public void onItemClick(AdapterView<?> adapter, View v, int position, long id) {
-//        Question item = (Question) adapter.getItem(position);
-//        item.setSelected();
-//    }
-//
-//    public void onSelectClick(View view){
-//
-//        Intent questionIntent = new Intent(QuizView.this, AnswerActivity.class);
-//        QuizView.this.startActivity(questionIntent);
-//
-//
-//    }
+        Intent createQIntent = new Intent(QuizView.this, CreateQuizActivity.class);
+        QuizView.this.startActivity(createQIntent);
+    }
 
     GetQuestionsTask mGetQuestionsTask;
     public void getQuestions(){
         mGetQuestionsTask = new GetQuestionsTask();
         mGetQuestionsTask.execute();
-
-//        listAdapter.addAll(APIHelper.getQuestions());
-//        retrofit.client.Response response;
-//        response = APIHelper.getQuestions();
     }
 
-//    TODO: finish
     private void showList(){
         //String array to store all the book names
-        String[] items = new String[questions.size()];
+        try {
+            String[] items = new String[questions.size()];
 
-        //Traversing through the whole list to get all the names
-        for(int i=0; i<questions.size(); i++){
-            //Storing names to string array
-            items[i] = questions.get(i).getTitle();
+            //Traversing through the whole list to get all the names
+            for(int i=0; i<questions.size(); i++){
+                //Storing names to string array
+                items[i] = questions.get(i).getTitle();
+            }
+
+            //Creating an array adapter for list view
+            ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.questions_list,items);
+
+            //Setting adapter to listview
+            listView.setAdapter(adapter);
+        }catch (Exception e){
+            throw e;
         }
-
-        //Creating an array adapter for list view
-        ArrayAdapter adapter = new ArrayAdapter<String>(this,R.layout.questions_list,items);
-
-        //Setting adapter to listview
-        listView.setAdapter(adapter);
     }
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         //Creating an intent
         Intent intent = new Intent(this, QuizDetailsActivity.class);
-//
-//        //Getting the requested question from the list
+
+       //Getting the requested question from the list
         Question question = questions.get(position);
-//
-//        //Adding question details to intent
+
         intent.putExtra("Question", question);
 
         startActivity(intent);

@@ -1,0 +1,51 @@
+[
+    {
+        "text": "<mailto:lewkoo@gmail.com|lewkoo@gmail.com> deployed version a7ab2ff of <http:\/\/votee-project.herokuapp.com|votee-project>.",
+        "bot_id": "B0NNT64GY",
+        "attachments": [
+            {
+                "text": "\n",
+                "id": 1,
+                "fallback": "NO FALLBACK DEFINED"
+            }
+        ],
+        "type": "message",
+        "subtype": "bot_message",
+        "ts": "1457015411.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3D11K5",
+        "text": "I won't be able to make use of the tablet this weekend so if someone would like it I can give it to you after class! Just let me know ",
+        "ts": "1457027781.000003",
+        "reactions": [
+            {
+                "name": "+1",
+                "users": [
+                    "U0HUU655Y"
+                ],
+                "count": 1
+            }
+        ]
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Hey <!channel>, I just enabled *Calls* for our team, so you can ring a teammate directly from a Slack DM. Just click the phone icon on your desktop device to get started. You can find more information in this Help Center article - <http:\/\/get.slack.help\/hc\/en-us\/articles\/216771908>.",
+        "attachments": [
+            {
+                "service_name": "Slack Help Center",
+                "title": "Making voice calls in Slack",
+                "title_link": "http:\/\/get.slack.help\/hc\/en-us\/articles\/216771908",
+                "text": "Now in beta!\u00a0Slack's new\u00a0Calls\u00a0feature\u00a0is available now to all teams. Learn how to join the beta. Keep in mind: Calls (beta)\u00a0is currently voice only and desktop only. Video, screen sharing, and mo...",
+                "fallback": "Slack Help Center: Making voice calls in Slack",
+                "from_url": "http:\/\/get.slack.help\/hc\/en-us\/articles\/216771908",
+                "thumb_url": "http:\/\/p6.zdassets.com\/hc\/settings_assets\/138842\/200037786\/yTayU6vKBHctGCxjwAUx7A-slackbot_192.png",
+                "thumb_width": 192,
+                "thumb_height": 192,
+                "id": 1
+            }
+        ],
+        "ts": "1457042664.000004"
+    }
+]

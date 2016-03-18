@@ -1,0 +1,280 @@
+[
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<@U0J3A5RML>: the getIp() method to added to the graddle script breaks some tests. I'll fix them up, but next time run tests before committing :simple_smile:",
+        "ts": "1458004468.000002"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Whaaaat, my code never breaks tests :stuck_out_tongue_closed_eyes:",
+        "ts": "1458004645.000003"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Guess I figured the rest of the code would be independent of the servers address. Sorry.",
+        "ts": "1458004681.000004"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "java.lang.IllegalArgumentException: unexpected url: <http:\/\/fe80:0:0:0:f5da:3921:96e5:de04%3:3000\/api\/login>",
+        "ts": "1458004694.000005"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "essentially, getIP seems to return ... whatever that string is :simple_smile:",
+        "ts": "1458004731.000006"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "doesn't look like MAC to me, but I might be wrong",
+        "ts": "1458004740.000007"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Is it an ipv6 address?",
+        "ts": "1458004771.000008"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Was that from unit tests or instrumentation?",
+        "ts": "1458004928.000009"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "Unit tests",
+        "ts": "1458004939.000010"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "yes, it is ipv6",
+        "ts": "1458004969.000011"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I have no issues running the tests on my computer. getIP should maybe have a check for IP version.",
+        "ts": "1458005054.000012"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "how about this method?",
+        "ts": "1458005093.000013"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "```\/\/ Get the ip address by interface name\ndef getLocalIp(String interfaceName) {\n    NetworkInterface iface =  NetworkInterface.getByName(interfaceName);\n    for (InterfaceAddress address : iface.getInterfaceAddresses()) {\n        String ip =  address.getAddress().getHostAddress()\n        if (ip.length() &lt;= 15) {\n            return ip;\n        }\n    }\n}\n```",
+        "ts": "1458005097.000014"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it does require to specify interface name though",
+        "ts": "1458005127.000015"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Which won't be cross platform.",
+        "ts": "1458005138.000016"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "exactly",
+        "ts": "1458005145.000017"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Add the length conditional to the loop I've got",
+        "ts": "1458005151.000018"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "is this the link where you got the code from?",
+        "ts": "1458005212.000019"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "<http:\/\/jeremie-martinez.com\/2015\/05\/05\/inject-host-gradle\/>",
+        "ts": "1458005217.000022"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I believe so. Probably should have put some attribution in there.",
+        "ts": "1458005314.000023"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "no, that is not necessary",
+        "ts": "1458005329.000024"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I added a check for addresses which end in .1",
+        "ts": "1458005337.000025"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "still, that code is not cross platform",
+        "ts": "1458005337.000026"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Because?",
+        "ts": "1458005348.000027"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "runs fine with you, doesn't work on windows",
+        "ts": "1458005355.000028"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Issues other than the ipv6 address?",
+        "ts": "1458005405.000029"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "No other issues, but that is kind of a significant issue",
+        "ts": "1458005433.000030"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "besides, I do not see that address in my ipconfig output",
+        "ts": "1458005456.000031"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "but that is probably because it doesn't output the local loop-back",
+        "ts": "1458005486.000032"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "fair enough",
+        "ts": "1458005489.000033"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "wait, what are you trying to achieve with that code anyways?",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458005494.000000"
+        },
+        "ts": "1458005489.000034"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I'm trying to get the IP address for the local network. Not the loopback.",
+        "ts": "1458005522.000036"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "You can't deploy to an Android device with the server address set to localhost",
+        "ts": "1458005554.000037"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "oh, yes, that is right",
+        "ts": "1458005577.000038"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "I guess on Windows all of those methods behave differently",
+        "ts": "1458005736.000039"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "how about this code?",
+        "ts": "1458005850.000040"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "```    productFlavors {\n        development {\n            applicationId \"ca.umanitoba.cs.votee.develop\"\n            def host = InetAddress.getLocalHost().getCanonicalHostName()\n            buildConfigField 'String', 'HOST', '\"http:\/\/'+host+':3000\"'\n        }```",
+        "ts": "1458005853.000041"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "works for me",
+        "ts": "1458005857.000042"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "can you put that and run the tests?",
+        "ts": "1458005864.000043"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "it returned my local IPv4 address of the correct adapter",
+        "edited": {
+            "user": "U0HUU655Y",
+            "ts": "1458005930.000000"
+        },
+        "ts": "1458005925.000044"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "Can't test now. I'll let you know.",
+        "ts": "1458006289.000046"
+    },
+    {
+        "type": "message",
+        "user": "U0HUU655Y",
+        "text": "sure, thanks",
+        "ts": "1458006303.000047"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "<@U0HUU655Y>: Works for the test cases, but not in the emulator or on device. Android can't resolve the hostname. We need the address.",
+        "ts": "1458017540.000048"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "I've pushed a change to filter out ipv6 addresses. It \"should\" be fixed.",
+        "ts": "1458018269.000049"
+    },
+    {
+        "type": "message",
+        "user": "U0J3A5RML",
+        "text": "If anyone gets connection errors when running the app let me know!",
+        "ts": "1458018301.000050"
+    }
+]

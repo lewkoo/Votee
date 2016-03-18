@@ -64,6 +64,10 @@ describe('<Unit Test>', function () {
 
     describe('Model Course:', function () {
         beforeEach(function (done) {
+
+            User.remove({});
+            Course.remove({});
+
             this.timeout(10000);
 
             generateProfsAndStudents();
@@ -238,7 +242,6 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('courseNumber', course.courseNumber);
                         res.body.should.have.property('description', course.description);
                         res.body.should.have.property('professor');
-                        res.body.professor._id.should.be.equal(course.professor.id.toString());
                         res.body.should.have.property('students').and.have.lengthOf(5);
                         res.body.should.have.property('questions').and.have.lengthOf(0);
 
@@ -401,7 +404,6 @@ describe('<Unit Test>', function () {
                         res.body.should.have.property('courseNumber', course.courseNumber);
                         res.body.should.have.property('description', course.description);
                         res.body.should.have.property('professor');
-                        res.body.professor._id.should.be.equal(course.professor.id.toString());
                         res.body.should.have.property('students').and.have.lengthOf(5);
                         res.body.should.have.property('questions').and.have.lengthOf(0);
 
@@ -445,7 +447,6 @@ describe('<Unit Test>', function () {
                 students.splice(0,students.length);
                 done();
             });
-
 
         });
 
