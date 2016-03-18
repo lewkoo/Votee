@@ -43,14 +43,14 @@
             </div>
         </div>
 
-    <form name="addStudentForm" class="form-horizontal col-md-6" role="form" data-ng-if="canAddStudents()" data-ng-submit="addStudents(addStudentForm.$valid)" novalidate>
+    <form name="studentEmailForm" class="form-horizontal col-md-6" role="form" data-ng-if="canAddStudents()" ng-submit="addStudents(studentEmailForm.$valid, email)" novalidate>
         <div class="col-md-12">
-            <div class="form-group" ng-class="{ 'has-error' : submitted && addStudentForm.email.$invalid }">
+            <div class="form-group" ng-class="{ 'has-error' : submitted && studentEmailForm.email.$invalid }">
                 <label class="col-md-3 control-label">Add Students Here</label>
                 <div class="col-md-9">
-                    <input name="email" type="text" class="form-control" data-ng-model="users.email" id="email" placeholder="Enter student email here" required>
-                    <div ng-show="submitted && addStudentForm.email.$invalid" class="help-block">
-                        <p ng-show="addStudentForm.email.$error.required">Student email is required</p>
+                    <input name="email" type="text" class="form-control" ng-model="email" placeholder="Enter student email here" required>
+                    <div ng-show="submitted && studentEmailForm.email.$invalid" class="help-block">
+                        <p ng-show="studentEmailForm.email.$error.required">Student email is required</p>
                     </div>
                 </div>
             </div>

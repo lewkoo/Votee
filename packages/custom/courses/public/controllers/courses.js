@@ -4,6 +4,7 @@
 angular.module('mean.courses').controller('CoursesController', ['$scope', '$stateParams', 'Global', 'Courses', '$location', 'MeanUser','Users',
     function($scope, $stateParams, Global, Courses, $location, MeanUser, Users) {
         $scope.global = Global;
+        $scope.studentEmail = null;
         $scope.package = {
             name: 'courses'
         };
@@ -112,19 +113,16 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             return questions;
         };
 
-        $scope.addStudents = function(isValid)
+        $scope.addStudents = function(isValid, emailToQuery)
         {
             if(isValid){
-                //console.log("HI");
-                //console.log("EMAIL = "+ $scope.users.email);
 
-                /*Users.get({
-                    email: $scope.users.email
+                Users.query({
+                    email: emailToQuery
                 }, function(users) {
                     $scope.user = users;
-                    console.log($scope.users.email);
                     console.log($scope.user.email);
-                });*/
+                });
             }
 
 
