@@ -67,11 +67,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, CORRECT_PASSWORD);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, CORRECT_PASSWORD);
         //Click on the submit button
@@ -98,13 +98,13 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, CORRECT_PASSWORD);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
-        solo.enterText(3, CORRECT_PASSWORD);
+        solo.enterText(4, CORRECT_PASSWORD);
         //Click on the submit button
         solo.clickOnView(solo.getView(R.id.register_button));
         String errorMessage = solo.getString(R.string.error_invalid_email);
@@ -130,11 +130,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, INCORRECT_PASSWORD_1);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, INCORRECT_PASSWORD_1);
         //Click on the submit button
@@ -163,11 +163,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, INCORRECT_PASSWORD_2);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, INCORRECT_PASSWORD_2);
         //Click on the submit button
@@ -196,11 +196,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, CORRECT_PASSWORD);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, CORRECT_PASSWORD + " extra stuff");
         //Click on the submit button
@@ -229,11 +229,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, CORRECT_PASSWORD);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, CORRECT_PASSWORD);
         //Click on the submit button
@@ -259,11 +259,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //Click on the correct role radio button
         solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, CORRECT_PASSWORD);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, CORRECT_PASSWORD);
         //Click on the submit button
@@ -292,11 +292,11 @@ public class RegisterActivityTest extends ActivityInstrumentationTestCase2<Regis
         //DO NOT Click on the correct role radio button
         //solo.clickOnRadioButton(1);
         //Click on the password field
-        solo.clickOnView(solo.getView(R.id.password));
+        //solo.clickOnView(solo.getView(R.id.password));
         //Enter the password
         solo.enterText(3, CORRECT_PASSWORD);
         //Click on the confirm password field
-        solo.clickOnView(solo.getView(R.id.password_repeat));
+        //solo.clickOnView(solo.getView(R.id.password_repeat));
         //Enter the password
         solo.enterText(4, CORRECT_PASSWORD);
         //Click on the submit button
