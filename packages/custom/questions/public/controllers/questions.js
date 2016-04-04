@@ -37,6 +37,18 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             return angular.equals(question.answer.charAt(3), answer.answer.toString());
         };
 
+        //$scope.link1 = "http://bootdey.com/img/Content/user_1.jpg";
+        //$scope.link2 = "http://bootdey.com/img/Content/user_2.jpg";
+        //$scope.link3 = "http://bootdey.com/img/Content/user_3.jpg";
+        //
+        //$scope.getRandomImg = function(){
+        //    $scope.num =  Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+        //
+        //    if($scope.num == 1){
+        //        return $scope.link1;
+        //    }
+        //};
+
         $scope.isHidden=true;
         $scope.showHide = function() {
             if($scope.isHidden)
