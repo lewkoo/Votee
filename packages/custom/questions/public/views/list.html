@@ -1,50 +1,54 @@
 <section data-ng-controller="QuestionsController" data-ng-init="find()">
-    <ul class="questions unstyled" data-ng-hide=!isAuthorized>
+    <!--<ul class="questions unstyled" data-ng-hide=!isAuthorized>-->
 
 
-        <table>
-            <td><img src="/voteeHome/assets/img/hatlogo.png" /></td>
-            <td><div style="text-align: center;"><h2>Questions</h2></div></td>
-        </table>
+        <!--<table>-->
+            <!--<td><img src="/voteeHome/assets/img/hatlogo.png" /></td>-->
+            <!--<td><div style="text-align: center;"><h2>Questions</h2></div></td>-->
+        <!--</table>-->
 
-        <div class="form-group">
-            <div class="row">
-                <a href="index" class="btn btn-default btn-primary">Home</a>
-                <a href="/student/profile" class="btn btn-default btn-primary">Student Profile</a>
-                <a href="/professors/profile">
-                    <button data-ng-hide="!hasAuthorization(question)" class="btn btn-default btn-primary">Professor Profile</button>
-                </a>
-                <br><hr>
-                <a href="/questions/create">
-                    <button id="createQuestionButton" data-ng-hide="!hasAuthorization(question)" type="create" class="btn btn-warning">Create New Question</button>
-                </a>
+        <!--<div class="form-group">-->
+            <!--<div class="row">-->
+                <!--<a href="index" class="btn btn-default btn-primary">Home</a>-->
+                <!--<a href="/student/profile" class="btn btn-default btn-primary">Student Profile</a>-->
+                <!--<a href="/professors/profile">-->
+                    <!--<button data-ng-hide="!hasAuthorization(question)" class="btn btn-default btn-primary">Professor Profile</button>-->
+                <!--</a>-->
+                <!--<br><hr>-->
+                <!--<a href="/questions/create">-->
+                    <!--<button id="createQuestionButton" data-ng-hide="!hasAuthorization(question)" type="create" class="btn btn-warning">Create New Question</button>-->
+                <!--</a>-->
 
-            </div>
-        </div>
+            <!--</div>-->
+        <!--</div>-->
 
-        <br>
+        <!--<br>-->
 
-        <div class="well panel panel-default">
-            <div class="panel-body">
+        <!--<div class="well panel panel-default">-->
+            <!--<div class="panel-body">-->
 
-        <li data-ng-repeat="question in questions">
-            <span>{{question.created | date:'medium'}}</span> by
-            <span>{{question.creator.name}}</span>
-            <h2>
-                <div class="col-xs-12 col-sm-5">
-                    <a data-ng-href="/questions/{{question._id}}" class="btn btn-block btn-danger">{{question.title}}
-                       <!-- <span class="glyphicon glyphicon-ok" data-ng-hide="!hasVoted(question)"></span>-->
-                    </a>
-                </div>
-            </h2>
-            <hr>
-            <hr>
-        </li>
-            </div>
-        </div>
+        <!--<li data-ng-repeat="question in questions">-->
+            <!--<span>{{question.created | date:'medium'}}</span> by-->
+            <!--<span>{{question.creator.name}}</span>-->
+            <!--<h2>-->
+                <!--<div class="col-xs-12 col-sm-5">-->
+                    <!--<a data-ng-href="/questions/{{question._id}}" class="btn btn-block btn-danger">{{question.title}}-->
+                       <!--&lt;!&ndash; <span class="glyphicon glyphicon-ok" data-ng-hide="!hasVoted(question)"></span>&ndash;&gt;-->
+                    <!--</a>-->
+                <!--</div>-->
+            <!--</h2>-->
+            <!--<hr>-->
+            <!--<hr>-->
+        <!--</li>-->
+            <!--</div>-->
+        <!--</div>-->
 
-    </ul>
+    <!--</ul>-->
     <h1 data-ng-hide="!questions || questions.length || !hasAuthorization(question)">No questions yet. <br> Why don't you <a href="/questions/create">Create One</a>?</h1>
+
+    <a href="/questions/create">
+        <button id="createQuestionButton" data-ng-hide="!hasAuthorization(question)" type="create" class="btn btn-warning">Create New Question</button>
+    </a>
 
     <div data-ng-hide="!questions" >
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
@@ -66,19 +70,6 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <!--<li data-ng-repeat="question in questions">-->
-                                    <!--<span>{{question.created | date:'medium'}}</span> by-->
-                                    <!--<span>{{question.creator.name}}</span>-->
-                                    <!--<h2>-->
-                                        <!--<div class="col-xs-12 col-sm-5">-->
-                                            <!--<a data-ng-href="/questions/{{question._id}}" class="btn btn-block btn-danger">{{question.title}}-->
-                                                <!--&lt;!&ndash; <span class="glyphicon glyphicon-ok" data-ng-hide="!hasVoted(question)"></span>&ndash;&gt;-->
-                                            <!--</a>-->
-                                        <!--</div>-->
-                                    <!--</h2>-->
-                                    <!--<hr>-->
-                                    <!--<hr>-->
-                                <!--</li>-->
                                 <tr data-ng-repeat="question in questions">
                                     <td>
                                         <img src="http://bootdey.com/img/Content/user_1.jpg" alt="">
@@ -87,30 +78,31 @@
                                     </td>
                                     <td>{{question.created | date:'medium'}}</td>
                                     <td class="text-center">
-                                        <span class="label label-success">available</span>
+                                        <span class="label label-success">open</span>
                                     </td>
                                     <td>
                                         <a href="#">{{question.courseNumber}}</a>
                                     </td>
-                                    <td data-ng-hide=!isAuthorized style="width: 20%;">
+                                    <td ng-hide="!isProfOrAdmin" style="width: 20%;">
                                         <!--<a href="#" class="table-link">-->
                                             <!--<span class="fa-stack">-->
                                                 <!--<i class="fa fa-square fa-stack-2x"></i>-->
                                                 <!--<i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>-->
                                             <!--</span>-->
                                         <!--</a>-->
-                                        <a href="#" class="table-link">
+                                        <a href="/questions/{{question._id}}/edit"class="table-link">
                                             <span class="fa-stack">
                                                 <i class="fa fa-square fa-stack-2x"></i>
                                                 <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
                                             </span>
                                         </a>
-                                        <a href="#" class="table-link danger">
-                                            <span class="fa-stack">
-                                                <i class="fa fa-square fa-stack-2x"></i>
-                                                <i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>
-                                            </span>
-                                        </a>
+                                        <!--TODO: add delete link if we want to-->
+                                        <!--<a href="#" class="table-link danger">-->
+                                            <!--<span class="fa-stack">-->
+                                                <!--<i class="fa fa-square fa-stack-2x"></i>-->
+                                                <!--<i class="fa fa-trash-o fa-stack-1x fa-inverse"></i>-->
+                                            <!--</span>-->
+                                        <!--</a>-->
                                     </td>
                                 </tr>
 
