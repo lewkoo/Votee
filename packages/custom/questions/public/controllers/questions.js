@@ -17,16 +17,19 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         $scope.hasVoted = function(question){
             var equal = false;
 
-            for(var key in question.answers){
-                var answer = question.answers[key];
+            if(question != undefined){
+                for(var key in question.answers){
+                    var answer = question.answers[key];
 
-                var creator = answer.student;
+                    var creator = answer.student;
 
-                if(angular.equals(answer.student._id, MeanUser.userId)){
+                    if(angular.equals(answer.student._id, MeanUser.userId)){
                         equal = true;
                         break;
+                    }
                 }
             }
+
             return equal;
         };
 
@@ -43,19 +46,26 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.noAnswers = function(question) {
-          return question.answers.length == 0;
+            if(question != undefined){
+                return question.answers.length == 0;
+            }else {
+                return false;
+            }
         };
 
         $scope.getCorrectCount = function(question) {
             $scope.correctCount=0;
 
-            for(var key in question.answers) {
-                var answer = question.answers[key];
+            if(question != undefined){
+                for(var key in question.answers) {
+                    var answer = question.answers[key];
 
-                if(angular.equals(answer.answer.toString(), question.answer.charAt(3))){
-                    $scope.correctCount++;
+                    if(angular.equals(answer.answer.toString(), question.answer.charAt(3))){
+                        $scope.correctCount++;
+                    }
                 }
             }
+
             return $scope.correctCount;
         };
 
