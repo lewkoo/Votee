@@ -80,7 +80,7 @@
         </fieldset>
         <div class="col-md-12" data-ng-if="hasVoted(question) && !hasAuthorization(question)">
             <h3>Correct Answer: {{question.options[question.answer]}}</h3>
-            <h3>Your Answer: {{question.options[getStudentsAnswer(question).answer]}}</h3>
+            <h3>Your Answer: {{question.options["opt" +getStudentsAnswer(question).answer]}}</h3>
         </div>
     </form>
 
@@ -92,7 +92,7 @@
         <div id="hideMe" data-ng-hide="isHidden" class="list-group col-md-4" >
             <div ng-repeat="answer in question.answers" class="row-fluid">
                 <div class="list-group-item">
-                    <h5>Selected Answer: {{answer.answer}}</h5>
+                    <h5>Selected Answer: {{question.options["opt"+answer.answer]}}</h5>
 
                     <h5>Name: {{answer.student.name}} </h5>
                     <h5>Email: {{answer.student.email}} </h5>

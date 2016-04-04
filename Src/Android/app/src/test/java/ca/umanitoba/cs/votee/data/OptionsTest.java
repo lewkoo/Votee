@@ -2,10 +2,10 @@ package ca.umanitoba.cs.votee.data;
 
 import junit.framework.Assert;
 
-import ca.umanitoba.cs.votee.data.Options;
-import ca.umanitoba.cs.votee.data.Question;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 
 /**
@@ -72,7 +72,7 @@ public class OptionsTest {
     @Test
     public void testSetOption4() throws Exception {
         assertTrue(testOption.getOption4() == null);
-        testOption.setOpt2("Ans4");
+        testOption.setOpt4("Ans4");
         Assert.assertEquals("Ans4", testOption.getOption4());
     }
 
