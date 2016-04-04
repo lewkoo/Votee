@@ -31,7 +31,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.isCorrect = function(question, answer) {
-          return question.answer == answer.answer;
+            return angular.equals(question.answer.charAt(3), answer.answer.toString());
         };
 
         $scope.isHidden=true;
@@ -52,7 +52,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             for(var key in question.answers) {
                 var answer = question.answers[key];
 
-                if(angular.equals(answer.answer, question.answer)){
+                if(angular.equals(answer.answer.toString(), question.answer.charAt(3))){
                     $scope.correctCount++;
                 }
             }
@@ -91,19 +91,19 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
             if (isValid) {
                 //var question = new Questions($scope.question);
 
-               /* $scope.options = {
-                    "opt0": $scope.question.options[0],
-                    "opt1": $scope.question.options[1],
-                    "opt2": $scope.question.options[2],
-                    "opt3": $scope.question.options[3]
-                };*/
-                $scope.options = {
+               $scope.options = {
+                    "opt0": $scope.question.options.opt0,
+                    "opt1": $scope.question.options.opt1,
+                    "opt2": $scope.question.options.opt2,
+                    "opt3": $scope.question.options.opt3
+                };
+                /*$scope.options = {
                     "opt3": $scope.question.options.opt3,
                     "opt2": $scope.question.options.opt2,
                     "opt1": $scope.question.options.opt1,
                     "opt0": $scope.question.options.opt0
 
-                };
+                };*/
 
 
                 var question = new Questions({
