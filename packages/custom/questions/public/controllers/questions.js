@@ -13,26 +13,42 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.isAuthorized = (MeanUser.isStudent || MeanUser.isProfessor || MeanUser.isAdmin);
+        $scope.isProfOrAdmin = (MeanUser.isProfessor || MeanUser.isAdmin);
 
         $scope.hasVoted = function(question){
             var equal = false;
 
-            for(var key in question.answers){
-                var answer = question.answers[key];
+            if(question != undefined){
+                for(var key in question.answers){
+                    var answer = question.answers[key];
 
-                var creator = answer.student;
+                    var creator = answer.student;
 
-                if(angular.equals(answer.student._id, MeanUser.userId)){
+                    if(angular.equals(answer.student._id, MeanUser.userId)){
                         equal = true;
                         break;
+                    }
                 }
             }
+
             return equal;
         };
 
         $scope.isCorrect = function(question, answer) {
             return angular.equals(question.answer.charAt(3), answer.answer.toString());
         };
+
+        //$scope.link1 = "http://bootdey.com/img/Content/user_1.jpg";
+        //$scope.link2 = "http://bootdey.com/img/Content/user_2.jpg";
+        //$scope.link3 = "http://bootdey.com/img/Content/user_3.jpg";
+        //
+        //$scope.getRandomImg = function(){
+        //    $scope.num =  Math.floor(Math.random() * (3 - 1 + 1)) + 1;
+        //
+        //    if($scope.num == 1){
+        //        return $scope.link1;
+        //    }
+        //};
 
         $scope.isHidden=true;
         $scope.showHide = function() {
@@ -43,19 +59,26 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
         };
 
         $scope.noAnswers = function(question) {
-          return question.answers.length == 0;
+            if(question != undefined){
+                return question.answers.length == 0;
+            }else {
+                return false;
+            }
         };
 
         $scope.getCorrectCount = function(question) {
             $scope.correctCount=0;
 
-            for(var key in question.answers) {
-                var answer = question.answers[key];
+            if(question != undefined){
+                for(var key in question.answers) {
+                    var answer = question.answers[key];
 
-                if(angular.equals(answer.answer.toString(), question.answer.charAt(3))){
-                    $scope.correctCount++;
+                    if(angular.equals(answer.answer.toString(), question.answer.charAt(3))){
+                        $scope.correctCount++;
+                    }
                 }
             }
+
             return $scope.correctCount;
         };
 

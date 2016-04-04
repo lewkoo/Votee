@@ -1,65 +1,86 @@
-<table>
-    <td><img src="/voteeHome/assets/img/hatlogo.png" /></td>
-    <td><div style="text-align: center;"><h2>Student Home</h2></div></td>
-</table>
+<!--<table>-->
+<!--<td><img src="/voteeHome/assets/img/hatlogo.png" /></td>-->
+<!--<td><div style="text-align: center;"><h2>Student Home</h2></div></td>-->
+<!--</table>-->
 
-<div class="container">
-    <a href="index" class="btn btn-default btn-primary">Home</a>
-   <!-- <button type="button" class="btn btn-danger btn-primary">Vote</button>-->
-</div>
+<!--<div class="container">-->
+<!--<a href="index" class="btn btn-default btn-primary">Home</a>-->
+<!--&lt;!&ndash; <button type="button" class="btn btn-danger btn-primary">Vote</button>&ndash;&gt;-->
+<!--</div>-->
 
-<h2> Your Statistics</h2>
+<!--<h2> Your Statistics</h2>-->
 
-<br>
+<!--<br>-->
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-xs-10">
-            <div class="well panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
+<section data-ng-controller="VoteeHeaderController" data-ng-init="init()">
 
-                        <!--/col-->
-                        <div class="col-xs-12 col-sm-8">
-                            <h2>Stew Dent</h2>
-                            <p><strong>SN: </strong> 123456748 </p>
-                            <p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn new things. </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-10">
+                <div class="well panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
 
+                            <!--/col-->
+                            <!--<div class="col-xs-12 col-sm-8">-->
+                                <!--<h2>Stew Dent</h2>-->
+                                <!--<p><strong>SN: </strong> 123456748 </p>-->
+                                <!--<p><strong>Hobbies: </strong> Read, out with friends, listen to music, draw and learn-->
+                                    <!--new things. </p>-->
+
+                            <!--</div>-->
+                            <div class="col-xs-6 col-sm-6">
+                                <!--<p><img src="/voteeHome/assets/img/hatlogo.png"/></p>-->
+                                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+
+                            </div>
+                            <div class="col-xs-6 col-sm-6">
+                                <h3>Name: {{user.username}}</h3>
+                                <h3>email: {{user.email}}</h3>
+
+
+                            </div>
+                            <!--/col-->
+                            <div class="clearfix"></div>
+                            <!--<div class="col-xs-12 col-sm-4">
+                                <h2><strong> 2 </strong></h2>
+                                <p><small>New Grades</small></p>
+                                <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> View Grades </button>
+                            </div>-->
+                            <!--/col-->
+                            <div class="col-xs-12 col-sm-4">
+                                <!--<h2><strong>3</strong></h2>-->
+                                <!--<p>-->
+                                    <!--<small>Enrolled</small>-->
+                                <!--</p>-->
+                                <a href="courses " button class="btn btn-info btn-block"><span
+                                        class="fa fa-user"></span> View Courses </a>
+                            </div>
+                            <!--/col-->
+
+                            <div class="col-xs-12 col-sm-4">
+                                <!--<h2><strong>43</strong></h2>-->
+                                <!--<p>-->
+                                    <!--<small>TODO</small>-->
+                                <!--</p>-->
+                                <a href="questions " button class="btn btn-info btn-block"><span
+                                        class="fa fa-user"></span> View Questions </a>
+                            </div>
+                            <!--/col-->
                         </div>
-                        <!--/col-->
-                        <div class="clearfix"></div>
-                        <!--<div class="col-xs-12 col-sm-4">
-                            <h2><strong> 2 </strong></h2>
-                            <p><small>New Grades</small></p>
-                            <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> View Grades </button>
-                        </div>-->
-                        <!--/col-->
-                        <div class="col-xs-12 col-sm-4">
-                            <h2><strong>3</strong></h2>
-                            <p><small>Enrolled</small></p>
-                            <a href="courses "button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Courses </a>
-                        </div>
-                        <!--/col-->
-
-                        <div class="col-xs-12 col-sm-4">
-                            <h2><strong>43</strong></h2>
-                            <p><small>TODO</small></p>
-                            <a href="questions "button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Questions </a>
-                        </div>
-                        <!--/col-->
+                        <!--/row-->
                     </div>
-                    <!--/row-->
+                    <!--/panel-body-->
+
                 </div>
-                <!--/panel-body-->
+                <!--/panel-->
 
             </div>
-            <!--/panel-->
-
+            <!--/col-->
         </div>
-        <!--/col-->
+        <!--/row-->
+
+
     </div>
-    <!--/row-->
-
-
-</div>
-<!--/container-->
+    <!--/container-->
+</section>

@@ -35,3 +35,7 @@ i.glyphicon {
         flex-direction: column;
     }
 }
+
+span.glyphicon-user {
+    font-size: 8em;
+}

@@ -64,5 +64,10 @@ angular.module('mean.voteeHome').controller('VoteeHeaderController', ['$scope', 
 	  $state.go('home');
 	});
 
+	  $scope.init = function(){
+		  $scope.user = MeanUser.user;
+		  console.log($scope.user);
+	  };
+
   }
 ]);

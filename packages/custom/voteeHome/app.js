@@ -26,7 +26,7 @@ VoteeHome.register(function(app, auth, database, system) {
     VoteeHome.menus.add({
         title: 'Students',
         link: 'Students',
-        roles: [ 'authenticated' ],
+        roles: [ 'student' ],
         menu: 'voteeMain'
     });
 

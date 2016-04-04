@@ -1,63 +1,91 @@
-<table>
-    <td><img src="/voteeHome/assets/img/hatlogo.png" /></td>
-    <td><div style="text-align: center;"><h2>Professor Home</h2></div></td>
-</table>
+<section data-ng-controller="VoteeHeaderController" data-ng-init="init()">
 
-<div class="container">
-    <a href="index" class="btn btn-default btn-primary">Home</a>
-    <a href="/questions/create" class="btn btn-default btn-primary">Create Question</a>
-</div>
+    <!--<table>-->
+        <!--<td><img src="/voteeHome/assets/img/hatlogo.png"/></td>-->
+        <!--<td>-->
+            <!--<div style="text-align: center;"><h2>Professor Home</h2></div>-->
+        <!--</td>-->
+    <!--</table>-->
 
-<h2>Your Statistics</h2>
+    <!--<div class="container">-->
+        <!--<a href="index" class="btn btn-default btn-primary">Home</a>-->
+        <!--<a href="/questions/create" class="btn btn-default btn-primary">Create Question</a>-->
+    <!--</div>-->
 
-<br>
+    <!--<h2>Your Statistics</h2>-->
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-xs-10">
-            <div class="well panel panel-default">
-                <div class="panel-body">
-                    <div class="row">
+    <br>
 
-                        <!--/col-->
-                        <div class="col-xs-12 col-sm-8">
-                            <h2>Pro Fessor</h2>
-                            <p><strong>Prof ID: </strong> 999999 </p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-10">
+                <div class="well panel panel-default">
+                    <div class="panel-body">
+                        <div class="row">
 
+                            <!--/col-->
+                            <div class="col-xs-6 col-sm-6">
+                                <p><img src="/voteeHome/assets/img/hatlogo.png"/></p>
+                                <!--<p><strong>Prof ID: </strong> 999999 </p>-->
+                                <!--<h2>{{user.username}}</h2>-->
+
+                            </div>
+                            <div class="col-xs-6 col-sm-6">
+                                <h3>Prof: {{user.username}}</h3>
+                                <h3>email: {{user.email}}</h3>
+
+
+                            </div>
+                            <!--/col-->
+                            <div class="clearfix"></div>
+                            <!--<div class="col-xs-12 col-sm-4">
+                                <h2><strong> 40 </strong></h2>
+                                <p><small>New Answer Submissions</small></p>
+                                <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> View Submissions </button>
+                            </div>-->
+                            <!--/col-->
+                            <div class="col-xs-12 col-sm-4">
+                                <!--<h2><strong>3</strong></h2>-->
+                                <!--<p>-->
+                                    <!--<small>Teaching</small>-->
+                                <!--</p>-->
+                                <a href="courses " button class="btn btn-info btn-block"><span
+                                        class="fa fa-user"></span> View Courses </a>
+                            </div>
+                            <!--/col-->
+                            <div class="col-xs-12 col-sm-4">
+                                <!--<h2><strong>4</strong></h2>-->
+                                <!--<p>-->
+                                    <!--<small>Questions Created</small>-->
+                                <!--</p>-->
+                                <a href="questions" button class="btn btn-info btn-block"><span
+                                        class="fa fa-user"></span> View Questions </a>
+                            </div>
+                            <!--/col-->
+                            <!--/col-->
+                            <div class="col-xs-12 col-sm-4">
+                                <!--<h2><strong>4</strong></h2>-->
+                                <!--<p>-->
+                                    <!--<small>Questions Created</small>-->
+                                <!--</p>-->
+                                <a href="questions" button class="btn btn-info btn-block"><span
+                                        class="fa fa-user"></span> Create a Question</a>
+                            </div>
+                            <!--/col-->
                         </div>
-                        <!--/col-->
-                        <div class="clearfix"></div>
-                        <!--<div class="col-xs-12 col-sm-4">
-                            <h2><strong> 40 </strong></h2>
-                            <p><small>New Answer Submissions</small></p>
-                            <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> View Submissions </button>
-                        </div>-->
-                        <!--/col-->
-                        <div class="col-xs-12 col-sm-4">
-                            <h2><strong>3</strong></h2>
-                            <p><small>Teaching</small></p>
-                            <a href="courses "button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Courses </a>
-                        </div>
-                        <!--/col-->
-                        <div class="col-xs-12 col-sm-4">
-                            <h2><strong>4</strong></h2>
-                            <p><small>Questions Created</small></p>
-                            <a href="questions" button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Questions </a>
-                        </div>
-                        <!--/col-->
+                        <!--/row-->
                     </div>
-                    <!--/row-->
+                    <!--/panel-body-->
+
                 </div>
-                <!--/panel-body-->
+                <!--/panel-->
 
             </div>
-            <!--/panel-->
-
+            <!--/col-->
         </div>
-        <!--/col-->
+        <!--/row-->
+
+
     </div>
-    <!--/row-->
-
-
-</div>
-<!--/container-->
+    <!--/container-->
+</section>
