@@ -1,6 +1,4 @@
 <section data-ng-controller="CoursesController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
-    <span>{{course.created | date:'medium'}}</span> /
-    <span> Taught by: {{course.professor.name}}</span>
     <br>
     <a href="courses" class="btn btn-default btn-warning">Back to List</a>
 
@@ -23,9 +21,14 @@
                                         <i class="glyphicon glyphicon-trash"></i>
                                     </a>
                                 </div>
+                                <h5> Taught by: {{course.professor.name}}</h5>
                                 <h5>Description: {{course.description}}</h5>
 
                                 <h5>There are {{course.students.length}} students enrolled</h5>
+
+                                <br>
+
+                                <span><i>Course Created On: {{course.created | date:'medium'}}</i></span>
 
                                 <br>
 
