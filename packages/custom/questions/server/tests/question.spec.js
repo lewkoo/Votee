@@ -77,7 +77,8 @@ describe('<Unit Test>', function() {
                 description: 'This is a question that has nothing to do with the course material',
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
-                answer: 'Option3'
+                answer: 'Option3',
+                explanation: 'Because star wars'
             });
             question.save();
 
@@ -197,7 +198,8 @@ describe('<Unit Test>', function() {
                 creator: professor,
                 options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
                 answer: 'Option3',
-                answers: answers
+                answers: answers,
+                explanation: 'Because reasons'
             });
             question.save();
 
@@ -222,6 +224,7 @@ describe('<Unit Test>', function() {
                         res.body[0].should.have.property('answer', question.answer);
                         res.body[0].should.have.property('answers').and.have.lengthOf(5);
                         res.body[0].should.have.property('type', 'MULTIPLE-CHOICE');
+                        res.body[0].should.have.property('explanation', question.explanation);
                         done();
                     });
             });
@@ -245,6 +248,7 @@ describe('<Unit Test>', function() {
                         res.body.should.have.property('answer', question.answer);
                         res.body.should.have.property('answers').and.have.lengthOf(5);
                         res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+                        res.body.should.have.property('explanation', question.explanation);
 
                         done();
                     });
@@ -290,7 +294,8 @@ describe('<Unit Test>', function() {
                     creator: professor,
                     options: { '0': 'The Hobbit', '1': 'Return of the King', '2': 'Star Wars', '3': 'Bond, James Bond' },
                     answer: 'Option3',
-                    answers: answers
+                    answers: answers,
+                    explanation: 'Because reasons'
                 });
 
                 server.post('/api/questions/') // request route - look for routes/question.js
@@ -304,6 +309,7 @@ describe('<Unit Test>', function() {
                         res.body.should.have.property('answer', question.answer);
                         res.body.should.have.property('answers').and.have.lengthOf(5);
                         res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+                        res.body.should.have.property('explanation', question.explanation);
 
                         done();
 
@@ -333,6 +339,7 @@ describe('<Unit Test>', function() {
                         res.body.should.have.property('answer', question.answer);
                         res.body.should.have.property('answers').and.have.lengthOf(5);
                         res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+                        res.body.should.have.property('explanation', question.explanation);
 
                         done();
 
@@ -390,6 +397,8 @@ describe('<Unit Test>', function() {
                         res.body.should.have.property('answer', question.answer);
                         res.body.should.have.property('answers').and.have.lengthOf(5);
                         res.body.should.have.property('type', 'MULTIPLE-CHOICE');
+                        res.body.should.have.property('explanation', question.explanation);
+
 
                         // test if the question is still in the model
                         Question.load(questionID, function(err, question){

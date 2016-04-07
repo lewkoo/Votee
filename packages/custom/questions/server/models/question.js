@@ -66,6 +66,12 @@ var QuestionSchema = new Schema({
         required:   'False'
     }],
 
+    explanation: {
+        type: String,
+        required: false,
+        trim: true
+    },
+
     courseNumber: {
         type: Number,
         required: false,

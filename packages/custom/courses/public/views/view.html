@@ -28,11 +28,35 @@
                                 <h5>There are {{course.students.length}} students enrolled</h5>
 
                                 <br>
-                                <div class="container">
-                                    <button class="btn btn-info">View Student List</button>
-                                    <button class="btn btn-info">View Questions</button>
-                                    <button class="btn btn-info">View Grades</button>
+
+                                <input type="button" data-ng-click="showHide()" value="Show / Hide Students" />
+                                <div class="container" id="hideMe" data-ng-hide="isHidden">
+                                    <table class="table student-list" data-ng-if="course.students.length != 0">
+                                        <thead>
+                                        <tr>
+                                            <th><span>Name</span></th>
+                                            <th><span>Email</span></th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr data-ng-repeat="student in course.students">
+                                            <td>{{student.name}}</td>
+                                            <td>{{student.email}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div data-ng-if="course.students.length == 0">
+                                        <h5>No students enrolled. Why don't you add one?</h5>
+                                    </div>
                                 </div>
+                                <!--TODO: add if implemented (not needed for demo)-->
+                                <!--<div class="container">-->
+                                    <!--<button class="btn btn-info">View Student List</button>-->
+                                    <!--<button class="btn btn-info">View Questions</button>-->
+                                    <!--<button class="btn btn-info">View Grades</button>-->
+                                <!--</div>-->
 
                                 <br>
                                 </div>

@@ -137,6 +137,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                     'answers': $scope.question.answers,
                     'type': $scope.question.type,
                     //'created": "2016-02-25T19:26:48.686Z',
+                    'explanation' : $scope.question.explanation,
                     '__v': 1
                 });
 
@@ -181,7 +182,7 @@ angular.module('mean.questions').controller('QuestionsController', ['$scope', '$
                 questionId: $stateParams.questionId
             }, function(question) {
                 $scope.question = question;
-                //console.log($scope.question.options[0]);
+                console.log($scope.question);
             });
         };
 
