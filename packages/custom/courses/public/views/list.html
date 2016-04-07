@@ -1,3 +1,13 @@
+<div class="col-xs-12 col-sm-4">
+    <!--<h2><strong>4</strong></h2>-->
+    <!--<p>-->
+    <!--<small>Questions Created</small>-->
+    <!--</p>-->
+    <a href="courses/create" button class="btn btn-warning btn-block"><span
+            class="fa fa-user"></span> Create a course</a>
+</div>
+<br>
+
 
 <section data-ng-controller="CoursesController" data-ng-init="find()" data-ng-hide=!isAuthorized>
 <h1 data-ng-hide="!courses || courses.length || !hasAuthorization(courses)">No courses yet. <br> Why don't you <a href="/courses/create">Create One</a>?</h1>
