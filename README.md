@@ -1,5 +1,7 @@
 **[Live Deploy on Heroku](http://votee-project.herokuapp.com/)**
 
+**[Live Deploy on AWS](http://ec2-52-37-76-156.us-west-2.compute.amazonaws.com/)**
+
 **[API Documentation is available here](https://rawgit.com/lewkoo/Votee/master/Documentation/apiDocs/index.html)**
 
 **[Vision Statement](https://docs.google.com/document/d/1CvnXLNxiKNNfu2M9UAxi4Pqej2G6_-8UjwUmqZ_DwPw/edit?usp=sharing)**
