@@ -11,8 +11,12 @@ import java.util.List;
 import ca.umanitoba.cs.votee.data.Question;
 import retrofit.Callback;
 import retrofit.http.Body;
+import retrofit.http.FormUrlEncoded;
 import retrofit.http.GET;
 import retrofit.http.POST;
+import retrofit.http.PUT;
+import retrofit.http.Path;
+
 
 /**
  * Created by Levko on 2016-03-10.
@@ -40,6 +44,7 @@ public interface APIHelperInterface {
 
     // Questions package routes
     String VT_API_URL_QUESTIONS = "/api/questions";
+    String VT_API_URL_QUESTION_VOTE = "/api/questions/vote/{question_id}";
 
     // Users package methods
     // Sends a log in payload, receives a token
@@ -63,5 +68,10 @@ public interface APIHelperInterface {
 
     @POST(VT_API_URL_USER_QUESTIONS)
     Question createQuestion(@Body JsonObject params);
+
+//    @FormUrlEncoded not needed i dont think
+    @PUT(VT_API_URL_QUESTION_VOTE)
+    Question voteForQuestion(@Path("question_id") String questionId, @Body Question q);
+
 
 }

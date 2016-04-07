@@ -158,4 +158,16 @@ public class UserProfile implements Serializable {
             return true;
         }
     }
+
+//    public boolean isProf(){
+//        boolean prof = false;
+//        for(int i = 0; i < roles.length; i++){
+//            if(roles[i].equals("professor")){
+//                prof = true;
+//                i = 10;
+//            }
+//        }
+//
+//        return prof;
+//    }
 }

@@ -361,6 +361,22 @@ public class APIHelper {
 //        }
     }
 
+    // register call
+    public static void voteForQuestion(Question q) {
+        final JsonObject jsonParams = new JsonObject();
+
+        if (q == null)
+            throw new InvalidParameterException("Invalid parameters given");
+
+        Question response;
+        try {
+            response = mRestService.voteForQuestion(q.get_id(), q);
+        } catch (RetrofitError error) {
+            throw error;
+        }
+
+    }
+
 
 
 }
