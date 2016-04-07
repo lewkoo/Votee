@@ -3,7 +3,7 @@
 <h1 data-ng-hide="!courses || courses.length || !hasAuthorization(courses)">No courses yet. <br> Why don't you <a href="/courses/create">Create One</a>?</h1>
 
 <a href="/courses/create">
-    <button data-ng-hide="!hasAuthorization(canCreateCourses)" type="create" class="btn btn-warning">Create Course</button>
+    <button data-ng-hide="!isAuthorized(canCreateCourses)" type="create" class="btn btn-warning">Create Course</button>
 </a>
 
 <div data-ng-hide="!courses" >
