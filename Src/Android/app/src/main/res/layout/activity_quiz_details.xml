@@ -73,15 +73,15 @@
         </RadioGroup>
 
         <!-- uncomment when voting is implemented-->
-            <!--<Button-->
-                <!--android:id="@+id/vote_button"-->
-                <!--android:layout_width="376dp"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:onClick="onSubmit"-->
-                <!--android:text="Vote"-->
-                <!--android:layout_below="@+id/radioGroup"-->
-                <!--android:layout_centerHorizontal="true"-->
-                <!--android:layout_marginTop="90dp" />-->
+            <Button
+                android:id="@+id/vote_button"
+                android:layout_width="376dp"
+                android:layout_height="wrap_content"
+                android:onClick="onSubmit"
+                android:text="Vote"
+                android:layout_below="@+id/radioGroup"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp" />
 
     </RelativeLayout>
 </LinearLayout>

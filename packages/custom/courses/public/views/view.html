@@ -1,6 +1,4 @@
 <section data-ng-controller="CoursesController" data-ng-init="findOne()" data-ng-hide=!isAuthorized>
-    <span>{{course.created | date:'medium'}}</span> /
-    <span> Taught by: {{course.professor.name}}</span>
     <br>
     <a href="courses" class="btn btn-default btn-warning">Back to List</a>
 
@@ -23,11 +21,39 @@
                                         <i class="glyphicon glyphicon-trash"></i>
                                     </a>
                                 </div>
+                                <h5> Taught by: {{course.professor.name}}</h5>
                                 <h5>Description: {{course.description}}</h5>
 
                                 <h5>There are {{course.students.length}} students enrolled</h5>
 
                                 <br>
+
+                                <span><i>Course Created On: {{course.created | date:'medium'}}</i></span>
+
+                                <br>
+
+                                <input type="button" data-ng-click="showHide()" value="Show / Hide Students" />
+                                <div class="container" id="hideMe" data-ng-hide="isHidden">
+                                    <table class="table student-list" data-ng-if="course.students.length != 0">
+                                        <thead>
+                                        <tr>
+                                            <th><span>Name</span></th>
+                                            <th><span>Email</span></th>
+                                            <th>&nbsp;</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr data-ng-repeat="student in course.students">
+                                            <td>{{student.name}}</td>
+                                            <td>{{student.email}}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div data-ng-if="course.students.length == 0">
+                                        <h5>No students enrolled. Why don't you add one?</h5>
+                                    </div>
+                                </div>
                                 <!--TODO: add if implemented (not needed for demo)-->
                                 <!--<div class="container">-->
                                     <!--<button class="btn btn-info">View Student List</button>-->

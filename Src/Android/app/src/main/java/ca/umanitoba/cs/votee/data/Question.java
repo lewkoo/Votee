@@ -15,9 +15,18 @@ public class Question  implements Serializable{
     private String title;
     private String type;
     private boolean selected;
+    private String selectedAnswer;
+    private String[] answers;
+
+    public String getSelectedAnswer() {
+        return selectedAnswer;
+    }
+
+    public void setSelectedAnswer(String selectedAnswer) {
+        this.selectedAnswer = selectedAnswer;
+    }
 
     public Question(){
-
     }
 
 

@@ -16,6 +16,8 @@
         <h4>You have already voted and your answer to this question has been submitted.</h4>
         <h4 data-ng-if="isCorrect(question,getStudentsAnswer(question))">You got it CORRECT!</h4>
         <h4 data-ng-if="!isCorrect(question,getStudentsAnswer(question))">Sorry, your answer was INCORRECT.</h4>
+        <h4>Reason:</h4>
+        <p>{{question.explanation}}</p>
     </div>
 
     <form name="questionForm" class="form-horizontal col-md-8" role="form" data-ng-submit="vote(questionForm)" novalidate>

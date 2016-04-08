@@ -42,7 +42,7 @@ public class APIHelper {
     public static final String VT_API_ROLES_KEY = "roles";
 
     //question params
-    public static final String VT_API_COURSE_NUM = "Number";
+    public static final String VT_API_COURSE_NUM = "courseNumber";
     public static final String VT_API_TITLE = "title";
     public static final String VT_API_OPTIONS = "options";
     public static final String VT_API_ANSWER = "answer";
@@ -322,6 +322,7 @@ public class APIHelper {
                 || options == null || correctAns == null)
             throw new InvalidParameterException("Invalid parameters given");
 
+        jsonParams.addProperty(VT_API_COURSE_NUM, Integer.parseInt(courseNum));
         jsonParams.addProperty(VT_API_TITLE, quizQuestion);
         jsonParams.addProperty(VT_API_OPT0, options.getOption1());
         jsonParams.addProperty(VT_API_OPT1, options.getOption2());
@@ -336,8 +337,6 @@ public class APIHelper {
 
         jsonParams.add(VT_API_OPTIONS, jsonObj);
         jsonParams.addProperty(VT_API_ANSWER, correctAns);
-        //TODO: umcomment when implemented
-//        jsonParams.addProperty(VT_API_CREATOR, UserProfile.getInstance().get_id());
 
         Question response;
         try {
@@ -360,6 +359,22 @@ public class APIHelper {
 //            // Update the REST adapter with an authorization token
 ////            updateRESTAdapter();
 //        }
+    }
+
+    // register call
+    public static void voteForQuestion(Question q) {
+        final JsonObject jsonParams = new JsonObject();
+
+        if (q == null)
+            throw new InvalidParameterException("Invalid parameters given");
+
+        Question response;
+        try {
+            response = mRestService.voteForQuestion(q.get_id(), q);
+        } catch (RetrofitError error) {
+            throw error;
+        }
+
     }
 
 

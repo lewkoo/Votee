@@ -29,6 +29,14 @@ angular.module('mean.courses').controller('CoursesController', ['$scope', '$stat
             return (MeanUser.isProfessor || MeanUser.isAdmin);
         };
 
+        $scope.isHidden=true;
+        $scope.showHide = function() {
+            if($scope.isHidden)
+                $scope.isHidden=false;
+            else
+                $scope.isHidden=true;
+        };
+
         $scope.find = function() {
             Courses.query(function(courses) {
                 $scope.courses = courses;

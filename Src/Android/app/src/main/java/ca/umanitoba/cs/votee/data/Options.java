@@ -22,9 +22,7 @@ public class Options  implements Serializable {
         this.opt3 = opt3;
     }
 
-    public String getOption1() {
-        return opt0;
-    }
+    public String getOption1() { return opt0; }
 
     public String getOption2() {
         return opt1;
